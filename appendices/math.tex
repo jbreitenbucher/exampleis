@@ -1,0 +1,1047 @@
+%!TEX root = ../username.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Contents: Math typesetting with LaTeX
+% $Id: math.tex,v 1.3 2005/05/21 02:03:43 jonb Exp $
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Typesetting Mathematical Formulae}\label{math}
+\begin{intro}
+  This appendix is taken from \citet{ophs03} under the GNU open source documentation license. This appendix addresses the main strength
+  of \TeX{}: mathematical typesetting. But be warned, this appendix
+  only scratches the surface. While the things explained here are
+  sufficient for many people, don't despair if you can't find a
+  solution to your mathematical typesetting needs here. It is highly likely
+  that your problem is addressed in \AmS-\LaTeX{}%
+  \footnote{\texttt{CTAN:/tex-archive/macros/latex/packages/amslatex}}
+  or some other package.
+\end{intro}
+  
+\section{General}
+
+\LaTeX{} has a special mode for typesetting mathematics\index{mathematics}.
+Mathematical text within a paragraph is entered between \verb|\(|\index{\(@\verb+\(+}
+and \verb|\)|\index{\)@\verb+\)+}, %$
+between \texttt{\$} and \texttt{\$} or between
+\verb|\begin{|{math}\verb|}| and \verb|\end{math}|.\index{formulae}
+
+\begin{singlespace}
+\begin{example}
+Add $a$ squared and $b$ squared 
+to get $c$ squared. Or, using 
+a more mathematical approach:
+$c^{2}=a^{2}+b^{2}$
+\end{example}
+\end{singlespace}
+
+\begin{singlespace}
+\begin{example}
+\TeX{} is pronounced as 
+$\tau\epsilon$.\\[6pt]
+100~m$^{3}$ of water\\[6pt]
+This comes from my $\heartsuit$
+\end{example}
+\end{singlespace}
+
+It is preferable to \emph{display} larger mathematical equations or formulae,
+rather than to typeset them on separate lines. This means you enclose them
+in \verb|\[| \index{\[@\verb+\[+} and \verb|\]| \index{\]@\verb+\]+} or between
+\verb|\begin{|displaymath\index{displaymath}\verb|}| and
+  \verb|\end{displaymath}|.  This produces formulae which are not
+numbered. If you want \LaTeX{} to number them, you can use the
+equation\index{equation} environment.
+
+
+\begin{singlespace}
+\begin{example}
+Add $a$ squared and $b$ squared 
+to get $c$ squared. Or, using 
+a more mathematical approach:
+\begin{displaymath}
+c^{2}=a^{2}+b^{2}
+\end{displaymath}
+And just one more line.
+\end{example}
+\end{singlespace}
+
+You can reference an equation with \ic{label} and \ic{ref}
+
+\begin{singlespace}
+\begin{example}
+\begin{equation} \label{eq:eps}
+\epsilon > 0
+\end{equation}
+From (\ref{eq:eps}), we gather 
+\ldots
+\end{example}
+\end{singlespace}
+
+Note that expressions will be typeset in a different style if displayed:
+
+\begin{singlespace}
+\begin{example}
+$\lim_{n \to \infty} 
+\sum_{k=1}^n \frac{1}{k^2} 
+= \frac{\pi^2}{6}$
+\end{example}
+\end{singlespace}
+\begin{singlespace}
+\begin{example}
+\begin{displaymath}
+\lim_{n \to \infty} 
+\sum_{k=1}^n \frac{1}{k^2} 
+= \frac{\pi^2}{6}
+\end{displaymath}
+\end{example}
+\end{singlespace}
+
+There are differences between \emph{math mode} and \emph{text mode}. For
+example in \emph{math mode}: 
+
+\begin{enumerate}
+
+\item Most spaces and linebreaks do not have any significance, as all spaces
+either are derived logically from the mathematical expressions or
+have to be specified using special commands such as \verb|\,| \index{''\,@\verb+\,+}, \ic{quad}, or \ic{qquad}.
+ 
+\item Empty lines are not allowed. Only one paragraph per formula.
+
+\item Each letter is considered to be the name of a variable and will be
+typeset as such. If you want to typeset normal text within a formula
+(normal upright font and normal spacing) then you have to enter the
+text using the \verb|\textrm{...}| commands.
+\end{enumerate}
+
+
+\begin{singlespace}
+\begin{example}
+\begin{equation}
+\forall x \in \mathbf{R}:
+\qquad x^{2} \geq 0
+\end{equation}
+\end{example}
+\end{singlespace}
+
+\begin{singlespace}
+\begin{example}
+\begin{equation}
+x^{2} \geq 0\qquad
+\textrm{for all }x\in\mathbf{R}
+\end{equation}
+\end{example}
+\end{singlespace}
+
+Mathematicians can be very fussy about which symbols are used:
+it would be conventional here to use `blackboard bold\index{blackboard bold}',
+bold symbols\index{bold symbols} which is obtained using \ic{mathbb} from the
+package \ip{amsfonts} or \ip{amssymb}.
+
+\ifx\mathbb\undefined\else
+The last example becomes
+\begin{singlespace}
+\begin{example}
+\begin{displaymath}
+x^{2} \geq 0\qquad
+\textrm{for all }x\in\mathbb{R}
+\end{displaymath}
+\end{example}
+\end{singlespace}
+\fi
+
+\section{Grouping in Math Mode}
+
+Most math mode commands act only on the next character. So if you
+want a command to affect several characters, you have to group them
+together using curly braces: \verb|{...}|.
+
+\begin{singlespace}
+\begin{example}
+\begin{equation}
+a^x+y \neq a^{x+y}
+\end{equation}
+\end{example}
+\end{singlespace}
+ 
+\section{Building Blocks of a Mathematical Formula}
+
+In this section, the most important commands used in mathematical
+typesetting will be described. Take a look at \citet{kd03} for a detailed list of commands for typesetting
+mathematical symbols.
+
+\textbf{Lowercase Greek letters\index{Greek letters}} are entered as \verb|\alpha|,
+ \verb|\beta|, \verb|\gamma|, \ldots, uppercase letters
+are entered as \verb|\Gamma|, \verb|\Delta|, \ldots\footnote{There is no
+  uppercase Alpha defined in \LaTeXe{} because it looks the same as a
+  normal roman A. Once the new math coding is done, things will
+  change.} 
+
+\begin{singlespace}
+\begin{example}
+$\lambda,\xi,\pi,\mu,\Phi,\Omega$
+\end{example}
+\end{singlespace}
+ 
+\textbf{Exponents and Subscripts} can be specified using\index{exponent}\index{subscript}
+the \verb|^|\index{^@\verb+^+} and the \verb|_|\index{_@\verb+_+} character.
+
+\begin{singlespace}
+\begin{example}
+$a_{1}$ \qquad $x^{2}$ \qquad
+$e^{-\alpha t}$ \qquad
+$a^{3}_{ij}$\\
+$e^{x^2} \neq {e^x}^2$
+\end{example}
+\end{singlespace}
+
+The \textbf{square root\index{square root}} is entered as \ic{sqrt}, the
+$n^\mathrm{th}$ root is generated with \verb|\sqrt[|$n$\verb|]|. The size of
+the root sign is determined automatically by \LaTeX. If just the sign
+is needed, use \ic{surd}.
+
+\begin{singlespace}
+\begin{example}
+$\sqrt{x}$ \qquad 
+$\sqrt{ x^{2}+\sqrt{y} }$ 
+\qquad $\sqrt[3]{2}$\\[3pt]
+$\surd[x^2 + y^2]$
+\end{example}
+\end{singlespace}
+
+The commands \ic{overline} and \ic{underline} create
+\textbf{horizontal lines} directly over or under an expression.
+\index{horizontal!line}
+
+\begin{singlespace}
+\begin{example}
+$\overline{m+n}$
+\end{example}
+\end{singlespace}
+
+The commands \ic{overbrace} and \ic{underbrace} create
+long \textbf{horizontal braces} over or under an expression.
+\index{horizontal!brace}
+
+\begin{singlespace}
+\begin{example}
+$\underbrace{ a+b+\cdots+z }_{26}$
+\end{example}
+\end{singlespace}
+
+\index{mathematical!accents} To add mathematical accents such as small
+arrows or {tilde} signs to variables, you can use the commands
+given in \citet{kd03}.  Wide hats and
+tildes covering several characters are generated with \ic{widetilde}
+and \ic{widehat}.  The \verb|'|\index{'@\verb+'+} symbol gives a
+prime\index{prime}.
+% a dash is --
+
+\begin{singlespace}
+\begin{example}
+\begin{displaymath}
+y=x^{2}\qquad y'=2x\qquad y''=2
+\end{displaymath}
+\end{example}
+\end{singlespace}
+
+\textbf{Vectors}\index{vectors} often are specified by adding a small
+arrow symbol\index{arrow symbols} on top of a variable. This is done with the
+\ic{vec} command. The two commands \ic{overrightarrow} and
+\ic{overleftarrow} are useful to denote the vector from $A$ to $B$.
+
+\begin{singlespace}
+\begin{example}
+\begin{displaymath}
+\vec a\quad\overrightarrow{AB}
+\end{displaymath}
+\end{example}
+\end{singlespace}
+
+Names of log-like functions are often typeset in an upright
+font and not in italic like variables. Therefore \LaTeX{} supplies the
+following commands to typeset the most important function names:
+\index{mathematical!functions}
+
+\begin{singlespace}
+\begin{verbatim}
+\arccos   \cos    \csc   \exp   \ker     \limsup  \min   \sinh
+\arcsin   \cosh   \deg   \gcd   \lg      \ln      \Pr    \sup
+\arctan   \cot    \det   \hom   \lim     \log     \sec   \tan
+\arg      \coth   \dim   \inf   \liminf  \max     \sin   \tanh
+\end{verbatim}
+\end{singlespace}
+
+\begin{singlespace}
+\begin{example}
+\[\lim_{x \rightarrow 0}
+\frac{\sin x}{x}=1\]
+\end{example}
+\end{singlespace}
+
+For the modulo function\index{modulo function}, there are two commands: \ic{bmod} for the
+binary operator ``$a \bmod b$'' and \ic{pmod}
+for expressions
+such as ``$x\equiv a \pmod{b}$.''
+
+A built-up \textbf{fraction\index{fraction}} is typeset with the
+\ic{frac}\verb|{...}{...}| command.
+Often the slashed form $1/2$ is preferable, because it looks better
+for small amounts of `fraction material.'
+
+\begin{singlespace}
+\begin{example}
+$1\frac{1}{2}$~hours
+\begin{displaymath}
+\frac{ x^{2} }{ k+1 }\qquad
+x^{ \frac{2}{k+1} }\qquad
+x^{ 1/2 }
+\end{displaymath}
+\end{example}
+\end{singlespace}
+
+To typeset binomial coefficients or similar structures, you can use
+either the command \linebreak \ic{binom}\{\emph{num}\}\{\emph{denom}\} or \ic{genfrac}\{\emph{ldelim}\}\{\emph{rdelim}\}\{\emph{thickness}\}\{\emph{style}\}\{\emph{num}\}\{\emph{denom}\}. The second command can be used to produce customized fraction like output and more information can be found in \citet{mgbcr04}.
+
+\begin{singlespace}
+\begin{example}
+\begin{displaymath}
+\binom{n}{k}\qquad 
+\genfrac{}{}{0pt}{}{x}{y+2}
+\end{displaymath}
+\end{example}
+\end{singlespace}
+ 
+\medskip
+
+The \textbf{integral operator\index{integral operator}} is generated with \ic{int}, the
+\textbf{sum operator\index{sum operator}} with \ic{sum}. The upper and lower limits
+are specified with~\verb|^|\index{^@\verb+^+} and~\verb|_|\index{_@\verb+_+} like subscripts and superscripts.
+
+\begin{singlespace}
+\begin{example}
+\begin{displaymath}
+\sum_{i=1}^{n} \qquad
+\int_{0}^{\frac{\pi}{2}} \qquad
+\end{displaymath}
+\end{example}
+\end{singlespace}
+
+For \textbf{braces\index{braces}} and other delimiters\index{delimiters}, there exist all
+types of symbols in \TeX{} (e.g.~$[\;\langle\;\|\;\updownarrow$).
+Round and square braces can be entered with the corresponding keys,
+curly braces with \verb|\{|, all other delimiters are generated with
+special commands (e.g.~\verb|\updownarrow|). For a list of all
+delimiters available, check \citet{kd03}.
+
+\begin{singlespace}
+\begin{example}
+\begin{displaymath}
+{a,b,c}\neq\{a,b,c\}
+\end{displaymath}
+\end{example}
+\end{singlespace}
+
+If you put the command \ic{left} in front of an opening delimiter or
+\ic{right} in front of a closing delimiter, \TeX{} will automatically
+determine the correct size of the delimiter. Note that you must close
+every \ic{left} with a corresponding \ic{right}, and that the size is
+determined correctly only if both are typeset on the same line. If you
+don't want anything on the right, use the invisible `\verb|\right .|\index{commands!right@\verb+right .+}'!
+
+\begin{singlespace}
+\begin{example}
+\begin{displaymath}
+1 + \left( \frac{1}{ 1-x^{2} }
+    \right) ^3
+\end{displaymath}
+\end{example}
+\end{singlespace}
+
+In some cases it is necessary to specify the correct size of a
+mathematical delimiter\index{mathematical!delimiter} by hand,
+which can be done using the commands \ic{big}, \ic{Big}, \ic{bigg} and
+\ic{Bigg} as prefixes to most delimiter commands.\footnote{These
+  commands do not work as expected if a size changing command has been
+  used, or the \texttt{11pt} or \texttt{12pt} option has been
+  specified.  Use the exscale\index{exscale} or amsmath\index{amsmath} packages to
+  correct this behaviour.}
+
+\begin{singlespace}
+\begin{example}
+$\Big( (x+1) (x-1) \Big) ^{2}$\\
+$\big(\Big(\bigg(\Bigg($\quad
+$\big\}\Big\}\bigg\}\Bigg\}$\quad
+$\big\|\Big\|\bigg\|\Bigg\|$
+\end{example}
+\end{singlespace}
+
+To enter \textbf{three dots\index{three dots}} into a formula, you can use several
+commands. \ic{ldots} typesets the dots on the baseline, \ic{cdots}
+sets them centered. Besides that, there are the commands \ic{vdots} for
+vertical and \ic{ddots} for diagonal dots\index{diagonal dots}.\index{vertical
+  dots}\index{horizontal!dots} You can find another example in section~\ref{sec:vert}.
+
+\begin{singlespace}
+\begin{example}
+\begin{displaymath}
+x_{1},\ldots,x_{n} \qquad
+x_{1}+\cdots+x_{n}
+\end{displaymath}
+\end{example}
+\end{singlespace}
+ 
+\section{Math Spacing}
+
+\index{math spacing} If the spaces within formulae chosen by \TeX{}
+are not satisfactory, they can be adjusted by inserting special
+spacing commands. There are some commands for small spaces: \verb|\,| \index{\,@\verb+\,+} for
+$\frac{3}{18}\:\textrm{quad}$ (\demowidth{0.166em}), \verb|\:| \index{\:@\verb+\:+} for $\frac{4}{18}\:
+\textrm{quad}$ (\demowidth{0.222em}) and \verb|\;| \index{\;@\verb+\;+} for $\frac{5}{18}\:
+\textrm{quad}$ (\demowidth{0.277em}).  The escaped space character
+\verb*.\ . generates a medium sized space and \ic{quad}
+(\demowidth{1em}) and \ic{qquad} (\demowidth{2em}) produce large
+spaces. The size of a quad corresponds to the width of the
+character `M' of the current font.  The \verb|\!|\index{"\"!@\texttt{\bs"!}} command produces a
+negative space of $-\frac{3}{18}\:\textrm{quad}$ (\demowidth{0.166em}).
+
+\begin{singlespace}
+\begin{example}
+\newcommand{\rd}{\mathrm{d}}
+\begin{displaymath}
+\int\!\!\!\int_{D} g(x,y)
+  \, \rd x\, \rd y 
+\end{displaymath}
+instead of 
+\begin{displaymath}
+\int\int_{D} g(x,y)\rd x \rd y
+\end{displaymath}
+\end{example}
+\end{singlespace}
+Note that `d' in the differential is conventionally set in roman.
+
+\AmS-\LaTeX{} provides another way for fine tuning
+the spacing between multiple integral signs,
+namely the \ic{iint}, \ic{iiint}, \ic{iiiint}, and \ic{idotsint} commands.
+With the \ip{amsmath} package loaded, the above example can be
+typeset this way:
+
+\begin{singlespace}
+\begin{example}
+\newcommand{\rd}{\mathrm{d}}
+\begin{displaymath}
+\iint_{D} \, \rd x \, \rd y
+\end{displaymath}
+\end{example}
+\end{singlespace}
+
+See the electronic document testmath.tex (distributed with
+\AmS-\LaTeX) or Chapter 8 of ``The LaTeX Companion''\footnote{
+available at \texttt{CTAN:/tex-archive/info/ch8.*}.} for further details.
+
+\section{Vertically Aligned Material}
+\label{sec:vert}
+
+To typeset \textbf{arrays}, use the \texttt{array}\index{array} environment. It works
+somewhat similar to the \texttt{tabular} environment. The \verb|\\| command is
+used to break the lines.
+
+\begin{singlespace}
+\begin{example}
+\begin{displaymath}
+\mathbf{X} =
+\left( \begin{array}{ccc}
+x_{11} & x_{12} & \ldots \\
+x_{21} & x_{22} & \ldots \\
+\vdots & \vdots & \ddots
+\end{array} \right)
+\end{displaymath}
+\end{example}
+\end{singlespace}
+
+The \texttt{array}\index{array} environment can also be used to typeset expressions which have one
+big delimiter by using a ``\verb|.|'' as an invisible right\index{commands!right@\verb+right .+} 
+delimiter:
+
+\begin{singlespace}
+\begin{example}
+\begin{displaymath}
+y = \left\{ \begin{array}{ll}
+ a & \textrm{if $d>c$}\\
+ b+x & \textrm{in the morning}\\
+ l & \textrm{all day long}
+  \end{array} \right.
+\end{displaymath}
+\end{example}
+\end{singlespace}
+
+
+For formulae running over several lines or for equation systems\index{equation systems},
+you can use the environments \texttt{eqnarray}\index{eqnarray}, and \verb|eqnarray*|
+instead of \texttt{equation}. In \texttt{eqnarray} each line gets an
+equation number. The \verb|eqnarray*| does not number anything.
+
+The \texttt{eqnarray} and the \verb|eqnarray*| environments work like
+a 3-column table of the form \verb|{rcl}|, where the middle column can
+be used for the equal sign or the not-equal sign. Or any other sign
+you see fit. The \verb|\\| command breaks the lines.
+
+\begin{singlespace}
+\begin{example}
+\begin{eqnarray}
+f(x) & = & \cos x     \\
+f'(x) & = & -\sin x   \\
+\int_{0}^{x} f(y)dy &
+ = & \sin x
+\end{eqnarray}
+\end{example}
+\end{singlespace}
+
+\noindent Notice that the space on either side of the 
+the equal signs is rather large. It can be reduced by setting
+\verb|\setlength\arraycolsep{2pt}|, as in the next example.
+
+\index{long equations} \textbf{Long equations} will not be
+automatically divided into neat bits.  The author has to specify
+where to break them and how much to indent. The following two methods
+are the most common ones used to achieve this.
+
+\begin{singlespace}
+\begin{example}
+{\setlength\arraycolsep{2pt}
+\begin{eqnarray}\notag
+\sin x & = & x -\frac{x^{3}}{3!}
+     +\frac{x^{5}}{5!}-{}
+                   \\\notag
+ & & {}-\frac{x^{7}}{7!}+{}\cdots
+\end{eqnarray}}
+\end{example}
+\end{singlespace}
+\pagebreak[1]
+
+\begin{singlespace}
+\begin{example}
+\begin{eqnarray}\notag
+\lefteqn{ \cos x = 1
+     -\frac{x^{2}}{2!} +{} }
+                   \\\notag
+ & & {}+\frac{x^{4}}{4!}
+     -\frac{x^{6}}{6!}+{}\cdots
+\end{eqnarray}
+\end{example}
+\end{singlespace}
+
+\enlargethispage{\baselineskip}
+
+\noindent The \ic{notag} command causes \LaTeX{} to not generate a number for
+this equation.
+
+It can be difficult to get vertically aligned equations to look right
+with these methods; the package amsmath\index{amsmath} provides a more
+powerful set of alternatives.
+
+\section{Math Font Size}
+
+\index{math font size} In math mode, \TeX{} selects the font size
+according to the context. Superscripts, for example, get typeset in a
+smaller font. If you want to typeset part of an equation in roman,
+don't use the \ic{textrm} command, because the font size switching
+mechanism will not work, as \verb|\textrm| temporarily escapes to text
+mode. Use \verb|\mathrm| instead to keep the size switching mechanism
+active. But pay attention, \ic{mathrm} will only work well on short
+items. Spaces are still not active and accented characters do not
+work.\footnote{The \AmS-\LaTeX{} package makes the textrm command
+  work with size changing.}
+
+\begin{singlespace}
+\begin{example}
+\begin{equation}
+2^{\textrm{nd}} \quad 
+2^{\mathrm{nd}}
+\end{equation}
+\end{example}
+\end{singlespace}
+
+Nevertheless, sometimes you need to tell \LaTeX{} the correct font
+size. In math mode, the font size is set with the four commands:
+\begin{center}
+{displaystyle}~($\displaystyle 123$),
+{textstyle}~($\textstyle 123$), 
+{scriptstyle}~($\scriptstyle 123$) and
+{scriptscriptstyle}~($\scriptscriptstyle 123$).
+\end{center}
+
+Changing styles also affects the way limits are displayed.
+
+\begin{singlespace}
+\begin{example}
+\begin{displaymath}
+\mathop{\mathrm{corr}}(X,Y)= 
+ \frac{\displaystyle 
+   \sum_{i=1}^n(x_i-\overline x)
+   (y_i-\overline y)} 
+  {\displaystyle\biggl[
+ \sum_{i=1}^n(x_i-\overline x)^2
+\sum_{i=1}^n(y_i-\overline y)^2
+\biggr]^{1/2}}
+\end{displaymath}    
+\end{example}
+\end{singlespace}
+% This is not a math accent, and no maths book would be set this way.
+% mathop gets the spacing right.
+
+\noindent This is one of those examples in which we need larger
+brackets than the standard \verb|\left[  \right]| provides.
+
+
+\section{Theorems, Laws, \ldots}
+
+When writing mathematical documents, you probably need a way to
+typeset ``Lemmas'', ``Definitions'', ``Axioms'' and similar
+structures. \LaTeX{} supports this with the command
+\begin{command}
+{newtheorem}\verb|{|\emph{name}\verb|}[|\emph{counter}\verb|]{|%
+         \emph{text}\verb|}[|\emph{section}\verb|]|
+\end{command}
+The \emph{name} argument, is a short keyword used to identify the
+``theorem''. With the \emph{text} argument, you define the actual name
+of the ``theorem'' which will be printed in the final document.
+
+The arguments in square brackets are optional. They are both used to
+specify the numbering used on the ``theorem''. With the \emph{counter}
+argument you can specify the \emph{name} of a previously declared
+``theorem''. The new ``theorem'' will then be numbered in the same
+sequence.  The \emph{section} argument allows you to specify the
+sectional unit within which you want your ``theorem'' to be numbered.
+
+After executing the {newtheorem} command in the preamble of your
+document, you can use the following command within the document.
+
+\begin{code}
+\verb|\begin{|\emph{name}\verb|}[|\emph{text}\verb|]|\\
+This is my interesting theorem\\
+\verb|\end{|\emph{name}\verb|}|     
+\end{code}
+
+This should be enough theory. The following examples will hopefully
+remove the final remains of doubt and make it clear that the
+\verb|\newtheorem| environment is way too complex to understand.
+
+\begin{singlespace}
+\begin{example}
+% definitions for the document
+% preamble
+\newtheorem{law}{Law}
+\newtheorem{jury}[law]{Jury}
+%in the document
+\begin{law} \label{law:box}
+Don't hide in the witness box
+\end{law}
+\begin{jury}[The Twelve]
+It could be you! So beware and
+see law~\ref{law:box}\end{jury}
+\begin{law}No, No, No\end{law}
+\end{example}
+\end{singlespace}
+
+The ``Jury'' theorem uses the same counter as the ``Law''
+theorem. Therefore it gets a number which is in sequence with
+the other ``Laws''. The argument in square brackets is used to specify 
+a title or something similar for the theorem.
+
+\begin{singlespace}
+\begin{example}
+\flushleft
+\newtheorem{mur}{Murphy}[section]
+\begin{mur}
+If there are two or more 
+ways to do something, and 
+one of those ways can result 
+in a catastrophe, then 
+someone will do it.\end{mur}
+\end{example}
+\end{singlespace}
+
+The ``Murphy'' theorem gets a number which is linked to the number of
+the current section. You could also use another unit, for example chapter or
+subsection.
+
+\section{Bold symbols}
+\index{bold symbols}
+
+It is quite difficult to get bold symbols in \LaTeX{}; this is 
+probably intentional as amateur typesetters tend to overuse them.
+The font change command \verb|\mathbf| gives bold letters, but these are
+roman (upright) whereas mathematical symbols are normally italic.
+There is a \ic{boldmath} command, but \emph{this can only be
+used outside mathematics mode}. It works for symbols too.
+
+\begin{singlespace}
+\begin{example}
+\begin{displaymath}
+\mu, M \qquad \mathbf{M} \qquad
+\mbox{\boldmath $\mu, M$}
+\end{displaymath}
+\end{example}
+\end{singlespace}
+
+\noindent
+Notice that the comma is bold too, which may not be what is required.
+
+The package \ip{amsbsy} (included by \ip{amsmath}) makes this much
+easier as it includes a \ic{boldsymbol} command.
+
+\ifx\boldsymbol\undefined\else
+\begin{singlespace}
+\begin{example}
+\begin{displaymath}
+\mu, M \qquad
+\boldsymbol{\mu}, \boldsymbol{M}
+\end{displaymath}
+\end{example}
+\end{singlespace}
+\fi
+
+\section{List of Mathematical Symbols}  \label{symbols}
+ 
+In the following tables, you find all the symbols normally accessible
+from \emph{math mode}.  
+
+%
+% Conditional Text in case the AMS Fonts are installed
+%
+\ifx\noAMS\relax To use the symbols listed in
+Tables~\ref{AMSD}--\ref{AMSNBR},\footnote{These tables were derived
+  from \texttt{symbols.tex} by David~Carlisle and subsequently changed
+extensively as suggested by Josef~Tkadlec.} the package
+\ip{amssymb} must be loaded in the preamble of the document and the
+AMS math fonts must be installed, on the system. If the AMS package and
+fonts are not installed, on your system, have a look at\\ 
+\texttt{CTAN:/tex-archive/macros/latex/required/amslatex}\fi
+ 
+\begin{table}[!ht]
+\caption{Math Mode Accents.}  \label{mathacc}
+\begin{symbols}{*4{cl}}
+\W{\hat}{a}     & \W{\check}{a} & \W{\tilde}{a} & \W{\acute}{a} \\
+\W{\grave}{a} & \W{\dot}{a} & \W{\ddot}{a}    & \W{\breve}{a} \\
+\W{\bar}{a} &\W{\vec}{a} &\W{\widehat}{A}&\W{\widetilde}{A}\\  
+\end{symbols}
+\end{table}
+ 
+\begin{table}[!ht]
+\caption{Lowercase Greek Letters.}
+\begin{symbols}{*4{cl}}
+ \X{\alpha}     & \X{\theta}     & \X{o}          & \X{\upsilon}  \\
+ \X{\beta}      & \X{\vartheta}  & \X{\pi}        & \X{\phi}      \\
+ \X{\gamma}     & \X{\iota}      & \X{\varpi}     & \X{\varphi}   \\
+ \X{\delta}     & \X{\kappa}     & \X{\rho}       & \X{\chi}      \\
+ \X{\epsilon}   & \X{\lambda}    & \X{\varrho}    & \X{\psi}      \\
+ \X{\varepsilon}& \X{\mu}        & \X{\sigma}     & \X{\omega}    \\
+ \X{\zeta}      & \X{\nu}        & \X{\varsigma}  & &             \\
+ \X{\eta}       & \X{\xi}        & \X{\tau} 
+\end{symbols}
+\end{table}
+
+\begin{table}[!ht]
+\caption{Uppercase Greek Letters.}
+\begin{symbols}{*4{cl}}
+ \X{\Gamma}     & \X{\Lambda}    & \X{\Sigma}     & \X{\Psi}      \\
+ \X{\Delta}     & \X{\Xi}        & \X{\Upsilon}   & \X{\Omega}    \\
+ \X{\Theta}     & \X{\Pi}        & \X{\Phi} 
+\end{symbols}
+\end{table}
+\clearpage 
+
+\begin{table}[!tbp]
+\caption{Binary Relations.}
+\bigskip
+You can produce corresponding negations by adding a \verb|\not| command
+as prefix to the following symbols.
+\begin{symbols}{*3{cl}}
+ \X{<}           & \X{>}           & \X{=}          \\
+ \X{\leq}or \verb|\le|   & \X{\geq}or \verb|\ge|   & \X{\equiv}     \\
+ \X{\ll}         & \X{\gg}         & \X{\doteq}     \\
+ \X{\prec}       & \X{\succ}       & \X{\sim}       \\
+ \X{\preceq}     & \X{\succeq}     & \X{\simeq}     \\
+ \X{\subset}     & \X{\supset}     & \X{\approx}    \\
+ \X{\subseteq}   & \X{\supseteq}   & \X{\cong}      \\
+ \X{\sqsubset}$^a$ & \X{\sqsupset}$^a$ & \X{\Join}$^a$    \\
+ \X{\sqsubseteq} & \X{\sqsupseteq} & \X{\bowtie}    \\
+ \X{\in}         & \X{\ni}, \verb|\owns|  & \X{\propto}    \\
+ \X{\vdash}      & \X{\dashv}      & \X{\models}    \\
+ \X{\mid}        & \X{\parallel}   & \X{\perp}      \\
+ \X{\smile}      & \X{\frown}      & \X{\asymp}     \\
+ \X{:}           & \X{\notin}      & \X{\neq}or \verb|\ne|
+\end{symbols}
+\centerline{\footnotesize $^a$Use the \texttt{latexsym} package to access this symbol}
+\end{table}
+
+\begin{table}[!tbp]
+\caption{Binary Operators.}
+\begin{symbols}{*3{cl}}
+ \X{+}              & \X{-}              & &                 \\
+ \X{\pm}            & \X{\mp}            & \X{\triangleleft} \\
+ \X{\cdot}          & \X{\div}           & \X{\triangleright}\\
+ \X{\times}         & \X{\setminus}      & \X{\star}         \\
+ \X{\cup}           & \X{\cap}           & \X{\ast}          \\
+ \X{\sqcup}         & \X{\sqcap}         & \X{\circ}         \\
+ \X{\vee}, \verb|\lor|     & \X{\wedge}, \verb|\land|  & \X{\bullet}       \\
+ \X{\oplus}         & \X{\ominus}        & \X{\diamond}      \\
+ \X{\odot}          & \X{\oslash}        & \X{\uplus}        \\
+ \X{\otimes}        & \X{\bigcirc}       & \X{\amalg}        \\
+ \X{\bigtriangleup} &\X{\bigtriangledown}& \X{\dagger}       \\
+ \X{\lhd}$^a$         & \X{\rhd}$^a$         & \X{\ddagger}      \\
+ \X{\unlhd}$^a$       & \X{\unrhd}$^a$       & \X{\wr}
+\end{symbols}
+ 
+\end{table}
+
+\begin{table}[!tbp]
+\caption{BIG Operators.}
+\begin{symbols}{*4{cl}}
+ \X{\sum}      & \X{\bigcup}   & \X{\bigvee}   & \X{\bigoplus}\\
+ \X{\prod}     & \X{\bigcap}   & \X{\bigwedge} &\X{\bigotimes}\\
+ \X{\coprod}   & \X{\bigsqcup} & &             & \X{\bigodot} \\
+ \X{\int}      & \X{\oint}     & &             & \X{\biguplus}
+\end{symbols}
+ 
+\end{table}
+
+
+\begin{table}[!tbp]
+\caption{Arrows.}
+\begin{symbols}{*3{cl}}
+ \X{\leftarrow}or \verb|\gets|& \X{\longleftarrow}     & \X{\uparrow}          \\
+ \X{\rightarrow}or \verb|\to|& \X{\longrightarrow}    & \X{\downarrow}        \\
+ \X{\leftrightarrow}    & \X{\longleftrightarrow}& \X{\updownarrow}      \\
+ \X{\Leftarrow}         & \X{\Longleftarrow}     & \X{\Uparrow}          \\
+ \X{\Rightarrow}        & \X{\Longrightarrow}    & \X{\Downarrow}        \\
+ \X{\Leftrightarrow}    & \X{\Longleftrightarrow}& \X{\Updownarrow}      \\
+ \X{\mapsto}            & \X{\longmapsto}        & \X{\nearrow}          \\
+ \X{\hookleftarrow}     & \X{\hookrightarrow}    & \X{\searrow}          \\
+ \X{\leftharpoonup}     & \X{\rightharpoonup}    & \X{\swarrow}          \\
+ \X{\leftharpoondown}   & \X{\rightharpoondown}  & \X{\nwarrow}          \\
+ \X{\rightleftharpoons} & \X{\iff}(bigger spaces)& \X{\leadsto}$^a$
+
+\end{symbols}
+\centerline{\footnotesize $^a$Use the \texttt{latexsym} package to access this symbol}
+\end{table}
+
+\begin{table}[!tbp]
+\caption{Delimiters.}\label{tab:delimiters}
+\begin{symbols}{*4{cl}}
+ \X{(}            & \X{)}            & \X{\uparrow} & \X{\Uparrow}    \\
+ \X{[}or \verb|\lbrack|   & \X{]}or \verb|\rbrack|  & \X{\downarrow}   & \X{\Downarrow}  \\
+ \X{\{}or \verb|\lbrace|  & \X{\}}or \verb|\rbrace|  & \X{\updownarrow} & \X{\Updownarrow}\\
+ \X{\langle}      & \X{\rangle}  & \X{|}or \verb|\vert| &\X{\|}or \verb|\Vert|\\
+ \X{\lfloor}      & \X{\rfloor}      & \X{\lceil}       & \X{\rceil}      \\
+ \X{/}            & \X{\backslash}   & &. (dual. empty)
+\end{symbols}
+\end{table}
+
+\begin{table}[!tbp]
+\caption{Large Delimiters.}
+\begin{symbols}{*4{cl}}
+ \Y{\lgroup}      & \Y{\rgroup}      & \Y{\lmoustache}  & \Y{\rmoustache} \\
+ \Y{\arrowvert}   & \Y{\Arrowvert}   & \Y{\bracevert} 
+\end{symbols}
+\end{table}
+
+
+\begin{table}[!tbp]
+\caption{Miscellaneous Symbols.}
+\begin{symbols}{*4{cl}}
+ \X{\dots}       & \X{\cdots}      & \X{\vdots}      & \X{\ddots}     \\
+ \X{\hbar}       & \X{\imath}      & \X{\jmath}      & \X{\ell}       \\
+ \X{\Re}         & \X{\Im}         & \X{\aleph}      & \X{\wp}        \\
+ \X{\forall}     & \X{\exists}     & \X{\mho}$^a$      & \X{\partial}   \\
+ \X{'}           & \X{\prime}      & \X{\emptyset}   & \X{\infty}     \\
+ \X{\nabla}      & \X{\triangle}   & \X{\Box}$^a$     & \X{\Diamond}$^a$ \\
+ \X{\bot}        & \X{\top}        & \X{\angle}      & \X{\surd}      \\
+\X{\diamondsuit} & \X{\heartsuit}  & \X{\clubsuit}   & \X{\spadesuit} \\
+ \X{\neg}or \verb|\lnot| & \X{\flat}       & \X{\natural}    & \X{\sharp}
+
+\end{symbols}
+\centerline{\footnotesize $^a$Use the \texttt{latexsym} package to access this symbol}
+\end{table}
+
+\begin{table}[!tbp]
+\caption{Non-Mathematical Symbols.}
+\bigskip
+These symbols can also be used in text mode.
+\begin{symbols}{*3{cl}}
+\SC{\dag} & \SC{\S} & \SC{\copyright}  \\
+\SC{\ddag} & \SC{\P} & \SC{\pounds}  \\
+\end{symbols}
+\end{table}
+
+%
+%
+% If the AMS Stuff is not available, we drop out right here :-)
+%
+\noAMS
+
+\begin{table}[!tbp]
+\caption{AMS Delimiters.}\label{AMSD}
+\bigskip
+\begin{symbols}{*4{cl}}
+\X{\ulcorner}&\X{\urcorner}&\X{\llcorner}&\X{\lrcorner}
+\end{symbols}
+\end{table}
+
+\begin{table}[!tbp]
+\caption{AMS Greek and Hebrew.}
+\begin{symbols}{*5{cl}}
+\X{\digamma}     &\X{\varkappa} & \X{\beth}& \X{\daleth}     &\X{\gimel}
+\end{symbols}
+\end{table}
+
+\begin{table}[!tbp]
+\caption{AMS Binary Relations.}
+\begin{symbols}{*3{cl}}
+ \X{\lessdot}           & \X{\gtrdot}            & \X{\doteqdot}or \verb|\Doteq| \\
+ \X{\leqslant}          & \X{\geqslant}          & \X{\risingdotseq}     \\
+ \X{\eqslantless}       & \X{\eqslantgtr}        & \X{\fallingdotseq}    \\
+ \X{\leqq}              & \X{\geqq}              & \X{\eqcirc}           \\
+ \X{\lll}or \verb|\llless|      & \X{\ggg}or \verb|\gggtr| & \X{\circeq}  \\
+ \X{\lesssim}           & \X{\gtrsim}            & \X{\triangleq}        \\
+ \X{\lessapprox}        & \X{\gtrapprox}         & \X{\bumpeq}           \\
+ \X{\lessgtr}           & \X{\gtrless}           & \X{\Bumpeq}           \\
+ \X{\lesseqgtr}         & \X{\gtreqless}         & \X{\thicksim}         \\
+ \X{\lesseqqgtr}        & \X{\gtreqqless}        & \X{\thickapprox}      \\
+ \X{\preccurlyeq}       & \X{\succcurlyeq}       & \X{\approxeq}
+ \end{symbols}
+ \end{table}
+ 
+ \begin{table}[!tbp]
+\caption{AMS Binary Relations Continued.}
+\begin{symbols}{*3{cl}}
+ \X{\curlyeqprec}       & \X{\curlyeqsucc}       & \X{\backsim}          \\
+ \X{\precsim}           & \X{\succsim}           & \X{\backsimeq}        \\
+ \X{\precapprox}        & \X{\succapprox}        & \X{\vDash}            \\
+ \X{\subseteqq}         & \X{\supseteqq}         & \X{\Vdash}            \\
+ \X{\Subset}            & \X{\Supset}            & \X{\Vvdash}           \\
+ \X{\sqsubset}          & \X{\sqsupset}          & \X{\backepsilon}      \\
+ \X{\therefore}         & \X{\because}           & \X{\varpropto}        \\
+ \X{\shortmid}          & \X{\shortparallel}     & \X{\between}          \\
+ \X{\smallsmile}        & \X{\smallfrown}        & \X{\pitchfork}        \\
+ \X{\vartriangleleft}   & \X{\vartriangleright}  & \X{\blacktriangleleft}\\
+ \X{\trianglelefteq}    & \X{\trianglerighteq}   &\X{\blacktriangleright}
+\end{symbols}
+\end{table}
+
+\begin{table}[!tbp]
+\caption{AMS Arrows.}
+\begin{symbols}{*3{cl}}
+ \X{\dashleftarrow}      & \X{\dashrightarrow}     & \X{\multimap}          \\
+ \X{\leftleftarrows}     & \X{\rightrightarrows}   & \X{\upuparrows}        \\
+ \X{\leftrightarrows}    & \X{\rightleftarrows}    & \X{\downdownarrows}    \\
+ \X{\Lleftarrow}         & \X{\Rrightarrow}        & \X{\upharpoonleft}     \\
+ \X{\twoheadleftarrow}   & \X{\twoheadrightarrow}  & \X{\upharpoonright}    \\
+ \X{\leftarrowtail}      & \X{\rightarrowtail}     & \X{\downharpoonleft}   \\
+ \X{\leftrightharpoons}  & \X{\rightleftharpoons}  & \X{\downharpoonright}  \\
+ \X{\Lsh}                & \X{\Rsh}                & \X{\rightsquigarrow}   \\
+ \X{\looparrowleft}      & \X{\looparrowright}     &\X{\leftrightsquigarrow}\\
+ \X{\curvearrowleft}     & \X{\curvearrowright}    & &                      \\
+ \X{\circlearrowleft}    & \X{\circlearrowright}   & &
+\end{symbols}
+\end{table}
+
+\begin{table}[!tbp]
+\caption{AMS Negated Binary Relations and Arrows.}\label{AMSNBR}
+\begin{symbols}{*3{cl}}
+ \X{\nless}           & \X{\ngtr}            & \X{\varsubsetneqq}  \\
+ \X{\lneq}            & \X{\gneq}            & \X{\varsupsetneqq}  \\[-0.5ex]
+ \X{\nleq}            & \X{\ngeq}            & \X{\nsubseteqq}     \\
+ \X{\nleqslant}       & \X{\ngeqslant}       & \X{\nsupseteqq}     \\[-0.5ex]
+ \X{\lneqq}           & \X{\gneqq}           & \X{\nmid}           \\
+ \X{\lvertneqq}       & \X{\gvertneqq}       & \X{\nparallel}      \\[-0.5ex]
+ \X{\nleqq}           & \X{\ngeqq}           & \X{\nshortmid}      \\
+ \X{\lnsim}           & \X{\gnsim}           & \X{\nshortparallel} \\[-0.5ex]
+ \X{\lnapprox}        & \X{\gnapprox}        & \X{\nsim}           \\
+ \X{\nprec}           & \X{\nsucc}           & \X{\ncong}          \\[-0.5ex]
+ \X{\npreceq}         & \X{\nsucceq}         & \X{\nvdash}         \\
+ \X{\precneqq}        & \X{\succneqq}        & \X{\nvDash}         \\[-0.5ex]
+ \X{\precnsim}        & \X{\succnsim}        & \X{\nVdash}         \\
+ \X{\precnapprox}     & \X{\succnapprox}     & \X{\nVDash}         \\[-0.5ex]
+ \X{\subsetneq}       & \X{\supsetneq}       & \X{\ntriangleleft}  \\
+ \X{\varsubsetneq}    & \X{\varsupsetneq}    & \X{\ntriangleright} \\[-0.5ex]
+ \X{\nsubseteq}       & \X{\nsupseteq}       & \X{\ntrianglelefteq}\\
+ \X{\subsetneqq}      & \X{\supsetneqq}      &\X{\ntrianglerighteq}\\[-0.5ex]
+ \X{\nleftarrow}      & \X{\nrightarrow}     & \X{\nleftrightarrow}\\
+ \X{\nLeftarrow}      & \X{\nRightarrow}     & \X{\nLeftrightarrow}
+\end{symbols}
+\end{table}
+
+\begin{table}[!tbp]
+\caption{AMS Binary Operators.}
+\begin{symbols}{*3{cl}}
+ \X{\dotplus}        & \X{\centerdot}      & \X{\intercal}      \\
+ \X{\ltimes}         & \X{\rtimes}         & \X{\divideontimes} \\
+ \X{\Cup}or \verb|\doublecup|& \X{\Cap}or \verb|\doublecap|& \X{\smallsetminus} \\
+ \X{\veebar}         & \X{\barwedge}       & \X{\doublebarwedge}\\
+ \X{\boxplus}        & \X{\boxminus}       & \X{\circleddash}   \\
+ \X{\boxtimes}       & \X{\boxdot}         & \X{\circledcirc}   \\
+ \X{\leftthreetimes} & \X{\rightthreetimes}& \X{\circledast}    \\
+ \X{\curlyvee}       & \X{\curlywedge}  
+\end{symbols}
+\end{table}
+
+\begin{table}[!tbp]
+\caption{AMS Miscellaneous.}
+\begin{symbols}{*3{cl}}
+ \X{\hbar}             & \X{\hslash}           & \X{\Bbbk}            \\
+ \X{\square}           & \X{\blacksquare}      & \X{\circledS}        \\
+ \X{\vartriangle}      & \X{\blacktriangle}    & \X{\complement}      \\
+ \X{\triangledown}     &\X{\blacktriangledown} & \X{\Game}            \\
+ \X{\lozenge}          & \X{\blacklozenge}     & \X{\bigstar}         \\
+ \X{\angle}            & \X{\measuredangle}    & \X{\sphericalangle}  \\
+ \X{\diagup}           & \X{\diagdown}         & \X{\backprime}       \\
+ \X{\nexists}          & \X{\Finv}             & \X{\varnothing}      \\
+ \X{\eth}              & \X{\mho}       
+\end{symbols}
+\end{table}
+
+
+
+\begin{table}[!tbp]
+\caption{Math Alphabets.}
+\begin{symbols}{@{}*3l@{}}
+Example& Command &Required package\\
+\hline
+\rule{0pt}{1.05em}$\mathrm{ABCdef}$
+        & \verb|\mathrm{ABCdef}|
+        &       \\
+$\mathit{ABCdef}$
+        & \verb|\mathit{ABCdef}|
+        &       \\
+$\mathnormal{ABCdef}$
+        & \verb|\mathnormal{ABCdef}|
+        &       \\
+$\mathcal{ABC}$
+        & \verb|\mathcal{ABC}|
+        &       \\
+\ifx\MathRSFS\undefined\else
+$\MathRSFS{ABC}$
+        &\verb|\mathcal{ABC}|
+        &\pai{mathrsfs}\\
+\fi
+\ifx\EuScript\undefined\else
+$\EuScript{ABC}$
+        & \verb|\mathcal{ABC}|
+        &\ip{eucal} with option: \index{mathcal}  \quad or\\
+        & \verb|\mathscr{ABC}|  
+        &\ip{eucal}  with option: mathscr\index{mathscr}\\
+$\mathfrak{ABCdef}$
+        & \verb|\mathfrak{ABCdef}|
+        &\ip{eufrak}                \\
+\fi
+$\mathbb{ABC}$
+        & \verb|\mathbb{ABC}|
+        &\ip{amsfonts} or \ip{amssymb}        \\
+\end{symbols}
+\end{table}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "lshort2e"
+%%% End: 
+
+

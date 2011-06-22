@@ -1,0 +1,276 @@
+%!TEX root = ../username.tex
+\chapter{In the beginning: Knuth said ``Let there be \TeX''}\label{text}
+Now that I've tried to convince you that \lt is going to be better than \msw for your IS, you're saying, ``So how do I use it?'' Well let's start with some basic things. First, how is a document structured in \LaTeX?
+
+A \emph{document} for \lt is all the stuff that comes between the \verb|\begin{document}| and \verb|\end{document}| tags. The\verb| username.tex| file has the \verb|\begin{document}| and \verb|\end{document}| tags. ``OK, but how do I get my chapters to print?'' You save the chapters in the \verb|chapters| folder and put an \verb|\include{chapters/chaptername}| command in \verb|username.tex| after the \verb|\begin{document}| and before the
+\verb|\end{document}| tag. \verb|username.tex| already has some examples of including chapters; you can just alter them to have your chapter names. I should also mention that the \% symbol is used for comments. The \verb|username.tex| file has a number of comments that are intended for you and try to explain what is happening. Oh, and if you need a \% symbol enter \verb+\%+.
+
+Now to write your first chapter. I would recommend saving this chapter (chapter1.tex) under a different name and making changes to the new copy. The most basic structural elements that you need to know are the paragraph, \ic{chapter}, \ic{section}, and \ic{subsection}. A new paragraph is obtained by putting a blank line in the source file.  The other commands are very easy to use. If I want to start a new section I enter \texttt{$\backslash$section[My new section]\{An example of making a new section and giving it a short name\}} (the part in square brackets is optional) and get
+
+\section[My new section]{An example of making a new section and giving it a short name}\label{sec:newsec}
+
+The \ic{chapter} and \ic{subsection} commands work in exactly the same manner. Each new chapter must have \texttt{$\backslash$chapter[short name]\{chapter name\}} as its first line.
+
+``Hey, wait a minute. What if I need to refer to that section? How can I do that?'' It's actually as simple as adding\verb+\label{labelname}+ at the end of the \ic{chapter} command like\texttt{$\backslash$section[My new section]\{An example of making a new section and giving it a short name\}$\backslash$label\{sec:newsec\}}. Now I can refer to Section \ref{sec:newsec} by typing \verb+\ref{sec:newsec}+. You can label just about anything and refer to the label to get an automatically generated number for the item. This means that you need to come up with a labeling scheme before you start writing and stick with it.
+
+Some other things you'll need to be able to do include italicizing and bolding text and creating lists. These are also easy to accomplish. For example I can use \ic{emph} or \ic{textit} to italicize text. To italicize homework I would enter \verb|\emph{homework}| or \verb|\textit{homework}| to produce \textit{homework}. To obtain \textbf{bold} text you would use the \ic{textbf} command. And what about lists?
+
+There are several kinds of lists\index{lists} (enumerated, itemized, and descriptive) and each has its own place and environment. An enumerated\index{lists!enumerated} list is good for outlining or ordered lists:
+
+\begin{singlespace}
+\begin{example}
+\begin{enumerate}
+\item First main idea
+\begin{enumerate}
+\item First subpoint
+\item\label{enum:1b} Second subpoint
+\end{enumerate}
+\item Second main idea
+\end{enumerate}
+\end{example}
+\end{singlespace}
+
+The itemized\index{lists!itemized} list is good for unordered lists or bullet points:
+
+\begin{singlespace}
+\begin{example}
+\begin{itemize}
+\item Idea
+\item Idea
+\item Idea
+\item Idea
+\end{itemize}
+\end{example}
+\end{singlespace}
+
+And the descriptive\index{lists!descriptive} list is good for definitions; however, \ip{amsthm} already has a definition environment, and you will most likely not need the description environment. In any event, here is an example:
+
+\begin{singlespace}
+\begin{example}
+\begin{description}
+\item[First item:] Idea
+\item[Second item:] Idea
+\item[Third item:] Idea
+\end{description}
+\end{example}
+\end{singlespace}
+
+Notice the use of brackets in the last example. The brackets are optional and the text in the brackets is used as the label for the item. You should also note that you can label an item for later reference see \ref{enum:1b}. There are several options for changing the format of the list environments and a package, \ip{paralist}, for customizing lists which are described in section 3.3 of \citet{mgbcr04}.
+
+\section{Theorems, definitions, examples, oh my!}
+The next thing you'll probably need to do is enter definitions, theorems, and examples. Below you will find some examples. On the left you will see the text typed into the document and on the right what it looks like when formatted. These examples are intended to give you a sense of what type of mathematical expressions \lt handles. You should look at Appendix~\ref{math} for a more complete discussion of entering mathematics. In the beginning you will not know all of the commands that you need to enter. Don't worry. Each of the suggested editors has a palette that shows you a picture of what you want and puts the correct commands into the document when you click the picture. As you look at these examples, keep it in mind that some of them use some user defined commands which can be found in \verb|styles/personal.tex|. Now lets look at Definition~\ref{def1} \ref{bdef1}, Theorem~\ref{introwatthm}, and equation~\ref{m.1diasumtwo}.
+
+\begin{singlespace}
+\begin{example}
+\begin{defn}[One of Ramanujan's
+ third order mock theta 
+ functions]\label{def1}
+ \begin{equation}\label{introf(q)} 
+ f(q)=1+\sum_{y=1}^{\infty}
+ \frac{q^{y^2}}{(1+q)^2(1+q^2)^2
+ \cdots (1+q^y)^2}.
+ \end{equation}\end{defn}
+\end{example}
+\end{singlespace}
+
+\begin{singlespace}
+\begin{example}
+\begin{thm}[Watson's 
+transformation of 
+$f(q)$]\label{introwatthm}
+\begin{equation}\label{introf}
+\qrfac{q}{\infty}
+\sum_{y=0}^{\infty} q^{y^2}
+ \qrfac[-2]{- q}{y}=1+
+ \sum_{y=1}^{\infty}
+ \frac{(-1)^{y}
+ 4q^{(3/2)y^2+
+ (1/2)y}}{(1+q^{y})}.
+ \end{equation}\end{thm}
+\end{example}
+\end{singlespace}
+
+This is a more complicated example which uses the \ic{substack} command to have multiple summation criteria.
+\begin{singlespace}
+\begin{example}
+\begin{align}\label{m.1diasumtwo}
+\left[NUM\right]_1^{(\fl)}(q;b;
+\bvec{x})=&\ q\sum\limits_{
+\substack{ 0\leq r,t 
+\leq\fl-1}}
+q^{r+t}\sum\limits_
+ {\substack{{\lambda
+ \vdash (r+t)}\\
+  \lambda/1^r\in V_t\\
+  \ell(\lambda)\leq \fl-1}}
+  \mathrm{s}_{(b,\lambda)}
+  (\bvec{x}).\end{align}
+\end{example}
+\end{singlespace}
+
+Another thing that one might need to do is create piecewise definitions. This can be accomplished by using the \verb|cases| \index{cases@\verb+cases+} environment. This example also uses the \ic{intertext} command to put text between displayed equations.
+\begin{singlespace}
+\begin{example}\begin{subequations}\label{2c1BP}
+\begin{alignat}{2}\label{2c1BPa} 
+A_{y_1}:=&\begin{cases}
+ 1 &\text{for $y_1=0$},\\
+\frac{-1)^{y_1}
+4q^{y_1}q^{\binom{y_1}{2}}}
+{\qrfac{q}{2y_1}(1+q^{y_1})}
+&\text{for $y_1>0$}\end{cases}\\
+\intertext{and} B_{y_1}:=&
+\qrfac[-1]{-q}{y_1}\qrfac[-1]
+{-q}{y_1}=\qrfac[-2]{-q}{y_1}
+&.\label{2c1BPb}\end{alignat}
+\end{subequations}
+\end{example}
+\end{singlespace}
+
+Finally, if you need to incorporate examples into your thesis you can do it using the example environment, as seen in Example~\ref{ex:ex}.
+\begin{singlespace}
+\begin{example}
+\begin{ex}[An example example]
+\label{ex:ex}
+This is an example of including an
+ example. Kind of silly isn't it.
+ \end{ex}
+\end{example}
+\end{singlespace}
+
+\section{Putting code in the main body of the thesis}
+There is one last textual item which Computer Science majors and probably some Mathematics majors will need to incorporate, pseudocode\index{pseudocode}. To do this I would suggest using the \ic{lstlisting} environment. Below is an example set up for the \ip{listings} package. You could put your modifications to this set up into the \texttt{personal.tex} file in the \texttt{styles} folder. Documentation on the \ip{listings} package can be found in the \texttt{doc} folder with the documentation for the other packages.
+\lstset{
+               language =Pascal, % pick a language style
+               emph={return,natural, numbers, integers, increasing},
+               emphstyle={\bfseries},% choose other keywords and a format
+               linewidth=.95\textwidth, breaklines=true, commentstyle=\textit,
+               stringstyle=\upshape, showspaces=false, numbers=left,
+               numberstyle=\tiny, basicstyle=\small, xleftmargin=30pt,
+               breakautoindent=true, captionpos=b
+               }
+{\small\begin{singlespace}
+\begin{verbatim}
+\lstset{
+        language =Pascal, % pick a language style
+        emph={return,natural, numbers, integers, increasing},
+        emphstyle={\bfseries},% choose other keywords and a format
+        linewidth=.95{\textwidth}, breaklines=true,commentstyle=\textit,
+        stringstyle=\upshape,showspaces=false,numbers=left,
+        numberstyle=\tiny,basicstyle=\small,xleftmargin=30pt,
+        breakautoindent=true,captionpos=b
+        }
+\end{verbatim}
+\end{singlespace}}
+
+The listing in Listing~\ref{largesteven} gives an algorithm for finding the largest even integer in a given list of $n$ integers. I have used the \texttt{mathescape}\index{listings!mathescape} option to be able to incorporate mathematics in the listing. The actual code put in the thesis is given first and the formatted output follows.
+
+{\small\begin{singlespace}
+\begin{verbatim}
+\begin{lstlisting}[mathescape, caption= Find the location 
+of the largest even integer in a list,label=largesteven]
+procedure $largestevenlocation$($a_1, a_2, \ldots, a_n$: integers)
+$k$:=0
+$largest$:=-$\infty$
+for $i$:=1 to $n$
+  if ($a_i$ is even and $a_i>largest$) then
+  begin
+    $k$:=$i$
+    $largest$:=$a_i$
+  end
+end
+return $k$
+\end{lstlisting}
+\end{verbatim}
+\end{singlespace}
+}
+\begin{singlespace}
+\begin{lstlisting}[mathescape, caption= Find the location
+ of the largest even integer in a list,label=largesteven]
+procedure $largestevenlocation$($a_1, a_2, \ldots, a_n$: integers)
+$k$:=0
+$largest$:=-$\infty$
+for $i$:=1 to $n$
+  if ($a_i$ is even and $a_i>largest$) then
+  begin
+    $k$:=$i$
+    $largest$:=$a_i$
+  end
+end
+return $k$
+\end{lstlisting}
+\end{singlespace}
+The code in Listing~\ref{quartsearch} is an improvement on Binary search. The algorithm reduces the size of the search by a factor of four at each iteration. It provides another example of using the \ic{lstlisting} environment.
+\begin{singlespace}\small
+\begin{verbatim}
+\begin{lstlisting}[mathescape,caption=Quartary search,
+label=quartsearch]
+procedure $quartarysearch$($x$: integer, $a_1, a_2,
+ \ldots, a_n$: increasing integers)
+$i$:=$1$
+$j$:=$n$
+while $i<j-2$
+begin
+  $l:=\lfloor(i+j)/4\rfloor$
+  $m:=\lfloor(i+j)/2\rfloor$
+  $u:=\lfloor3(i+j)/4\rfloor$
+  if $x>a_m$ then
+    if $x\leq a_u$ then
+    begin
+      $i:=m+1$
+      $j:=u$
+    end
+    else
+     $i:=u+1$
+  else if $x>a_l$ then
+    begin
+      $i:=l+1$
+      $j:=m$
+    end
+    else $j:=l$
+end
+if $x=a_i$ then $location:= i$
+else if $x=a_j$ then $location:= j$
+else if $x=a_{\lfloor(i+j)/2\rfloor}$ then
+ $location:= \lfloor(i+j)/2\rfloor$
+else $location:= 0$
+return $location$
+\end{lstlisting}
+\end{verbatim}
+\end{singlespace}
+\begin{singlespace}
+\begin{lstlisting}[mathescape,caption=Quartary search,label=quartsearch]
+procedure $quartarysearch$($x$: integer, $a_1, a_2, \ldots, a_n$: increasing integers)
+$i$:=$1$
+$j$:=$n$
+while $i<j-2$
+begin
+  $l:=\lfloor(i+j)/4\rfloor$
+  $m:=\lfloor(i+j)/2\rfloor$
+  $u:=\lfloor3(i+j)/4\rfloor$
+  if $x>a_m$ then
+    if $x\leq a_u$ then
+    begin
+      $i:=m+1$
+      $j:=u$
+    end
+    else
+     $i:=u+1$
+  else if $x>a_l$ then
+    begin
+      $i:=l+1$
+      $j:=m$
+    end
+    else $j:=l$
+end
+if $x=a_i$ then $location:= i$
+else if $x=a_j$ then $location:= j$
+else if $x=a_{\lfloor(i+j)/2\rfloor}$ then $location:= \lfloor(i+j)/2\rfloor$
+else $location:= 0$
+return $location$
+\end{lstlisting}
+\end{singlespace}
+
+\section{What is in \texttt{username.tex}}
+Before we move on let's talk a little bit about what is at the beginning of \verb|username.tex|. The file starts with 
+\verb|\documentclass{woosterthesis}|, which must be at the beginning of every IS. In the brackets are options for the woosterthesis class. The options are the same as for the \verb|book| class with some additional options  \verb|abstractonly|\index{woosterthesis options!abstractonly}, \verb|alltt|\index{woosterthesis options!alltt},  \verb|blacklinks|\index{woosterthesis options!blacklinks}, \verb|code|\index{woosterthesis options!code}, \verb|dropcaps|\index{woosterthesis options!dropcaps}, \verb|euler|\index{woosterthesis options!euler}, \verb|guass|\index{woosterthesis options!guass}, 
+\verb|index|\index{woosterthesis options!index}, \verb|kaukecopyright|\index{woosterthesis options!kaukecopyright}, \verb|palatino|\index{woosterthesis options!palatino}, \verb|picins|\index{woosterthesis options!picins}, \verb|verbatim|\index{woosterthesis options!verbatim}, and \verb|xetex|\index{woosterthesis options!xetex}. The \verb|kaukecopyright| option will put the arch symbol with the word mark on the copyright page. The \verb|blacklinks| option will make the hyperlinks in the PDF version of the thesis black and suitable for printing; normally the links are colored to provide visual clues to the reader.  The \verb|code| option will use \ip{listings} style to format program code examples.  The \verb|abstractonly| option will allow you to print just the Abstract. The \verb|palatino| option will use the \ip{pxfonts} package which uses the Palatino fonts. The \verb|picins| option will use the \ip{floatflt} package to allow text to wrap around images. \verb|index| will allow the \ip{makeidx} package to be loaded so that if you have index entries they will be added to an index (this reqires additional steps). \verb|dropcaps| loads the \ip{letterine} package for doing dropped capitals and \verb|alltt| loads the \ip{alltt} for using typewriter type in various ways. \verb|verbatim| allows one to set verbatim what is entered. \verb|euler| and \verb|guass| load the \ip{woofncychap} package with the named option which will change the look of chapter headings. Finally \verb|xetex| will allow you to use the \ifthenelse{\boolean{xetex}}{\XeTeX\ }{XeTeX} extension of \TeX{} for easy use of system fonts. Adding or deleting options from the comma separated list will change the appearance of the document and some options should only be used after consulting your advisor. Now let's move on to some other things that you'll need to deal with: figures, pictures, and tables.

@@ -1,0 +1,27 @@
+%%
+%% This is file `wooind.ist',
+%% created by Jon Breitenbucher.
+%%
+%% The original source files were:
+%%
+actual '@'
+%quote ''''
+level '!'
+preamble
+"\n \\begin{theindex} \n"
+postamble
+"\n\n \\end{theindex}\n"
+item_x1   "\\hfill \n \\subitem "
+item_x2   "\\hfill \n \\subsubitem "
+delim_0   "\\dotfill "
+delim_1   "\\dotfill "
+delim_2   "\\dotfill "
+% The next lines will produce some warnings when
+% running Makeindex as they try to cover two different
+% versions of the program:
+heading_prefix   "{\\bfseries\\hfill "
+heading_suffix   "\\hfill}\\nopagebreak\n\\vspace{\\baselineskip}"
+headings_flag       1
+%% 
+%%
+%% End of file `wooind.ist'.

@@ -1,0 +1,194 @@
+%%% Copyright  Jon Breitenbucher
+%%%             Department of Mathematics and Computer Science
+%%%             The College of Wooster
+%%%             Wooster, Ohio 44691
+%%%             E-mail jbreitenbuch@wooster.edu
+%%%
+%%% Note     Premission is granted to modify this file under
+%%%             the condition that it is saved using another
+%%%             file and package name.
+%%%
+%%% Last modified    March 26th 2004
+
+\NeedsTeXFormat{LaTeX2e}[1995/12/01]
+\ProvidesPackage{styles/woofncychap}
+             [2004/03/26 v1.0
+                 LaTeX package (Revised chapters) an alteration of fncychap by Jon Breitenbucher]
+
+%%%% DEFINITION OF Chapapp variables
+\newcommand{\CNV}{\huge\bfseries}
+\newcommand{\ChNameVar}[1]{\renewcommand{\CNV}{#1}}
+
+
+%%%% DEFINITION OF TheChapter variables
+\newcommand{\CNoV}{\huge\bfseries}
+\newcommand{\ChNumVar}[1]{\renewcommand{\CNoV}{#1}}
+
+\newif\ifUCN
+\UCNfalse
+\newif\ifLCN
+\LCNfalse
+\def\ChNameLowerCase{\LCNtrue\UCNfalse}
+\def\ChNameUpperCase{\UCNtrue\LCNfalse}
+\def\ChNameAsIs{\UCNfalse\LCNfalse}
+\newcommand{\FmN}[1]{%
+\ifUCN
+   {\MakeUppercase#1}\LCNfalse
+\else
+   \ifLCN
+      {\MakeLowercase#1}\UCNfalse
+   \else #1
+   \fi
+\fi}
+
+
+%%%% DEFINITION OF Title variables
+\newcommand{\CTV}{\Huge\bfseries}
+\newcommand{\ChTitleVar}[1]{\renewcommand{\CTV}{#1}}
+
+%%%% DEFINITION OF the basic rule width
+\newlength{\RW}
+\setlength{\RW}{1pt}
+\newcommand{\ChRuleWidth}[1]{\setlength{\RW}{#1}}
+
+\newif\ifUCT
+\UCTfalse
+\newif\ifLCT
+\LCTfalse
+\def\ChTitleLowerCase{\LCTtrue\UCTfalse}
+\def\ChTitleUpperCase{\UCTtrue\LCTfalse}
+\def\ChTitleAsIs{\UCTfalse\LCTfalse}
+\newcommand{\FmTi}[1]{%
+\ifUCT
+   {\MakeUppercase#1}\LCTfalse
+\else
+   \ifLCT
+      {\MakeLowercase#1}\UCTfalse
+   \else #1
+   \fi
+\fi}
+
+
+
+\newlength{\mylen}
+\newlength{\myhi}
+\newlength{\px}
+\newlength{\py}
+\newlength{\pyy}
+\newlength{\pxx}
+
+
+\def\mghrulefill#1{\leavevmode\leaders\hrule\@height #1\hfill\kern\z@}
+
+\newcommand{\DOCH}{%
+  \CNV\FmN{\@chapapp}\space \CNoV\thechapter
+  \par\nobreak
+  \vskip 10\p@
+  }
+\newcommand{\DOTI}[1]{%
+    \CTV\FmTi{#1}\par\nobreak
+    \vskip 40\p@
+    }
+
+%%%%%% Euler DEF
+
+\DeclareOption{Euler}{%
+
+  \ChNameVar{\small}
+	\ChNumVar{\fontsize{60}{62}\selectfont}
+  \ChTitleVar{\scshape\Large}
+  \ChRuleWidth{1.5pt}
+  \renewcommand{\DOCH}{%
+    \settowidth{\px}{\CNV\FmN{\@chapapp}}
+    \addtolength{\px}{2pt}
+    \settoheight{\py}{\CNV\FmN{\@chapapp}}
+    \addtolength{\py}{1pt}
+
+    \settowidth{\mylen}{\CNV\FmN{\@chapapp}\space\CNoV\thechapter}
+    \addtolength{\mylen}{1pt}
+    \settowidth{\pxx}{\CNoV\thechapter}
+    \addtolength{\pxx}{-1pt}
+
+    \settoheight{\pyy}{\CNoV\thechapter}
+    \addtolength{\pyy}{-2pt}
+    \setlength{\myhi}{\pyy}
+    \addtolength{\myhi}{-1\py}
+    \par
+    \parbox[b]{\textwidth}{%
+    \rule[\py]{\RW}{\myhi}%
+    \hskip -\RW%
+    \rule[\pyy]{\px}{\RW}%
+    \hskip -\px%
+    \raggedright%
+    \CNV\FmN{\@chapapp}\space\CNoV\thechapter%
+    \hskip1pt%
+    \mghrulefill{\RW}%
+    \rule{\RW}{\pyy}\par\nobreak%
+    \vskip -\baselineskip%
+    \vskip -\pyy%
+    \hskip \mylen%
+    \mghrulefill{\RW}\par\nobreak%
+    \vskip \pyy}%
+    \vskip 10\p@
+    }
+ 
+
+  \renewcommand{\DOTI}[1]{%
+    \raggedright
+    \CTV\FmTi{#1}\par\nobreak
+    \vskip 30\p@}
+ }
+
+
+%%%%%%% Gauss DEF
+
+
+\DeclareOption{Gauss}{%
+  \ChNameVar{\small}
+  \ChNumVar{\fontsize{40}{42}\selectfont}
+  \ChTitleVar{\scshape\Large}
+  \ChRuleWidth{1.5pt}
+  \newlength{\backskip}
+  \renewcommand{\DOCH}{%
+    \settoheight{\myhi}{\CTV\FmTi{Test}}
+  \setlength{\py}{\baselineskip}
+    \addtolength{\py}{\RW}
+    \addtolength{\py}{\myhi}
+    \setlength{\pyy}{\py}
+    \addtolength{\pyy}{-1\RW}
+     
+    \raggedright
+   \CNV\FmN{\@chapapp}\space\CNoV\thechapter
+    \hskip 3pt\mghrulefill{\RW}\rule[-1\pyy]{2\RW}{\py}\par\nobreak}
+
+  \renewcommand{\DOTI}[1]{%
+    \addtolength{\pyy}{-4pt}
+    \settoheight{\myhi}{\CTV\FmTi{#1}}
+    \addtolength{\myhi}{\py}
+    \addtolength{\myhi}{-1\RW}
+    \vskip -1\pyy
+    \rule{2\RW}{\myhi}\mghrulefill{\RW}\hskip 2pt
+    \raggedleft\CTV\FmTi{#1}\par\nobreak
+    \vskip 30\p@}
+  }
+
+\DeclareOption*{%
+  \PackageWarning{woofncychap}{unknown style option}
+  }
+
+\ProcessOptions* \relax
+
+\def\@makechapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedright \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      \DOCH
+    \fi
+    \interlinepenalty\@M
+    \DOTI{#1}
+	\noindent
+  }}
+
+\endinput
+
+

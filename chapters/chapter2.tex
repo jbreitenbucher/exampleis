@@ -1,0 +1,253 @@
+%!TEX root = ../username.tex
+\chapter{Working with figures and tables}\label{graphics}
+
+\section{Getting a simple figure in the document}
+In this chapter we want to talk about including figures and tables in the document. To insert a simple figure you can enter something like
+\begin{singlespace}\small
+\begin{verbatim}
+\begin{figure}[!ht]
+\begin{center}
+\woopic{picture3}{.8}
+\end{center}
+\caption{Our first
+ picture}\label{first}
+\end{figure}
+\end{verbatim}
+\end{singlespace}
+\vspace{-2 in}
+\begin{figure}[!ht]
+\rightline{
+\begin{minipage}{.5\textwidth}
+\begin{center}
+\woopic{picture3}{.8}
+\vspace{-.5 in}
+\caption{Our first picture}\label{first}
+\end{center}
+\end{minipage}
+}
+\end{figure}
+
+The \verb|!ht| tell \LaTeX{} to try and place the figure here no matter what or at the top of the next page. The \verb|\woopic| command takes the name of the picture as the first argument and the scaling factor as the second argument. The scaling factor must be between zero and one and the figure name must have \emph{no spaces}. Your figures can be in one of three formats: jpg, tif, or pdf. Captions are placed below the figure and your label should be placed after the caption.
+
+In the next example we are using the woosterthesis option \verb|picins|\index{woosterthesis options!picins} to typeset a picture inside a paragraph and have the text wrap around the figure. This option loads the \ip{wrapfig} package. One thing to note is that the figures placed in this manner do not float with the other figures and as such numbering could get out of sequence. Keep an eye out for such behavior.  This technique should be used sparingly in your thesis.
+
+\begin{singlespace}\small
+\begin{verbatim}
+\newcommand{\sample}{Some text that is reused over and over
+ again in the example. }
+\begin{wrapfigure}{r}{2.2in}
+\woopic{picture2}{.4}
+\caption{Conchoid.}
+\end{wrapfigure}
+\sample\sample\sample\sample
+\end{verbatim}
+\end{singlespace}
+
+\newcommand{\sample}{Some text that is reused over and over again in the example. }
+\begin{wrapfigure}{r}{2.2in}
+\woopic{picture2}{.4}
+\caption{Conchoid.}
+\end{wrapfigure}
+\sample\sample\sample\sample\sample\sample\sample\sample\sample
+
+
+\subsection{Minipages}
+
+You can also create minipages in your documents to accomplish more complicated formatting. For example you could try the following which produces Figure~\ref{Fig2}.
+\begin{singlespace}\small
+\begin{verbatim}
+\begin{minipage}[t][3 in][t]{1 in}
+This is a minipage which is 3 in tall and 1 in wide.
+ Top Text Text Text Text.\end{minipage}\hfill
+\begin{minipage}[t][3 in][c]{1 in}
+This is a minipage which is 3 in tall and 1 in wide.
+ Center Text Text Text Text.\end{minipage}\hfill
+\begin{minipage}[t][3 in][b]{1 in}
+This is a minipage which is 3 in tall and 1 in wide.
+ Bottom Text Text Text Text.\end{minipage}
+\end{verbatim}
+\end{singlespace}
+
+\begin{figure}[!htb]
+\begin{minipage}[t][3 in][t]{1 in}
+This is a minipage which is 3 in tall and 1 in wide. Top Text Text Text Text.
+\end{minipage}
+\hfill
+\begin{minipage}[t][3 in][c]{1 in} This is a minipage which is 3 in tall and 1 in wide. Center Text Text Text Text.
+\end{minipage}
+\hfill
+\begin{minipage}[t][3 in][b]{1 in}
+This is a minipage which is 3 in tall and 1 in wide. Bottom Text Text Text Text.
+\end{minipage}
+\caption{Minipage example}\label{Fig2}
+\end{figure}
+
+In the example above, the syntax \verb|\begin{minipage}[t][3 in][t]{1 in}| follows the convention \linebreak\verb|\begin{minipage}[minipageposition][height][textposition]{width}|\index{minipage}
+
+\subsubsection[Two pictures in one figure]{How to get more than one picture in the same figure}
+
+You can use minipages to put more than one picture in a figure. Here is an example of how to do this.
+\begin{singlespace}\small
+\begin{verbatim}
+\begin{minipage}[!ht]{6cm}
+\woopic{picture1}{.4}
+\par
+\caption[What goes in the List of Figures]{Left}
+\end{minipage}
+\hfill
+\begin{minipage}[!ht]{6cm}
+\woopic{picture2}{.4}
+\end{picture}\par
+\caption{Right}
+\end{minipage}
+\end{verbatim}
+\end{singlespace}
+\begin{figure}[!ht]
+\begin{minipage}[!ht]{6cm}
+\woopic{picture1}{.4}
+\par
+\caption[What goes in the List of Figures]{Left}
+\end{minipage}
+\hfill
+\begin{minipage}[!ht]{6cm}
+\woopic{picture2}{.4}
+\par
+\caption{Right}
+\end{minipage}
+\end{figure}
+
+You can also use the \ip{subfigure} package to do this.
+
+\begin{singlespace}\small
+\begin{verbatim}
+\begin{figure}[!ht]\centering
+\subfigure[What goes in the List][Large conchoid]
+{\woopic{picture1}{.4}\label{fig3:left}}
+\qquad
+\subfigure[What goes in the List][Small conchoid]
+{\woopic{picture2}{.4}\label{fig3:right}}
+\caption{Two pictures in one figure}\label{fig3}
+\end{figure}
+\end{verbatim}
+\end{singlespace}
+\begin{figure}[!ht]\centering
+\subfigure[What goes in the List][Large conchoid]
+{\woopic{picture1}{.4}\label{fig3:left}}
+\qquad
+\subfigure[What goes in the List][Small conchoid]
+{\woopic{picture2}{.4}\label{fig3:right}}
+\caption{Two pictures in one figure}\label{fig3}
+\end{figure}
+
+We should now be able to refer to either Figure~\ref{fig3}~\subref{fig3:left} or Figure~\ref{fig3}~\subref{fig3:right} using the labels we gave to the left and right images.
+
+The reader is referred to Chapters 8, 9, and 16 of \citet{kd03} or to Chapters 6 and 10 of \citet{mgbcr04} for a complete discussion of figures and graphics.
+
+\section{Tables}
+
+Tables are fairly easy to set up. Here is a simple table
+\begin{singlespace}\small
+\begin{verbatim}
+\begin{table}[!ht]
+\begin{center}
+\begin{tabular}{r l}
+  $\underline{\textnormal{District}}$ &  
+  $\underline{\textnormal{Population}}$\\
+   Applewood & 8280 \\
+   Boxwood & 4600  \\
+   Central & 5220
+   \end{tabular}\caption{Our first table}
+   \end{center}
+\end{table}
+\end{verbatim}
+\end{singlespace}
+\begin{table}[!ht]
+\begin{center}
+\begin{tabular}{r l}
+  $\underline{\textnormal{District}}$ &
+    $\underline{\textnormal{Population}}$\\
+   Applewood & 8280 \\
+   Boxwood & 4600  \\
+   Central & 5220
+   \end{tabular}\caption{Our first table}
+   \end{center}
+\end{table}
+
+In \verb|\begin{tabular}{r l}| the two ``r'' and ``l'' indicate that we have two columns with right and left aligned entries and no lines dividing cells or around the table. I can make the table look more like a spreadsheet by doing
+\begin{singlespace}\small
+\begin{verbatim}
+\begin{table}[!ht]
+\begin{center}
+\begin{tabular}{|r|l|}
+\hline
+  {\textnormal{District}} &  
+  {\textnormal{Population}}\\ \hline
+   Applewood & 8280 \\ \hline
+   Boxwood & 4600  \\ \hline
+   Central & 5220\\ \hline
+   \end{tabular}\caption{Our first table again}
+   \end{center}
+\end{table}
+\end{verbatim}
+\end{singlespace}
+\begin{table}[!ht]
+\begin{center}
+\begin{tabular}{|r|l|}
+\hline
+  {\textnormal{District}} &  
+  {\textnormal{Population}}\\ \hline
+   Applewood & 8280 \\ \hline
+   Boxwood & 4600  \\ \hline
+   Central & 5220\\ \hline
+   \end{tabular}\caption{Our first table again}
+   \end{center}
+\end{table}
+
+Here is a more complicated example of a table.
+\begin{singlespace}\small
+\begin{verbatim}
+\begin{table}[!ht]
+\centerline{
+\begin{tabular}{|l||r|r|r|r|} \hline
+\emph{Reprojection} & \multicolumn{3}{|c|}{\emph{Largest
+ Reduction of Curvature}}
+  & \emph{Average} \\ \cline{2-4}
+\emph{Method} & \emph{Original} & \emph{Reprojected} &
+ \emph{at} & 
+  \emph{Reduction} \\ 
+ & \emph{Curvature} & \emph{Curvature} &
+  \emph{Rotation} & \emph{of Curvature} \\ 
+  \hline \hline
+ZEEL & 0.0358 & 0.0245 &
+ $\degree{45}$ & 0.0050 \\ \hline
+ZEEL ext.\ & 0.0358 & 0.0245 &
+ $\degree{45}$ & 0.0059 \\ \hline
+Regridding & 0.0428 & 0.0166 &
+ $\degree{75}$ & 0.0159 \\ \hline
+Block & 0.0358 & 0.0103 &
+ $\degree{45}$ & 0.0163 \\ \hline
+\end{tabular}}
+\caption{Reduction of curvature by each
+ reprojection method\label{tbl:kreduce}}
+\end{table}
+\end{verbatim}
+\end{singlespace}
+\begin{table}[!ht]
+\centerline{
+\begin{tabular}{|l||r|r|r|r|} \hline
+\emph{Reprojection} & \multicolumn{3}{|c|}{\emph{Largest Reduction of Curvature}} 
+  & \emph{Average} \\ \cline{2-4}
+\emph{Method} & \emph{Original} & \emph{Reprojected} & \emph{at} & 
+  \emph{Reduction} \\ 
+ & \emph{Curvature} & \emph{Curvature} & \emph{Rotation} & \emph{of Curvature} \\ 
+  \hline \hline
+ZEEL & 0.0358 & 0.0245 & $\degree{45}$ & 0.0050 \\ \hline
+ZEEL ext.\ & 0.0358 & 0.0245 & $\degree{45}$ & 0.0059 \\ \hline
+Regridding & 0.0428 & 0.0166 & $\degree{75}$ & 0.0159 \\ \hline
+Block & 0.0358 & 0.0103 & $\degree{45}$ & 0.0163 \\ \hline
+\end{tabular}}
+\caption{Reduction of curvature by each reprojection method\label{tbl:kreduce}}
+\end{table}
+
+Please refer to Chapter 6 of \citet{kd03} for a complete discussion of tables and tabular environments.
+

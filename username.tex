@@ -1,0 +1,280 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%                                                       Example IS Template
+%
+%\documentclass{woosterthesis} must be at the beginning of every IS. Options are the same as
+%for the report class with some additional options, blacklinks, palatino, abstractonly, and
+%kaukecopyright. The kaukecopyright option will put the arch symbol with the word mark on the
+%copyright page. The woosterthesis class is based on the report class. One thing to note is that
+%the ``%'' symbol comments out all characters that follow it on the line.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% use this declaration for a draft  version of your IS
+%\documentclass[10pt,palatino,code,picins,kaukecopyright,openright,woolshort,dropcaps,verbatim,index,euler]{woosterthesis}
+\documentclass[10pt,code,picins,kaukecopyright,openright,woolshort,dropcaps,verbatim,euler,index,colophon,blacklinks,twoside]{woosterthesis}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% use this declaration for the print version of your IS
+%\documentclass[12pt,code,palatino,picins,blacklinks,kaukecopyright,openright]{woosterthesis} % probably what most students would use
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% use this declaration for the CD version of your IS
+%\documentclass[12pt,code,palatino,picins,kaukecopyright,openright]{woosterthesis}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%                                                    Load Packages
+%
+%   To load packages in addition to the ones that are loaded by default, please place your
+%   usepackage commands in the packages.tex file in the styles folder.
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{styles/packages}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%                                                Load Personal commands
+%                                                                    
+%There will be certain commands that you use frequently in the thesis. You can give these %commands new names which are easier for you to remember. You can also combine several %commands into a new command of your own. See The LaTeX Companion or Guide to LaTeX %for examples on defining your own commands. These are commands that I defined to cut %down on typing. You can enter your commands in the personal.tex file in the styles folder.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{styles/personal}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%                                             Load Theorem formatting information
+%
+%  If you need to define an new theorem style or want to see what theorem like environments 
+%  are available please look at the theorems.tex file in the styles folder.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{styles/theorems}
+
+\setcounter{secnumdepth}{5}% controls the numbering of sections
+\setcounter{tocdepth}{6}% controls the number of levels in the Contents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%This is where one enters the information about the thesis.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\title{Introduction to \LaTeX{} at Wooster}
+\thesistype{Example Independent Study Thesis} % you should make this Independent Study Thesis
+\author{Jon Breitenbucher}
+\presentdegrees{Ph.D.} % you should comment this line
+\degreetoobtain{Your degree}
+\presentschool{The College of Wooster}
+\academicprogram{Department of Your Department}
+\gradyear{2009}
+\advisor{Your advisor (Department)}
+%\secondadvisor{Second Advisor}
+%\reader{Reader}
+\copyrighted   
+%\copyrightdate{}                  
+\makeindex % comment this line if you do not have an index
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%This is where the commands for the document begin. All \LaTeX{} documents must have a %\begin{document} text .... \end{document} structure.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%The front matter includes acknowledgments, dedications, vitas, list of tables, list of figures,
+%copyright, abstract, title page, and contents.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\frontmatter
+\maketitle
+\ClearShipoutPicture
+\clearpage\thispagestyle{empty}\null\clearpage
+\disscopyright 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                                       
+%				                                            Abstract						
+%                                                                                       
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{abstract}
+Include a short summary of your thesis, including any pertinent results.  This section is \emph{not} optional for the Mathematics and Computer Science or Physics Department ISs, and the reader should be able to learn the meat of your thesis by reading this (short) section.
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                                       
+%				                                         Dedications					
+%                                                                                       
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\dedication{This work is dedicated to the future generations of Wooster students.}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                                       
+%				                                      Acknowledgments					
+%                                                                                       
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{acknowl}  
+I would like to acknowledge Prof. Lowell Boone in the Physics Department for his suggestions and code.
+\end{acknowl}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                                       
+%				   Vita					
+%                                                                                       
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{vita} 
+%You talk about yourself and how you got to where you are now. There is a structured form for the Vita that can be used if you want, but I don't encourage it.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%The list below is for a thesis that requires a more structured Vita such as a masters or Ph.D.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\begin{datelist}
+%\item[April 6, 1970]Born-Wooster, Ohio
+%\item[August 11, 1990]Chosen to present an undergraduate paper at the 75th meeting of the MAA, Columbus, Ohio
+%\item[August 1990--August 1991]President Wooster Student Chapter of the MAA, The College of Wooster, Wooster, Ohio
+%\item[August 1991--May 1992]Secretary Wooster Student Chapter of the MAA, The College of Wooster, Wooster, Ohio
+%\item[1992]\emph{Phi Beta Kappa} (on junior standing), The College of Wooster, Wooster, Ohio
+%\item[1992]Elizabeth Sidwell Wagner Prize in Mathematics, The College of Wooster
+%\item[1992]William H. Wilson Prize in Mathematics, The College of Wooster
+%\item[May 11, 1992]B.A., Mathematics, The College of Wooster
+%\item[1997]Finalist for Graduate Teaching Award, The Ohio State University, Columbus, Ohio
+%\item[June 21-25, 1998]Participant in the AMS-IMS-SIAM Summer Research Conferences: q-Series, Combinatorics, and Computer Algebra, Mt. Holyoke, Massachusetts
+%\item[October 1998--October 1999]Graduate student representative to The Ohio State University Department of Mathematics Graduate Studies Committee, Columbus, Ohio
+%\item[January 1999]q-series seminar address, The Ohio State University, Columbus, Ohio
+%\item[2000]Finalist for Departmental Teaching Award, The Ohio State University, Columbus, Ohio
+%\item[2000]Nominated for Graduate Teaching Award, The Ohio State University, Columbus, Ohio
+%\item[April 2000]Invited colloquium talk at The College of Wooster, Wooster, Ohio
+%\item[1992-- present]Graduate Teaching and Research Associate, The Ohio State University
+%\end{datelist}
+%
+%%%This is for any publications you might have.%%%%%
+
+\begin{publist}  
+\pubitem{\quad}
+\pubitem{\quad}
+\end{publist} 
+
+\begin{fieldsstudy} 
+    \majorfield{Major}
+	\minorfield{Minor}
+    \specialization{Area of IS research}
+    %\begin{studieslist}
+   %\studyitem{Abstract Algebra}{Hampton}
+   %\end{studieslist}
+  \end{fieldsstudy}
+\end{vita}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%We now create the contents page and if necessary the list of figures and list of tables.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Contents}
+
+\tableofcontents
+\listoffigures %Use if you have a list of figures.
+\listoftables%Use if you have a list of tables.
+\lstlistoflistings% Use if you are using the code option
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{chapters/preface} % most theses do not have a preface so this should be commented
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mainmatter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%                                                       Thesis Chapters
+%
+% This is where the main text of the thesis goes. I have written this template assuming that %each chapter is a separate file. You do not have to do this but it makes things easier to find %for editing. You can use the sample chapters to help you figure out how to type things into %your thesis. To include a chapter just use the \include{chaptername} command. Chapters are %included in the order listed.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{chapters/introduction}
+\include{chapters/chapter1}
+\include{chapters/chapter2}
+\include{chapters/chapter3}
+%\include{chapters/chapter4}
+%\include{chapters/chapter5}
+%\include{chapters/chapter6}
+%\include{chapters/chapter7}
+%\include{conclusion}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%This section starts the back matter. The back matter includes appendices, indicies, and the %bibliography
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\backmatter
+
+\include{appendices/math}
+\include{appendices/java}
+\include{appendices/cpp}
+\include{appendices/afterword}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%This section would be used if you are not using BibTeX. Look at Kopka and Daly for how to
+%format a bibliography manually as well as how to use BibTeX.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\begin{thebibliography}{99}
+%\bibitem{}
+%\bibitem{}
+%\end{thebibliography}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%We used BibTeX to generate a Bibliography. I would recommend this method. However, it is %not required.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand\bibname{References} % changes the name of the Bibliography
+
+\nocite{*} % This command forces all the bibliography references to be printed -- not just 
+           % those that were explicitly cited in the text.  If you comment this out, the bibliography
+           % will only include cited references.
+\bibliographystyle{woosterchicago} % please don't change this
+\bibliography{references} % load our Bibliography file
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%                                                                Index
+%
+%  Uncomment the lines below to include an index. To get an index you must put 
+%  \index{index text} after any words that you want to appear in the index.
+%  Subentries are entered as \index{index text!subentry text}. You must also run the
+%  makeindex program to generate the index files that LaTeX uses. The PCs are set to run
+%  makeindex automatically.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ifthenelse{\boolean{index}}{
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Index}
+\printindex}{}
+\ifthenelse{\boolean{colophon}}{
+\begin{colophon}
+This Independent Study was designed by Dr. Jon Breitenbucher.\newline
+It was edited and set into type in Wooster, Ohio,\newline
+using the \ifthenelse{\boolean{xetex}}{\XeTeX\ typesetting system designed by Jonathan Kew}{\LaTeX\ typesetting system designed by Leslie Lamport}\newline
+and based on the original \TeX\ system of Donald Knuth.\newline
+It was printed and bound by Office Services at The College of Wooster.
+
+The text face is Adobe Garamond Pro, designed by Robert Slimbach.\newline
+This is the Opentype version distributed by Adobe Systems\newline
+and purchased as part of the Adobe Type Classics for Learning.
+
+The paper is standard laser copier paper and not of archival quality.
+\end{colophon}}{}
+\clearpage\thispagestyle{empty}\null\clearpage
+\end{document}

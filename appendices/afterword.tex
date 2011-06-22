@@ -1,0 +1,38 @@
+%!TEX root = ../username.tex
+\chapter*{Afterword}\label{after}
+\addcontentsline{toc}{chapter}{Afterword}
+\markboth{Afterword}{Afterword}
+So how does a \lt session work? \lt loads the document class with any specified options and uses the information in the document class to decide on how the document will be formatted. At this point \lt loads any packages that the user has specified. Packages extend the basic \lt commands and formatting for special situations. \verb|woosterthesis| loads a number of packages by default and it is assumed you have these installed on your system. They are:
+\ip{ifpdf},
+\ip{textpos},
+\ip{geometry},
+\ip{amsthm},
+\ip{amssymb},
+\ip{amsmath},
+\ip{setspace},
+\ip{fancyhdr},
+\ip{graphicx},
+\ip{eso-pic},
+\ip{listings},
+\ip{natbib},
+\ip{makeidx},
+\ip{verbatim},
+\ip{lettrine},
+\ip{alltt},
+\ip{fontenc},
+\ip{pxfonts},
+\ip{floatflt},
+\ip{float},
+\ip{caption},
+\ip{subfigure},
+and \ip{ifthen}.
+The \texttt{woosterthesis} class assumes you are using pdfTeX (support for postscript based TeX has been dropped as of 2006/17/11). 
+
+The \texttt{hyperref} package will make your thesis a linked document. \texttt{amsthm} is for altering the Theorem environments. \texttt{amsmath} implements almost all of the mathematical symbols. \texttt{amssymb} adds the mathematical symbols not present in \texttt{amsmath}. \texttt{graphicx} and \texttt{eso-pic} are used to place graphics files in the thesis. \texttt{geometry} is used to set up the margins for the thesis. \texttt{setspace} is used to alter spacing by allowing a \texttt{singlespace}, \texttt{doublespace}, and \texttt{onehalfspace} environments. \texttt{natbib} formats references in parentheses with author and year.  Documentation is included for some of the packages in the \verb|doc| folder.
+
+These packages should all be installed with a full installation of TeXLive on OS X or XP. On OS X one can use the the MacTeX installer as i-Installer is no longer supported as of 2007/1/1. On XP/Vista one can use MikTeX to install all available packages which will install all of the above. By default the MikTeX install does a minimal installation. You will need to run the updater to make your MikTeX installation aware of all the new packages.
+
+There is also a new \TeX{} engine called \xt which allows one to use the native fonts on your system as text fonts in the document. More information can be found at the \href{http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=xetex}{\xt homepage}. If using \xt you will also need \ip{fontspec} and \ip{xltxtra} which should be installed with \xt.
+
+Once the packages are loaded, \lt begins to process the commands contained between the \texttt{document} tags. As it processes the commands, a number of auxiliary files are created. These files contain information needed for things like the Bibliography, Table of Contents, List of Figures, etc. We then process the file a second time to allow \lt to use its auxiliary files to fill in information. Some information may require three passes before it is displayed. Once \lt is done you are presented with a PDF of the output.
+
