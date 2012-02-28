@@ -1,34 +1,35 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2010.5.15)  14 MAR 2011 17:44
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.2.28)  28 FEB 2012 04:17
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
 **username.tex
 (./username.tex
-LaTeX2e <2009/09/24>
-Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
-yphenation, german-x-2009-06-19, ngerman-x-2009-06-19, ancientgreek, ibycus, ar
-abic, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danish, dutc
-h, esperanto, estonian, farsi, finnish, french, galician, german, ngerman, mono
-greek, greek, hungarian, icelandic, assamese, bengali, gujarati, hindi, kannada
-, malayalam, marathi, oriya, panjabi, tamil, telugu, indonesian, interlingua, i
-rish, italian, kurmanji, latin, latvian, lithuanian, mongolian, mongolianlmc, b
-okmal, nynorsk, polish, portuguese, romanian, russian, sanskrit, serbian, slova
-k, slovenian, spanish, swedish, turkish, turkmen, ukenglish, ukrainian, upperso
-rbian, welsh, loaded.
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman-x-2011-07-01, ngerman-x-2011-07-01, afrikaans, ancientgreek, ibycus, arabi
+c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
+h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
+h, french, galician, german, ngerman, swissgerman, monogreek, greek, hungarian,
+ icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, marathi, or
+iya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, kurmanji,
+ lao, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk, pol
+ish, portuguese, romanian, russian, sanskrit, serbian, serbianc, slovak, sloven
+ian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, welsh, loaded
+.
 (./woosterthesis.cls
 Document Class: woosterthesis 2006/11/03 v4.2.1 Wooster IS LaTeX document class
  by Dr. Jon Breitenbucher
-(/usr/local/texlive/2009/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2010/01/28 v2.1 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in pdf mode detected.
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
 (./ifxetex.sty
 Package: ifxetex 2009/01/23 v0.5 Provides ifxetex conditional
 )
-(/usr/local/texlive/2009/texmf-dist/tex/latex/textpos/textpos.sty
-Package: textpos 2009/05/28 v1.7f
+(/usr/local/texlive/2011/texmf-dist/tex/latex/textpos/textpos.sty
+Package: textpos 2010/09/30 v1.7g
 
-Package: `textpos' 1.7f <2009 May 28>
+Package: `textpos' 1.7g <2010 September 30>
 \TP@textbox=\box26
 \TPHorizModule=\dimen102
 \TPVertModule=\dimen103
@@ -38,8 +39,8 @@ Grid set 16 x 16 = 38.39343pt x 49.68562pt
 \TPboxrulesize=\dimen106
 \TP@tbargs=\toks14
 \TP@prevdepth=\dimen107
-) (/usr/local/texlive/2009/texmf-dist/tex/latex/amscls/amsthm.sty
-Package: amsthm 2004/08/06 v2.20
+) (/usr/local/texlive/2011/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2009/07/02 v2.20.1
 \thm@style=\toks15
 \thm@bodyfont=\toks16
 \thm@headfont=\toks17
@@ -50,10 +51,10 @@ Package: amsthm 2004/08/06 v2.20
 \thm@headsep=\skip43
 \dth@everypar=\toks20
 )
-(/usr/local/texlive/2009/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2009/06/22 v3.00
 
-(/usr/local/texlive/2009/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
 \@emptytoks=\toks21
 \symAMSa=\mathgroup4
@@ -61,24 +62,24 @@ Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
 ))
-(/usr/local/texlive/2009/texmf-dist/tex/latex/amsmath/amsmath.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2000/07/18 v2.13 AMS math features
 \@mathmargin=\skip44
 
 For additional information on amsmath, use the `?' option.
-(/usr/local/texlive/2009/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
 
-(/usr/local/texlive/2009/texmf-dist/tex/latex/amsmath/amsgen.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks22
 \ex@=\dimen108
 ))
-(/usr/local/texlive/2009/texmf-dist/tex/latex/amsmath/amsbsy.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen109
 )
-(/usr/local/texlive/2009/texmf-dist/tex/latex/amsmath/amsopn.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count79
@@ -119,11 +120,10 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
 )
-(/usr/local/texlive/2009/texmf-dist/tex/latex/setspace/setspace.sty
-Package: setspace 2000/12/01 6.7 Contributed and Supported LaTeX2e package
-
-Package: `setspace' 6.7 <2000/12/01>
-) (/usr/local/texlive/2009/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 \fancy@headwidth=\skip47
 \f@ncyO@elh=\skip48
 \f@ncyO@erh=\skip49
@@ -134,47 +134,48 @@ Package: `setspace' 6.7 <2000/12/01>
 \f@ncyO@olf=\skip54
 \f@ncyO@orf=\skip55
 )
-(/usr/local/texlive/2009/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2009/texmf-dist/tex/latex/graphics/keyval.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks27
 )
-(/usr/local/texlive/2009/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2009/texmf-dist/tex/latex/graphics/trig.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/local/texlive/2009/texmf-dist/tex/latex/latexconfig/graphics.cfg
-File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
+(/usr/local/texlive/2011/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/local/texlive/2009/texmf-dist/tex/latex/pdftex-def/pdftex.def
-File: pdftex.def 2010/02/14 v0.04n Graphics/color for pdfTeX
+(/usr/local/texlive/2011/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
+)
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
+)
 \Gread@gobject=\count91
 ))
 \Gin@req@height=\dimen117
 \Gin@req@width=\dimen118
 )
-(/usr/local/texlive/2009/texmf-dist/tex/latex/eso-pic/eso-pic.sty
-Package: eso-pic 2009/10/07 v2.0a eso-pic (RN)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2010/10/06 v2.0c eso-pic (RN)
 
-(/usr/local/texlive/2009/texmf-dist/tex/generic/oberdiek/atbegshi.sty
-Package: atbegshi 2010/03/25 v1.12 At begin shipout hook (HO)
-
-(/usr/local/texlive/2009/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/atbegshi.sty
+Package: atbegshi 2011/01/30 v1.15 At begin shipout hook (HO)
 )
-(/usr/local/texlive/2009/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2010/04/26 v1.7 LaTeX kernel commands for general use (HO)
-))
-(/usr/local/texlive/2009/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
-(/usr/local/texlive/2009/texmf-dist/tex/latex/latexconfig/color.cfg
+(/usr/local/texlive/2011/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -192,10 +193,10 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 (./woo10.clo
 File: woo10.clo 2004/02/16 v1.4f Standard LaTeX file (size option)
 )
-(/usr/local/texlive/2009/texmf-dist/tex/latex/geometry/geometry.sty
-Package: geometry 2010/03/13 v5.3 Page Geometry
+(/usr/local/texlive/2011/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
 
-(/usr/local/texlive/2009/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/ifvtex.sty
 Package: ifvtex 2010/03/01 v1.5 Switches for detecting VTeX and its modes (HO)
 Package ifvtex Info: VTeX not detected.
 )
@@ -225,7 +226,7 @@ Package ifvtex Info: VTeX not detected.
 \abovecaptionskip=\skip56
 \belowcaptionskip=\skip57
 
-(/usr/local/texlive/2009/texmf-dist/tex/latex/listings/listings.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count104
 \lst@gtempboxa=\box29
 \lst@token=\toks29
@@ -239,39 +240,39 @@ Package ifvtex Info: VTeX not detected.
 \lst@lineno=\count109
 \lst@maxwidth=\dimen130
 
-(/usr/local/texlive/2009/texmf-dist/tex/latex/listings/lstmisc.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 \c@lstnumber=\count110
 \lst@skipnumbers=\count111
 \lst@framebox=\box30
 )
-(/usr/local/texlive/2009/texmf-dist/tex/latex/listings/listings.cfg
+(/usr/local/texlive/2011/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2007/02/22 1.4 listings configuration
 ))
 Package: listings 2007/02/22 1.4 (Carsten Heinz)
 \bibindent=\dimen131
 
-(/usr/local/texlive/2009/texmf-dist/tex/latex/natbib/natbib.sty
-Package: natbib 2009/11/07 8.31a (PWD, AO)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip58
 \bibsep=\skip59
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count112
 
 Local config file natbib.cfg used
-(./natbib.cfg)) (/usr/local/texlive/2009/texmf-dist/tex/latex/base/ifthen.sty
+(./natbib.cfg)) (/usr/local/texlive/2011/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
-(/usr/local/texlive/2009/texmf-dist/tex/latex/base/makeidx.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/makeidx.sty
 Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
 )
-(/usr/local/texlive/2009/texmf-dist/tex/latex/tools/verbatim.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks30
 \verbatim@line=\toks31
 \verbatim@in@stream=\read1
 )
-(/usr/local/texlive/2009/texmf-dist/tex/latex/lettrine/lettrine.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/lettrine/lettrine.sty
 File: lettrine.sty 2007/08/08 v1.62 (Daniel Flipo)
 \c@DefaultLines=\count113
 \DefaultFindent=\dimen132
@@ -291,7 +292,7 @@ File: lettrine.sty 2007/08/08 v1.62 (Daniel Flipo)
 \LettrineWidth=\dimen143
 
 Loading lettrine.cfg
-(/usr/local/texlive/2009/texmf-dist/tex/latex/lettrine/lettrine.cfg))
+(/usr/local/texlive/2011/texmf-dist/tex/latex/lettrine/lettrine.cfg))
 (./styles/woofncychap.sty
 Package: styles/woofncychap 2004/03/26 v1.0 LaTeX package (Revised chapters) an
  alteration of fncychap by Jon Breitenbucher
@@ -305,7 +306,7 @@ Package: styles/woofncychap 2004/03/26 v1.0 LaTeX package (Revised chapters) an
 ) (./styles/woolshort.sty
 Package: styles/woolshort 
 
-(/usr/local/texlive/2009/texmf-dist/tex/latex/tools/calc.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count115
 \calc@Bcount=\count116
@@ -320,12 +321,12 @@ LaTeX Info: Redefining \addtolength on input line 77.
 )
 \symbbox=\box33
 
-(/usr/local/texlive/2009/texmf-dist/tex/latex/amsfonts/eucal.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/eucal.sty
 Package: eucal 2009/06/22 v3.00 Euler Script fonts
 LaTeX Font Info:    Overwriting math alphabet `\EuScript' in version `bold'
 (Font)                  U/eus/m/n --> U/eus/b/n on input line 33.
 )
-(/usr/local/texlive/2009/texmf-dist/tex/latex/amsfonts/eufrak.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/eufrak.sty
 
 Package eufrak Warning: The eufrak package is redundant if the amsfonts package
  is used on input line 36.
@@ -336,7 +337,7 @@ Package eufrak Warning: The eufrak package is redundant if the amsfonts package
 \savefboxrule=\skip70
 \savefboxsep=\skip71
 \outdent=\skip72
-) (/usr/local/texlive/2009/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+) (/usr/local/texlive/2011/texmf-dist/tex/latex/wrapfig/wrapfig.sty
 \wrapoverhang=\dimen146
 \WF@size=\dimen147
 \c@WF@wrappedlines=\count119
@@ -344,7 +345,7 @@ Package eufrak Warning: The eufrak package is redundant if the amsfonts package
 \WF@everypar=\toks32
 Package: wrapfig 2003/01/31  v 3.6
 )
-(/usr/local/texlive/2009/texmf-dist/tex/latex/float/float.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count120
 \float@exts=\toks33
@@ -352,11 +353,11 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks34
 \@floatcapt=\box36
 )
-(/usr/local/texlive/2009/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2010/01/09 v3.1m Customizing captions (AR)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2011/11/10 v3.2e Customizing captions (AR)
 
-(/usr/local/texlive/2009/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2010/01/14 v3.1m caption3 kernel (AR)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2011/11/01 v1.4a caption3 kernel (AR)
 \captionmargin=\dimen148
 \captionmargin@=\dimen149
 \captionwidth=\dimen150
@@ -364,7 +365,7 @@ Package: caption3 2010/01/14 v3.1m caption3 kernel (AR)
 \caption@parindent=\dimen152
 \caption@hangindent=\dimen153
 Package caption Info: Unknown document class (or package),
-(caption)             standard defaults will be used on input line 1084.
+(caption)             standard defaults will be used.
 )
 
 Package caption Warning: Unsupported document class (or package) detected,
@@ -382,7 +383,7 @@ aptionskip .
 Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: wrapfig package is loaded.
-) (/usr/local/texlive/2009/texmf-dist/tex/latex/subfigure/subfigure.sty
+) (/usr/local/texlive/2011/texmf-dist/tex/latex/subfigure/subfigure.sty
 Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfigtopskip=\skip73
 \subfigcapskip=\skip74
@@ -398,11 +399,11 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
-(/usr/local/texlive/2009/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/subfigure/subfigure.cfg)
 \subfig@top=\skip77
 \subfig@bottom=\skip78
 )
-(/usr/local/texlive/2009/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2010/01/10 v2.4 Micro-typography with pdfTeX (RS)
 \MT@toks=\toks35
 \MT@count=\count126
@@ -414,150 +415,136 @@ LaTeX Info: Redefining \textls on input line 1605.
 LaTeX Info: Redefining \textmicrotypecontext on input line 2156.
 Package microtype Info: Loading configuration file microtype.cfg.
 
-(/usr/local/texlive/2009/texmf-dist/tex/latex/microtype/microtype.cfg
+(/usr/local/texlive/2011/texmf-dist/tex/latex/microtype/microtype.cfg
 File: microtype.cfg 2010/01/10 v2.4 microtype main configuration file (RS)
 ))
-(/usr/local/texlive/2009/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2010/05/04 v6.81a Hypertext links for LaTeX
+(/usr/local/texlive/2011/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2012/02/06 v6.82o Hypertext links for LaTeX
 
-(/usr/local/texlive/2009/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2010/03/01 v1.9 Key value parser (HO)
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2011/04/23 v1.4 Bundle oberdiek, subset hyperref (HO)
 
-(/usr/local/texlive/2009/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2010/01/28 v1.3 Prefix for e-TeX command names (HO)
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2011/04/23 v1.4 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2011/04/23 v1.4 Subsetting bundle oberdiek (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2007/09/27 v1.1 Expandable integer calculations (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2011/02/16 v1.5 Prefix for e-TeX command names (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
-))
-(/usr/local/texlive/2009/texmf-dist/tex/generic/oberdiek/pdfescape.sty
-Package: pdfescape 2010/03/01 v1.9 Provides hex, PDF name and string conversion
-s (HO)
-
-(/usr/local/texlive/2009/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2010/04/01 v0.9 Utility functions of pdfTeX for LuaTeX (HO)
-
-
-(/usr/local/texlive/2009/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
+Package: kvsetkeys 2011/04/07 v1.13 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Defining keys (HO)
+Package: pdftexcmds 2011/04/22 v0.16 Utilities of pdfTeX for LuaTeX (HO)
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
-))
-(/usr/local/texlive/2009/texmf-dist/tex/latex/oberdiek/hycolor.sty
-Package: hycolor 2009/12/12 v1.6 Color options of hyperref/bookmark (HO)
-
-(/usr/local/texlive/2009/texmf-dist/tex/latex/oberdiek/xcolor-patch.sty
-Package: xcolor-patch 2009/12/12 xcolor patch
-))
-(/usr/local/texlive/2009/texmf-dist/tex/latex/oberdiek/letltxmacro.sty
-Package: letltxmacro 2008/06/24 v1.3 Let assignment for LaTeX macros (HO)
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2011/04/04 v1.12 Provides string conversions (HO)
+Package: bigintcalc 2011/01/30 v1.2 Expandable big integer calculations (HO)
+Package: bitset 2011/01/30 v1.1 Data type bit set (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provides unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2011/01/30 v1.0 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/04/23 v1.7 Hooks at very end of document (HO)
+Package hobsub Info: Skipping package `atbegshi' (already loaded).
+Package: refcount 2010/12/01 v3.2 Data extraction from references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options of hyperref/bookmark (HO)
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2010/12/23 v3.10 Keyval support for LaTeX options (HO)
 )
 \@linkdim=\dimen157
 \Hy@linkcounter=\count127
 \Hy@pagecounter=\count128
 
-(/usr/local/texlive/2009/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2010/05/04 v6.81a Hyperref: PDFDocEncoding definition (HO)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2012/02/06 v6.82o Hyperref: PDFDocEncoding definition (HO)
 )
-(/usr/local/texlive/2009/texmf-dist/tex/generic/oberdiek/intcalc.sty
-Package: intcalc 2007/09/27 v1.1 Expandable integer calculations (HO)
-)
-(/usr/local/texlive/2009/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+\Hy@SavedSpaceFactor=\count129
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-(/usr/local/texlive/2009/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2010/02/22 v3.7 Keyval support for LaTeX options (HO)
-)
-Package hyperref Info: Option `pdfusetitle' set `true' on input line 3558.
-Package hyperref Info: Option `bookmarks' set `true' on input line 3558.
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 3558.
-Package hyperref Info: Option `colorlinks' set `true' on input line 3558.
-Package hyperref Info: Option `plainpages' set `false' on input line 3558.
-Package hyperref Info: Option `linktocpage' set `true' on input line 3558.
-Package hyperref Info: Option `pdfpagelabels' set `true' on input line 3558.
-Package hyperref Info: Option `hyperindex' set `true' on input line 3558.
-Package hyperref Info: Option `breaklinks' set `true' on input line 3558.
+Package hyperref Info: Option `pdfusetitle' set `true' on input line 3925.
+Package hyperref Info: Option `bookmarks' set `true' on input line 3925.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 3925.
+Package hyperref Info: Option `colorlinks' set `true' on input line 3925.
+Package hyperref Info: Option `plainpages' set `false' on input line 3925.
+Package hyperref Info: Option `linktocpage' set `true' on input line 3925.
+Package hyperref Info: Option `pdfpagelabels' set `true' on input line 3925.
+Package hyperref Info: Option `hyperindex' set `true' on input line 3925.
+Package hyperref Info: Option `breaklinks' set `true' on input line 3925.
+Package hyperref Info: Hyper figures OFF on input line 4046.
+Package hyperref Info: Link nesting OFF on input line 4051.
+Package hyperref Info: Hyper index ON on input line 4054.
+Package hyperref Info: Plain pages OFF on input line 4061.
+Package hyperref Info: Backreferencing OFF on input line 4066.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4284.
+\c@Hy@tempcnt=\count130
 
-
-Package hyperref Warning: Option `pagecolor' is not available anymore.
-
-Package hyperref Info: Hyper figures OFF on input line 3639.
-Package hyperref Info: Link nesting OFF on input line 3644.
-Package hyperref Info: Hyper index ON on input line 3647.
-Package hyperref Info: Plain pages OFF on input line 3654.
-Package hyperref Info: Backreferencing OFF on input line 3659.
-Implicit mode ON; LaTeX internals redefined
-Package hyperref Info: Bookmarks ON on input line 3855.
-(/usr/local/texlive/2009/texmf-dist/tex/latex/url/url.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 4140.
-
-(/usr/local/texlive/2009/texmf-dist/tex/generic/oberdiek/bitset.sty
-Package: bitset 2007/09/28 v1.0 Data type bit set (HO)
-
-(/usr/local/texlive/2009/texmf-dist/tex/generic/oberdiek/bigintcalc.sty
-Package: bigintcalc 2007/11/11 v1.1 Expandable big integer calculations (HO)
-))
-\Fld@menulength=\count129
+LaTeX Info: Redefining \url on input line 4637.
+\Fld@menulength=\count131
 \Field@Width=\dimen158
 \Fld@charsize=\dimen159
-\Field@toks=\toks36
-Package hyperref Info: Hyper figures OFF on input line 5118.
-Package hyperref Info: Link nesting OFF on input line 5123.
-Package hyperref Info: Hyper index ON on input line 5126.
-Package hyperref Info: backreferencing OFF on input line 5133.
-Package hyperref Info: Link coloring ON on input line 5136.
-Package hyperref Info: Link coloring with OCG OFF on input line 5143.
-Package hyperref Info: PDF/A mode OFF on input line 5148.
-LaTeX Info: Redefining \ref on input line 5188.
-LaTeX Info: Redefining \pageref on input line 5192.
-\Hy@abspage=\count130
-\c@Item=\count131
-\c@Hfootnote=\count132
+Package hyperref Info: Hyper figures OFF on input line 5757.
+Package hyperref Info: Link nesting OFF on input line 5762.
+Package hyperref Info: Hyper index ON on input line 5765.
+Package hyperref Info: backreferencing OFF on input line 5772.
+Package hyperref Info: Link coloring ON on input line 5775.
+Package hyperref Info: Link coloring with OCG OFF on input line 5782.
+Package hyperref Info: PDF/A mode OFF on input line 5787.
+LaTeX Info: Redefining \ref on input line 5827.
+LaTeX Info: Redefining \pageref on input line 5831.
+\Hy@abspage=\count132
+\c@Item=\count133
+\c@Hfootnote=\count134
 )
-* hyperref using driver hpdftex *
-(/usr/local/texlive/2009/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2010/05/04 v6.81a Hyperref driver for pdfTeX
 
-(/usr/local/texlive/2009/texmf-dist/tex/latex/oberdiek/atveryend.sty
-Package: atveryend 2010/03/24 v1.5 Hooks at very end of document (HO)
-Package atveryend Info: \enddocument detected (standard).
-)
-\Fld@listcount=\count133
-\c@bookmark@seq@number=\count134
+Package hyperref Message: Driver: hpdftex.
 
-(/usr/local/texlive/2009/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
-Package: rerunfilecheck 2010/03/16 v1.6 Rerun checks for auxiliary files (HO)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2012/02/06 v6.82o Hyperref driver for pdfTeX
+\Fld@listcount=\count135
+\c@bookmark@seq@number=\count136
 
-(/usr/local/texlive/2009/texmf-dist/tex/generic/oberdiek/uniquecounter.sty
-Package: uniquecounter 2009/12/18 v1.1 Provides unlimited unique counter (HO)
-)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
-71.
+82.
 )
 \Hy@SectionHShift=\skip80
 )
 *** Warning: The hyperref package has been loaded. Loading any packages after t
 his could interfere with the hyperref package***
 ) (./styles/packages.tex) (./styles/personal.tex
-\c@unnumft=\count135
+\c@unnumft=\count137
 ) (./styles/theorems.tex
-\c@thm=\count136
-\c@cor=\count137
-\c@lem=\count138
-\c@prop=\count139
-\c@defn=\count140
-\c@rem=\count141
-\c@ex=\count142
-\c@note=\count143
-\c@nts=\count144
-\c@terminology=\count145
-\c@bdefn=\count146
+\c@thm=\count138
+\c@cor=\count139
+\c@lem=\count140
+\c@prop=\count141
+\c@defn=\count142
+\c@rem=\count143
+\c@ex=\count144
+\c@note=\count145
+\c@nts=\count146
+\c@terminology=\count147
+\c@bdefn=\count148
 \fmbox=\box37
 )
 \@indexfile=\write4
@@ -586,19 +573,33 @@ LaTeX Font Info:    ... okay on input line 86.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 86.
 LaTeX Font Info:    ... okay on input line 86.
 
-(/usr/local/texlive/2009/texmf-dist/tex/context/base/supp-pdf.mkii
+(/usr/local/texlive/2011/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count147
+\scratchcounter=\count149
 \scratchdimen=\dimen160
 \scratchbox=\box38
-\nofMPsegments=\count148
-\nofMParguments=\count149
-\everyMPshowfont=\toks37
-\MPscratchCnt=\count150
+\nofMPsegments=\count150
+\nofMParguments=\count151
+\everyMPshowfont=\toks36
+\MPscratchCnt=\count152
 \MPscratchDim=\dimen161
-\MPnumerator=\count151
-\everyMPtoPDFconversion=\toks38
+\MPnumerator=\count153
+\makeMPintoPDFobject=\count154
+\everyMPtoPDFconversion=\toks37
+) (/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Managing graphics extensions (HO)
 )
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.jpg,.tif,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 \AtBeginShipoutBox=\box39
 
 *geometry* driver: auto-detecting
@@ -606,8 +607,9 @@ LaTeX Font Info:    ... okay on input line 86.
 *geometry* verbose mode - [ preamble ] result:
 * driver: pdftex
 * paper: letterpaper
-* layout: letterpaper
-* switch(es): twoside 
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
 * h-part:(L,W,R)=(108.405pt, 433.62001pt, 72.26999pt)
 * v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
 * \paperwidth=614.295pt
@@ -619,6 +621,7 @@ LaTeX Font Info:    ... okay on input line 86.
 * \topmargin=-30.06749pt
 * \headheight=12.0pt
 * \headsep=18.06749pt
+* \topskip=10.0pt
 * \footskip=25.29494pt
 * \marginparwidth=43.36243pt
 * \marginparsep=7.0pt
@@ -631,9 +634,9 @@ LaTeX Font Info:    ... okay on input line 86.
 * \@twosidetrue
 * \@mparswitchtrue
 * \@reversemarginfalse
-* (1in=72.27pt, 1cm=28.453pt)
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count152
+\c@lstlisting=\count155
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: subfigure package is loaded.
@@ -649,7 +652,7 @@ Package microtype Info: No tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
 Package microtype Info: ... Loading configuration file mt-cmr.cfg.
-(/usr/local/texlive/2009/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+(/usr/local/texlive/2011/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2009/11/09 v2.0 microtype config. file: Computer Modern Roman 
 (RS)
 )
@@ -659,16 +662,13 @@ Package microtype Info: ... : First loading protrusion list `cmr-default'.
 Package microtype Info: ... Applying non-selected expansion (list `default').
 Package hyperref Info: Link coloring ON on input line 86.
 
-(/usr/local/texlive/2009/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 
-(/usr/local/texlive/2009/texmf-dist/tex/latex/oberdiek/refcount.sty
-Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-(/usr/local/texlive/2009/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
-Package: gettitlestring 2009/12/18 v1.3 Cleanup title references (HO)
-)
-\c@section@level=\count153
+\c@section@level=\count156
 )
 LaTeX Info: Redefining \ref on input line 86.
 LaTeX Info: Redefining \pageref on input line 86.
@@ -728,12 +728,12 @@ Package microtype Info: ... No protrusion.
 Package microtype Info: ... No expansion.
 LaTeX Font Info:    Try loading font information for U+msa on input line 95.
 
-(/usr/local/texlive/2009/texmf-dist/tex/latex/amsfonts/umsa.fd
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
 Package microtype Info: ... Loading configuration file mt-msa.cfg.
 
-(/usr/local/texlive/2009/texmf-dist/tex/latex/microtype/mt-msa.cfg
+(/usr/local/texlive/2011/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 Package microtype Info: Setting up font `U/msa/m/n/14.4' on input line 95.
@@ -747,12 +747,12 @@ Package microtype Info: ... No protrusion.
 Package microtype Info: ... No expansion.
 LaTeX Font Info:    Try loading font information for U+msb on input line 95.
 
-(/usr/local/texlive/2009/texmf-dist/tex/latex/amsfonts/umsb.fd
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
 Package microtype Info: ... Loading configuration file mt-msb.cfg.
 
-(/usr/local/texlive/2009/texmf-dist/tex/latex/microtype/mt-msb.cfg
+(/usr/local/texlive/2011/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 Package microtype Info: Setting up font `U/msb/m/n/14.4' on input line 95.
@@ -773,24 +773,29 @@ Overfull \hbox (3.22597pt too wide) in paragraph at lines 95--95
   [] 
  []
 
-<kauke_arch_gray.pdf, id=151, 202.3556pt x 289.08pt>
+<kauke_arch_gray.pdf, id=152, 202.3556pt x 289.08pt>
 File: kauke_arch_gray.pdf Graphic file (type pdf)
  <use kauke_arch_gray.pdf>
+Package pdftex.def Info: kauke_arch_gray.pdf used on input line 95.
+(pdftex.def)             Requested size: 556.50735pt x 795.01213pt.
+
 [1
 
 
 
-{/usr/local/texlive/2009/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/
+{/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/
 jonb/Library/texmf/tex/latex/wooster/kauke_arch_gray.pdf>] [2
 
 ]
-<kauke_wordmark.pdf, id=191, 320.06438pt x 398.97574pt>
+<kauke_wordmark.pdf, id=192, 320.06438pt x 398.97574pt>
 File: kauke_wordmark.pdf Graphic file (type pdf)
 
 <use kauke_wordmark.pdf>
+Package pdftex.def Info: kauke_wordmark.pdf used on input line 97.
+(pdftex.def)             Requested size: 128.02347pt x 159.58746pt.
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 97.
 
-(/usr/local/texlive/2009/texmf-dist/tex/latex/base/omscmr.fd
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
@@ -1019,7 +1024,7 @@ File: username.exa  (verbatim)
 File: username.exa  (verbatim)
 
 (./username.exa)
-(/usr/local/texlive/2009/texmf-dist/tex/latex/listings/lstlang1.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 ) [6]
 Package microtype Info: Setting up font `OT1/cmr/bx/n/9' on input line 189.
@@ -1088,14 +1093,19 @@ Package microtype Info: ... Applying non-selected expansion (list `default').
 
 ]
 CHAPTER 3.
-<./figures/picture3.pdf, id=547, 144.54pt x 144.54pt>
+<./figures/picture3.pdf, id=552, 144.54pt x 144.54pt>
 File: ./figures/picture3.pdf Graphic file (type pdf)
 
-<use ./figures/picture3.pdf> [11 <./figures/picture3.pdf>]
-<./figures/picture2.pdf, id=590, 352.31625pt x 273.02pt>
+<use ./figures/picture3.pdf>
+Package pdftex.def Info: ./figures/picture3.pdf used on input line 27.
+(pdftex.def)             Requested size: 115.63214pt x 115.63214pt.
+ [11 <./figures/picture3.pdf>]
+<./figures/picture2.pdf, id=595, 352.31625pt x 273.02pt>
 File: ./figures/picture2.pdf Graphic file (type pdf)
 
 <use ./figures/picture2.pdf>
+Package pdftex.def Info: ./figures/picture2.pdf used on input line 48.
+(pdftex.def)             Requested size: 140.924pt x 109.20605pt.
 Package microtype Info: Setting up font `OT1/cmr/m/sc/12' on input line 54.
 Package microtype Info: ... Loading protrusion list `cmr-sc-OT1'.
 Package microtype Info: ... : First loading protrusion list `cmr-OT1'.
@@ -1112,16 +1122,26 @@ Underfull \hbox (badness 1087) in paragraph at lines 80--81
  []
 
 [12 <./figures/picture2.pdf>]
-<./figures/picture1.pdf, id=608, 349.305pt x 399.4925pt>
+<./figures/picture1.pdf, id=615, 349.305pt x 399.4925pt>
 File: ./figures/picture1.pdf Graphic file (type pdf)
 
 <use ./figures/picture1.pdf>
+Package pdftex.def Info: ./figures/picture1.pdf used on input line 107.
+(pdftex.def)             Requested size: 139.71951pt x 159.79416pt.
 File: ./figures/picture2.pdf Graphic file (type pdf)
- <use ./figures/picture2.pdf> [13 <./figures/picture1.pdf>]
+ <use ./figures/picture2.pdf>
+Package pdftex.def Info: ./figures/picture2.pdf used on input line 113.
+(pdftex.def)             Requested size: 140.924pt x 109.20605pt.
+ [13 <./figures/picture1.pdf>]
 File: ./figures/picture1.pdf Graphic file (type pdf)
  <use ./figures/picture1.pdf>
+Package pdftex.def Info: ./figures/picture1.pdf used on input line 135.
+(pdftex.def)             Requested size: 139.71951pt x 159.79416pt.
 File: ./figures/picture2.pdf Graphic file (type pdf)
- <use ./figures/picture2.pdf> [14]
+ <use ./figures/picture2.pdf>
+Package pdftex.def Info: ./figures/picture2.pdf used on input line 138.
+(pdftex.def)             Requested size: 140.924pt x 109.20605pt.
+ [14]
 [15]) [16]
 \openout2 = `chapters/chapter3.aux'.
 
@@ -1305,7 +1325,7 @@ Package microtype Info: ... Applying non-selected expansion (list `default').
 
 File: username.exa  (verbatim)
  (./username.exa
-\c@law=\count154
+\c@law=\count157
 )
 Underfull \vbox (badness 3088) has occurred while \output is active []
 
@@ -1315,7 +1335,7 @@ Underfull \vbox (badness 3088) has occurred while \output is active []
 File: username.exa  (verbatim)
 
 (./username.exa
-\c@mur=\count155
+\c@mur=\count158
 )
 \openout3 = `username.exa'.
 
@@ -1357,12 +1377,12 @@ Package microtype Info: ... Loading protrusion list `cmr-it-OT1'.
 Package microtype Info: ... : First loading protrusion list `cmr-it'.
 Package microtype Info: ... Applying non-selected expansion (list `default').
 LaTeX Font Info:    Try loading font information for U+eus on input line 1027.
- (/usr/local/texlive/2009/texmf-dist/tex/latex/amsfonts/ueus.fd
+ (/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/ueus.fd
 File: ueus.fd 2009/06/22 v3.00 Euler Script
 )
 Package microtype Info: ... Loading configuration file mt-eus.cfg.
 
-(/usr/local/texlive/2009/texmf-dist/tex/latex/microtype/mt-eus.cfg
+(/usr/local/texlive/2011/texmf-dist/tex/latex/microtype/mt-eus.cfg
 File: mt-eus.cfg 2006/07/28 v1.2 microtype config. file: AMS Euler Script (RS)
 )
 Package microtype Info: Setting up font `U/eus/m/n/10' on input line 1027.
@@ -1376,12 +1396,12 @@ Package microtype Info: ... No protrusion.
 Package microtype Info: ... No expansion.
 LaTeX Font Info:    Try loading font information for U+euf on input line 1032.
 
-(/usr/local/texlive/2009/texmf-dist/tex/latex/amsfonts/ueuf.fd
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2009/06/22 v3.00 Euler Fraktur
 )
 Package microtype Info: ... Loading configuration file mt-euf.cfg.
 
-(/usr/local/texlive/2009/texmf-dist/tex/latex/microtype/mt-euf.cfg
+(/usr/local/texlive/2011/texmf-dist/tex/latex/microtype/mt-euf.cfg
 File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
 
 )
@@ -1400,7 +1420,7 @@ Package microtype Info: ... No expansion.
 
  (./appendices/java.tex
 APPENDIX B.
-(/usr/local/texlive/2009/texmf-dist/tex/latex/listings/lstlang1.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
 (./source/Clock.java
@@ -1415,16 +1435,16 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
 
  (./appendices/cpp.tex
 APPENDIX C.
-(/usr/local/texlive/2009/texmf-dist/tex/latex/listings/lstlang1.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
-(/usr/local/texlive/2009/texmf-dist/tex/latex/listings/lstlang1.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
-(/usr/local/texlive/2009/texmf-dist/tex/latex/listings/lstlang1.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
-(/usr/local/texlive/2009/texmf-dist/tex/latex/listings/lstmisc.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 )
 (./source/Motion.cpp
@@ -1446,7 +1466,7 @@ Package microtype Info: ... No protrusion.
 Package microtype Info: ... No expansion.
 LaTeX Font Info:    Try loading font information for OML+cmr on input line 6.
 
-(/usr/local/texlive/2009/texmf-dist/tex/latex/base/omlcmr.fd
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <9> not available
@@ -1492,6 +1512,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 280.
 ) (./chapters/chapter2.aux) (./chapters/chapter3.aux) (./appendices/math.aux)
 (./appendices/java.aux) (./appendices/cpp.aux) (./appendices/afterword.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 280.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 280.
 Package rerunfilecheck Info: File `username.out' has not changed.
 (rerunfilecheck)             Checksum: 3F00673E2B127AECDF523A37B7970E5A;2238.
 
@@ -1507,57 +1528,58 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 13206 strings out of 493773
- 192446 string characters out of 3145346
- 559289 words of memory out of 3000000
- 15255 multiletter control sequences out of 15000+200000
+ 13646 strings out of 493629
+ 198596 string characters out of 3143323
+ 568584 words of memory out of 3000000
+ 15736 multiletter control sequences out of 15000+200000
  26757 words of font info for 218 fonts, out of 3000000 for 9000
- 714 hyphenation exceptions out of 8191
- 44i,23n,69p,1960b,1768s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 831 hyphenation exceptions out of 8191
+ 44i,23n,69p,1960b,1775s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{page.53} has been referenced but does not exist, 
 replaced by a fixed one
 
-</usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
-/usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></u
-sr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr
-/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr
-/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/
-local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></u
-sr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
-r/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/
-local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/lo
-cal/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/loca
-l/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/
-texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/lo
-cal/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
-l/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/
-texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/tex
-live/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texliv
-e/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2
-009/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2009
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2009/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsltt10.pfb></usr/local/texlive/2009
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2009/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2009/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2009/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2009/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2009/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmtcsc10.pfb></usr/local/texlive/2009/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2009/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive/2009/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2009/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2009/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2009/texmf-dist/font
-s/type1/public/amsfonts/cm/cmu10.pfb></usr/local/texlive/2009/texmf-dist/fonts/
-type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2009/texmf-dist/font
-s/type1/public/amsfonts/euler/eusm10.pfb></usr/local/texlive/2009/texmf-dist/fo
-nts/type1/public/amsfonts/latxfont/lcircle1.pfb></usr/local/texlive/2009/texmf-
-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2009/te
-xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/200
-9/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on username.pdf (74 pages, 1551103 bytes).
+</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
+/usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></u
+sr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr
+/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr
+/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/
+local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></u
+sr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
+r/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/
+local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/lo
+cal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/loca
+l/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/
+texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/lo
+cal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
+l/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/
+texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/tex
+live/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texliv
+e/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2
+011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2011
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2011/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsltt10.pfb></usr/local/texlive/2011
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2011/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2011/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2011/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2011/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2011/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmtcsc10.pfb></usr/local/texlive/2011/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2011/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive/2011/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2011/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2011/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2011/texmf-dist/font
+s/type1/public/amsfonts/cm/cmu10.pfb></usr/local/texlive/2011/texmf-dist/fonts/
+type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2011/texmf-dist/font
+s/type1/public/amsfonts/euler/eusm10.pfb></usr/local/texlive/2011/texmf-dist/fo
+nts/type1/public/amsfonts/latxfont/lcircle1.pfb></usr/local/texlive/2011/texmf-
+dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2011/te
+xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/201
+1/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on username.pdf (74 pages, 1385110 bytes).
 PDF statistics:
- 1509 PDF objects out of 1728 (max. 8388607)
+ 1529 PDF objects out of 1728 (max. 8388607)
+ 1356 compressed objects within 14 object streams
  474 named destinations out of 1000 (max. 500000)
  57666 words of extra memory for PDF output out of 61914 (max. 10000000)
 

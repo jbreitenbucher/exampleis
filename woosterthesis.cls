@@ -409,13 +409,13 @@
 \end{center}
 \end{singlespace}%
 \end{textblock}}
-\begin{textblock}{6}(2.20,2.48)
+\begin{textblock}{6}(2.20,2.75)
 \begin{center}
 {\scshape
   \th@sistype}
 \end{center}
 \end{textblock}  
-\begin{textblock}{7}(1.65,4.6)
+\begin{textblock}{7}(1.65,5.15)
 \begin{singlespace}
 \begin{center}
 Presented in Partial Fulfillment of the Requirements for \\
@@ -424,7 +424,7 @@ the Degree \d@greetoobtain in the \\
 \end{center}
 \end{singlespace}
 \end{textblock}
-\begin{textblock}{6}(2.20,7.7)
+\begin{textblock}{6}(2.20,7.8)
 \begin{singlespace}
 \begin{center}
 by \\
@@ -432,7 +432,7 @@ by \\
 \end{center}
 \end{singlespace}
 \end{textblock}
-\begin{textblock}{6}(2.20,9)
+\begin{textblock}{6}(2.20,8.8)
 {\def\baselinestretch{1}\normalsize
 \begin{center}
 \@school\\
@@ -513,13 +513,13 @@ by \\
 \end{center}
 \end{singlespace}}%
 \end{textblock}
-\begin{textblock}{6}(2.20,2.48)
+\begin{textblock}{6}(2.20,2.75)
 \begin{center}
 {\scshape
   \th@sistype}
 \end{center}
 \end{textblock}  
-\begin{textblock}{7}(1.65,4.6)
+\begin{textblock}{7}(1.65,5.15)
 \begin{singlespace}
 \begin{center}
 Presented in Partial Fulfillment of the Requirements for \\
@@ -528,7 +528,7 @@ the Degree \d@greetoobtain in the \\
 \end{center}
 \end{singlespace}
 \end{textblock}
-\begin{textblock}{6}(2.20,7.7)
+\begin{textblock}{6}(2.20,7.8)
 \begin{singlespace}
 \begin{center}
 by \\
@@ -536,7 +536,7 @@ by \\
 \end{center}
 \end{singlespace}
 \end{textblock}
-\begin{textblock}{6}(2.20,9)
+\begin{textblock}{6}(2.20,8.8)
 {\def\baselinestretch{1}\normalsize
 \begin{center}
 \@school\\
@@ -575,13 +575,13 @@ by \\
 \end{center}
 \end{singlespace}%
 \end{textblock}}
-\begin{textblock}{6}(2.20,2.35)
+\begin{textblock}{6}(2.20,2.65)
 \begin{center}
 {\scshape
   \th@sistype}
 \end{center}
 \end{textblock}  
-\begin{textblock}{7}(1.65,4.47)
+\begin{textblock}{7}(1.65,4.97)
 \begin{singlespace}
 \begin{center}
 Presented in Partial Fulfillment of the Requirements for \\
@@ -590,7 +590,7 @@ the Degree \d@greetoobtain in the \\
 \end{center}
 \end{singlespace}
 \end{textblock}
-\begin{textblock}{6}(2.20,7.57)
+\begin{textblock}{6}(2.20,7.67)
 \begin{singlespace}
 \begin{center}
 by \\
@@ -598,7 +598,7 @@ by \\
 \end{center}
 \end{singlespace}
 \end{textblock}
-\begin{textblock}{6}(2.20,8.87)
+\begin{textblock}{6}(2.20,8.70)
 {\def\baselinestretch{1}\normalsize
 \begin{center}
 \@school\\
@@ -679,13 +679,13 @@ by \\
 \end{center}
 \end{singlespace}}%
 \end{textblock}
-\begin{textblock}{6}(2.20,2.35)
+\begin{textblock}{6}(2.20,2.65)
 \begin{center}
 {\scshape
   \th@sistype}
 \end{center}
 \end{textblock}  
-\begin{textblock}{7}(1.65,4.47)
+\begin{textblock}{7}(1.65,4.97)
 \begin{singlespace}
 \begin{center}
 Presented in Partial Fulfillment of the Requirements for \\
@@ -694,7 +694,7 @@ the Degree \d@greetoobtain in the \\
 \end{center}
 \end{singlespace}
 \end{textblock}
-\begin{textblock}{6}(2.20,7.57)
+\begin{textblock}{6}(2.20,7.67)
 \begin{singlespace}
 \begin{center}
 by \\
@@ -702,7 +702,7 @@ by \\
 \end{center}
 \end{singlespace}
 \end{textblock}
-\begin{textblock}{6}(2.20,8.87)
+\begin{textblock}{6}(2.20,8.70)
 {\def\baselinestretch{1}\normalsize
 \begin{center}
 \@school\\
@@ -741,13 +741,13 @@ by \\
 \end{center}
 \end{singlespace}%
 \end{textblock}}
-\begin{textblock}{6}(2.20,2.3)
+\begin{textblock}{6}(2.20,2.6)
 \begin{center}
 {\scshape
   \th@sistype}
 \end{center}
 \end{textblock}  
-\begin{textblock}{8}(1.25,4.37)
+\begin{textblock}{8}(1.25,4.9)
 \begin{singlespace}
 \begin{center}
 Presented in Partial Fulfillment of the Requirements for \\
@@ -756,7 +756,7 @@ the Degree \d@greetoobtain in the \\
 \end{center}
 \end{singlespace}
 \end{textblock}
-\begin{textblock}{6}(2.20,7.50)
+\begin{textblock}{6}(2.20,7.59)
 \begin{singlespace}
 \begin{center}
 by \\
@@ -764,7 +764,7 @@ by \\
 \end{center}
 \end{singlespace}
 \end{textblock}
-\begin{textblock}{6}(2.20,8.87)
+\begin{textblock}{6}(2.20,8.7)
 {\def\baselinestretch{1}\normalsize
 \begin{center}
 \@school\\
@@ -845,13 +845,13 @@ by \\
 \end{center}
 \end{singlespace}}%
 \end{textblock}
-\begin{textblock}{6}(2.20,2.3)
+\begin{textblock}{6}(2.20,2.6)
 \begin{center}
 {\scshape
   \th@sistype}
 \end{center}
 \end{textblock}  
-\begin{textblock}{8}(1.25,4.37)
+\begin{textblock}{8}(1.25,4.9)
 \begin{singlespace}
 \begin{center}
 Presented in Partial Fulfillment of the Requirements for \\
@@ -860,7 +860,7 @@ the Degree \d@greetoobtain in the \\
 \end{center}
 \end{singlespace}
 \end{textblock}
-\begin{textblock}{6}(2.20,7.50)
+\begin{textblock}{6}(2.20,7.59)
 \begin{singlespace}
 \begin{center}
 by \\
@@ -868,7 +868,7 @@ by \\
 \end{center}
 \end{singlespace}
 \end{textblock}
-\begin{textblock}{6}(2.20,8.87)
+\begin{textblock}{6}(2.20,8.7)
 {\def\baselinestretch{1}\normalsize
 \begin{center}
 \@school\\
@@ -1697,7 +1697,7 @@ by \\
 		\setboolean{colophon}{true}
 	\fi
 	\RequirePackage{float}% to handle figures and tables - JB
-	\RequirePackage[labelfont={bf,footnotesize},font={footnotesize}, justification=raggedright]{caption}% to format captions - JB
+	\RequirePackage[style=base,format=hang,labelfont={bf,footnotesize},font=footnotesize, justification=raggedright]{caption}% to format captions - JB
 	\RequirePackage{subfigure}% to allow multiple images in a figure - JB
 	\captionsetup[subfloat]{listofindent=4em}% set captions on subfigures - JB
 	\setcounter{lofdepth}{2}% setting depth of the list of figures - JB
@@ -1713,6 +1713,7 @@ by \\
 		bookmarksopen=true,%
 		pdfstartview=FitV,%
 		colorlinks,%
+		allcolors=black,%
 		linkcolor=black,%
 		citecolor=black,%
 		pagebackref=false,%
@@ -1722,7 +1723,6 @@ by \\
 		hyperindex=false,%
 		pdfpagetransition=Glitter,%
 		breaklinks=true,%
-		pagecolor=black,%
 		urlcolor=black,%
 		pdfstartpage=1]
 		{hyperref}
@@ -1738,6 +1738,7 @@ by \\
 		bookmarksopen=true,%
 		pdfstartview=FitV,%
 		colorlinks,%
+		allcolors=black,%
 		linkcolor=refcolor,%
 		citecolor=citecolor,%
 		pagebackref=true,%
@@ -1747,7 +1748,6 @@ by \\
 		hyperindex=true,%
 		pdfpagetransition=Glitter,%
 		breaklinks=true,%
-		pagecolor=black,%
 		urlcolor=urlcolor,%
 		pdfstartpage=1]
 		{hyperref}
@@ -1762,6 +1762,7 @@ by \\
 		bookmarksopen=true,%
 		pdfstartview=FitV,%
 		colorlinks,%
+		allcolors=black,%
 		linkcolor=black,%
 		citecolor=black,%
 		pagebackref=false,%
@@ -1771,7 +1772,6 @@ by \\
 		hyperindex=true,%
 		pdfpagetransition=Glitter,%
 		breaklinks=true,%
-		pagecolor=black,%
 		urlcolor=black,%
 		pdfstartpage=1]	
 		{hyperref}
@@ -1787,6 +1787,7 @@ by \\
 		bookmarksopen=true,%
 		pdfstartview=FitV,%
 		colorlinks,%
+		allcolors=black,%
 		linkcolor=refcolor,%
 		citecolor=citecolor,%
 		pagebackref=true,%
@@ -1795,8 +1796,7 @@ by \\
 		pdfpagelabels=true,%
 		hyperindex=true,%
 		pdfpagetransition=Glitter,%
-		breaklinks=true,%
-		pagecolor=black,%			
+		breaklinks=true,%			
 		urlcolor=urlcolor,%
 		pdfstartpage=1]
 		{hyperref}	
