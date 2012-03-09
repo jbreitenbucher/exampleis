@@ -201,8 +201,8 @@
 \RequirePackage{setspace}% to allow single and double spacing - JB
 \RequirePackage{fancyhdr}% to have fancy chapter headings - JB
 \ifxetex
+     \RequirePackage{mathspec}
 	\RequirePackage{fontspec}% allows one to easily set up fonts in the document
-	\RequirePackage{xunicode}
 	\RequirePackage{xltxtra}% adds extra commands specific to XeTeX
 	%\RequirePackage[xetex]{graphicx}
 		\def\kaukelogo{\includegraphics[scale=.4]{kauke_wordmark}}
@@ -441,7 +441,7 @@ by \\
 \end{textblock}
 \begin{textblock}{6}(0,11)
 \noindent
-\hspace{1px}
+\hspace{1pt}
 \begin{minipage}[b]{\hsize}
 \begin{flushleft}
 {\bfseries Advised by:} \\
@@ -607,7 +607,7 @@ by \\
 \end{textblock}
 \begin{textblock}{6}(0,11)
 \noindent
-\hspace{1px}
+\hspace{1pt}
 \begin{minipage}[b]{\hsize}
 \begin{flushleft}
 {\bfseries Advised by:} \\
@@ -773,7 +773,7 @@ by \\
 \end{textblock}
 \begin{textblock}{6}(0,11)
 \noindent
-\hspace{1px}
+\hspace{1pt}
 \begin{minipage}[b]{\hsize}
 \begin{flushleft}
 {\bfseries Advised by:} \\
@@ -1489,10 +1489,12 @@ by \\
 \if@restonecol\twocolumn\fi}
 \let\l@lstlisting\l@figure
 \fi
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newdimen\bibindent
 \setlength\bibindent{1.5em}
+
 \newenvironment{thebibliography}[1]
      {\chapter*{\bibname}%
       \@mkboth{\bibname}{\bibname}% removed \MakeUppercase -JB
@@ -1554,6 +1556,7 @@ by \\
   \PackageWarning{natbib}
      {Empty `thebibliography' environment}}%
   \endlist\vskip-\lastskip}
+
 \newenvironment{theindex}
                {\if@twocolumn
                   \@restonecolfalse
@@ -1661,6 +1664,7 @@ by \\
 	\RequirePackage{ifthen}% to test boolean conditions - JB
 	\newboolean{index}
 	\newboolean{colophon}
+      \newboolean{mla}
 	\if@index
 		\RequirePackage{makeidx}
 		\setboolean{index}{true}
@@ -1696,6 +1700,7 @@ by \\
 	\if@colophon
 		\setboolean{colophon}{true}
 	\fi
+
 	\RequirePackage{float}% to handle figures and tables - JB
 	\RequirePackage[style=base,format=hang,labelfont={bf,footnotesize},font=footnotesize, justification=raggedright]{caption}% to format captions - JB
 	\RequirePackage{subfigure}% to allow multiple images in a figure - JB
@@ -1706,7 +1711,7 @@ by \\
 
 \ifxetex
 	\if@blacklinks
-		\RequirePackage[dvipdfm,%
+		\RequirePackage[xetex,%
 		pdfusetitle=true,%
 		pdfpagemode=UseOutlines,%
 		bookmarks,%
@@ -1731,7 +1736,7 @@ by \\
 		\definecolor{refcolor}{cmyk}{1,0.98,0,0}    % Color for the reference links
 		\definecolor{urlcolor}{cmyk}{0.8,0.32,0.98,0.2}    % Color for the url links
 		\definecolor{citecolor}{cmyk}{0.5,1,0,0}    % Color for the citation links
-		\RequirePackage[dvipdfm,%
+		\RequirePackage[xetex,%
 		pdfusetitle=true,%
 		pdfpagemode=UseOutlines,%
 		bookmarks,%

@@ -2,11 +2,11 @@
 %
 %                                                       Example IS Template
 %
-%\documentclass{woosterthesis} must be at the beginning of every IS. Options are the same as
-%for the report class with some additional options, blacklinks, palatino, abstractonly, and
-%kaukecopyright. The kaukecopyright option will put the arch symbol with the word mark on the
-%copyright page. The woosterthesis class is based on the report class. One thing to note is that
-%the ``%'' symbol comments out all characters that follow it on the line.
+% \documentclass{woosterthesis} must be at the beginning of every IS. Options are the same as
+% for the report class with some additional options, blacklinks, palatino, abstractonly, and
+% kaukecopyright. The kaukecopyright option will put the arch symbol with the word mark on the
+% copyright page. The woosterthesis class is based on the report class. One thing to note is that
+% the ``%'' symbol comments out all characters that follow it on the line.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -25,7 +25,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-%                                                    Load Packages
+%                                                       Load Packages
 %
 %   To load packages in addition to the ones that are loaded by default, please place your
 %   usepackage commands in the packages.tex file in the styles folder.
@@ -37,9 +37,13 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-%                                                Load Personal commands
+%                                                       Load Personal commands
 %                                                                    
-%There will be certain commands that you use frequently in the thesis. You can give these %commands new names which are easier for you to remember. You can also combine several %commands into a new command of your own. See The LaTeX Companion or Guide to LaTeX %for examples on defining your own commands. These are commands that I defined to cut %down on typing. You can enter your commands in the personal.tex file in the styles folder.
+% There will be certain commands that you use frequently in the thesis. You can give these
+% commands new names which are easier for you to remember. You can also combine several
+% commands into a new command of your own. See The LaTeX Companion or Guide to LaTeX
+% for examples on defining your own commands. These are commands that I defined to cut
+% down on typing. You can enter your commands in the personal.tex file in the styles folder.
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -47,7 +51,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-%                                             Load Theorem formatting information
+%                                                       Load Theorem formatting information
 %
 %  If you need to define an new theorem style or want to see what theorem like environments 
 %  are available please look at the theorems.tex file in the styles folder.
@@ -60,7 +64,7 @@
 \setcounter{tocdepth}{6}% controls the number of levels in the Contents
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%This is where one enters the information about the thesis.
+% This is where one enters the information about the thesis.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -80,15 +84,15 @@
 \makeindex % comment this line if you do not have an index
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%This is where the commands for the document begin. All \LaTeX{} documents must have a %\begin{document} text .... \end{document} structure.
+% This is where the commands for the document begin. All \LaTeX{} documents must have a %\begin{document} text .... \end{document} structure.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%The front matter includes acknowledgments, dedications, vitas, list of tables, list of figures,
-%copyright, abstract, title page, and contents.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The front matter includes acknowledgments, dedications, vitas, list of tables, list of figures,
+% copyright, abstract, title page, and contents.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \frontmatter
 \maketitle
@@ -98,9 +102,9 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                                       
-%				                                            Abstract						
+%                                                       Abstract						
 %                                                                                       
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{abstract}
 Include a short summary of your thesis, including any pertinent results.  This section is \emph{not} optional for the Mathematics and Computer Science or Physics Department ISs, and the reader should be able to learn the meat of your thesis by reading this (short) section.
@@ -108,7 +112,7 @@ Include a short summary of your thesis, including any pertinent results.  This s
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                                       
-%				                                         Dedications					
+%                                                       Dedications					
 %                                                                                       
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -117,7 +121,7 @@ Include a short summary of your thesis, including any pertinent results.  This s
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                                       
-%				                                      Acknowledgments					
+%                                                       Acknowledgments					
 %                                                                                       
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -127,16 +131,16 @@ I would like to acknowledge Prof. Lowell Boone in the Physics Department for his
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                                       
-%				   Vita					
+%                                                       Vita					
 %                                                                                       
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{vita} 
-%You talk about yourself and how you got to where you are now. There is a structured form for the Vita that can be used if you want, but I don't encourage it.
+% You talk about yourself and how you got to where you are now. There is a structured form for the Vita that can be used if you want, but I don't encourage it.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%The list below is for a thesis that requires a more structured Vita such as a masters or Ph.D.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The list below is for a thesis that requires a more structured Vita such as a masters or Ph.D.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %\begin{datelist}
 %\item[April 6, 1970]Born-Wooster, Ohio
@@ -174,9 +178,9 @@ I would like to acknowledge Prof. Lowell Boone in the Physics Department for his
   \end{fieldsstudy}
 \end{vita}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%We now create the contents page and if necessary the list of figures and list of tables.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% We now create the contents page and if necessary the list of figures and list of tables.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \cleardoublepage
@@ -188,18 +192,23 @@ I would like to acknowledge Prof. Lowell Boone in the Physics Department for his
 \listoftables%Use if you have a list of tables.
 \lstlistoflistings% Use if you are using the code option
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \include{chapters/preface} % most theses do not have a preface so this should be commented
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \mainmatter
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %                                                       Thesis Chapters
 %
-% This is where the main text of the thesis goes. I have written this template assuming that %each chapter is a separate file. You do not have to do this but it makes things easier to find %for editing. You can use the sample chapters to help you figure out how to type things into %your thesis. To include a chapter just use the \include{chaptername} command. Chapters are %included in the order listed.
+% This is where the main text of the thesis goes. I have written this template assuming that
+% each chapter is a separate file. You do not have to do this but it makes things easier to find
+% for editing. You can use the sample chapters to help you figure out how to type things into
+% your thesis. To include a chapter just use the \include{chaptername} command. Chapters are
+% included in the order listed.
+%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \include{chapters/introduction}
@@ -213,7 +222,7 @@ I would like to acknowledge Prof. Lowell Boone in the Physics Department for his
 %\include{conclusion}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%This section starts the back matter. The back matter includes appendices, indicies, and the %bibliography
+% This section starts the back matter. The back matter includes appendices, indicies, and the %bibliography
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \backmatter
@@ -224,8 +233,8 @@ I would like to acknowledge Prof. Lowell Boone in the Physics Department for his
 \include{appendices/afterword}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%This section would be used if you are not using BibTeX. Look at Kopka and Daly for how to
-%format a bibliography manually as well as how to use BibTeX.
+% This section would be used if you are not using BibTeX. Look at Kopka and Daly for how to
+% format a bibliography manually as well as how to use BibTeX.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %\begin{thebibliography}{99}
@@ -233,16 +242,17 @@ I would like to acknowledge Prof. Lowell Boone in the Physics Department for his
 %\bibitem{}
 %\end{thebibliography}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%We used BibTeX to generate a Bibliography. I would recommend this method. However, it is %not required.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% We used BibTeX to generate a Bibliography. I would recommend this method. However, it is %not required.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\renewcommand\bibname{References} % changes the name of the Bibliography
+\renewcommand\bibname{References}
 
 \nocite{*} % This command forces all the bibliography references to be printed -- not just 
-           % those that were explicitly cited in the text.  If you comment this out, the bibliography
-           % will only include cited references.
-\bibliographystyle{plainnat} % please don't change this
+              % those that were explicitly cited in the text.  If you comment this out, the bibliography
+              % will only include cited references.
+
+\bibliographystyle{plainnat} % you can use woosterchicago or mla-good for humanities majors
 \bibliography{references} % load our Bibliography file
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

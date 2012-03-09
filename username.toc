@@ -9,7 +9,7 @@
 \contentsline {chapter}{Preface}{xxi}{chapter*.10}
 \vskip .66\baselineskip \relax \hbox to \hsize {CHAPTER \hfil PAGE}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
-\contentsline {chapter}{\numberline {2}In the beginning: Knuth said ``Let there be T\kern -.1667em\lower .5ex\hbox {E}\kern -.125emX\spacefactor \@m ''}{3}{chapter.2}
+\contentsline {chapter}{\numberline {2}In the beginning: Knuth said ``Let there be \TeX ''}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}My new section}{3}{section.2.1}
 \contentsline {section}{\numberline {2.2}Theorems, definitions, examples, oh my!}{5}{section.2.2}
 \contentsline {section}{\numberline {2.3}Putting code in the main body of the thesis}{6}{section.2.3}
@@ -17,7 +17,7 @@
 \contentsline {chapter}{\numberline {3}Working with figures and tables}{11}{chapter.3}
 \contentsline {section}{\numberline {3.1}Getting a simple figure in the document}{11}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Minipages}{12}{subsection.3.1.1}
-\contentsline {subsubsection}{\numberline {3.1.1.1}Two pictures in one figure}{12}{subsubsection.3.1.1.1}
+\contentsline {subsubsection}{\numberline {3.1.1.1}Two pictures in one figure}{13}{subsubsection.3.1.1.1}
 \contentsline {section}{\numberline {3.2}Tables}{14}{section.3.2}
 \contentsline {chapter}{\numberline {4}Working with bibliographies and indicies}{17}{chapter.4}
 \vskip .66\baselineskip \relax \hbox to \hsize {APPENDIX \hfil PAGE}
@@ -25,12 +25,12 @@
 \contentsline {section}{\numberline {A.1}General}{19}{section.A.1}
 \contentsline {section}{\numberline {A.2}Grouping in Math Mode}{21}{section.A.2}
 \contentsline {section}{\numberline {A.3}Building Blocks of a Mathematical Formula}{21}{section.A.3}
-\contentsline {section}{\numberline {A.4}Math Spacing}{25}{section.A.4}
+\contentsline {section}{\numberline {A.4}Math Spacing}{24}{section.A.4}
 \contentsline {section}{\numberline {A.5}Vertically Aligned Material}{25}{section.A.5}
 \contentsline {section}{\numberline {A.6}Math Font Size}{27}{section.A.6}
-\contentsline {section}{\numberline {A.7}Theorems, Laws, \ldots }{28}{section.A.7}
+\contentsline {section}{\numberline {A.7}Theorems, Laws, \ldots }{27}{section.A.7}
 \contentsline {section}{\numberline {A.8}Bold symbols}{29}{section.A.8}
-\contentsline {section}{\numberline {A.9}List of Mathematical Symbols}{30}{section.A.9}
+\contentsline {section}{\numberline {A.9}List of Mathematical Symbols}{29}{section.A.9}
 \contentsline {chapter}{\numberline {B}Examples of Java Code}{37}{appendix.B}
 \contentsline {chapter}{\numberline {C}C++ Examples}{39}{appendix.C}
 \contentsline {chapter}{Afterword}{45}{appendix*.39}
