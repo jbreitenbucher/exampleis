@@ -1,191 +1,191 @@
-\indexentry{LaTeX@\LaTeX}{xxi}
-\indexentry{commands!chapter}{3}
-\indexentry{commands!section}{3}
-\indexentry{commands!subsection}{3}
-\indexentry{commands!chapter}{3}
-\indexentry{commands!subsection}{3}
-\indexentry{commands!chapter}{3}
-\indexentry{commands!emph}{4}
-\indexentry{commands!textit}{4}
-\indexentry{commands!textbf}{4}
-\indexentry{lists}{4}
-\indexentry{lists!enumerated}{4}
-\indexentry{lists!itemized}{4}
-\indexentry{lists!descriptive}{4}
-\indexentry{packages!amsthm}{4}
-\indexentry{packages!paralist}{4}
-\indexentry{commands!substack}{5}
-\indexentry{cases@\verb+cases+}{6}
-\indexentry{commands!intertext}{6}
-\indexentry{pseudocode}{6}
-\indexentry{commands!lstlisting}{6}
-\indexentry{packages!listings}{6}
-\indexentry{packages!listings}{6}
-\indexentry{listings!mathescape}{7}
-\indexentry{commands!lstlisting}{7}
-\indexentry{woosterthesis options!abstractonly}{9}
-\indexentry{woosterthesis options!alltt}{9}
-\indexentry{woosterthesis options!blacklinks}{9}
-\indexentry{woosterthesis options!code}{9}
-\indexentry{woosterthesis options!dropcaps}{9}
-\indexentry{woosterthesis options!euler}{9}
-\indexentry{woosterthesis options!guass}{9}
-\indexentry{woosterthesis options!index}{9}
-\indexentry{woosterthesis options!kaukecopyright}{9}
-\indexentry{woosterthesis options!palatino}{9}
-\indexentry{woosterthesis options!picins}{9}
-\indexentry{woosterthesis options!verbatim}{9}
-\indexentry{woosterthesis options!xetex}{9}
-\indexentry{packages!listings}{9}
-\indexentry{packages!pxfonts}{9}
-\indexentry{packages!floatflt}{9}
-\indexentry{packages!makeidx}{9}
-\indexentry{packages!letterine}{9}
-\indexentry{packages!alltt}{9}
-\indexentry{packages!woofncychap}{9}
-\indexentry{woosterthesis options!picins}{11}
-\indexentry{packages!wrapfig}{11}
-\indexentry{minipage}{13}
-\indexentry{packages!subfigure}{13}
-\indexentry{Wooster}{18}
-\indexentry{Wooster!User Services}{18}
-\indexentry{Wooster!User Services!Help Desk}{18}
-\indexentry{mathematics}{19}
-\indexentry{\(@\verb+\(+}{19}
-\indexentry{\)@\verb+\)+}{19}
-\indexentry{formulae}{19}
-\indexentry{\[@\verb+\[+}{19}
-\indexentry{\]@\verb+\]+}{19}
-\indexentry{displaymath}{19}
-\indexentry{equation}{19}
-\indexentry{commands!label}{20}
-\indexentry{commands!ref}{20}
-\indexentry{''\,@\verb+\,+}{20}
-\indexentry{commands!quad}{20}
-\indexentry{commands!qquad}{20}
-\indexentry{blackboard bold}{21}
-\indexentry{bold symbols}{21}
-\indexentry{commands!mathbb}{21}
-\indexentry{packages!amsfonts}{21}
-\indexentry{packages!amssymb}{21}
-\indexentry{Greek letters}{21}
-\indexentry{exponent}{21}
-\indexentry{subscript}{21}
-\indexentry{^@\verb+^+}{21}
-\indexentry{_@\verb+_+}{21}
-\indexentry{square root}{22}
-\indexentry{commands!sqrt}{22}
-\indexentry{commands!surd}{22}
-\indexentry{commands!overline}{22}
-\indexentry{commands!underline}{22}
-\indexentry{horizontal!line}{22}
-\indexentry{commands!overbrace}{22}
-\indexentry{commands!underbrace}{22}
-\indexentry{horizontal!brace}{22}
-\indexentry{mathematical!accents}{22}
-\indexentry{commands!widetilde}{22}
-\indexentry{commands!widehat}{22}
-\indexentry{'@\verb+'+}{22}
-\indexentry{prime}{22}
-\indexentry{vectors}{22}
-\indexentry{arrow symbols}{22}
-\indexentry{commands!vec}{22}
-\indexentry{commands!overrightarrow}{22}
-\indexentry{commands!overleftarrow}{22}
-\indexentry{mathematical!functions}{22}
-\indexentry{modulo function}{23}
-\indexentry{commands!bmod}{23}
-\indexentry{commands!pmod}{23}
-\indexentry{fraction}{23}
-\indexentry{commands!frac}{23}
-\indexentry{commands!binom}{23}
-\indexentry{commands!genfrac}{23}
-\indexentry{integral operator}{23}
-\indexentry{commands!int}{23}
-\indexentry{sum operator}{23}
-\indexentry{commands!sum}{23}
-\indexentry{^@\verb+^+}{23}
-\indexentry{_@\verb+_+}{23}
-\indexentry{braces}{23}
-\indexentry{delimiters}{23}
-\indexentry{commands!left}{23}
-\indexentry{commands!right}{23}
-\indexentry{commands!left}{23}
-\indexentry{commands!right}{24}
-\indexentry{commands!right@\verb+right .+}{24}
-\indexentry{mathematical!delimiter}{24}
-\indexentry{commands!big}{24}
-\indexentry{commands!Big}{24}
-\indexentry{commands!bigg}{24}
-\indexentry{commands!Bigg}{24}
-\indexentry{three dots}{24}
-\indexentry{commands!ldots}{24}
-\indexentry{commands!cdots}{24}
-\indexentry{commands!vdots}{24}
-\indexentry{commands!ddots}{24}
-\indexentry{diagonal dots}{24}
-\indexentry{vertical   dots}{24}
-\indexentry{horizontal!dots}{24}
-\indexentry{math spacing}{24}
-\indexentry{\,@\verb+\,+}{24}
-\indexentry{\:@\verb+\:+}{24}
-\indexentry{\;@\verb+\;+}{24}
-\indexentry{commands!quad}{24}
-\indexentry{commands!qquad}{24}
-\indexentry{"\"!@\texttt{\bs"!}}{24}
-\indexentry{exscale}{24}
-\indexentry{amsmath}{24}
-\indexentry{commands!iint}{25}
-\indexentry{commands!iiint}{25}
-\indexentry{commands!iiiint}{25}
-\indexentry{commands!idotsint}{25}
-\indexentry{packages!amsmath}{25}
-\indexentry{array}{25}
-\indexentry{array}{25}
-\indexentry{commands!right@\verb+right .+}{25}
-\indexentry{equation systems}{26}
-\indexentry{eqnarray}{26}
-\indexentry{long equations}{26}
-\indexentry{commands!notag}{26}
-\indexentry{amsmath}{26}
-\indexentry{math font size}{27}
-\indexentry{commands!textrm}{27}
-\indexentry{commands!mathrm}{27}
-\indexentry{bold symbols}{29}
-\indexentry{commands!boldmath}{29}
-\indexentry{packages!amsbsy}{29}
-\indexentry{packages!amsmath}{29}
-\indexentry{commands!boldsymbol}{29}
-\indexentry{packages!amssymb}{29}
-\indexentry{packages!eucal}{36}
-\indexentry{mathcal}{36}
-\indexentry{packages!eucal}{36}
-\indexentry{mathscr}{36}
-\indexentry{packages!eufrak}{36}
-\indexentry{packages!amsfonts}{36}
-\indexentry{packages!amssymb}{36}
-\indexentry{packages!ifpdf}{45}
-\indexentry{packages!textpos}{45}
-\indexentry{packages!geometry}{45}
-\indexentry{packages!amsthm}{45}
-\indexentry{packages!amssymb}{45}
-\indexentry{packages!amsmath}{45}
-\indexentry{packages!setspace}{45}
-\indexentry{packages!fancyhdr}{45}
-\indexentry{packages!graphicx}{45}
-\indexentry{packages!eso-pic}{45}
-\indexentry{packages!listings}{45}
-\indexentry{packages!natbib}{45}
-\indexentry{packages!makeidx}{45}
-\indexentry{packages!verbatim}{45}
-\indexentry{packages!lettrine}{45}
-\indexentry{packages!alltt}{45}
-\indexentry{packages!fontenc}{45}
-\indexentry{packages!pxfonts}{45}
-\indexentry{packages!floatflt}{45}
-\indexentry{packages!float}{45}
-\indexentry{packages!caption}{45}
-\indexentry{packages!subfigure}{45}
-\indexentry{packages!ifthen}{45}
-\indexentry{packages!fontspec}{45}
-\indexentry{packages!xltxtra}{45}
+\indexentry{LaTeX@\LaTeX|hyperpage}{xxi}
+\indexentry{commands!chapter|hyperpage}{3}
+\indexentry{commands!section|hyperpage}{3}
+\indexentry{commands!subsection|hyperpage}{3}
+\indexentry{commands!chapter|hyperpage}{3}
+\indexentry{commands!subsection|hyperpage}{3}
+\indexentry{commands!chapter|hyperpage}{4}
+\indexentry{commands!emph|hyperpage}{4}
+\indexentry{commands!textit|hyperpage}{4}
+\indexentry{commands!textbf|hyperpage}{4}
+\indexentry{lists|hyperpage}{4}
+\indexentry{lists!enumerated|hyperpage}{4}
+\indexentry{lists!itemized|hyperpage}{4}
+\indexentry{lists!descriptive|hyperpage}{4}
+\indexentry{packages!amsthm|hyperpage}{4}
+\indexentry{packages!paralist|hyperpage}{5}
+\indexentry{commands!substack|hyperpage}{5}
+\indexentry{cases@\verb+cases+|hyperpage}{6}
+\indexentry{commands!intertext|hyperpage}{6}
+\indexentry{pseudocode|hyperpage}{6}
+\indexentry{commands!lstlisting|hyperpage}{6}
+\indexentry{packages!listings|hyperpage}{6}
+\indexentry{packages!listings|hyperpage}{6}
+\indexentry{listings!mathescape|hyperpage}{7}
+\indexentry{commands!lstlisting|hyperpage}{7}
+\indexentry{woosterthesis options!abstractonly|hyperpage}{9}
+\indexentry{woosterthesis options!alltt|hyperpage}{9}
+\indexentry{woosterthesis options!blacklinks|hyperpage}{9}
+\indexentry{woosterthesis options!code|hyperpage}{9}
+\indexentry{woosterthesis options!dropcaps|hyperpage}{9}
+\indexentry{woosterthesis options!euler|hyperpage}{9}
+\indexentry{woosterthesis options!guass|hyperpage}{9}
+\indexentry{woosterthesis options!index|hyperpage}{9}
+\indexentry{woosterthesis options!kaukecopyright|hyperpage}{9}
+\indexentry{woosterthesis options!palatino|hyperpage}{9}
+\indexentry{woosterthesis options!picins|hyperpage}{9}
+\indexentry{woosterthesis options!verbatim|hyperpage}{9}
+\indexentry{woosterthesis options!xetex|hyperpage}{9}
+\indexentry{packages!listings|hyperpage}{9}
+\indexentry{packages!pxfonts|hyperpage}{9}
+\indexentry{packages!floatflt|hyperpage}{9}
+\indexentry{packages!makeidx|hyperpage}{9}
+\indexentry{packages!letterine|hyperpage}{9}
+\indexentry{packages!alltt|hyperpage}{9}
+\indexentry{packages!woofncychap|hyperpage}{9}
+\indexentry{woosterthesis options!picins|hyperpage}{11}
+\indexentry{packages!wrapfig|hyperpage}{11}
+\indexentry{minipage|hyperpage}{12}
+\indexentry{packages!subfigure|hyperpage}{13}
+\indexentry{Wooster|hyperpage}{18}
+\indexentry{Wooster!User Services|hyperpage}{18}
+\indexentry{Wooster!User Services!Help Desk|hyperpage}{18}
+\indexentry{mathematics|hyperpage}{19}
+\indexentry{\(@\verb+\(+|hyperpage}{19}
+\indexentry{\)@\verb+\)+|hyperpage}{19}
+\indexentry{formulae|hyperpage}{19}
+\indexentry{\[@\verb+\[+|hyperpage}{19}
+\indexentry{\]@\verb+\]+|hyperpage}{19}
+\indexentry{displaymath|hyperpage}{19}
+\indexentry{equation|hyperpage}{19}
+\indexentry{commands!label|hyperpage}{20}
+\indexentry{commands!ref|hyperpage}{20}
+\indexentry{''\,@\verb+\,+|hyperpage}{20}
+\indexentry{commands!quad|hyperpage}{20}
+\indexentry{commands!qquad|hyperpage}{20}
+\indexentry{blackboard bold|hyperpage}{21}
+\indexentry{bold symbols|hyperpage}{21}
+\indexentry{commands!mathbb|hyperpage}{21}
+\indexentry{packages!amsfonts|hyperpage}{21}
+\indexentry{packages!amssymb|hyperpage}{21}
+\indexentry{Greek letters|hyperpage}{21}
+\indexentry{exponent|hyperpage}{21}
+\indexentry{subscript|hyperpage}{21}
+\indexentry{^@\verb+^+|hyperpage}{21}
+\indexentry{_@\verb+_+|hyperpage}{21}
+\indexentry{square root|hyperpage}{22}
+\indexentry{commands!sqrt|hyperpage}{22}
+\indexentry{commands!surd|hyperpage}{22}
+\indexentry{commands!overline|hyperpage}{22}
+\indexentry{commands!underline|hyperpage}{22}
+\indexentry{horizontal!line|hyperpage}{22}
+\indexentry{commands!overbrace|hyperpage}{22}
+\indexentry{commands!underbrace|hyperpage}{22}
+\indexentry{horizontal!brace|hyperpage}{22}
+\indexentry{mathematical!accents|hyperpage}{22}
+\indexentry{commands!widetilde|hyperpage}{22}
+\indexentry{commands!widehat|hyperpage}{22}
+\indexentry{'@\verb+'+|hyperpage}{22}
+\indexentry{prime|hyperpage}{22}
+\indexentry{vectors|hyperpage}{22}
+\indexentry{arrow symbols|hyperpage}{22}
+\indexentry{commands!vec|hyperpage}{22}
+\indexentry{commands!overrightarrow|hyperpage}{22}
+\indexentry{commands!overleftarrow|hyperpage}{22}
+\indexentry{mathematical!functions|hyperpage}{23}
+\indexentry{modulo function|hyperpage}{23}
+\indexentry{commands!bmod|hyperpage}{23}
+\indexentry{commands!pmod|hyperpage}{23}
+\indexentry{fraction|hyperpage}{23}
+\indexentry{commands!frac|hyperpage}{23}
+\indexentry{commands!binom|hyperpage}{23}
+\indexentry{commands!genfrac|hyperpage}{23}
+\indexentry{integral operator|hyperpage}{23}
+\indexentry{commands!int|hyperpage}{23}
+\indexentry{sum operator|hyperpage}{23}
+\indexentry{commands!sum|hyperpage}{23}
+\indexentry{^@\verb+^+|hyperpage}{23}
+\indexentry{_@\verb+_+|hyperpage}{23}
+\indexentry{braces|hyperpage}{24}
+\indexentry{delimiters|hyperpage}{24}
+\indexentry{commands!left|hyperpage}{24}
+\indexentry{commands!right|hyperpage}{24}
+\indexentry{commands!left|hyperpage}{24}
+\indexentry{commands!right|hyperpage}{24}
+\indexentry{commands!right@\verb+right .+|hyperpage}{24}
+\indexentry{mathematical!delimiter|hyperpage}{24}
+\indexentry{commands!big|hyperpage}{24}
+\indexentry{commands!Big|hyperpage}{24}
+\indexentry{commands!bigg|hyperpage}{24}
+\indexentry{commands!Bigg|hyperpage}{24}
+\indexentry{three dots|hyperpage}{24}
+\indexentry{commands!ldots|hyperpage}{24}
+\indexentry{commands!cdots|hyperpage}{24}
+\indexentry{commands!vdots|hyperpage}{24}
+\indexentry{commands!ddots|hyperpage}{24}
+\indexentry{diagonal dots|hyperpage}{24}
+\indexentry{vertical   dots|hyperpage}{24}
+\indexentry{horizontal!dots|hyperpage}{24}
+\indexentry{exscale|hyperpage}{24}
+\indexentry{amsmath|hyperpage}{24}
+\indexentry{math spacing|hyperpage}{25}
+\indexentry{\,@\verb+\,+|hyperpage}{25}
+\indexentry{\:@\verb+\:+|hyperpage}{25}
+\indexentry{\;@\verb+\;+|hyperpage}{25}
+\indexentry{commands!quad|hyperpage}{25}
+\indexentry{commands!qquad|hyperpage}{25}
+\indexentry{"\"!@\texttt{\bs"!}|hyperpage}{25}
+\indexentry{commands!iint|hyperpage}{25}
+\indexentry{commands!iiint|hyperpage}{25}
+\indexentry{commands!iiiint|hyperpage}{25}
+\indexentry{commands!idotsint|hyperpage}{25}
+\indexentry{packages!amsmath|hyperpage}{25}
+\indexentry{array|hyperpage}{25}
+\indexentry{array|hyperpage}{26}
+\indexentry{commands!right@\verb+right .+|hyperpage}{26}
+\indexentry{equation systems|hyperpage}{26}
+\indexentry{eqnarray|hyperpage}{26}
+\indexentry{long equations|hyperpage}{26}
+\indexentry{commands!notag|hyperpage}{27}
+\indexentry{amsmath|hyperpage}{27}
+\indexentry{math font size|hyperpage}{27}
+\indexentry{commands!textrm|hyperpage}{27}
+\indexentry{commands!mathrm|hyperpage}{27}
+\indexentry{bold symbols|hyperpage}{29}
+\indexentry{commands!boldmath|hyperpage}{29}
+\indexentry{packages!amsbsy|hyperpage}{29}
+\indexentry{packages!amsmath|hyperpage}{29}
+\indexentry{commands!boldsymbol|hyperpage}{29}
+\indexentry{packages!amssymb|hyperpage}{30}
+\indexentry{packages!eucal|hyperpage}{36}
+\indexentry{mathcal|hyperpage}{36}
+\indexentry{packages!eucal|hyperpage}{36}
+\indexentry{mathscr|hyperpage}{36}
+\indexentry{packages!eufrak|hyperpage}{36}
+\indexentry{packages!amsfonts|hyperpage}{36}
+\indexentry{packages!amssymb|hyperpage}{36}
+\indexentry{packages!ifpdf|hyperpage}{45}
+\indexentry{packages!textpos|hyperpage}{45}
+\indexentry{packages!geometry|hyperpage}{45}
+\indexentry{packages!amsthm|hyperpage}{45}
+\indexentry{packages!amssymb|hyperpage}{45}
+\indexentry{packages!amsmath|hyperpage}{45}
+\indexentry{packages!setspace|hyperpage}{45}
+\indexentry{packages!fancyhdr|hyperpage}{45}
+\indexentry{packages!graphicx|hyperpage}{45}
+\indexentry{packages!eso-pic|hyperpage}{45}
+\indexentry{packages!listings|hyperpage}{45}
+\indexentry{packages!natbib|hyperpage}{45}
+\indexentry{packages!makeidx|hyperpage}{45}
+\indexentry{packages!verbatim|hyperpage}{45}
+\indexentry{packages!lettrine|hyperpage}{45}
+\indexentry{packages!alltt|hyperpage}{45}
+\indexentry{packages!fontenc|hyperpage}{45}
+\indexentry{packages!pxfonts|hyperpage}{45}
+\indexentry{packages!floatflt|hyperpage}{45}
+\indexentry{packages!float|hyperpage}{45}
+\indexentry{packages!caption|hyperpage}{45}
+\indexentry{packages!subfigure|hyperpage}{45}
+\indexentry{packages!ifthen|hyperpage}{45}
+\indexentry{packages!fontspec|hyperpage}{45}
+\indexentry{packages!xltxtra|hyperpage}{45}

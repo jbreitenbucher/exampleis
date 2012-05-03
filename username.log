@@ -1,6 +1,6 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (TeX Live 2011) (format=xelatex 2012.2.28)  8 MAR 2012 23:04
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.2.28)  19 MAR 2012 20:00
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  %&-line parsing enabled.
 **username.tex
 (./username.tex
@@ -21,7 +21,7 @@ Document Class: woosterthesis 2006/11/03 v4.2.1 Wooster IS LaTeX document class
  by Dr. Jon Breitenbucher
 (/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is not detected.
+Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
 (/usr/local/texlive/2011/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
@@ -82,13 +82,13 @@ Package: amsbsy 1999/11/29 v1.2d
 (/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count80
+\inf@bad=\count79
 LaTeX Info: Redefining \frac on input line 211.
-\uproot@=\count81
-\leftroot@=\count82
+\uproot@=\count80
+\leftroot@=\count81
 LaTeX Info: Redefining \overline on input line 307.
-\classnum@=\count83
-\DOTSCASE@=\count84
+\classnum@=\count82
+\DOTSCASE@=\count83
 LaTeX Info: Redefining \ldots on input line 379.
 LaTeX Info: Redefining \dots on input line 382.
 LaTeX Info: Redefining \cdots on input line 467.
@@ -97,15 +97,15 @@ LaTeX Info: Redefining \cdots on input line 467.
 \big@size=\dimen110
 LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
-\macc@depth=\count85
-\c@MaxMatrixCols=\count86
+\macc@depth=\count84
+\c@MaxMatrixCols=\count85
 \dotsspace@=\muskip10
-\c@parentequation=\count87
-\dspbrk@lvl=\count88
+\c@parentequation=\count86
+\dspbrk@lvl=\count87
 \tag@help=\toks23
-\row@=\count89
-\column@=\count90
-\maxfields@=\count91
+\row@=\count88
+\column@=\count89
+\maxfields@=\count90
 \andhelp@=\toks24
 \eqnshift@=\dimen111
 \alignsep@=\dimen112
@@ -134,45 +134,13 @@ Package: setspace 2011/12/19 v6.7a set line spacing
 \f@ncyO@olf=\skip54
 \f@ncyO@orf=\skip55
 )
-(/usr/local/texlive/2011/texmf-dist/tex/xelatex/mathspec/mathspec.sty
-Package: mathspec 2009/09/30 v0.2 LaTeX Package (Mathematics font selection for
- XeLaTeX)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2011/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2011/01/03 v2.1 e-TeX tools for LaTeX
-
-(/usr/local/texlive/2011/texmf-dist/tex/latex/etex-pkg/etex.sty
-Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
-\et@xins=\count92
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks27
 )
-\etb@tempcnta=\count93
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/fontspec/fontspec.sty
-Package: fontspec 2011/09/18 v2.2a Advanced font selection for XeLaTeX/LuaLaTeX
-
-
-(/usr/local/texlive/2011/texmf-dist/tex/latex/l3kernel/expl3.sty
-(/usr/local/texlive/2011/texmf-dist/tex/latex/l3kernel/l3names.sty
-(/usr/local/texlive/2011/texmf-dist/tex/latex/l3kernel/l3bootstrap.sty
-Package: l3bootstrap 2011/12/29 v3110 L3 Experimental bootstrap code
-)
-Package: l3names 2011/12/30 v3113 L3 Experimental namespace for primitives
-)
-Package: expl3 2012/02/26 v3471 L3 Experimental code bundle wrapper
-
-(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
-LaTeX Info: Redefining \color on input line 76.
-
-(/usr/local/texlive/2011/texmf-dist/tex/latex/latexconfig/color.cfg
-File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
-)
-Package color Info: Driver file: xetex.def on input line 130.
-
-(/usr/local/texlive/2011/texmf-dist/tex/xelatex/xetex-def/xetex.def
-File: xetex.def 2009/11/22 v0.94 LaTeX color/graphics driver for XeTeX (RRM/JK)
-
-))
 (/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
@@ -182,453 +150,46 @@ Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 (/usr/local/texlive/2011/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: xetex.def on input line 91.
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/l3kernel/l3basics.sty
-Package: l3basics 2012/02/26 v3460 L3 Experimental basic definitions
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/l3kernel/l3expan.sty
-Package: l3expan 2012/02/26 v3460 L3 Experimental argument expansion
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/l3kernel/l3tl.sty
-Package: l3tl 2012/02/26 v3460 L3 Experimental token lists
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/l3kernel/l3seq.sty
-Package: l3seq 2012/01/09 v3158 L3 Experimental sequences and stacks
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/l3kernel/l3int.sty
-Package: l3int 2012/02/26 v3460 L3 Experimental integers
-\c_max_int=\count94
-\l_tmpa_int=\count95
-\l_tmpb_int=\count96
-\l_tmpc_int=\count97
-\g_tmpa_int=\count98
-\g_tmpb_int=\count99
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/l3kernel/l3quark.sty
-Package: l3quark 2012/02/12 v3384 L3 Experimental quarks
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/l3kernel/l3prg.sty
-Package: l3prg 2012/02/26 v3464 L3 Experimental control structures
-\g_prg_map_int=\count100
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/l3kernel/l3clist.sty
-Package: l3clist 2012/02/26 v3460 L3 Experimental comma separated lists
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/l3kernel/l3token.sty
-Package: l3token 2012/02/26 v3460 L3 Experimental token manipulation
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/l3kernel/l3prop.sty
-Package: l3prop 2012/02/26 v3460 L3 Experimental property lists
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/l3kernel/l3msg.sty
-Package: l3msg 2012/02/26 v3470 L3 Experimental messages
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/l3kernel/l3file.sty
-Package: l3file 2012/02/26 v3464 L3 Experimental file and I/O operations
-\l_iow_stream_int=\count101
-\l_iow_line_length_int=\count102
-\l_iow_target_length_int=\count103
-\l_iow_current_line_int=\count104
-\l_iow_current_word_int=\count105
-\l_iow_current_indentation_int=\count106
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/l3kernel/l3skip.sty
-Package: l3skip 2012/02/26 v3460 L3 Experimental dimensions and skips
-\l_tmpa_dim=\dimen117
-\l_tmpb_dim=\dimen118
-\l_tmpc_dim=\dimen119
-\g_tmpa_dim=\dimen120
-\g_tmpb_dim=\dimen121
-\l_tmpa_skip=\skip56
-\l_tmpb_skip=\skip57
-\l_tmpc_skip=\skip58
-\g_tmpa_skip=\skip59
-\g_tmpb_skip=\skip60
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/l3kernel/l3keys.sty
-Package: l3keys 2011/12/22 v3086 L3 Experimental key-value interfaces
-\g_keyval_level_int=\count107
-\l_keys_choice_int=\count108
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/l3kernel/l3fp.sty
-Package: l3fp 2012/02/06 v3315 L3 Experimental floating-point operations
-\c_one_hundred_million=\count109
-\c_five_hundred_million=\count110
-\c_one_thousand_million=\count111
-\c_fp_pi_by_four_decimal_int=\count112
-\c_fp_pi_by_four_extended_int=\count113
-\c_fp_pi_decimal_int=\count114
-\c_fp_pi_extended_int=\count115
-\c_fp_two_pi_decimal_int=\count116
-\c_fp_two_pi_extended_int=\count117
-\l_fp_count_int=\count118
-\l_fp_div_offset_int=\count119
-\l_fp_exp_integer_int=\count120
-\l_fp_exp_decimal_int=\count121
-\l_fp_exp_extended_int=\count122
-\l_fp_exp_exponent_int=\count123
-\l_fp_input_a_sign_int=\count124
-\l_fp_input_a_integer_int=\count125
-\l_fp_input_a_decimal_int=\count126
-\l_fp_input_a_exponent_int=\count127
-\l_fp_input_b_sign_int=\count128
-\l_fp_input_b_integer_int=\count129
-\l_fp_input_b_decimal_int=\count130
-\l_fp_input_b_exponent_int=\count131
-\l_fp_input_a_extended_int=\count132
-\l_fp_input_b_extended_int=\count133
-\l_fp_mul_a_i_int=\count134
-\l_fp_mul_a_ii_int=\count135
-\l_fp_mul_a_iii_int=\count136
-\l_fp_mul_a_iv_int=\count137
-\l_fp_mul_a_v_int=\count138
-\l_fp_mul_a_vi_int=\count139
-\l_fp_mul_b_i_int=\count140
-\l_fp_mul_b_ii_int=\count141
-\l_fp_mul_b_iii_int=\count142
-\l_fp_mul_b_iv_int=\count143
-\l_fp_mul_b_v_int=\count144
-\l_fp_mul_b_vi_int=\count145
-\l_fp_mul_output_int=\count146
-\l_fp_output_sign_int=\count147
-\l_fp_output_integer_int=\count148
-\l_fp_output_decimal_int=\count149
-\l_fp_output_exponent_int=\count150
-\l_fp_output_extended_int=\count151
-\l_fp_round_position_int=\count152
-\l_fp_round_target_int=\count153
-\l_fp_split_sign_int=\count154
-\l_fp_internal_int=\count155
-\l_fp_trig_octant_int=\count156
-\l_fp_trig_sign_int=\count157
-\l_fp_trig_decimal_int=\count158
-\l_fp_trig_extended_int=\count159
-\l_fp_internal_dim=\dimen122
-\l_fp_internal_skip=\skip61
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/l3kernel/l3box.sty
-Package: l3box 2012/02/18 v3432 L3 Experimental boxes
-\l_tmpb_box=\box29
-\l_box_top_dim=\dimen123
-\l_box_bottom_dim=\dimen124
-\l_box_left_dim=\dimen125
-\l_box_right_dim=\dimen126
-\l_box_top_new_dim=\dimen127
-\l_box_bottom_new_dim=\dimen128
-\l_box_left_new_dim=\dimen129
-\l_box_right_new_dim=\dimen130
-\l_box_internal_box=\box30
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/l3kernel/l3coffins.sty
-Package: l3coffins 2012/02/26 v3460 L3 Experimental coffin code layer
-\l_coffin_internal_box=\box31
-\l_coffin_internal_dim=\dimen131
-\l_coffin_offset_x_dim=\dimen132
-\l_coffin_offset_y_dim=\dimen133
-\l_coffin_x_dim=\dimen134
-\l_coffin_y_dim=\dimen135
-\l_coffin_x_prime_dim=\dimen136
-\l_coffin_y_prime_dim=\dimen137
-\l_coffin_Depth_dim=\dimen138
-\l_coffin_Height_dim=\dimen139
-\l_coffin_TotalHeight_dim=\dimen140
-\l_coffin_Width_dim=\dimen141
-\c_empty_coffin=\box32
-\l_coffin_aligned_coffin=\box33
-\l_coffin_aligned_internal_coffin=\box34
-\l_coffin_bounding_shift_dim=\dimen142
-\l_coffin_left_corner_dim=\dimen143
-\l_coffin_right_corner_dim=\dimen144
-\l_coffin_bottom_corner_dim=\dimen145
-\l_coffin_top_corner_dim=\dimen146
-\l_coffin_scaled_total_height_dim=\dimen147
-\l_coffin_scaled_width_dim=\dimen148
-\l_coffin_display_coffin=\box35
-\l_coffin_display_coord_coffin=\box36
-\l_coffin_display_pole_coffin=\box37
-\l_coffin_display_offset_dim=\dimen149
-\l_coffin_display_x_dim=\dimen150
-\l_coffin_display_y_dim=\dimen151
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/l3kernel/l3color.sty
-Package: l3color 2011/09/07 v2776 L3 Experimental colour support
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/l3kernel/l3luatex.sty
-Package: l3luatex 2012/02/09 v3355 L3 Experimental LuaTeX-specific functions
-\g_cctab_allocate_int=\count160
-\g_cctab_stack_int=\count161
-))
-(/usr/local/texlive/2011/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-Package: xparse 2012/02/26 v3471 L3 Experimental document command parser
-\l_xparse_current_arg_int=\count162
-\l_xparse_m_args_int=\count163
-\l_xparse_mandatory_args_int=\count164
-\l_xparse_processor_int=\count165
-\l_xparse_v_nesting_int=\count166
-)
-\l_fontspec_script_int=\count167
-\l_fontspec_language_int=\count168
-\l_fontspec_strnum_int=\count169
-\l_fontspec_tmpa_dim=\dimen152
-\l_fontspec_tmpb_dim=\dimen153
-\l_fontspec_tmpc_dim=\dimen154
-Variant \tl_gset:cV already defined; not changing it on line 66
+Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/local/texlive/2011/texmf-dist/tex/latex/fontspec/fontspec-patches.sty
-Package: fontspec-patches 2011/09/18 v2.2a Advanced font selection for XeLaTeX/
-LuaLaTeX
-
-(/usr/local/texlive/2011/texmf-dist/tex/latex/base/fixltx2e.sty
-Package: fixltx2e 2006/09/13 v1.1m fixes to LaTeX
-LaTeX Info: Redefining \em on input line 420.
-LaTeX Info: The control sequence `\[' is already robust on input line 471.
-LaTeX Info: The control sequence `\]' is already robust on input line 472.
-)
-LaTeX Info: Redefining \em on input line 22.
-LaTeX Info: Redefining \emph on input line 29.
-LaTeX Info: Redefining \- on input line 32.
-
-*************************************************
-* LaTeX warning: "xparse/redefine-command"
-* 
-* Redefining document command \oldstylenums with arg. spec. 'm' on line 107.
-*************************************************
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \liningnums with arg. spec. 'm' on line 111.
-.................................................
-) (/usr/local/texlive/2011/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
-Package: fontspec-xetex 2011/09/18 v2.2a Advanced font selection for XeLaTeX/Lu
-aLaTeX
-
-(/usr/local/texlive/2011/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
-
-(/Users/jonb/Library/texmf/tex/xelatex/euenc/eu1enc.def
-File: eu1enc.def 2006/08/13 v0.1 Experimental unicode font encoding
-)
-LaTeX Font Info:    Try loading font information for EU1+lmr on input line 100.
-
-
-(/Users/jonb/Library/texmf/tex/xelatex/euenc/lm/eu1lmr.fd
-File: eu1lmr.fd 2005/08/29 v1.2 Font defs for Latin Modern
-))
-(/Users/jonb/Library/texmf/tex/xelatex/adobetypeclassics/xunicode.sty
-File: xunicode.sty 2005/02/26 v0.5 provides access to latin accents and many ot
-her characters in Unicode lower plane
-)
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \fontspec with arg. spec. 'O{}m' on line 39.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \setmainfont with arg. spec. 'O{}m' on line 43.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \setsansfont with arg. spec. 'O{}m' on line 47.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \setmonofont with arg. spec. 'O{}m' on line 51.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \setmathrm with arg. spec. 'O{}m' on line 59.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \setboldmathrm with arg. spec. 'O{}m' on line 62.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \setmathsf with arg. spec. 'O{}m' on line 65.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \setmathtt with arg. spec. 'O{}m' on line 68.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \newfontfamily with arg. spec. 'mO{}m' on line 84.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \newfontface with arg. spec. 'mO{}m' on line 87.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \defaultfontfeatures with arg. spec. 'm' on line
-. 91.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \addfontfeatures with arg. spec. 'm' on line 107.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \newfontfeature with arg. spec. 'mm' on line 118.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \newAATfeature with arg. spec. 'mmmm' on line 125.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \newICUfeature with arg. spec. 'mmm' on line 132.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \aliasfontfeature with arg. spec. 'mm' on line
-. 159.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \aliasfontfeatureoption with arg. spec. 'mmm' on
-. line 164.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \newfontscript with arg. spec. 'mm' on line 169.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \newfontlanguage with arg. spec. 'mm' on line 192.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \DeclareFontsExtensions with arg. spec. 'm' on
-. line 211.
-.................................................
-Variant \prop_gput:cnV already defined; not changing it on line 485
-Variant \prop_gput:cnx already defined; not changing it on line 486
-Variant \keys_set:nx already defined; not changing it on line 963
-\c@fontspec_tmp_int=\count170
-LaTeX Info: Redefining \itshape on input line 1881.
-LaTeX Info: Redefining \slshape on input line 1885.
-LaTeX Info: Redefining \scshape on input line 1889.
-LaTeX Info: Redefining \upshape on input line 1893.
-
-(/usr/local/texlive/2011/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
-(/usr/local/texlive/2011/texmf-dist/tex/latex/xkeyval/xkeyval.sty
-Package: xkeyval 2008/08/13 v2.6a package option processing (HA)
-
-(/usr/local/texlive/2011/texmf-dist/tex/generic/xkeyval/xkeyval.tex
-\XKV@toks=\toks27
-\XKV@tempa@toks=\toks28
-\XKV@depth=\count171
-File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
-
-(/usr/local/texlive/2011/texmf-dist/tex/generic/xkeyval/keyval.tex)))
-\c@eu@=\count172
-\c@eu@i=\count173
-\c@mkern=\count174
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/xltxtra/xltxtra.sty
-Package: xltxtra 2010/09/20 v0.5e Improvements for the "XeLaTeX" format
-
-(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/realscripts/realscripts.sty
-Package: realscripts 2010/09/30 v0.3 Access OpenType subscripts and superscript
-s
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \fakesubscript with arg. spec. 'm' on line 19.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \fakesuperscript with arg. spec. 'm' on line 22.
-.................................................
-
-*************************************************
-* LaTeX warning: "xparse/redefine-command"
-* 
-* Redefining document command \textsubscript with arg. spec. 's' on line 25.
-*************************************************
-*************************************************
-* LaTeX warning: "xparse/redefine-command"
-* 
-* Redefining document command \textsuperscript with arg. spec. 's' on line 28.
-*************************************************
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \realsubscript with arg. spec. 'm' on line 45.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \realsuperscript with arg. spec. 'm' on line 60.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \textsubsuperscript with arg. spec. 'sO{l}mm' on
-. line 137.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining document command \textsupersubscript with arg. spec. 'sO{l}mm' on
-. line 140.
-.................................................
-\subsupersep=\dimen155
-) (/usr/local/texlive/2011/texmf-dist/tex/latex/metalogo/metalogo.sty
-Package: metalogo 2010/05/29 v0.12 Extended TeX logo macros
-
-(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
-\Gin@req@height=\dimen156
-\Gin@req@width=\dimen157
-)
-\xl@everylogo=\toks29
-\xl@@everylogo=\toks30
-LaTeX Info: Redefining \TeX on input line 193.
-LaTeX Info: Redefining \LaTeX on input line 202.
-LaTeX Info: Redefining \LaTeXe on input line 219.
-)
-\xxt@tempbox=\box38
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/eso-pic/eso-pic.sty
-Package: eso-pic 2010/10/06 v2.0c eso-pic (RN)
-
-(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/atbegshi.sty
-Package: atbegshi 2011/01/30 v1.15 At begin shipout hook (HO)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
 (/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
 )
 (/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
-)))
+)
+\Gread@gobject=\count91
+))
+\Gin@req@height=\dimen117
+\Gin@req@width=\dimen118
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2010/10/06 v2.0c eso-pic (RN)
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/atbegshi.sty
+Package: atbegshi 2011/01/30 v1.15 At begin shipout hook (HO)
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+LaTeX Info: Redefining \color on input line 702.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+))
 (./woo10.clo
 File: woo10.clo 2004/02/16 v1.4f Standard LaTeX file (size option)
 )
@@ -639,66 +200,64 @@ Package: geometry 2010/09/12 v5.6 Page Geometry
 Package: ifvtex 2010/03/01 v1.5 Switches for detecting VTeX and its modes (HO)
 Package ifvtex Info: VTeX not detected.
 )
-\Gm@cnth=\count175
-\Gm@cntv=\count176
-\c@Gm@tempcnt=\count177
-\Gm@bindingoffset=\dimen158
-\Gm@wd@mp=\dimen159
-\Gm@odd@mp=\dimen160
-\Gm@even@mp=\dimen161
-\Gm@layoutwidth=\dimen162
-\Gm@layoutheight=\dimen163
-\Gm@layouthoffset=\dimen164
-\Gm@layoutvoffset=\dimen165
-\Gm@dimlist=\toks31
+\Gm@cnth=\count92
+\Gm@cntv=\count93
+\c@Gm@tempcnt=\count94
+\Gm@bindingoffset=\dimen119
+\Gm@wd@mp=\dimen120
+\Gm@odd@mp=\dimen121
+\Gm@even@mp=\dimen122
+\Gm@layoutwidth=\dimen123
+\Gm@layoutheight=\dimen124
+\Gm@layouthoffset=\dimen125
+\Gm@layoutvoffset=\dimen126
+\Gm@dimlist=\toks28
 
-(/Users/jonb/Library/texmf/tex/xelatex/geometry.cfg
-\pdfoutput=\count178
-))
-\c@part=\count179
-\c@chapter=\count180
-\c@section=\count181
-\c@subsection=\count182
-\c@subsubsection=\count183
-\c@paragraph=\count184
-\c@subparagraph=\count185
-\c@figure=\count186
-\c@table=\count187
-\abovecaptionskip=\skip62
-\belowcaptionskip=\skip63
+(/Users/jonb/Library/texmf/tex/xelatex/geometry.cfg))
+\c@part=\count95
+\c@chapter=\count96
+\c@section=\count97
+\c@subsection=\count98
+\c@subsubsection=\count99
+\c@paragraph=\count100
+\c@subparagraph=\count101
+\c@figure=\count102
+\c@table=\count103
+\abovecaptionskip=\skip56
+\belowcaptionskip=\skip57
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count188
-\lst@gtempboxa=\box39
-\lst@token=\toks32
-\lst@length=\count189
-\lst@currlwidth=\dimen166
-\lst@column=\count190
-\lst@pos=\count191
-\lst@lostspace=\dimen167
-\lst@width=\dimen168
-\lst@newlines=\count192
-\lst@lineno=\count193
-\lst@maxwidth=\dimen169
+\lst@mode=\count104
+\lst@gtempboxa=\box29
+\lst@token=\toks29
+\lst@length=\count105
+\lst@currlwidth=\dimen127
+\lst@column=\count106
+\lst@pos=\count107
+\lst@lostspace=\dimen128
+\lst@width=\dimen129
+\lst@newlines=\count108
+\lst@lineno=\count109
+\lst@maxwidth=\dimen130
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
-\c@lstnumber=\count194
-\lst@skipnumbers=\count195
-\lst@framebox=\box40
+\c@lstnumber=\count110
+\lst@skipnumbers=\count111
+\lst@framebox=\box30
 )
 (/usr/local/texlive/2011/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2007/02/22 1.4 listings configuration
 ))
 Package: listings 2007/02/22 1.4 (Carsten Heinz)
-\bibindent=\dimen170
+\bibindent=\dimen131
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip64
-\bibsep=\skip65
+\bibhang=\skip58
+\bibsep=\skip59
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count196
+\c@NAT@ctr=\count112
 
 Local config file natbib.cfg used
 (./natbib.cfg)) (/usr/local/texlive/2011/texmf-dist/tex/latex/base/ifthen.sty
@@ -709,58 +268,58 @@ Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
 )
 (/usr/local/texlive/2011/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks33
-\verbatim@line=\toks34
+\every@verbatim=\toks30
+\verbatim@line=\toks31
 \verbatim@in@stream=\read1
 )
 (/usr/local/texlive/2011/texmf-dist/tex/latex/lettrine/lettrine.sty
 File: lettrine.sty 2007/08/08 v1.62 (Daniel Flipo)
-\c@DefaultLines=\count197
-\DefaultFindent=\dimen171
-\DefaultNindent=\dimen172
-\DefaultSlope=\dimen173
-\L@lbox=\box41
-\L@tbox=\box42
-\c@L@lines=\count198
-\L@Pindent=\dimen174
-\L@Findent=\dimen175
-\L@Nindent=\dimen176
-\L@lraise=\dimen177
-\L@first=\dimen178
-\L@next=\dimen179
-\L@slope=\dimen180
-\L@height=\dimen181
-\LettrineWidth=\dimen182
+\c@DefaultLines=\count113
+\DefaultFindent=\dimen132
+\DefaultNindent=\dimen133
+\DefaultSlope=\dimen134
+\L@lbox=\box31
+\L@tbox=\box32
+\c@L@lines=\count114
+\L@Pindent=\dimen135
+\L@Findent=\dimen136
+\L@Nindent=\dimen137
+\L@lraise=\dimen138
+\L@first=\dimen139
+\L@next=\dimen140
+\L@slope=\dimen141
+\L@height=\dimen142
+\LettrineWidth=\dimen143
 
 Loading lettrine.cfg
 (/usr/local/texlive/2011/texmf-dist/tex/latex/lettrine/lettrine.cfg))
 (./styles/woofncychap.sty
 Package: styles/woofncychap 2004/03/26 v1.0 LaTeX package (Revised chapters) an
  alteration of fncychap by Jon Breitenbucher
-\RW=\skip66
-\mylen=\skip67
-\myhi=\skip68
-\px=\skip69
-\py=\skip70
-\pyy=\skip71
-\pxx=\skip72
+\RW=\skip60
+\mylen=\skip61
+\myhi=\skip62
+\px=\skip63
+\py=\skip64
+\pyy=\skip65
+\pxx=\skip66
 ) (./styles/woolshort.sty
 Package: styles/woolshort 
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count199
-\calc@Bcount=\count200
-\calc@Adimen=\dimen183
-\calc@Bdimen=\dimen184
-\calc@Askip=\skip73
-\calc@Bskip=\skip74
+\calc@Acount=\count115
+\calc@Bcount=\count116
+\calc@Adimen=\dimen144
+\calc@Bdimen=\dimen145
+\calc@Askip=\skip67
+\calc@Bskip=\skip68
 LaTeX Info: Redefining \setlength on input line 76.
 LaTeX Info: Redefining \addtolength on input line 77.
-\calc@Ccount=\count201
-\calc@Cskip=\skip75
+\calc@Ccount=\count117
+\calc@Cskip=\skip69
 )
-\symbbox=\box43
+\symbbox=\box33
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/eucal.sty
 Package: eucal 2009/06/22 v3.00 Euler Script fonts
@@ -774,38 +333,37 @@ Package eufrak Warning: The eufrak package is redundant if the amsfonts package
 
 )
 \example@out=\write3
-Normal \count register pool exhausted, switching to extended pool.
-\c@exacnt=\count277
-\savefboxrule=\skip76
-\savefboxsep=\skip77
-\outdent=\skip78
+\c@exacnt=\count118
+\savefboxrule=\skip70
+\savefboxsep=\skip71
+\outdent=\skip72
 ) (/usr/local/texlive/2011/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen185
-\WF@size=\dimen186
-\c@WF@wrappedlines=\count278
-\WF@box=\box44
-\WF@everypar=\toks35
+\wrapoverhang=\dimen146
+\WF@size=\dimen147
+\c@WF@wrappedlines=\count119
+\WF@box=\box34
+\WF@everypar=\toks32
 Package: wrapfig 2003/01/31  v 3.6
 )
 (/usr/local/texlive/2011/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count279
-\float@exts=\toks36
-\float@box=\box45
-\@float@everytoks=\toks37
-\@floatcapt=\box46
+\c@float@type=\count120
+\float@exts=\toks33
+\float@box=\box35
+\@float@everytoks=\toks34
+\@floatcapt=\box36
 )
 (/usr/local/texlive/2011/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2011/11/10 v3.2e Customizing captions (AR)
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2011/11/01 v1.4a caption3 kernel (AR)
-\captionmargin=\dimen187
-\captionmargin@=\dimen188
-\captionwidth=\dimen189
-\caption@indent=\dimen190
-\caption@parindent=\dimen191
-\caption@hangindent=\dimen192
+\captionmargin=\dimen148
+\captionmargin@=\dimen149
+\captionwidth=\dimen150
+\caption@indent=\dimen151
+\caption@parindent=\dimen152
+\caption@hangindent=\dimen153
 Package caption Info: Unknown document class (or package),
 (caption)             standard defaults will be used.
 )
@@ -821,30 +379,45 @@ ize \advance \@tempdima -\wd \@tempboxa \parshape \@ne 1\wd \@tempboxa \@tempdi
 ma }\par \parindent 0pt\noindent \hbox to \z@ {\hss #1: }#2\par }\else \global 
 \@minipagefalse \hbox to\hsize {\hfil \box \@tempboxa \hfil }\fi \vskip \belowc
 aptionskip .
-\c@ContinuedFloat=\count280
+\c@ContinuedFloat=\count121
 Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: wrapfig package is loaded.
 ) (/usr/local/texlive/2011/texmf-dist/tex/latex/subfigure/subfigure.sty
 Package: subfigure 2002/03/15 v2.1.5 subfigure package
-\subfigtopskip=\skip79
-\subfigcapskip=\skip80
-\subfigcaptopadj=\dimen193
-\subfigbottomskip=\skip81
-\subfigcapmargin=\dimen194
-\subfiglabelskip=\skip82
-\c@subfigure=\count281
-\c@lofdepth=\count282
-\c@subtable=\count283
-\c@lotdepth=\count284
+\subfigtopskip=\skip73
+\subfigcapskip=\skip74
+\subfigcaptopadj=\dimen154
+\subfigbottomskip=\skip75
+\subfigcapmargin=\dimen155
+\subfiglabelskip=\skip76
+\c@subfigure=\count122
+\c@lofdepth=\count123
+\c@subtable=\count124
+\c@lotdepth=\count125
 
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
 (/usr/local/texlive/2011/texmf-dist/tex/latex/subfigure/subfigure.cfg)
-\subfig@top=\skip83
-\subfig@bottom=\skip84
+\subfig@top=\skip77
+\subfig@bottom=\skip78
 )
+(/usr/local/texlive/2011/texmf-dist/tex/latex/microtype/microtype.sty
+Package: microtype 2010/01/10 v2.4 Micro-typography with pdfTeX (RS)
+\MT@toks=\toks35
+\MT@count=\count126
+LaTeX Info: Redefining \lsstyle on input line 1597.
+LaTeX Info: Redefining \lslig on input line 1597.
+\MT@outer@space=\skip79
+LaTeX Info: Redefining \textls on input line 1605.
+\MT@outer@kern=\dimen156
+LaTeX Info: Redefining \textmicrotypecontext on input line 2156.
+Package microtype Info: Loading configuration file microtype.cfg.
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/microtype/microtype.cfg
+File: microtype.cfg 2010/01/10 v2.4 microtype main configuration file (RS)
+))
 (/usr/local/texlive/2011/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2012/02/06 v6.82o Hypertext links for LaTeX
 
@@ -856,7 +429,8 @@ Package: hobsub-generic 2011/04/23 v1.4 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2011/04/23 v1.4 Subsetting bundle oberdiek (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
 Package hobsub Info: Skipping package `ltxcmds' (already loaded).
-Package hobsub Info: Skipping package `ifluatex' (already loaded).
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
 Package hobsub Info: Skipping package `ifvtex' (already loaded).
 Package: intcalc 2007/09/27 v1.1 Expandable integer calculations (HO)
 Package hobsub Info: Skipping package `ifpdf' (already loaded).
@@ -869,10 +443,9 @@ Package: kvsetkeys 2011/04/07 v1.13 Key value parser (HO)
 Package: kvdefinekeys 2011/04/07 v1.3 Defining keys (HO)
 Package: pdftexcmds 2011/04/22 v0.16 Utilities of pdfTeX for LuaTeX (HO)
 Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: pdfTeX >= 1.30 not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode not found.
+Package pdftexcmds Info: \pdfdraftmode found.
 Package: pdfescape 2011/04/04 v1.12 Provides string conversions (HO)
 Package: bigintcalc 2011/01/30 v1.2 Expandable big integer calculations (HO)
 Package: bitset 2011/01/30 v1.1 Data type bit set (HO)
@@ -890,17 +463,17 @@ Package: hycolor 2011/01/30 v1.7 Color options of hyperref/bookmark (HO)
 (/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2010/12/23 v3.10 Keyval support for LaTeX options (HO)
 )
-\@linkdim=\dimen195
-\Hy@linkcounter=\count285
-\Hy@pagecounter=\count286
+\@linkdim=\dimen157
+\Hy@linkcounter=\count127
+\Hy@pagecounter=\count128
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/02/06 v6.82o Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count287
+\Hy@SavedSpaceFactor=\count129
 
-(/Users/jonb/Library/texmf/tex/xelatex/hyperref.cfg
-File: hyperref.cfg 2006/06/07 v1.2b hyperref configuration of XeTeX
+(/usr/local/texlive/2011/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Option `pdfusetitle' set `true' on input line 3925.
 Package hyperref Info: Option `bookmarks' set `true' on input line 3925.
@@ -909,214 +482,70 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 3925.
 Package hyperref Info: Option `plainpages' set `false' on input line 3925.
 Package hyperref Info: Option `linktocpage' set `true' on input line 3925.
 Package hyperref Info: Option `pdfpagelabels' set `true' on input line 3925.
-Package hyperref Info: Option `hyperindex' set `false' on input line 3925.
+Package hyperref Info: Option `hyperindex' set `true' on input line 3925.
 Package hyperref Info: Option `breaklinks' set `true' on input line 3925.
 Package hyperref Info: Hyper figures OFF on input line 4046.
 Package hyperref Info: Link nesting OFF on input line 4051.
-Package hyperref Info: Hyper index OFF on input line 4056.
+Package hyperref Info: Hyper index ON on input line 4054.
 Package hyperref Info: Plain pages OFF on input line 4061.
 Package hyperref Info: Backreferencing OFF on input line 4066.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4284.
-\c@Hy@tempcnt=\count288
+\c@Hy@tempcnt=\count130
 
-(/Users/jonb/Library/texmf/tex/xelatex/url.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
-Package: url 2004/03/15  ver 3.1  Verb mode for urls, etc.
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4637.
-\Fld@menulength=\count289
-\Field@Width=\dimen196
-\Fld@charsize=\dimen197
+\Fld@menulength=\count131
+\Field@Width=\dimen158
+\Fld@charsize=\dimen159
 Package hyperref Info: Hyper figures OFF on input line 5757.
 Package hyperref Info: Link nesting OFF on input line 5762.
-Package hyperref Info: Hyper index OFF on input line 5767.
+Package hyperref Info: Hyper index ON on input line 5765.
 Package hyperref Info: backreferencing OFF on input line 5772.
 Package hyperref Info: Link coloring ON on input line 5775.
 Package hyperref Info: Link coloring with OCG OFF on input line 5782.
 Package hyperref Info: PDF/A mode OFF on input line 5787.
 LaTeX Info: Redefining \ref on input line 5827.
 LaTeX Info: Redefining \pageref on input line 5831.
-\Hy@abspage=\count290
-\c@Item=\count291
-\c@Hfootnote=\count292
+\Hy@abspage=\count132
+\c@Item=\count133
+\c@Hfootnote=\count134
 )
 
-Package hyperref Message: Driver: hxetex.
+Package hyperref Message: Driver: hpdftex.
 
-(/usr/local/texlive/2011/texmf-dist/tex/latex/hyperref/hxetex.def
-File: hxetex.def 2012/02/06 v6.82o Hyperref driver for XeTeX
-
-(/usr/local/texlive/2011/texmf-dist/tex/latex/hyperref/puenc.def
-File: puenc.def 2012/02/06 v6.82o Hyperref: PDF Unicode definition (HO)
-)
-(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/stringenc.sty
-Package: stringenc 2010/03/01 v1.8 Converts strings between encodings (HO)
-)
-\pdfm@box=\box47
-\c@Hy@AnnotLevel=\count293
-\HyField@AnnotCount=\count294
-\Fld@listcount=\count295
-\c@bookmark@seq@number=\count296
+(/usr/local/texlive/2011/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2012/02/06 v6.82o Hyperref driver for pdfTeX
+\Fld@listcount=\count135
+\c@bookmark@seq@number=\count136
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
-Package rerunfilecheck Info: Feature \pdfmdfivesum is not available
-(rerunfilecheck)             (e.g. pdfTeX or LuaTeX with package `pdftexcmds').
-
-(rerunfilecheck)             Therefore file contents cannot be checked efficien
-tly
-(rerunfilecheck)             and the loading of the package is aborted.
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
 )
-\Hy@SectionHShift=\skip85
+\Hy@SectionHShift=\skip80
 )
 *** Warning: The hyperref package has been loaded. Loading any packages after t
 his could interfere with the hyperref package***
-) (./styles/packages.tex
-\g_fontspec_family_Adobe Garamond Pro_int=\count297
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'AdobeGaramondPro(0)' created for font 'Adobe Garamond Pro' with
-. options [Mapping=tex-text,Numbers=OldStyle,BoldFont={* Semibold}].
-. 
-. This font family consists of the following shapes:
-. 
-. * 'normal' with NFSS spec.:
-. <->"Adobe Garamond
-. Pro/ICU:script=latn;language=DFLT;mapping=tex-text;+onum;"
-. 
-. * 'small caps' with NFSS spec.:
-. <->"Adobe Garamond
-. Pro/ICU:script=latn;language=DFLT;mapping=tex-text;+onum;+smcp;"
-. 
-. * 'bold' with NFSS spec.:
-. <->"Adobe Garamond Pro
-. Semibold/ICU:script=latn;language=DFLT;mapping=tex-text;+onum;"
-. 
-. * 'bold small caps' with NFSS spec.:
-. <->"Adobe Garamond Pro
-. Semibold/ICU:script=latn;language=DFLT;mapping=tex-text;+onum;+smcp;"
-. 
-. * 'italic' with NFSS spec.:
-. <->"Adobe Garamond
-. Pro/I/ICU:script=latn;language=DFLT;mapping=tex-text;+onum;"
-. 
-. * 'bold italic' with NFSS spec.:
-. <->"Adobe Garamond Pro
-. Semibold/I/ICU:script=latn;language=DFLT;mapping=tex-text;+onum;"
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'AdobeGaramondPro(1)' created for font 'Adobe Garamond Pro' with
-. options [Mapping=tex-text,].
-. 
-. This font family consists of the following shapes:
-. 
-. * 'normal' with NFSS spec.:
-. <->"Adobe Garamond Pro/ICU:script=latn;language=DFLT;mapping=tex-text;"
-. 
-. * 'small caps' with NFSS spec.:
-. <->"Adobe Garamond
-. Pro/ICU:script=latn;language=DFLT;mapping=tex-text;+smcp;"
-. 
-. * 'bold' with NFSS spec.:
-. <->"Adobe Garamond Pro/B/ICU:script=latn;language=DFLT;mapping=tex-text;"
-. 
-. * 'bold small caps' with NFSS spec.:
-. <->"Adobe Garamond
-. Pro/B/ICU:script=latn;language=DFLT;mapping=tex-text;+smcp;"
-. 
-. * 'italic' with NFSS spec.:
-. <->"Adobe Garamond Pro/I/ICU:script=latn;language=DFLT;mapping=tex-text;"
-. 
-. * 'bold italic' with NFSS spec.:
-. <->"Adobe Garamond Pro/BI/ICU:script=latn;language=DFLT;mapping=tex-text;"
-.................................................
-LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 12.
-LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  EU1/AdobeGaramondPro(1)/m/n --> EU1/AdobeGaramondPro(1)
-/bx/n on input line 12.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 12.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> EU1/AdobeGaramondPro(1)/m/it on input 
-line 12.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> EU1/AdobeGaramondPro(1)/m/it on input
- line 12.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 12.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> EU1/AdobeGaramondPro(1)/bx/n on input 
-line 12.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> EU1/AdobeGaramondPro(1)/bx/n on input 
-line 12.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  EU1/AdobeGaramondPro(1)/m/it --> EU1/AdobeGaramondPro(1
-)/bx/it on input line 12.
-\symOperators:m:n=\mathgroup6
-\g_fontspec_family_Myriad Pro_int=\count298
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'MyriadPro(0)' created for font 'Myriad Pro' with options
-. [Mapping=tex-text,Scale=.87,Fractions=On,Numbers=Lining].
-. 
-. This font family consists of the following shapes:
-. 
-. * 'normal' with NFSS spec.:
-. <->s*[.87]"Myriad
-. Pro/ICU:script=latn;language=DFLT;mapping=tex-text;+frac;+lnum;"
-. 
-. * 'bold' with NFSS spec.:
-. <->s*[.87]"Myriad
-. Pro/B/ICU:script=latn;language=DFLT;mapping=tex-text;+frac;+lnum;"
-. 
-. * 'italic' with NFSS spec.:
-. <->s*[.87]"Myriad
-. Pro/I/ICU:script=latn;language=DFLT;mapping=tex-text;+frac;+lnum;"
-. 
-. * 'bold italic' with NFSS spec.:
-. <->s*[.87]"Myriad
-. Pro/BI/ICU:script=latn;language=DFLT;mapping=tex-text;+frac;+lnum;"
-.................................................
-\g_fontspec_family_Courier Std_int=\count299
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'CourierStd(0)' created for font 'Courier Std' with options
-. [Mapping=tex-text,Scale=.9].
-. 
-. This font family consists of the following shapes:
-. 
-. * 'normal' with NFSS spec.:
-. <->s*[.9]"Courier Std/ICU:script=latn;language=DFLT;mapping=tex-text;"
-. 
-. * 'bold' with NFSS spec.:
-. <->s*[.9]"Courier Std/B/ICU:script=latn;language=DFLT;mapping=tex-text;"
-. 
-. * 'italic' with NFSS spec.:
-. <->s*[.9]"Courier Std/I/ICU:script=latn;language=DFLT;mapping=tex-text;"
-. 
-. * 'bold italic' with NFSS spec.:
-. <->s*[.9]"Courier Std/BI/ICU:script=latn;language=DFLT;mapping=tex-text;"
-.................................................
-) (./styles/personal.tex
-\c@unnumft=\count300
+) (./styles/packages.tex) (./styles/personal.tex
+\c@unnumft=\count137
 ) (./styles/theorems.tex
-\c@thm=\count301
-\c@cor=\count302
-\c@lem=\count303
-\c@prop=\count304
-\c@defn=\count305
-\c@rem=\count306
-\c@ex=\count307
-\c@note=\count308
-\c@nts=\count309
-\c@terminology=\count310
-\c@bdefn=\count311
-\fmbox=\box48
+\c@thm=\count138
+\c@cor=\count139
+\c@lem=\count140
+\c@prop=\count141
+\c@defn=\count142
+\c@rem=\count143
+\c@ex=\count144
+\c@note=\count145
+\c@nts=\count146
+\c@terminology=\count147
+\c@bdefn=\count148
+\fmbox=\box37
 )
 \@indexfile=\write4
 \openout4 = `username.idx'.
@@ -1141,14 +570,39 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 90.
 LaTeX Font Info:    ... okay on input line 90.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 90.
 LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 90.
 LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-\AtBeginShipoutBox=\box49
 
+(/usr/local/texlive/2011/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count149
+\scratchdimen=\dimen160
+\scratchbox=\box38
+\nofMPsegments=\count150
+\nofMParguments=\count151
+\everyMPshowfont=\toks36
+\MPscratchCnt=\count152
+\MPscratchDim=\dimen161
+\MPnumerator=\count153
+\makeMPintoPDFobject=\count154
+\everyMPtoPDFconversion=\toks37
+) (/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Managing graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.jpg,.tif,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\AtBeginShipoutBox=\box39
+
+*geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
 * driver: pdftex
@@ -1182,19 +636,39 @@ LaTeX Font Info:    ... okay on input line 90.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count312
+\c@lstlisting=\count155
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: subfigure package is loaded.
 Package caption Info: End \AtBeginDocument code.
+LaTeX Info: Redefining \microtypecontext on input line 90.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using expansion set `alltext'.
+Package microtype Info: No tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+Package microtype Info: ... Loading configuration file mt-cmr.cfg.
+(/usr/local/texlive/2011/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+File: mt-cmr.cfg 2009/11/09 v2.0 microtype config. file: Computer Modern Roman 
+(RS)
+)
+Package microtype Info: Setting up font `OT1/cmr/m/n/10' on input line 90.
+Package microtype Info: ... Loading protrusion list `cmr-OT1'.
+Package microtype Info: ... : First loading protrusion list `cmr-default'.
+Package microtype Info: ... Applying non-selected expansion (list `default').
 Package hyperref Info: Link coloring ON on input line 90.
+
 (/usr/local/texlive/2011/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 
 (/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count313
+\c@section@level=\count156
 )
 LaTeX Info: Redefining \ref on input line 90.
 LaTeX Info: Redefining \pageref on input line 90.
@@ -1204,39 +678,150 @@ LaTeX Info: Redefining \nameref on input line 90.
 \@outlinefile=\write5
 \openout5 = `username.out'.
 
+Package microtype Info: Setting up font `OT1/cmr/m/sc/10' on input line 99.
+Package microtype Info: ... Loading protrusion list `cmr-sc-OT1'.
+Package microtype Info: ... : First loading protrusion list `cmr-OT1'.
+Package microtype Info: ... : First loading protrusion list `cmr-default'.
+Package microtype Info: ... Applying non-selected expansion (list `default').
+Package microtype Info: Setting up font `OT1/cmr/m/sc/14.4' on input line 99.
+Package microtype Info: ... Loading protrusion list `cmr-sc-OT1'.
+Package microtype Info: ... : First loading protrusion list `cmr-OT1'.
+Package microtype Info: ... : First loading protrusion list `cmr-default'.
+Package microtype Info: ... Applying non-selected expansion (list `default').
+Package microtype Info: Setting up font `OT1/cmr/m/n/14.4' on input line 99.
+Package microtype Info: ... Loading protrusion list `cmr-OT1'.
+Package microtype Info: ... : First loading protrusion list `cmr-default'.
+Package microtype Info: ... Applying non-selected expansion (list `default').
+Package microtype Info: Setting up font `OT1/cmr/m/n/7' on input line 99.
+Package microtype Info: ... Loading protrusion list `cmr-OT1'.
+Package microtype Info: ... : First loading protrusion list `cmr-default'.
+Package microtype Info: ... Applying non-selected expansion (list `default').
+Package microtype Info: ... No configuration file mt-cmm.cfg.
+Package microtype Info: Setting up font `OML/cmm/m/it/14.4' on input line 99.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
+Package microtype Info: Setting up font `OML/cmm/m/it/10' on input line 99.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
+Package microtype Info: Setting up font `OML/cmm/m/it/7' on input line 99.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
+Package microtype Info: ... No configuration file mt-cmsy.cfg.
+Package microtype Info: Setting up font `OMS/cmsy/m/n/14.4' on input line 99.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
+Package microtype Info: Setting up font `OMS/cmsy/m/n/10' on input line 99.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
+Package microtype Info: Setting up font `OMS/cmsy/m/n/7' on input line 99.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
+Package microtype Info: ... No configuration file mt-cmex.cfg.
+Package microtype Info: Setting up font `OMX/cmex/m/n/14.4' on input line 99.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
+Package microtype Info: Setting up font `OMX/cmex/m/n/10' on input line 99.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
+Package microtype Info: Setting up font `OMX/cmex/m/n/7' on input line 99.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
 LaTeX Font Info:    Try loading font information for U+msa on input line 99.
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
+Package microtype Info: ... Loading configuration file mt-msa.cfg.
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+Package microtype Info: Setting up font `U/msa/m/n/14.4' on input line 99.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
+Package microtype Info: Setting up font `U/msa/m/n/10' on input line 99.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
+Package microtype Info: Setting up font `U/msa/m/n/7' on input line 99.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
 LaTeX Font Info:    Try loading font information for U+msb on input line 99.
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-Overfull \hbox (2.66667pt too wide) in paragraph at lines 99--99
+Package microtype Info: ... Loading configuration file mt-msb.cfg.
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+Package microtype Info: Setting up font `U/msb/m/n/14.4' on input line 99.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
+Package microtype Info: Setting up font `U/msb/m/n/10' on input line 99.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
+Package microtype Info: Setting up font `U/msb/m/n/7' on input line 99.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
+Package microtype Info: Setting up font `OT1/cmr/bx/n/10' on input line 99.
+Package microtype Info: ... Loading protrusion list `cmr-OT1'.
+Package microtype Info: ... : First loading protrusion list `cmr-default'.
+Package microtype Info: ... Applying non-selected expansion (list `default').
+
+Overfull \hbox (3.22221pt too wide) in paragraph at lines 99--99
   [] 
  []
 
-File: kauke_arch_gray.pdf Graphic file (type QTm)
-<use  "kauke_arch_gray.pdf" >
-(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/se-ascii-print.def
-File: se-ascii-print.def 2010/03/01 v1.8 stringenc: Printable ASCII characters
-)
+<kauke_arch_gray.pdf, id=152, 202.3556pt x 289.08pt>
+File: kauke_arch_gray.pdf Graphic file (type pdf)
+ <use kauke_arch_gray.pdf>
+Package pdftex.def Info: kauke_arch_gray.pdf used on input line 99.
+(pdftex.def)             Requested size: 556.50735pt x 795.01213pt.
+
 [1
 
 
 
-] [2
+{/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/
+jonb/Library/texmf/tex/latex/wooster/kauke_arch_gray.pdf>] [2
 
 ]
-File: kauke_wordmark.pdf Graphic file (type QTm)
- <use  "kauke_wordmark.pdf" > [3
+<kauke_wordmark.pdf, id=192, 320.06438pt x 398.97574pt>
+File: kauke_wordmark.pdf Graphic file (type pdf)
+
+<use kauke_wordmark.pdf>
+Package pdftex.def Info: kauke_wordmark.pdf used on input line 101.
+(pdftex.def)             Requested size: 128.02347pt x 159.58746pt.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 101.
 
 
-] [4
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 101.
+ [3
 
-] [5] [6
+
+ </Users/jonb/Library/texmf/tex/latex/wooster/kauke_wordmark.pdf>] [4
+
+]
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/sc' in size <20> not available
+(Font)              size <20.74> substituted on input line 109.
+
+Package microtype Info: Setting up font `OT1/cmr/m/sc/20.74' on input line 109.
+
+Package microtype Info: ... Loading protrusion list `cmr-sc-OT1'.
+Package microtype Info: ... : First loading protrusion list `cmr-OT1'.
+Package microtype Info: ... : First loading protrusion list `cmr-default'.
+Package microtype Info: ... Applying non-selected expansion (list `default').
+Package microtype Info: Setting up font `OT1/cmr/m/it/10' on input line 110.
+Package microtype Info: ... Loading protrusion list `cmr-it-OT1'.
+Package microtype Info: ... : First loading protrusion list `cmr-it'.
+Package microtype Info: ... Applying non-selected expansion (list `default').
+[5] [6
 
 ] [7
 
@@ -1244,12 +829,33 @@ File: kauke_wordmark.pdf Graphic file (type QTm)
 
 ] [9] [10
 
-] [11]
-[12
+] [11] [12
 
 ] (./username.toc
-LaTeX Font Info:    Font shape `EU1/CourierStd(0)/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 16.
+Package microtype Info: Setting up font `OT1/cmr/m/n/5' on input line 13.
+Package microtype Info: ... Loading protrusion list `cmr-OT1'.
+Package microtype Info: ... : First loading protrusion list `cmr-default'.
+Package microtype Info: ... Applying non-selected expansion (list `default').
+Package microtype Info: Setting up font `OML/cmm/m/it/5' on input line 13.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
+Package microtype Info: Setting up font `OMS/cmsy/m/n/5' on input line 13.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
+Package microtype Info: Setting up font `OMX/cmex/m/n/5' on input line 13.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
+Package microtype Info: Setting up font `U/msa/m/n/5' on input line 13.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
+Package microtype Info: Setting up font `U/msb/m/n/5' on input line 13.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
+Package microtype Info: ... No configuration file mt-cmtt.cfg.
+Package microtype Info: Setting up font `OT1/cmtt/m/n/10' on input line 16.
+Package microtype Info: ... Loading protrusion list `OT1-default'.
+Package microtype Info: ... : First loading protrusion list `default'.
+Package microtype Info: ... Applying non-selected expansion (list `default').
  [13
 
 ])
@@ -1260,7 +866,8 @@ LaTeX Font Info:    Font shape `EU1/CourierStd(0)/m/n' will be
 \tf@lof=\write7
 \openout7 = `username.lof'.
 
- [15
+
+[15
 
 ] [16
 
@@ -1268,8 +875,7 @@ LaTeX Font Info:    Font shape `EU1/CourierStd(0)/m/n' will be
 \tf@lot=\write8
 \openout8 = `username.lot'.
 
-
-[17] [18
+ [17] [18
 
 ] (./username.lol)
 \tf@lol=\write9
@@ -1278,18 +884,39 @@ LaTeX Font Info:    Font shape `EU1/CourierStd(0)/m/n' will be
  [19]
 \openout2 = `chapters/preface.aux'.
 
- (./chapters/preface.tex [20
+
+(./chapters/preface.tex [20
 
 
-]) [21] [22
+]
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <27.6574> not available
+(Font)              size <24.88> substituted on input line 4.
+
+Package microtype Info: Setting up font `OT1/cmr/m/n/24.88' on input line 4.
+Package microtype Info: ... Loading protrusion list `cmr-OT1'.
+Package microtype Info: ... : First loading protrusion list `cmr-default'.
+Package microtype Info: ... Applying non-selected expansion (list `default').
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <45.00699> not available
+(Font)              size <24.88> substituted on input line 4.
+
+) [21] [22
 
 
 ]
 \openout2 = `chapters/introduction.aux'.
 
-
-(./chapters/introduction.tex
+ (./chapters/introduction.tex
 CHAPTER 1.
+Package microtype Info: Setting up font `OT1/cmr/m/n/9' on input line 2.
+Package microtype Info: ... Loading protrusion list `cmr-OT1'.
+Package microtype Info: ... : First loading protrusion list `cmr-default'.
+Package microtype Info: ... Applying non-selected expansion (list `default').
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <60> not available
+(Font)              size <24.88> substituted on input line 2.
+
 ) [1
 
 
@@ -1303,28 +930,79 @@ CHAPTER 1.
 ]
 CHAPTER 2.
 
-Overfull \hbox (30.33759pt too wide) in paragraph at lines 5--7
-\EU1/AdobeGaramondPro(0)/m/n/10 my chapters to print?” You save the chapters 
-in the []\EU1/CourierStd(0)/m/n/10 chapters \EU1/AdobeGaramondPro(0)/m/n/10 fol
-der and put an []\EU1/CourierStd(0)/m/n/10 \include{chapters/chaptername}
+Overfull \hbox (9.63396pt too wide) in paragraph at lines 5--7
+[]\OT1/cmr/m/n/10 (-20) A \OT1/cmr/m/it/10 (-20) doc-u-ment \OT1/cmr/m/n/10 (-2
+0) for L[]T[]X is all the stuff that comes be-tween the []\OT1/cmtt/m/n/10 (-20
+) \begin{document} \OT1/cmr/m/n/10 (-20) and []\OT1/cmtt/m/n/10 (-20) \end{docu
+ment}
  []
 
+LaTeX Font Info:    Try loading font information for OMS+cmtt on input line 8.
+LaTeX Font Info:    No file OMScmtt.fd. on input line 8.
 
-Overfull \hbox (18.50034pt too wide) in paragraph at lines 5--7
-\EU1/AdobeGaramondPro(0)/m/n/10 command in []\EU1/CourierStd(0)/m/n/10 username
-.tex \EU1/AdobeGaramondPro(0)/m/n/10 after the []\EU1/CourierStd(0)/m/n/10 \beg
-in{document} \EU1/AdobeGaramondPro(0)/m/n/10 and before the []\EU1/CourierStd(0
-)/m/n/10 \end{document} \EU1/AdobeGaramondPro(0)/m/n/10 tag. []\EU1/CourierStd(
-0)/m/n/10 username.tex
+LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead
+(Font)              for symbol `textbraceleft' on input line 8.
+
+Package microtype Info: Setting up font `OMS/cmtt/m/n/10' on input line 8.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
+
+Overfull \hbox (25.59875pt too wide) in paragraph at lines 14--15
+\OT1/cmtt/m/n/10 (-20) section]\OMS/cmtt/m/n/10 f\OT1/cmtt/m/n/10 (-20) An exam
+ple of making a new section and giving it a short name\OMS/cmtt/m/n/10 g$n$\OT1
+/cmtt/m/n/10 (-20) label\OMS/cmtt/m/n/10 f\OT1/cmtt/m/n/10 (-20) sec:newsec\OMS
+/cmtt/m/n/10 g\OT1/cmr/m/n/10 (-20) .
  []
 
 [3]
 \openout3 = `username.exa'.
 
-LaTeX Font Info:    Font shape `EU1/CourierStd(0)/m/n' will be
-(Font)              scaled to size 8.09995pt on input line 30.
+Package microtype Info: Setting up font `OT1/cmtt/m/n/9' on input line 30.
+Package microtype Info: ... Loading protrusion list `OT1-default'.
+Package microtype Info: ... : First loading protrusion list `default'.
+Package microtype Info: ... Applying non-selected expansion (list `default').
 File: username.exa  (verbatim)
  (./username.exa)
+\openout3 = `username.exa'.
+
+File: username.exa  (verbatim)
+ (./username.exa
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <7> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 2.
+)
+\openout3 = `username.exa'.
+
+File: username.exa  (verbatim)
+ (./username.exa
+Package microtype Info: Setting up font `OT1/cmr/bx/n/7' on input line 2.
+Package microtype Info: ... Loading protrusion list `cmr-OT1'.
+Package microtype Info: ... : First loading protrusion list `cmr-default'.
+Package microtype Info: ... Applying non-selected expansion (list `default').
+)
+Package microtype Info: Setting up font `OT1/cmr/m/sl/10' on input line 60.
+Package microtype Info: ... Loading protrusion list `cmr-sl'.
+Package microtype Info: ... : First loading protrusion list `cmr-it-OT1'.
+Package microtype Info: ... : First loading protrusion list `cmr-it'.
+Package microtype Info: ... Applying non-selected expansion (list `default').
+ [4]
+
+LaTeX Warning: Reference `bdef1' on page 5 undefined on input line 61.
+
+\openout3 = `username.exa'.
+
+File: username.exa  (verbatim)
+(./username.exa
+Package microtype Info: Setting up font `OT1/cmr/m/it/7' on input line 1.
+Package microtype Info: ... Loading protrusion list `cmr-it-OT1'.
+Package microtype Info: ... : First loading protrusion list `cmr-it'.
+Package microtype Info: ... Applying non-selected expansion (list `default').
+Package microtype Info: Setting up font `OT1/cmr/m/sc/7' on input line 3.
+Package microtype Info: ... Loading protrusion list `cmr-sc-OT1'.
+Package microtype Info: ... : First loading protrusion list `cmr-OT1'.
+Package microtype Info: ... : First loading protrusion list `cmr-default'.
+Package microtype Info: ... Applying non-selected expansion (list `default').
+)
 \openout3 = `username.exa'.
 
 File: username.exa  (verbatim)
@@ -1332,54 +1010,80 @@ File: username.exa  (verbatim)
 \openout3 = `username.exa'.
 
 File: username.exa  (verbatim)
- (./username.exa)
-
-LaTeX Warning: Reference `bdef1' on page 4 undefined on input line 61.
-
-
-LaTeX Font Warning: Font shape `EU1/AdobeGaramondPro(0)/m/sl' undefined
-(Font)              using `EU1/AdobeGaramondPro(0)/m/n' instead on input line 6
-2.
-
-[4]
+ (./username.exa
+Package microtype Info: Setting up font `OT1/cmr/bx/n/5' on input line 12.
+Package microtype Info: ... Loading protrusion list `cmr-OT1'.
+Package microtype Info: ... : First loading protrusion list `cmr-default'.
+Package microtype Info: ... Applying non-selected expansion (list `default').
+) [5]
 \openout3 = `username.exa'.
 
 File: username.exa  (verbatim)
  (./username.exa)
-\openout3 = `username.exa'.
-
-File: username.exa  (verbatim)
- (./username.exa)
-\openout3 = `username.exa'.
-
-File: username.exa  (verbatim)
- (./username.exa)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [5]
 \openout3 = `username.exa'.
 
 File: username.exa  (verbatim)
 
 (./username.exa)
-\openout3 = `username.exa'.
-
-File: username.exa  (verbatim)
- (./username.exa)
 (/usr/local/texlive/2011/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 ) [6]
+Package microtype Info: Setting up font `OT1/cmr/bx/n/9' on input line 189.
+Package microtype Info: ... Loading protrusion list `cmr-OT1'.
+Package microtype Info: ... : First loading protrusion list `cmr-default'.
+Package microtype Info: ... Applying non-selected expansion (list `default').
+Package microtype Info: Setting up font `OT1/cmr/m/n/6' on input line 189.
+Package microtype Info: ... Loading protrusion list `cmr-OT1'.
+Package microtype Info: ... : First loading protrusion list `cmr-default'.
+Package microtype Info: ... Applying non-selected expansion (list `default').
+Package microtype Info: Setting up font `OML/cmm/m/it/9' on input line 189.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
+Package microtype Info: Setting up font `OML/cmm/m/it/6' on input line 189.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
+Package microtype Info: Setting up font `OMS/cmsy/m/n/9' on input line 189.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
+Package microtype Info: Setting up font `OMS/cmsy/m/n/6' on input line 189.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
+Package microtype Info: Setting up font `OMX/cmex/m/n/9' on input line 189.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
+Package microtype Info: Setting up font `OMX/cmex/m/n/6' on input line 189.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
+Package microtype Info: Setting up font `OT1/cmr/bx/n/6' on input line 189.
+Package microtype Info: ... Loading protrusion list `cmr-OT1'.
+Package microtype Info: ... : First loading protrusion list `cmr-default'.
+Package microtype Info: ... Applying non-selected expansion (list `default').
+Package microtype Info: Setting up font `U/msa/m/n/9' on input line 189.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
+Package microtype Info: Setting up font `U/msa/m/n/6' on input line 189.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
+Package microtype Info: Setting up font `U/msb/m/n/9' on input line 189.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
+Package microtype Info: Setting up font `U/msb/m/n/6' on input line 189.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
+
 [7]
+Underfull \vbox (badness 1189) has occurred while \output is active []
 
-LaTeX Font Warning: Font shape `EU1/CourierStd(0)/m/sc' undefined
-(Font)              using `EU1/CourierStd(0)/m/n' instead on input line 273.
+ [8]
+Package microtype Info: Setting up font `OT1/cmtt/m/sc/14.4' on input line 273.
 
-LaTeX Font Info:    Font shape `EU1/CourierStd(0)/m/n' will be
-(Font)              scaled to size 12.9599pt on input line 273.
-) [8]
-
-LaTeX Font Warning: Font shape `EU1/CourierStd(0)/m/sl' undefined
-(Font)              using `EU1/CourierStd(0)/m/n' instead on input line 215.
+Package microtype Info: ... Loading protrusion list `OT1-sc'.
+Package microtype Info: ... : First loading protrusion list `default'.
+Package microtype Info: ... Applying non-selected expansion (list `default').
+)
+Package microtype Info: Setting up font `OT1/cmtt/m/sl/10' on input line 215.
+Package microtype Info: ... Loading protrusion list `OT1-it'.
+Package microtype Info: ... Applying non-selected expansion (list `default').
 
 [9]
 \openout2 = `chapters/chapter2.aux'.
@@ -1390,86 +1094,60 @@ LaTeX Font Warning: Font shape `EU1/CourierStd(0)/m/sl' undefined
 
 ]
 CHAPTER 3.
-File: ./figures/picture3.pdf Graphic file (type QTm)
-<use  "./figures/picture3.pdf" >
-File: ./figures/picture2.pdf Graphic file (type QTm)
- <use  "./figures/picture2.pdf" > [11]
-Underfull \hbox (badness 10000) in paragraph at lines 73--74
-\EU1/AdobeGaramondPro(0)/m/sl/10 and 1 in wide.
+<./figures/picture3.pdf, id=552, 144.54pt x 144.54pt>
+File: ./figures/picture3.pdf Graphic file (type pdf)
+
+<use ./figures/picture3.pdf>
+Package pdftex.def Info: ./figures/picture3.pdf used on input line 27.
+(pdftex.def)             Requested size: 115.63214pt x 115.63214pt.
+ [11 <./figures/picture3.pdf>]
+<./figures/picture2.pdf, id=595, 352.31625pt x 273.02pt>
+File: ./figures/picture2.pdf Graphic file (type pdf)
+
+<use ./figures/picture2.pdf>
+Package pdftex.def Info: ./figures/picture2.pdf used on input line 48.
+(pdftex.def)             Requested size: 140.924pt x 109.20605pt.
+Package microtype Info: Setting up font `OT1/cmr/m/sc/12' on input line 54.
+Package microtype Info: ... Loading protrusion list `cmr-sc-OT1'.
+Package microtype Info: ... : First loading protrusion list `cmr-OT1'.
+Package microtype Info: ... : First loading protrusion list `cmr-default'.
+Package microtype Info: ... Applying non-selected expansion (list `default').
+
+Underfull \hbox (badness 2894) in paragraph at lines 76--77
+\OT1/cmr/m/n/10 (+20) wide. Cen-ter
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--77
-\EU1/AdobeGaramondPro(0)/m/sl/10 and 1 in wide.
+Underfull \hbox (badness 1087) in paragraph at lines 80--81
+\OT1/cmr/m/n/10 (+20) wide. Bot-tom
  []
 
+[12 <./figures/picture2.pdf>]
+<./figures/picture1.pdf, id=615, 349.305pt x 399.4925pt>
+File: ./figures/picture1.pdf Graphic file (type pdf)
 
-Underfull \hbox (badness 2435) in paragraph at lines 76--77
-\EU1/AdobeGaramondPro(0)/m/sl/10 Center Text Text
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 80--81
-\EU1/AdobeGaramondPro(0)/m/sl/10 and 1 in wide.
- []
-
-[12]
-File: ./figures/picture1.pdf Graphic file (type QTm)
- <use  "./figures/picture1.pdf" >
-File: ./figures/picture2.pdf Graphic file (type QTm)
- <use  "./figures/picture2.pdf" >
-File: ./figures/picture1.pdf Graphic file (type QTm)
-
-<use  "./figures/picture1.pdf" >
-File: ./figures/picture2.pdf Graphic file (type QTm)
- <use  "./figures/picture2.pdf" > [13] [14])
-[15] [16]
+<use ./figures/picture1.pdf>
+Package pdftex.def Info: ./figures/picture1.pdf used on input line 107.
+(pdftex.def)             Requested size: 139.71951pt x 159.79416pt.
+File: ./figures/picture2.pdf Graphic file (type pdf)
+ <use ./figures/picture2.pdf>
+Package pdftex.def Info: ./figures/picture2.pdf used on input line 113.
+(pdftex.def)             Requested size: 140.924pt x 109.20605pt.
+ [13 <./figures/picture1.pdf>]
+File: ./figures/picture1.pdf Graphic file (type pdf)
+ <use ./figures/picture1.pdf>
+Package pdftex.def Info: ./figures/picture1.pdf used on input line 135.
+(pdftex.def)             Requested size: 139.71951pt x 159.79416pt.
+File: ./figures/picture2.pdf Graphic file (type pdf)
+ <use ./figures/picture2.pdf>
+Package pdftex.def Info: ./figures/picture2.pdf used on input line 138.
+(pdftex.def)             Requested size: 140.924pt x 109.20605pt.
+ [14]
+[15]) [16]
 \openout2 = `chapters/chapter3.aux'.
 
  (./chapters/chapter3.tex
 CHAPTER 4.
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'AdobeGaramondPro(2)' created for font 'Adobe Garamond Pro' with
-. options [Mapping=tex-text,Numbers=OldStyle,BoldFont={*
-. Semibold},VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-. 
-. * 'normal' with NFSS spec.:
-. <->"Adobe Garamond
-. Pro/ICU:script=latn;language=DFLT;mapping=tex-text;+onum;+sups;"
-. 
-. * 'small caps' with NFSS spec.:
-. <->"Adobe Garamond
-. Pro/ICU:script=latn;language=DFLT;mapping=tex-text;+onum;+sups;+smcp;"
-. 
-. * 'bold' with NFSS spec.:
-. <->"Adobe Garamond Pro
-. Semibold/ICU:script=latn;language=DFLT;mapping=tex-text;+onum;+sups;"
-. 
-. * 'bold small caps' with NFSS spec.:
-. <->"Adobe Garamond Pro
-. Semibold/ICU:script=latn;language=DFLT;mapping=tex-text;+onum;+sups;+smcp;"
-. 
-. * 'italic' with NFSS spec.:
-. <->"Adobe Garamond
-. Pro/I/ICU:script=latn;language=DFLT;mapping=tex-text;+onum;+sups;"
-. 
-. * 'bold italic' with NFSS spec.:
-. <->"Adobe Garamond Pro
-. Semibold/I/ICU:script=latn;language=DFLT;mapping=tex-text;+onum;+sups;"
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'AdobeGaramondPro(2)' created for font 'Adobe Garamond Pro' with
-. options [Mapping=tex-text,Numbers=OldStyle,BoldFont={*
-. Semibold},VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
 [17
 
 
@@ -1479,24 +1157,6 @@ CHAPTER 4.
 
  (./appendices/math.tex
 APPENDIX A.
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'AdobeGaramondPro(2)' created for font 'Adobe Garamond Pro' with
-. options [Mapping=tex-text,Numbers=OldStyle,BoldFont={*
-. Semibold},VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'AdobeGaramondPro(2)' created for font 'Adobe Garamond Pro' with
-. options [Mapping=tex-text,Numbers=OldStyle,BoldFont={*
-. Semibold},VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
 \openout3 = `username.exa'.
 
 File: username.exa  (verbatim)
@@ -1544,24 +1204,6 @@ File: username.exa  (verbatim)
 
 File: username.exa  (verbatim)
  (./username.exa)
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'AdobeGaramondPro(2)' created for font 'Adobe Garamond Pro' with
-. options [Mapping=tex-text,Numbers=OldStyle,BoldFont={*
-. Semibold},VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'AdobeGaramondPro(2)' created for font 'Adobe Garamond Pro' with
-. options [Mapping=tex-text,Numbers=OldStyle,BoldFont={*
-. Semibold},VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
 \openout3 = `username.exa'.
 
 File: username.exa  (verbatim)
@@ -1569,10 +1211,9 @@ File: username.exa  (verbatim)
 \openout3 = `username.exa'.
 
 File: username.exa  (verbatim)
- (./username.exa)
+ (./username.exa) [21]
 \openout3 = `username.exa'.
 
- [21]
 File: username.exa  (verbatim)
 
 (./username.exa)
@@ -1592,24 +1233,7 @@ File: username.exa  (verbatim)
 
 File: username.exa  (verbatim)
 
-(./username.exa)
-\openout3 = `username.exa'.
-
-File: username.exa  (verbatim)
- (./username.exa) [22]
-\openout3 = `username.exa'.
-
-File: username.exa  (verbatim)
- (./username.exa)
-Underfull \hbox (badness 10000) in paragraph at lines 300--302
-[]\EU1/AdobeGaramondPro(0)/m/sl/10 To typeset binomial coefficients or similar 
-structures, you can use either the command
- []
-
-\openout3 = `username.exa'.
-
-File: username.exa  (verbatim)
-(./username.exa)
+(./username.exa) [22]
 \openout3 = `username.exa'.
 
 File: username.exa  (verbatim)
@@ -1620,73 +1244,13 @@ File: username.exa  (verbatim)
  (./username.exa)
 \openout3 = `username.exa'.
 
- [23]
 File: username.exa  (verbatim)
  (./username.exa)
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'AdobeGaramondPro(2)' created for font 'Adobe Garamond Pro' with
-. options [Mapping=tex-text,Numbers=OldStyle,BoldFont={*
-. Semibold},VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'AdobeGaramondPro(2)' created for font 'Adobe Garamond Pro' with
-. options [Mapping=tex-text,Numbers=OldStyle,BoldFont={*
-. Semibold},VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
 \openout3 = `username.exa'.
 
 File: username.exa  (verbatim)
 
-(./username.exa)
-\openout3 = `username.exa'.
-
-File: username.exa  (verbatim)
- (./username.exa)
-LaTeX Font Info:    Try loading font information for EU1+lmtt on input line 399
-.
-
-(/Users/jonb/Library/texmf/tex/xelatex/euenc/lm/eu1lmtt.fd
-File: eu1lmtt.fd 2005/08/29 v1.2 Font defs for Latin Modern
-)
-Missing character: There is no ␣ in font [lmtypewriter10-regular]!
-\openout3 = `username.exa'.
-
-File: username.exa  (verbatim)
- (./username.exa)
-Underfull \vbox (badness 3590) has occurred while \output is active []
-
- [24]
-\openout3 = `username.exa'.
-
-File: username.exa  (verbatim)
-
-(./username.exa)
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'AdobeGaramondPro(2)' created for font 'Adobe Garamond Pro' with
-. options [Mapping=tex-text,Numbers=OldStyle,BoldFont={*
-. Semibold},VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'AdobeGaramondPro(2)' created for font 'Adobe Garamond Pro' with
-. options [Mapping=tex-text,Numbers=OldStyle,BoldFont={*
-. Semibold},VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
+(./username.exa) [23]
 \openout3 = `username.exa'.
 
 File: username.exa  (verbatim)
@@ -1695,7 +1259,28 @@ File: username.exa  (verbatim)
 
 File: username.exa  (verbatim)
  (./username.exa)
-Underfull \vbox (badness 2671) has occurred while \output is active []
+\openout3 = `username.exa'.
+
+File: username.exa  (verbatim)
+ (./username.exa)
+\openout3 = `username.exa'.
+
+File: username.exa  (verbatim)
+
+(./username.exa) [24]
+\openout3 = `username.exa'.
+
+File: username.exa  (verbatim)
+ (./username.exa)
+\openout3 = `username.exa'.
+
+File: username.exa  (verbatim)
+ (./username.exa)
+\openout3 = `username.exa'.
+
+File: username.exa  (verbatim)
+ (./username.exa)
+Underfull \vbox (badness 2435) has occurred while \output is active []
 
  [25]
 \openout3 = `username.exa'.
@@ -1703,88 +1288,77 @@ Underfull \vbox (badness 2671) has occurred while \output is active []
 File: username.exa  (verbatim)
 
 (./username.exa)
-Overfull \hbox (86.51805pt too wide) in paragraph at lines 497--500
-\EU1/AdobeGaramondPro(0)/m/sl/10 Notice that the space on either side of the th
-e equal signs is rather large. It can be reduced by setting []\EU1/CourierStd(0
-)/m/n/10 \setlength\arraycolsep{2pt}\EU1/AdobeGaramondPro(0)/m/sl/10 ,
- []
-
 \openout3 = `username.exa'.
 
 File: username.exa  (verbatim)
+ (./username.exa)
+\openout3 = `username.exa'.
+
+File: username.exa  (verbatim)
+ (./username.exa)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [26]
+\openout3 = `username.exa'.
+
+File: username.exa  (verbatim)
+
 (./username.exa)
 \openout3 = `username.exa'.
 
 File: username.exa  (verbatim)
  (./username.exa)
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'AdobeGaramondPro(2)' created for font 'Adobe Garamond Pro' with
-. options [Mapping=tex-text,Numbers=OldStyle,BoldFont={*
-. Semibold},VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'AdobeGaramondPro(2)' created for font 'Adobe Garamond Pro' with
-. options [Mapping=tex-text,Numbers=OldStyle,BoldFont={*
-. Semibold},VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
- [26]
 \openout3 = `username.exa'.
 
 File: username.exa  (verbatim)
- (./username.exa)
-\openout3 = `username.exa'.
+ (./username.exa) [27pdfTeX warning (ext4): destination with the same identifie
+r (name{equation.A.5.8}) has been already used, duplicate ignored
 
-File: username.exa  (verbatim)
- (./username.exa)
-[27]
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.586 \end{singlespace}
+                       ]
+Package microtype Info: Setting up font `OT1/cmr/m/it/9' on input line 600.
+Package microtype Info: ... Loading protrusion list `cmr-it-OT1'.
+Package microtype Info: ... : First loading protrusion list `cmr-it'.
+Package microtype Info: ... Applying non-selected expansion (list `default').
 \openout3 = `username.exa'.
 
 File: username.exa  (verbatim)
  (./username.exa
-\c@law=\count314
+\c@law=\count157
+)
+Underfull \vbox (badness 3088) has occurred while \output is active []
+
+ [28]
+\openout3 = `username.exa'.
+
+File: username.exa  (verbatim)
+
+(./username.exa
+\c@mur=\count158
 )
 \openout3 = `username.exa'.
 
 File: username.exa  (verbatim)
  (./username.exa
-\c@mur=\count315
-) [28]
+Package microtype Info: Setting up font `OML/cmm/b/it/7' on input line 3.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
+Package microtype Info: Setting up font `OML/cmm/b/it/5' on input line 3.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
+Package microtype Info: Setting up font `OMS/cmsy/b/n/7' on input line 3.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
+Package microtype Info: Setting up font `OMS/cmsy/b/n/5' on input line 3.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
+)
 \openout3 = `username.exa'.
 
 File: username.exa  (verbatim)
- (./username.exa)
-\openout3 = `username.exa'.
-
-File: username.exa  (verbatim)
- (./username.exa)
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'AdobeGaramondPro(2)' created for font 'Adobe Garamond Pro' with
-. options [Mapping=tex-text,Numbers=OldStyle,BoldFont={*
-. Semibold},VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'AdobeGaramondPro(2)' created for font 'Adobe Garamond Pro' with
-. options [Mapping=tex-text,Numbers=OldStyle,BoldFont={*
-. Semibold},VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-
-[29] [30]
+ (./username.exa) [29] [30]
 
 LaTeX Warning: Text page 31 contains only floats.
 
@@ -1795,16 +1369,54 @@ LaTeX Warning: Text page 31 contains only floats.
 LaTeX Warning: Text page 32 contains only floats.
 
 [32]
+Package microtype Info: Setting up font `OT1/cmr/m/ui/10' on input line 871.
+Package microtype Info: ... Loading protrusion list `cmr-OT1'.
+Package microtype Info: ... : First loading protrusion list `cmr-default'.
+Package microtype Info: ... Applying non-selected expansion (list `default').
+Package microtype Info: Setting up font `OT1/cmr/m/it/5' on input line 1012.
+Package microtype Info: ... Loading protrusion list `cmr-it-OT1'.
+Package microtype Info: ... : First loading protrusion list `cmr-it'.
+Package microtype Info: ... Applying non-selected expansion (list `default').
 LaTeX Font Info:    Try loading font information for U+eus on input line 1027.
  (/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/ueus.fd
 File: ueus.fd 2009/06/22 v3.00 Euler Script
 )
+Package microtype Info: ... Loading configuration file mt-eus.cfg.
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/microtype/mt-eus.cfg
+File: mt-eus.cfg 2006/07/28 v1.2 microtype config. file: AMS Euler Script (RS)
+)
+Package microtype Info: Setting up font `U/eus/m/n/10' on input line 1027.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
+Package microtype Info: Setting up font `U/eus/m/n/7' on input line 1027.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
+Package microtype Info: Setting up font `U/eus/m/n/5' on input line 1027.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
 LaTeX Font Info:    Try loading font information for U+euf on input line 1032.
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2009/06/22 v3.00 Euler Fraktur
-)) [33] [34]
-[35] [36]
+)
+Package microtype Info: ... Loading configuration file mt-euf.cfg.
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/microtype/mt-euf.cfg
+File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
+
+)
+Package microtype Info: Setting up font `U/euf/m/n/10' on input line 1032.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
+Package microtype Info: Setting up font `U/euf/m/n/7' on input line 1032.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
+Package microtype Info: Setting up font `U/euf/m/n/5' on input line 1032.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
+) [33]
+[34] [35] [36]
 \openout2 = `appendices/java.aux'.
 
  (./appendices/java.tex
@@ -1812,25 +1424,14 @@ APPENDIX B.
 (/usr/local/texlive/2011/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
-(./source/Clock.java) [37
+(./source/Clock.java
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 2.
+) [37
 
 
 
-] (./source/Consumer.java
-! Font EU1/lmtt/m/n/9=[lmtypewriter9-regular] at 9.0pt not loadable: Metric (TF
-M) file or installed font not found.
-<to be read again> 
-                   relax 
-l.15             System.out.println("Got 
-                                         message: "+ message);
-? 
-Missing character: There is no ␣ in font nullfont!
-Missing character: There is no ␣ in font nullfont!
-) (./source/EvilEmpire.java
-Missing character: There is no ␣ in font nullfont!
-Missing character: There is no ␣ in font nullfont!
-Missing character: There is no ␣ in font nullfont!
-)) [38]
+] (./source/Consumer.java) (./source/EvilEmpire.java)) [38]
 \openout2 = `appendices/cpp.aux'.
 
  (./appendices/cpp.tex
@@ -1847,36 +1448,57 @@ File: lstlang1.sty 2004/09/05 1.3 listings language file
 (/usr/local/texlive/2011/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 )
-(./source/Motion.cpp) (./source/Plotter.cpp
-Missing character: There is no ␣ in font nullfont!
-Missing character: There is no ␣ in font nullfont!
-Missing character: There is no ␣ in font nullfont!
-Missing character: There is no ␣ in font nullfont!
- [39
+(./source/Motion.cpp
+Package microtype Info: Setting up font `OT1/cmr/m/it/6' on input line 6.
+Package microtype Info: ... Loading protrusion list `cmr-it-OT1'.
+Package microtype Info: ... : First loading protrusion list `cmr-it'.
+Package microtype Info: ... Applying non-selected expansion (list `default').
+Package microtype Info: Setting up font `U/euf/m/n/9' on input line 6.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
+Package microtype Info: Setting up font `U/euf/m/n/6' on input line 6.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
+Package microtype Info: Setting up font `U/eus/m/n/9' on input line 6.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
+Package microtype Info: Setting up font `U/eus/m/n/6' on input line 6.
+Package microtype Info: ... No protrusion.
+Package microtype Info: ... No expansion.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 6.
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <9> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 6.
+)
+(./source/Plotter.cpp [39
 
 
 
 ]
-Missing character: There is no ␣ in font nullfont!
-Missing character: There is no ␣ in font nullfont!
-) (./source/Simulation.cpp)
-(./source/Simulation.cpp [40]) (./source/Simulation.cpp)
-(./source/Simulation.cpp) [41] (./source/Simulation.cpp)
-(./source/Simulation.cpp) (./source/Simulation.cpp [42])) [43]
+LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <9> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 25.
+LaTeX Font Info:    Font shape `OML/cmr/m/it' in size <9> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 26.
+) (./source/Simulation.cpp) (./source/Simulation.cpp
+[40]) (./source/Simulation.cpp) (./source/Simulation.cpp) [41]
+(./source/Simulation.cpp) (./source/Simulation.cpp) (./source/Simulation.cpp
+[42])) [43]
 \openout2 = `appendices/afterword.aux'.
 
-
-(./appendices/afterword.tex [44
-
+ (./appendices/afterword.tex [44
 
 
-]) [45] (./username.bbl [46
+
+] [45]) [46] (./username.bbl)
+[47
 
 
-]) [47] [48
+] [48
 
-]
-(./username.ind [49
+] (./username.ind [49
 
 ] [50]) [51
 
@@ -1886,12 +1508,24 @@ Missing character: There is no ␣ in font nullfont!
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 290.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 290.
- (./username.aux (./chapters/preface.aux)
-(./chapters/introduction.aux) (./chapters/chapter1.aux)
-(./chapters/chapter2.aux) (./chapters/chapter3.aux) (./appendices/math.aux)
+ (./username.aux
+(./chapters/preface.aux) (./chapters/introduction.aux) (./chapters/chapter1.aux
+) (./chapters/chapter2.aux) (./chapters/chapter3.aux) (./appendices/math.aux)
 (./appendices/java.aux) (./appendices/cpp.aux) (./appendices/afterword.aux))
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 290.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 290.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 290.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 290.
+
+
+Package rerunfilecheck Warning: File `username.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `username.out':
+(rerunfilecheck)             Before: 99D2D1A045AEEBD140228E24380F3621;2453
+(rerunfilecheck)             After:  3F00673E2B127AECDF523A37B7970E5A;2238.
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 35.12pt have occurred.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1899,14 +1533,63 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 23615 strings out of 494146
- 442572 string characters out of 3152895
- 706791 words of memory out of 3000000
- 26245 multiletter control sequences out of 15000+200000
- 14450 words of font info for 112 fonts, out of 3000000 for 9000
- 1018 hyphenation exceptions out of 8191
- 60i,23n,124p,1966b,1805s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 13652 strings out of 493629
+ 198792 string characters out of 3143323
+ 569278 words of memory out of 3000000
+ 15739 multiletter control sequences out of 15000+200000
+ 26865 words of font info for 219 fonts, out of 3000000 for 9000
+ 831 hyphenation exceptions out of 8191
+ 44i,23n,69p,1960b,1775s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{page.53} has been referenced but does not exist, 
+replaced by a fixed one
 
-Output written on username.pdf (74 pages).
+</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
+/usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></u
+sr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr
+/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr
+/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/
+local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></u
+sr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
+r/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/
+local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/lo
+cal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/loca
+l/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/
+texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/lo
+cal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
+l/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/
+texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/tex
+live/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texliv
+e/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2
+011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2011
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2011/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsltt10.pfb></usr/local/texlive/2011
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2011/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2011/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2011/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2011/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2011/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmtcsc10.pfb></usr/local/texlive/2011/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2011/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive/2011/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2011/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2011/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2011/texmf-dist/font
+s/type1/public/amsfonts/cm/cmu10.pfb></usr/local/texlive/2011/texmf-dist/fonts/
+type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2011/texmf-dist/font
+s/type1/public/amsfonts/euler/eusm10.pfb></usr/local/texlive/2011/texmf-dist/fo
+nts/type1/public/amsfonts/latxfont/lcircle1.pfb></usr/local/texlive/2011/texmf-
+dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2011/te
+xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/201
+1/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on username.pdf (74 pages, 1385135 bytes).
+PDF statistics:
+ 1530 PDF objects out of 1728 (max. 8388607)
+ 1357 compressed objects within 14 object streams
+ 474 named destinations out of 1000 (max. 500000)
+ 57666 words of extra memory for PDF output out of 61914 (max. 10000000)
+
