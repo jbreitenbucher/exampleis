@@ -1,4 +1,4 @@
-%%
+ %%
 %% This is file `woosterthesis.cls',
 %% a modification of the book class
 %% by Dr. Jon Breitenbucher. It is
@@ -184,6 +184,16 @@
 \def\t@st{test}%
 \ifx\test@colophon\t@st\@colophontrue\else\@colophonfalse\fi
 \DeclareOption{colophon}{\@colophontrue}
+\newif\if@woosterchicago
+\expandafter\def\csname test@\jobname\endcsname{test}%
+\def\t@st{test}%
+\ifx\test@woosterchicago\t@st\@woosterchicagotrue\else\@woosterchicagofalse\fi
+\DeclareOption{woosterchicago}{\@woosterchicagotrue}
+\newif\if@chemso
+\expandafter\def\csname test@\jobname\endcsname{test}%
+\def\t@st{test}%
+\ifx\test@chemso\t@st\@chemsotrue\else\@chemsofalse\fi
+\DeclareOption{achemso}{\@chemsotrue}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \ExecuteOptions{letterpaper,12pt,oneside,onecolumn,final,openany}% - JB
@@ -201,8 +211,8 @@
 \RequirePackage{setspace}% to allow single and double spacing - JB
 \RequirePackage{fancyhdr}% to have fancy chapter headings - JB
 \ifxetex
-     \RequirePackage{mathspec}
 	\RequirePackage{fontspec}% allows one to easily set up fonts in the document
+	\RequirePackage{xunicode}
 	\RequirePackage{xltxtra}% adds extra commands specific to XeTeX
 	%\RequirePackage[xetex]{graphicx}
 		\def\kaukelogo{\includegraphics[scale=.4]{kauke_wordmark}}
@@ -441,7 +451,7 @@ by \\
 \end{textblock}
 \begin{textblock}{6}(0,11)
 \noindent
-\hspace{1pt}
+\hspace{1px}
 \begin{minipage}[b]{\hsize}
 \begin{flushleft}
 {\bfseries Advised by:} \\
@@ -607,7 +617,7 @@ by \\
 \end{textblock}
 \begin{textblock}{6}(0,11)
 \noindent
-\hspace{1pt}
+\hspace{1px}
 \begin{minipage}[b]{\hsize}
 \begin{flushleft}
 {\bfseries Advised by:} \\
@@ -773,7 +783,7 @@ by \\
 \end{textblock}
 \begin{textblock}{6}(0,11)
 \noindent
-\hspace{1pt}
+\hspace{1px}
 \begin{minipage}[b]{\hsize}
 \begin{flushleft}
 {\bfseries Advised by:} \\
@@ -1489,12 +1499,10 @@ by \\
 \if@restonecol\twocolumn\fi}
 \let\l@lstlisting\l@figure
 \fi
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newdimen\bibindent
 \setlength\bibindent{1.5em}
-
 \newenvironment{thebibliography}[1]
      {\chapter*{\bibname}%
       \@mkboth{\bibname}{\bibname}% removed \MakeUppercase -JB
@@ -1518,9 +1526,23 @@ by \\
 \let\@openbib@code\@empty
 
 % Use natbib.sty for the bibliography and make some modifications by cutting code from natbib and altering it- JB
-
-\RequirePackage{natbib}
-\bibpunct{[}{]}{;}{a}{,}{,}
+\RequirePackage{ifthen}% to test boolean conditions - JB
+\newboolean{achemso}
+\newboolean{woosterchicago}
+\if@chemso
+\RequirePackage[sort&compress,numbers,super]{natbib}
+\setboolean{achemso}{true}
+\else
+	\if@woosterchicago
+		\RequirePackage{natbib}
+		\bibpunct{[}{]}{;}{a}{,}{,}
+		\setboolean{woosterchicago}{true}
+	\else
+		\RequirePackage{natbib}
+		\newcommand\bibstyle@wooster{\bibpunct{[}{]}{,}{n}{}{}%
+		     \gdef\NAT@biblabelnum##1{##1.}}
+	\fi
+\fi
 
 \providecommand\bibsection{}
 \@ifundefined{chapter}%
@@ -1556,7 +1578,7 @@ by \\
   \PackageWarning{natbib}
      {Empty `thebibliography' environment}}%
   \endlist\vskip-\lastskip}
-
+  
 \newenvironment{theindex}
                {\if@twocolumn
                   \@restonecolfalse
@@ -1661,10 +1683,8 @@ by \\
 \let\disscopyright\relax
 \renewcommand{\dedication}[1]{}
 \fi
-	\RequirePackage{ifthen}% to test boolean conditions - JB
 	\newboolean{index}
 	\newboolean{colophon}
-      \newboolean{mla}
 	\if@index
 		\RequirePackage{makeidx}
 		\setboolean{index}{true}
@@ -1700,7 +1720,6 @@ by \\
 	\if@colophon
 		\setboolean{colophon}{true}
 	\fi
-
 	\RequirePackage{float}% to handle figures and tables - JB
 	\RequirePackage[style=base,format=hang,labelfont={bf,footnotesize},font=footnotesize, justification=raggedright]{caption}% to format captions - JB
 	\RequirePackage{subfigure}% to allow multiple images in a figure - JB

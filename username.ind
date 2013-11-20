@@ -1,238 +1,219 @@
+\begin{theindex}
 
- \begin{theindex} 
-{\bfseries\hfill Symbols\hfill}\nopagebreak
-\vspace{\baselineskip}
-  \item \verb+'+\dotfill \hyperpage{25}
-  \item \verb+\,+\dotfill \hyperpage{23}
-  \item \texttt{\bs!}\dotfill \hyperpage{28}
-  \item \verb+\(+\dotfill \hyperpage{21}
-  \item \verb+\)+\dotfill \hyperpage{21}
-  \item \verb+\,+\dotfill \hyperpage{28}
-  \item \verb+\:+\dotfill \hyperpage{28}
-  \item \verb+\;+\dotfill \hyperpage{28}
-  \item \verb+\[+\dotfill \hyperpage{22}
-  \item \verb+\]+\dotfill \hyperpage{22}
-  \item \verb+^+\dotfill \hyperpage{24}, \hyperpage{27}
-  \item \verb+_+\dotfill \hyperpage{24}, \hyperpage{27}
+  \item \verb+'+, \hyperpage{20}
+  \item \verb+\,+, \hyperpage{18}
+  \item \texttt{\bs!}, \hyperpage{23}
+  \item \verb+\(+, \hyperpage{17}
+  \item \verb+\)+, \hyperpage{17}
+  \item \verb+\,+, \hyperpage{23}
+  \item \verb+\:+, \hyperpage{23}
+  \item \verb+\;+, \hyperpage{23}
+  \item \verb+\[+, \hyperpage{17}
+  \item \verb+\]+, \hyperpage{17}
+  \item \verb+^+, \hyperpage{19}, \hyperpage{21}
+  \item \verb+_+, \hyperpage{19}, \hyperpage{21}
 
   \indexspace
-{\bfseries\hfill A\hfill}\nopagebreak
-\vspace{\baselineskip}
-  \item amsmath\dotfill \hyperpage{27}, \hyperpage{31}
-  \item array\dotfill \hyperpage{29}
-  \item arrow symbols\dotfill \hyperpage{25}
+
+  \item amsmath, \hyperpage{22}, \hyperpage{25}
+  \item array, \hyperpage{23, 24}
+  \item arrow symbols, \hyperpage{20}
 
   \indexspace
-{\bfseries\hfill B\hfill}\nopagebreak
-\vspace{\baselineskip}
-  \item blackboard bold\dotfill \hyperpage{23}
-  \item bold symbols\dotfill \hyperpage{23}, \hyperpage{34}
-  \item braces\dotfill \hyperpage{27}
+
+  \item blackboard bold, \hyperpage{19}
+  \item bold symbols, \hyperpage{19}, \hyperpage{27}
+  \item braces, \hyperpage{22}
 
   \indexspace
-{\bfseries\hfill C\hfill}\nopagebreak
-\vspace{\baselineskip}
-  \item \verb+cases+\dotfill \hyperpage{7}
-  \item commands\hfill 
- \subitem Big\dotfill \hyperpage{27}
-    \subitem big\dotfill \hyperpage{27}
-    \subitem Bigg\dotfill \hyperpage{27}
-    \subitem bigg\dotfill \hyperpage{27}
-    \subitem binom\dotfill \hyperpage{26}
-    \subitem bmod\dotfill \hyperpage{26}
-    \subitem boldmath\dotfill \hyperpage{34}
-    \subitem boldsymbol\dotfill \hyperpage{34}
-    \subitem cdots\dotfill \hyperpage{28}
-    \subitem chapter\dotfill \hyperpage{3, 4}
-    \subitem ddots\dotfill \hyperpage{28}
-    \subitem emph\dotfill \hyperpage{4}
-    \subitem frac\dotfill \hyperpage{26}
-    \subitem genfrac\dotfill \hyperpage{26}
-    \subitem idotsint\dotfill \hyperpage{29}
-    \subitem iiiint\dotfill \hyperpage{29}
-    \subitem iiint\dotfill \hyperpage{29}
-    \subitem iint\dotfill \hyperpage{29}
-    \subitem int\dotfill \hyperpage{27}
-    \subitem intertext\dotfill \hyperpage{7}
-    \subitem label\dotfill \hyperpage{22}
-    \subitem ldots\dotfill \hyperpage{28}
-    \subitem left\dotfill \hyperpage{27}
-    \subitem lstlisting\dotfill \hyperpage{8, 9}
-    \subitem mathbb\dotfill \hyperpage{23}
-    \subitem mathrm\dotfill \hyperpage{31}
-    \subitem notag\dotfill \hyperpage{31}
-    \subitem overbrace\dotfill \hyperpage{25}
-    \subitem overleftarrow\dotfill \hyperpage{25}
-    \subitem overline\dotfill \hyperpage{25}
-    \subitem overrightarrow\dotfill \hyperpage{25}
-    \subitem pmod\dotfill \hyperpage{26}
-    \subitem qquad\dotfill \hyperpage{23}, \hyperpage{28}
-    \subitem quad\dotfill \hyperpage{23}, \hyperpage{28}
-    \subitem ref\dotfill \hyperpage{22}
-    \subitem right\dotfill \hyperpage{27}
-    \subitem \verb+right .+\dotfill \hyperpage{27}, \hyperpage{29}
-    \subitem section\dotfill \hyperpage{3}
-    \subitem sqrt\dotfill \hyperpage{24}
-    \subitem subsection\dotfill \hyperpage{3, 4}
-    \subitem substack\dotfill \hyperpage{6}
-    \subitem sum\dotfill \hyperpage{27}
-    \subitem surd\dotfill \hyperpage{24}
-    \subitem textbf\dotfill \hyperpage{4}
-    \subitem textit\dotfill \hyperpage{4}
-    \subitem textrm\dotfill \hyperpage{31}
-    \subitem underbrace\dotfill \hyperpage{25}
-    \subitem underline\dotfill \hyperpage{25}
-    \subitem vdots\dotfill \hyperpage{28}
-    \subitem vec\dotfill \hyperpage{25}
-    \subitem widehat\dotfill \hyperpage{25}
-    \subitem widetilde\dotfill \hyperpage{25}
+
+  \item \verb+cases+, \hyperpage{5}
+  \item commands
+    \subitem Big, \hyperpage{22}
+    \subitem big, \hyperpage{22}
+    \subitem Bigg, \hyperpage{22}
+    \subitem bigg, \hyperpage{22}
+    \subitem binom, \hyperpage{21}
+    \subitem bmod, \hyperpage{21}
+    \subitem boldmath, \hyperpage{27}
+    \subitem boldsymbol, \hyperpage{27}
+    \subitem cdots, \hyperpage{22}
+    \subitem chapter, \hyperpage{2, 3}
+    \subitem ddots, \hyperpage{22}
+    \subitem emph, \hyperpage{3}
+    \subitem frac, \hyperpage{21}
+    \subitem genfrac, \hyperpage{21}
+    \subitem idotsint, \hyperpage{23}
+    \subitem iiiint, \hyperpage{23}
+    \subitem iiint, \hyperpage{23}
+    \subitem iint, \hyperpage{23}
+    \subitem int, \hyperpage{21}
+    \subitem intertext, \hyperpage{5}
+    \subitem label, \hyperpage{18}
+    \subitem ldots, \hyperpage{22}
+    \subitem left, \hyperpage{22}
+    \subitem lstlisting, \hyperpage{5, 6}
+    \subitem mathbb, \hyperpage{19}
+    \subitem mathrm, \hyperpage{25}
+    \subitem notag, \hyperpage{25}
+    \subitem overbrace, \hyperpage{20}
+    \subitem overleftarrow, \hyperpage{20}
+    \subitem overline, \hyperpage{20}
+    \subitem overrightarrow, \hyperpage{20}
+    \subitem pmod, \hyperpage{21}
+    \subitem qquad, \hyperpage{18}, \hyperpage{23}
+    \subitem quad, \hyperpage{18}, \hyperpage{23}
+    \subitem ref, \hyperpage{18}
+    \subitem right, \hyperpage{22}
+    \subitem \verb+right .+, \hyperpage{22}, \hyperpage{24}
+    \subitem section, \hyperpage{2}
+    \subitem sqrt, \hyperpage{20}
+    \subitem subsection, \hyperpage{2}
+    \subitem substack, \hyperpage{5}
+    \subitem sum, \hyperpage{21}
+    \subitem surd, \hyperpage{20}
+    \subitem textbf, \hyperpage{3}
+    \subitem textit, \hyperpage{3}
+    \subitem textrm, \hyperpage{25}
+    \subitem underbrace, \hyperpage{20}
+    \subitem underline, \hyperpage{20}
+    \subitem vdots, \hyperpage{22}
+    \subitem vec, \hyperpage{20}
+    \subitem widehat, \hyperpage{20}
+    \subitem widetilde, \hyperpage{20}
 
   \indexspace
-{\bfseries\hfill D\hfill}\nopagebreak
-\vspace{\baselineskip}
-  \item delimiters\dotfill \hyperpage{27}
-  \item diagonal dots\dotfill \hyperpage{28}
-  \item displaymath\dotfill \hyperpage{22}
+
+  \item delimiters, \hyperpage{22}
+  \item diagonal dots, \hyperpage{22}
+  \item displaymath, \hyperpage{17}
 
   \indexspace
-{\bfseries\hfill E\hfill}\nopagebreak
-\vspace{\baselineskip}
-  \item eqnarray\dotfill \hyperpage{30}
-  \item equation\dotfill \hyperpage{22}
-  \item equation systems\dotfill \hyperpage{30}
-  \item exponent\dotfill \hyperpage{24}
-  \item exscale\dotfill \hyperpage{27}
+
+  \item eqnarray, \hyperpage{24}
+  \item equation, \hyperpage{17}
+  \item equation systems, \hyperpage{24}
+  \item exponent, \hyperpage{19}
+  \item exscale, \hyperpage{22}
 
   \indexspace
-{\bfseries\hfill F\hfill}\nopagebreak
-\vspace{\baselineskip}
-  \item formulae\dotfill \hyperpage{21}
-  \item fraction\dotfill \hyperpage{26}
+
+  \item formulae, \hyperpage{17}
+  \item fraction, \hyperpage{21}
 
   \indexspace
-{\bfseries\hfill G\hfill}\nopagebreak
-\vspace{\baselineskip}
-  \item Greek letters\dotfill \hyperpage{24}
+
+  \item Greek letters, \hyperpage{19}
 
   \indexspace
-{\bfseries\hfill H\hfill}\nopagebreak
-\vspace{\baselineskip}
-  \item horizontal\hfill 
- \subitem brace\dotfill \hyperpage{25}
-    \subitem dots\dotfill \hyperpage{28}
-    \subitem line\dotfill \hyperpage{25}
+
+  \item horizontal
+    \subitem brace, \hyperpage{20}
+    \subitem dots, \hyperpage{22}
+    \subitem line, \hyperpage{20}
 
   \indexspace
-{\bfseries\hfill I\hfill}\nopagebreak
-\vspace{\baselineskip}
-  \item integral operator\dotfill \hyperpage{27}
+
+  \item integral operator, \hyperpage{21}
 
   \indexspace
-{\bfseries\hfill L\hfill}\nopagebreak
-\vspace{\baselineskip}
-  \item \LaTeX\dotfill \hyperpage{xii}
-  \item listings\hfill 
- \subitem mathescape\dotfill \hyperpage{8}
-  \item lists\dotfill \hyperpage{4}
-    \subitem descriptive\dotfill \hyperpage{5}
-    \subitem enumerated\dotfill \hyperpage{4}
-    \subitem itemized\dotfill \hyperpage{4}
-  \item long equations\dotfill \hyperpage{30}
+
+  \item \LaTeX, \hyperpage{xii}
+  \item listings
+    \subitem mathescape, \hyperpage{6}
+  \item lists, \hyperpage{3}
+    \subitem descriptive, \hyperpage{3}
+    \subitem enumerated, \hyperpage{3}
+    \subitem itemized, \hyperpage{3}
+  \item long equations, \hyperpage{24}
 
   \indexspace
-{\bfseries\hfill M\hfill}\nopagebreak
-\vspace{\baselineskip}
-  \item math font size\dotfill \hyperpage{31}
-  \item math spacing\dotfill \hyperpage{28}
-  \item mathcal\dotfill \hyperpage{41}
-  \item mathematical\hfill 
- \subitem accents\dotfill \hyperpage{25}
-    \subitem delimiter\dotfill \hyperpage{27}
-    \subitem functions\dotfill \hyperpage{26}
-  \item mathematics\dotfill \hyperpage{21}
-  \item mathscr\dotfill \hyperpage{41}
-  \item minipage\dotfill \hyperpage{14}
-  \item modulo function\dotfill \hyperpage{26}
+
+  \item math font size, \hyperpage{25}
+  \item math spacing, \hyperpage{23}
+  \item mathcal, \hyperpage{34}
+  \item mathematical
+    \subitem accents, \hyperpage{20}
+    \subitem delimiter, \hyperpage{22}
+    \subitem functions, \hyperpage{21}
+  \item mathematics, \hyperpage{17}
+  \item mathscr, \hyperpage{34}
+  \item minipage, \hyperpage{10}
+  \item modulo function, \hyperpage{21}
 
   \indexspace
-{\bfseries\hfill P\hfill}\nopagebreak
-\vspace{\baselineskip}
-  \item packages\hfill 
- \subitem alltt\dotfill \hyperpage{11}, \hyperpage{52}
-    \subitem amsbsy\dotfill \hyperpage{34}
-    \subitem amsfonts\dotfill \hyperpage{23}, \hyperpage{41}
-    \subitem amsmath\dotfill \hyperpage{29}, \hyperpage{34}, 
-		\hyperpage{52}
-    \subitem amssymb\dotfill \hyperpage{23}, \hyperpage{34}, 
-		\hyperpage{41}, \hyperpage{52}
-    \subitem amsthm\dotfill \hyperpage{5}, \hyperpage{52}
-    \subitem caption\dotfill \hyperpage{52}
-    \subitem eso-pic\dotfill \hyperpage{52}
-    \subitem eucal\dotfill \hyperpage{41}
-    \subitem eufrak\dotfill \hyperpage{41}
-    \subitem fancyhdr\dotfill \hyperpage{52}
-    \subitem float\dotfill \hyperpage{52}
-    \subitem floatflt\dotfill \hyperpage{11, 12}, \hyperpage{52}
-    \subitem fontenc\dotfill \hyperpage{52}
-    \subitem fontspec\dotfill \hyperpage{53}
-    \subitem geometry\dotfill \hyperpage{52}
-    \subitem graphicx\dotfill \hyperpage{52}
-    \subitem ifpdf\dotfill \hyperpage{52}
-    \subitem ifthen\dotfill \hyperpage{52}
-    \subitem letterine\dotfill \hyperpage{11}
-    \subitem lettrine\dotfill \hyperpage{52}
-    \subitem listings\dotfill \hyperpage{8}, \hyperpage{11}, 
-		\hyperpage{52}
-    \subitem makeidx\dotfill \hyperpage{11}, \hyperpage{52}
-    \subitem natbib\dotfill \hyperpage{52}
-    \subitem paralist\dotfill \hyperpage{5}
-    \subitem pxfonts\dotfill \hyperpage{11}, \hyperpage{52}
-    \subitem setspace\dotfill \hyperpage{52}
-    \subitem subfigure\dotfill \hyperpage{15}, \hyperpage{52}
-    \subitem textpos\dotfill \hyperpage{52}
-    \subitem verbatim\dotfill \hyperpage{52}
-    \subitem woofncychap\dotfill \hyperpage{11}
-    \subitem xltxtra\dotfill \hyperpage{53}
-  \item prime\dotfill \hyperpage{25}
-  \item pseudocode\dotfill \hyperpage{8}
+
+  \item packages
+    \subitem alltt, \hyperpage{8}, \hyperpage{42}
+    \subitem amsbsy, \hyperpage{27}
+    \subitem amsfonts, \hyperpage{19}, \hyperpage{34}
+    \subitem amsmath, \hyperpage{23}, \hyperpage{27}, \hyperpage{42}
+    \subitem amssymb, \hyperpage{19}, \hyperpage{28}, \hyperpage{34}, 
+		\hyperpage{42}
+    \subitem amsthm, \hyperpage{3}, \hyperpage{42}
+    \subitem caption, \hyperpage{42}
+    \subitem eso-pic, \hyperpage{42}
+    \subitem eucal, \hyperpage{34}
+    \subitem eufrak, \hyperpage{34}
+    \subitem fancyhdr, \hyperpage{42}
+    \subitem float, \hyperpage{42}
+    \subitem floatflt, \hyperpage{8}, \hyperpage{42}
+    \subitem fontenc, \hyperpage{42}
+    \subitem fontspec, \hyperpage{42}
+    \subitem geometry, \hyperpage{42}
+    \subitem graphicx, \hyperpage{42}
+    \subitem ifpdf, \hyperpage{42}
+    \subitem ifthen, \hyperpage{42}
+    \subitem letterine, \hyperpage{8}
+    \subitem lettrine, \hyperpage{42}
+    \subitem listings, \hyperpage{6}, \hyperpage{8}, \hyperpage{42}
+    \subitem makeidx, \hyperpage{8}, \hyperpage{42}
+    \subitem natbib, \hyperpage{42}
+    \subitem paralist, \hyperpage{4}
+    \subitem pxfonts, \hyperpage{8}, \hyperpage{42}
+    \subitem setspace, \hyperpage{42}
+    \subitem subfigure, \hyperpage{11}, \hyperpage{42}
+    \subitem textpos, \hyperpage{42}
+    \subitem verbatim, \hyperpage{42}
+    \subitem woofncychap, \hyperpage{8}
+    \subitem wrapfig, \hyperpage{9}
+    \subitem xltxtra, \hyperpage{42}
+  \item prime, \hyperpage{20}
+  \item pseudocode, \hyperpage{5}
 
   \indexspace
-{\bfseries\hfill S\hfill}\nopagebreak
-\vspace{\baselineskip}
-  \item square root\dotfill \hyperpage{24}
-  \item subscript\dotfill \hyperpage{24}
-  \item sum operator\dotfill \hyperpage{27}
+
+  \item square root, \hyperpage{20}
+  \item subscript, \hyperpage{19}
+  \item sum operator, \hyperpage{21}
 
   \indexspace
-{\bfseries\hfill T\hfill}\nopagebreak
-\vspace{\baselineskip}
-  \item three dots\dotfill \hyperpage{28}
+
+  \item three dots, \hyperpage{22}
 
   \indexspace
-{\bfseries\hfill V\hfill}\nopagebreak
-\vspace{\baselineskip}
-  \item vectors\dotfill \hyperpage{25}
-  \item vertical dots\dotfill \hyperpage{28}
+
+  \item vectors, \hyperpage{20}
+  \item vertical   dots, \hyperpage{22}
 
   \indexspace
-{\bfseries\hfill W\hfill}\nopagebreak
-\vspace{\baselineskip}
-  \item Wooster\dotfill \hyperpage{20}
-    \subitem User Services\dotfill \hyperpage{20}
-      \subsubitem Help Desk\dotfill \hyperpage{20}
-  \item woosterthesis options\hfill 
- \subitem abstractonly\dotfill \hyperpage{11}
-    \subitem alltt\dotfill \hyperpage{11}
-    \subitem blacklinks\dotfill \hyperpage{11}
-    \subitem code\dotfill \hyperpage{11}
-    \subitem dropcaps\dotfill \hyperpage{11}
-    \subitem euler\dotfill \hyperpage{11}
-    \subitem guass\dotfill \hyperpage{11}
-    \subitem index\dotfill \hyperpage{11}
-    \subitem kaukecopyright\dotfill \hyperpage{11}
-    \subitem palatino\dotfill \hyperpage{11}
-    \subitem picins\dotfill \hyperpage{11, 12}
-    \subitem verbatim\dotfill \hyperpage{11}
-    \subitem xetex\dotfill \hyperpage{11}
 
- \end{theindex}
+  \item Wooster, \hyperpage{16}
+    \subitem User Services, \hyperpage{16}
+      \subsubitem Help Desk, \hyperpage{16}
+  \item woosterthesis options
+    \subitem abstractonly, \hyperpage{8}
+    \subitem alltt, \hyperpage{8}
+    \subitem blacklinks, \hyperpage{8}
+    \subitem code, \hyperpage{8}
+    \subitem dropcaps, \hyperpage{8}
+    \subitem euler, \hyperpage{8}
+    \subitem guass, \hyperpage{8}
+    \subitem index, \hyperpage{8}
+    \subitem kaukecopyright, \hyperpage{8}
+    \subitem palatino, \hyperpage{8}
+    \subitem picins, \hyperpage{8, 9}
+    \subitem verbatim, \hyperpage{8}
+    \subitem xetex, \hyperpage{8}
+
+\end{theindex}

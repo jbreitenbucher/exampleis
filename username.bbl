@@ -1,80 +1,92 @@
 \begin{thebibliography}{12}
+\newcommand{\enquote}[1]{``#1''}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
-\expandafter\ifx\csname urlstyle\endcsname\relax
-  \providecommand{\doi}[1]{doi: #1}\else
-  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+\providecommand{\urlprefix}{}
 
-\bibitem[Breitenbucher(2004)]{brei04}
-Jon Breitenbucher.
-\newblock {W}ooster related {L}a{T}e{X} files.
+\bibitem[{Breitenbucher(2004)}]{brei04}
+Breitenbucher, Jon.
+\newblock \enquote{{W}ooster related {L}a{T}e{X} files.}
 \newblock World Wide Web, 2004.
-\newblock URL \url{http://woolatex.wooster.edu}.
+\newblock \urlprefix\url{http://woolatex.wooster.edu}.
 \newblock Accessed on 03/11/2004.
 
-\bibitem[Feuerstack(2002)]{feu02}
-Thomas Feuerstack.
-\newblock Introduction to pdf{\TeX{}}.
-\newblock \emph{TUGboat}, 23\penalty0 (3/4):\penalty0 329--334, 2002.
-\newblock URL \url{http://www.tug.org/TUGboat/Articles/tb23-3-4/tb75feu.pdf}.
 
-\bibitem[Flynn(2003)]{fly03}
-Peter Flynn.
-\newblock Formatting {I}nformation.
-\newblock \emph{TUGboat}, 23\penalty0 (2):\penalty0 115--237, 2003.
-\newblock URL
-  \url{http://www.tug.org/tex-archive/info/beginlatex/beginlatex.letter.pdf}.
+\bibitem[{Feuerstack(2002)}]{feu02}
+Feuerstack, Thomas.
+\newblock \enquote{Introduction to pdf{\TeX{}}.}
+\newblock \emph{TUGboat} 23,  3/4: (2002) 329--334.
+\newblock
+  \urlprefix\url{http://www.tug.org/TUGboat/Articles/tb23-3-4/tb75feu.pdf}.
 
-\bibitem[Garcia(1986)]{GAR86}
-J.~Garcia.
-\newblock Personal identification apparatus.
+
+\bibitem[{Flynn(2003)}]{fly03}
+Flynn, Peter.
+\newblock \enquote{Formatting {I}nformation.}
+\newblock \emph{TUGboat} 23, ~2: (2003) 115--237.
+\newblock
+  \urlprefix\url{http://www.tug.org/tex-archive/info/beginlatex/beginlatex.letter.pdf}.
+
+
+\bibitem[{Garcia(1986)}]{GAR86}
+Garcia, J.
+\newblock \enquote{Personal Identification Apparatus.}
 \newblock Technical report, U.S. Patent and Trademark Office, 1986.
 
-\bibitem[Gr\"atzer(1996)]{gra96}
-George Gr\"atzer.
+
+\bibitem[{Gr\"atzer(1996)}]{gra96}
+Gr\"atzer, George.
 \newblock \emph{Math into \LaTeX}.
 \newblock Birkh\"auser, 1996.
-\newblock URL \url{http://www.tug.org/tex-archive/info/mil/mil.pdf}.
+\newblock \urlprefix\url{http://www.tug.org/tex-archive/info/mil/mil.pdf}.
 
-\bibitem[Konstantopoulos(2004)]{kon04}
-Stasinos Konstantopoulos.
-\newblock Bibtex etries.
+
+\bibitem[{Konstantopoulos(2004)}]{kon04}
+Konstantopoulos, Stasinos.
+\newblock \enquote{BibTeX Etries.}
 \newblock World Wide Web, 2004.
-\newblock URL \url{http://odur.let.rug.nl/~konstant/Ac/publications.html}.
+\newblock
+  \urlprefix\url{http://odur.let.rug.nl/~konstant/Ac/publications.html}.
 \newblock Accessed on 03/11/2004.
 
-\bibitem[Kopka and Daly(2003)]{kd03}
-Helmut Kopka and Patrick~W. Daly.
-\newblock \emph{Guide to \LaTeX}.
-\newblock Pearson Education, New York, 4th edition, 2003.
 
-\bibitem[Mittelbach et~al.(2004)Mittelbach, Goossens, Braams, Carlisle, and
-  Rowley]{mgbcr04}
-Frank Mittelbach, Michel Goossens, Johannes Braams, David Carlisle, and Chris
+\bibitem[{Kopka and Daly(2003)}]{kd03}
+Kopka, Helmut, and Patrick~W. Daly.
+\newblock \emph{Guide to \LaTeX}.
+\newblock New York: Pearson Education, 2003, 4th edition.
+
+
+\bibitem[{Mittelbach et~al.(2004)Mittelbach, Goossens, Braams, Carlisle, and
+  Rowley}]{mgbcr04}
+Mittelbach, Frank, Michel Goossens, Johannes Braams, David Carlisle, and Chris
   Rowley.
 \newblock \emph{The \LaTeX\ Companion}.
-\newblock Addison Wesley Professional, New York, 2nd edition, 2004.
+\newblock New York: Addison Wesley Professional, 2004, 2nd edition.
 
-\bibitem[Oetiker et~al.(2003)Oetiker, Partl, Hyna, and Schlegl]{ophs03}
-Tobias Oetiker, Hurbert Partl, Irene Hyna, and Elisabeth Schlegl.
-\newblock The {N}ot {S}o {S}hort {I}ntroduction to {\LaTeX2e{}}.
-\newblock 2003.
-\newblock URL
-  \url{http://www.ctan.org/tex-archive/info/lshort/english/lshort.pdf}.
 
-\bibitem[Simmonds(1996)]{SIM96}
-Fred Simmonds.
+\bibitem[{Oetiker et~al.(2003)Oetiker, Partl, Hyna, and Schlegl}]{ophs03}
+Oetiker, Tobias, Hurbert Partl, Irene Hyna, and Elisabeth Schlegl.
+\newblock \enquote{The {N}ot {S}o {S}hort {I}ntroduction to {\LaTeX2e{}}.}
+  \urlprefix\url{http://www.ctan.org/tex-archive/info/lshort/english/lshort.pdf}.
+\begin{quotation}\noindent{\textsc{Annotation: }}This is a very good
+  introduction to \LaTeX\end{quotation}
+
+\bibitem[{Simmonds(1996)}]{SIM96}
+Simmonds, Fred.
 \newblock \emph{Network Security: Data and Voice Communications}.
 \newblock McGraw-Hill, 1996.
 
-\bibitem[Singh(1999)]{SIN99}
-Simon Singh.
-\newblock \emph{The Code Book}.
-\newblock Anchor Books, New York, 1999.
 
-\bibitem[Trappe and Washington(2002)]{TRA02}
-Wade Trappe and Lawrence~C. Washington.
+\bibitem[{Singh(1999)}]{SIN99}
+Singh, Simon.
+\newblock \emph{The Code Book}.
+\newblock New York: Anchor Books, 1999.
+
+
+\bibitem[{Trappe and Washington(2002)}]{TRA02}
+Trappe, Wade, and Lawrence~C. Washington.
 \newblock \emph{Introduction to Cryptography with Coding Theory}.
-\newblock Prentice Hall, Upper Saddle River, NJ, 2002.
+\newblock Upper Saddle River, NJ: Prentice Hall, 2002.
+
 
 \end{thebibliography}
