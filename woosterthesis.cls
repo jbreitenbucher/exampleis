@@ -178,17 +178,19 @@
 \def\t@st{test}%
 \ifx\test@woolshort\t@st\@woolshorttrue\else\@woolshortfalse\fi
 \DeclareOption{woolshort}{\@woolshorttrue}
-% option to use woolshort package a modification of lshort - JB
+% option to include a colophon- JB
 \newif\if@colophon
 \expandafter\def\csname test@\jobname\endcsname{test}%
 \def\t@st{test}%
 \ifx\test@colophon\t@st\@colophontrue\else\@colophonfalse\fi
 \DeclareOption{colophon}{\@colophontrue}
+% option to use the Chicago citation and reference style added for Ian Sharp
 \newif\if@woosterchicago
 \expandafter\def\csname test@\jobname\endcsname{test}%
 \def\t@st{test}%
 \ifx\test@woosterchicago\t@st\@woosterchicagotrue\else\@woosterchicagofalse\fi
 \DeclareOption{woosterchicago}{\@woosterchicagotrue}
+% option to use the American Chemical Society citation and reference style added for Norman Chamusah
 \newif\if@chemso
 \expandafter\def\csname test@\jobname\endcsname{test}%
 \def\t@st{test}%
@@ -401,7 +403,10 @@
    		\fi
     	}
 \fi
- \ifnum\@ptsize=0  
+
+% a series of title page definitions one for each supported class point size - JB
+
+ \ifnum\@ptsize=0  % 10 pt
   \if@titlepage
   \newcommand\maketitle{\begin{titlepage}%
 
@@ -567,7 +572,7 @@ by \\
 \end{textblock}
 }
 \fi
-\else\ifnum\@ptsize=1
+\else\ifnum\@ptsize=1 % 11 pt
  \if@titlepage
   \newcommand\maketitle{\begin{titlepage}%
 
@@ -733,7 +738,7 @@ by \\
 \end{textblock}
 }
 \fi
-\else\ifnum\@ptsize>1
+\else\ifnum\@ptsize>1 % 12 pt or greater
  \if@titlepage
   \newcommand\maketitle{\begin{titlepage}%
 
@@ -1527,17 +1532,18 @@ by \\
 
 % Use natbib.sty for the bibliography and make some modifications by cutting code from natbib and altering it- JB
 \RequirePackage{ifthen}% to test boolean conditions - JB
-\newboolean{achemso}
-\newboolean{woosterchicago}
+\newboolean{achemso} % for American Chemical Society style
+\newboolean{woosterchicago} % for Chicago style
+% load natbib with the options used in achemso style and set boolean to true
 \if@chemso
 \RequirePackage[sort&compress,numbers,super]{natbib}
 \setboolean{achemso}{true}
-\else
+\else % load natbib, set bibliography punctuation for Chicago style and set boolean to true
 	\if@woosterchicago
 		\RequirePackage{natbib}
 		\bibpunct{[}{]}{;}{a}{,}{,}
 		\setboolean{woosterchicago}{true}
-	\else
+	\else % load natbib and define the wooster bibliography style
 		\RequirePackage{natbib}
 		\newcommand\bibstyle@wooster{\bibpunct{[}{]}{,}{n}{}{}%
 		     \gdef\NAT@biblabelnum##1{##1.}}

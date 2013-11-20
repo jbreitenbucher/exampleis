@@ -3,8 +3,9 @@
 %                                                       Example IS Template
 %
 % \documentclass{woosterthesis} must be at the beginning of every IS. Options are the same as
-% for the report class with some additional options, blacklinks, palatino, abstractonly, and
-% kaukecopyright. The kaukecopyright option will put the arch symbol with the word mark on the
+% for the report class with some additional options, abstractonly, blacklinks, code, kaukecopyright, palatino, picins,
+% maple, index, verbatim, dropcaps, euler, gauss, alltt,  woolshort, colophon, woosterchicago, and
+% achemso. The kaukecopyright option will put the arch symbol with the word mark on the
 % copyright page. The woosterthesis class is based on the report class. One thing to note is that
 % the ``%'' symbol comments out all characters that follow it on the line.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -13,7 +14,7 @@
 % use this declaration for a draft  version of your IS
 \documentclass[10pt,palatino,code,picins,kaukecopyright,openright,woolshort,dropcaps,verbatim,index,euler]{woosterthesis}
 %\documentclass[10pt,code,picins,kaukecopyright,openright,woolshort,dropcaps,verbatim,euler,index,colophon,blacklinks,twoside]{woosterthesis}
-% note that you can specify the woosterchicago option to use Chicago citation style and achemso to use the American Chamical Society citation format
+% note that you can specify the woosterchicago option to use Chicago citation style and achemso to use the American Chemical Society citation format
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % use this declaration for the print version of your IS
@@ -85,7 +86,8 @@
 \makeindex % comment this line if you do not have an index
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% This is where the commands for the document begin. All \LaTeX{} documents must have a %\begin{document} text .... \end{document} structure.
+% This is where the commands for the document begin. All \LaTeX{} documents must have a
+% \begin{document} text .... \end{document} structure.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
@@ -223,7 +225,8 @@ I would like to acknowledge Prof. Lowell Boone in the Physics Department for his
 %\include{conclusion}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% This section starts the back matter. The back matter includes appendices, indicies, and the %bibliography
+% This section starts the back matter. The back matter includes appendices, indicies, and the
+% bibliography
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \backmatter
@@ -244,7 +247,8 @@ I would like to acknowledge Prof. Lowell Boone in the Physics Department for his
 %\end{thebibliography}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% We used BibTeX to generate a Bibliography. I would recommend this method. However, it is %not required.
+% We used BibTeX to generate a Bibliography. I would recommend this method. However, it is 
+% not required.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \renewcommand\bibname{References} % changes the name of the Bibliography
@@ -276,6 +280,17 @@ I would like to acknowledge Prof. Lowell Boone in the Physics Department for his
 \phantomsection
 \addcontentsline{toc}{chapter}{Index}
 \printindex}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%                                                                Colophon
+%
+%  A Colophon is a section of a printed document that acknowledges the designers and printers of the work.
+% The colophon also includes information about the fonts and paper used in the printing. It is not required 
+% for your IS and can be commented out.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \ifthenelse{\boolean{colophon}}{
 \begin{colophon}
 This Independent Study was designed by Dr. Jon Breitenbucher.\newline
