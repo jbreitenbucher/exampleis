@@ -197,7 +197,7 @@ I would like to acknowledge Prof. Lowell Boone in the Physics Department for his
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\include{chapters/preface} % most theses do not have a preface so this should be commented
+\input{chapters/preface} % most theses do not have a preface so this should be commented
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \mainmatter
@@ -214,27 +214,26 @@ I would like to acknowledge Prof. Lowell Boone in the Physics Department for his
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\include{chapters/introduction}
-\include{chapters/chapter1}
-\include{chapters/chapter2}
-\include{chapters/chapter3}
-%\include{chapters/chapter4}
-%\include{chapters/chapter5}
-%\include{chapters/chapter6}
-%\include{chapters/chapter7}
-%\include{conclusion}
+\input{chapters/introduction}
+\input{chapters/chapter1}
+\input{chapters/chapter2}
+\input{chapters/chapter3}
+%\input{chapters/chapter4}
+%\input{chapters/chapter5}
+%\input{chapters/chapter6}
+%\input{chapters/chapter7}
+%\input{conclusion}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% This section starts the back matter. The back matter includes appendices, indicies, and the
-% bibliography
+% This section starts the back matter. The back matter includes appendices, indicies, and the %bibliography
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \backmatter
 
-\include{appendices/math}
-\include{appendices/java}
-\include{appendices/cpp}
-\include{appendices/afterword}
+\input{appendices/math}
+\input{appendices/java}
+\input{appendices/cpp}
+\input{appendices/afterword}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % This section would be used if you are not using BibTeX. Look at Kopka and Daly for how to
@@ -247,8 +246,7 @@ I would like to acknowledge Prof. Lowell Boone in the Physics Department for his
 %\end{thebibliography}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% We used BibTeX to generate a Bibliography. I would recommend this method. However, it is 
-% not required.
+% We used BibTeX to generate a Bibliography. I would recommend this method. However, it is %not required.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \renewcommand\bibname{References} % changes the name of the Bibliography
@@ -257,10 +255,8 @@ I would like to acknowledge Prof. Lowell Boone in the Physics Department for his
               % those that were explicitly cited in the text.  If you comment this out, the bibliography
               % will only include cited references.
 \ifthenelse{\boolean{woosterchicago}}{
-\bibliographystyle{woosterchicago}}{} % if you have used the woosterchicago class option then your references and citations will be in Chicago format
-\ifthenelse{\boolean{achemso}}{
-\bibliographystyle{achemso}}{} % if you have used the achemso class option then your references and citations will be in the American Chemical Society format
-% if you do not specify a citation format then the default Wooster format will be used.
+\bibliographystyle{woosterchicago}}{\ifthenelse{\boolean{achemso}}{
+\bibliographystyle{achemso}}{\bibliographystyle{plainnat}}} % if you have used the woosterchicago class option then your references and citations will be in Chicago format. If you have used the achemso class option then your references and citations will be in the American Chemical Society format. If you do not specify a citation format then the default Wooster format will be used.
 \bibliography{references} % load our Bibliography file
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
