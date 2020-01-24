@@ -1728,7 +1728,7 @@ by \\
 	\fi
 	\RequirePackage{float}% to handle figures and tables - JB
 	\RequirePackage[style=base,format=hang,labelfont={bf,footnotesize},font=footnotesize, justification=raggedright]{caption}% to format captions - JB
-	\RequirePackage{subfigure}% to allow multiple images in a figure - JB
+	\RequirePackage{subfig}% to allow multiple images in a figure. subfig used instead of subfigure which is deprecated (1-24-2020) - JB
 	\captionsetup[subfloat]{listofindent=4em}% set captions on subfigures - JB
 	\setcounter{lofdepth}{2}% setting depth of the list of figures - JB
 % Load hyperref.sty to create a linked document. Warn users that packages called after this

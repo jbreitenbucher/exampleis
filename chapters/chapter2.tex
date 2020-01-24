@@ -116,25 +116,25 @@ You can use minipages to put more than one picture in a figure. Here is an examp
 \end{minipage}
 \end{figure}
 
-You can also use the \ip{subfigure} package to do this.
+You can also use the \ip{subfig} package to do this. %changed subfigure to subfig as result of changing to subfig package due to deprecation of subfigure 1-24-2020 - JB
 
 \begin{singlespace}\small
 \begin{verbatim}
 \begin{figure}[!ht]\centering
-\subfigure[What goes in the List][Large conchoid]
+\subfloat[What goes in the List][Large conchoid] %changed subfigure to subfloat as result of changing to subfig package due to deprecation of subfigure 1-24-2020 - JB
 {\woopic{picture1}{.4}\label{fig3:left}}
 \qquad
-\subfigure[What goes in the List][Small conchoid]
+\subfloat[What goes in the List][Small conchoid] %changed subfigure to subfloat as result of changing to subfig package due to deprecation of subfigure 1-24-2020 - JB
 {\woopic{picture2}{.4}\label{fig3:right}}
 \caption{Two pictures in one figure}\label{fig3}
 \end{figure}
 \end{verbatim}
 \end{singlespace}
 \begin{figure}[!ht]\centering
-\subfigure[What goes in the List][Large conchoid]
+\subfloat[What goes in the List][Large conchoid] %changed subfigure to subfloat as result of changing to subfig package due to deprecation of subfigure 1-24-2020 - JB
 {\woopic{picture1}{.4}\label{fig3:left}}
 \qquad
-\subfigure[What goes in the List][Small conchoid]
+\subfloat[What goes in the List][Small conchoid] %changed subfigure to subfloat as result of changing to subfig package due to deprecation of subfigure 1-24-2020 - JB
 {\woopic{picture2}{.4}\label{fig3:right}}
 \caption{Two pictures in one figure}\label{fig3}
 \end{figure}
