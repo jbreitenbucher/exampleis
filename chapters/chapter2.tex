@@ -150,6 +150,7 @@ Tables are fairly easy to set up. Here is a simple table
 \begin{verbatim}
 \begin{table}[!ht]
 \begin{center}
+\caption{Our first table}
 \begin{tabular}{r l}
   $\underline{\textnormal{District}}$ &  
   $\underline{\textnormal{Population}}$\\
@@ -163,13 +164,14 @@ Tables are fairly easy to set up. Here is a simple table
 \end{singlespace}
 \begin{table}[!ht]
 \begin{center}
+\caption{Our first table}
 \begin{tabular}{r l}
   $\underline{\textnormal{District}}$ &
     $\underline{\textnormal{Population}}$\\
    Applewood & 8280 \\
    Boxwood & 4600  \\
    Central & 5220
-   \end{tabular}\caption{Our first table}
+   \end{tabular}
    \end{center}
 \end{table}
 
@@ -178,6 +180,7 @@ In \verb|\begin{tabular}{r l}| the two ``r'' and ``l'' indicate that we have two
 \begin{verbatim}
 \begin{table}[!ht]
 \begin{center}
+\caption{Our first table again}
 \begin{tabular}{|r|l|}
 \hline
   {\textnormal{District}} &  
@@ -185,13 +188,14 @@ In \verb|\begin{tabular}{r l}| the two ``r'' and ``l'' indicate that we have two
    Applewood & 8280 \\ \hline
    Boxwood & 4600  \\ \hline
    Central & 5220\\ \hline
-   \end{tabular}\caption{Our first table again}
+   \end{tabular}
    \end{center}
 \end{table}
 \end{verbatim}
 \end{singlespace}
 \begin{table}[!ht]
 \begin{center}
+\caption{Our first table again}
 \begin{tabular}{|r|l|}
 \hline
   {\textnormal{District}} &  
@@ -199,7 +203,7 @@ In \verb|\begin{tabular}{r l}| the two ``r'' and ``l'' indicate that we have two
    Applewood & 8280 \\ \hline
    Boxwood & 4600  \\ \hline
    Central & 5220\\ \hline
-   \end{tabular}\caption{Our first table again}
+   \end{tabular}
    \end{center}
 \end{table}
 
@@ -207,6 +211,7 @@ Here is a more complicated example of a table.
 \begin{singlespace}\small
 \begin{verbatim}
 \begin{table}[!ht]
+\caption{Reduction of curvature by each reprojection method\label{tbl:kreduce}}
 \centerline{
 \begin{tabular}{|l||r|r|r|r|} \hline
 \emph{Reprojection} & \multicolumn{3}{|c|}{\emph{Largest
@@ -227,12 +232,11 @@ Regridding & 0.0428 & 0.0166 &
 Block & 0.0358 & 0.0103 &
  $\degree{45}$ & 0.0163 \\ \hline
 \end{tabular}}
-\caption{Reduction of curvature by each
- reprojection method\label{tbl:kreduce}}
 \end{table}
 \end{verbatim}
 \end{singlespace}
 \begin{table}[!ht]
+\caption{Reduction of curvature by each reprojection method\label{tbl:kreduce}}
 \centerline{
 \begin{tabular}{|l||r|r|r|r|} \hline
 \emph{Reprojection} & \multicolumn{3}{|c|}{\emph{Largest Reduction of Curvature}} 
@@ -246,7 +250,6 @@ ZEEL ext.\ & 0.0358 & 0.0245 & $\degree{45}$ & 0.0059 \\ \hline
 Regridding & 0.0428 & 0.0166 & $\degree{75}$ & 0.0159 \\ \hline
 Block & 0.0358 & 0.0103 & $\degree{45}$ & 0.0163 \\ \hline
 \end{tabular}}
-\caption{Reduction of curvature by each reprojection method\label{tbl:kreduce}}
 \end{table}
 
 Please refer to Chapter 6 of \citet{kd03} for a complete discussion of tables and tabular environments.
