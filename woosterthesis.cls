@@ -106,6 +106,18 @@
 \def\t@st{test}%
 \ifx\test@kaukecopyright\t@st\@kaukecopytrue\else\@kaukecopyfalse\fi
 \DeclareOption{kaukecopyright}{\@kaukecopytrue}
+% the woostercopyright option to insert an Wooster word mark on the copyright page - JB
+\newif\if@woostercopy
+\expandafter\def\csname test@\jobname\endcsname{test}%
+\def\t@st{test}%
+\ifx\test@woostercopyright\t@st\@woostercopytrue\else\@woostercopyfalse\fi
+\DeclareOption{woostercopyright}{\@woostercopytrue}
+% the wblack option to insert a black W in the background of the cover instead of Kauke - JB
+%\newif\if@wblack
+%\expandafter\def\csname test@\jobname\endcsname{test}%
+%\def\t@st{test}%
+%\ifx\test@wblack\t@st\@wblacktrue\else\@wblackfalse\fi
+%\DeclareOption{wblack}{\@wblacktrue}
 %the palatino option typesets the thesis in Palatino, the College font.- JB
 \newif\if@palatino
 \expandafter\def\csname test@\jobname\endcsname{test}%
@@ -218,28 +230,56 @@
 	\RequirePackage{xltxtra}% adds extra commands specific to XeTeX
 	%\RequirePackage[xetex]{graphicx}
 		\def\kaukelogo{\includegraphics[scale=.4]{kauke_wordmark}}
+		\def\woosterlogo{\includegraphics[scale=.4]{wooster_stacked_black}}
 		\RequirePackage{eso-pic}
+		%\newboolean{wblack}
+		%\if@wblack
 		\newcommand\BackgroundPicture{%
-   			\put(-3,-5){%
-     			\parbox[b][\paperheight]{\paperwidth}{%       
-       			\vfill
-       			\centering
-       			\includegraphics[width=\paperwidth,height=\paperheight,%
-                        		keepaspectratio]{kauke_arch_gray}%
-       			\vfill
+			\put(-3,-5){%
+				\parbox[b][\paperheight]{\paperwidth}{%       
+					\vfill
+					\centering
+					\includegraphics[width=\paperwidth,height=\paperheight,%
+						keepaspectratio]{W_black}%
+					\vfill
+		%\else
+			%\newcommand\BackgroundPicture{%
+   				%\put(-3,-5){%
+     				%\parbox[b][\paperheight]{\paperwidth}{%       
+       				%\vfill
+       				%\centering
+       				%\includegraphics[width=\paperwidth,height=\paperheight,%
+                        %keepaspectratio]{kauke_arch_gray}%
+       				%\vfill
+       	%\setboolean{wblack}{true}
+       	%\fi
      			}}}
 \else % alter class behavior based on version of TeX - JB
 			\RequirePackage[pdftex]{graphicx}
 			\def\kaukelogo{\includegraphics[scale=.4]{kauke_wordmark}}
+			\def\woosterlogo{\includegraphics[scale=.4]{wooster_stacked_black}}
 			\RequirePackage{eso-pic}
-			\newcommand\BackgroundPicture{%
-   				\put(-3,-5){%
-     				\parbox[b][\paperheight]{\paperwidth}{%       
-       				\vfill
-       				\centering
-       				\includegraphics[width=\paperwidth,height=\paperheight,%
-                        		keepaspectratio]{kauke_arch_gray}%
-       				\vfill
+			%\newboolean{wblack}
+			%\if@wblack
+				\newcommand\BackgroundPicture{%
+					\put(-3,-5){%
+						\parbox[b][\paperheight]{\paperwidth}{%       
+							\vfill
+							\centering
+							\includegraphics[width=\paperwidth,height=\paperheight,%
+								keepaspectratio]{W_black}%
+							\vfill
+			%\else
+				%\newcommand\BackgroundPicture{%
+					%\put(-3,-5){%
+						%\parbox[b][\paperheight]{\paperwidth}{%       
+							%\vfill
+							%\centering
+							%\includegraphics[width=\paperwidth,height=\paperheight,%
+								%keepaspectratio]{kauke_arch_gray}%
+							%\vfill
+			%\setboolean{wblack}{true}
+			%\fi
      				}}} 
 \fi
 
@@ -402,6 +442,31 @@
           \vfill
    		\fi
     	}
+\fi
+
+% woostercopyright - JB
+
+\if@woostercopy
+\renewcommand{\copyrighted}[1][\@author]{%
+	\@copyrighttrue%
+	\def\@copyright{#1}%
+}
+\renewcommand{\disscopyright}{%
+	\cleardoublepage%
+	\thispagestyle{empty}%
+	~%
+	\if@copyright%
+	\vspace*{\fill}%
+	\begin{center}%
+		\woosterlogo%
+		\begin{singlespace}%
+			\copyright\ \ye@r\ by \@copyright
+			%\@copydate%
+		\end{singlespace}%
+	\end{center}%                      
+	\vfill
+	\fi
+}
 \fi
 
 % a series of title page definitions one for each supported class point size - JB
