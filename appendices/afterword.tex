@@ -26,7 +26,51 @@ So how does a \lt session work? \lt loads the document class with any specified 
 \ip{caption},
 \ip{subfigure},
 and \ip{ifthen}.
-The \texttt{woosterthesis} class assumes you are using pdfTeX (support for postscript based TeX has been dropped as of 2006/17/11). 
+The \texttt{woosterthesis} class assumes you are using pdfTeX (support for postscript based TeX has been dropped as of 2006/17/11).
+
+There are also a number of defined options for the \texttt{woosterthesis} class. They are:
+\ip{a4paper},
+\ip{a5paper},
+\ip{b5paper},
+\ip{letterpaper},
+\ip{legalpaper},
+\ip{executivepaper},
+\ip{landscape},
+\ip{10pt},
+\ip{11pt},
+\ip{12pt},
+\ip{oneside},
+\ip{twoside},
+\ip{draft},
+\ip{final},
+\ip{titlepage},
+\ip{notitlepage},
+\ip{openright},
+\ip{openany},
+\ip{onecolumn},
+\ip{twocolumn},
+\ip{leqno},
+\ip{fleqno},
+\ip{openbib},
+\ip{abstractonly},
+\ip{kaukecopyright},
+\ip{woostercopyright},
+\ip{wblack},
+\ip{palatino},
+\ip{picins},
+\ip{blacklinks},
+\ip{code},
+\ip{maple},
+\ip{index},
+\ip{verbatim},
+\ip{dropcaps},
+\ip{euler},
+\ip{gauss},
+\ip{alltt},
+\ip{woolshort},
+\ip{colophon},
+\ip{woosterchicago},
+and \ip{achemso}. \texttt{letterpaper}, \texttt{12pt}, \texttt{oneside} , \texttt{onecolumn} , \texttt{final}, and \texttt{openany} are the options that are executed by default in the class file and what will be used if the class is called without any options like \verb|\documentclass{woosterthesis}|. Most of the options are self explanatory. Some that might benefit from a little explanation are \texttt{kaukecopyright}, \texttt{woostercopyright}, \texttt{wblack}, \texttt{picins}, \texttt{euler},  \texttt{gauss},  \texttt{woolshort}, \texttt{colophon}, \texttt{woosterchicago}, \texttt{achemso}. The  \texttt{kaukecopyright} option includes a copyright notice with an image of Kauke Hall displayed while the \texttt{woostercopyright} option includes a copyright notice with the new (as of 8/2021) Wooster wordmark. The \texttt{wblack} option includes an opaque Wooster "W" (as of 8/2021) in the background of the title page instead of the default opaque Kauke Hall image. The \texttt{picins} option loads the \texttt{wrapfig} pacakge. The \texttt{euler} and \texttt{gause} options load the \texttt{fncychap} package with either the Euler or Gauss styling for chapter headings. The \texttt{woolshort} option should only be used for this sample document and loads the mathematical appendix. The \texttt{colophon} option will include a colophon which is section that describes the fonts and other settings used to produce the manuscript. The \texttt{woosterchicago} option was added at the request of Ian Sharp and implements the Chicago citation and reference style. The \texttt{achemso} option was added at the request of Norman Chamusah and implements the American Chemical Society citation and reference style. The other options generally load the package with the associated name. The sample document uses \verb|\documentclass[|\texttt{10pt,palatino,code,picins,kaukecopyright,openright,woolshort,dropcaps,}\newline\texttt{verbatim,index,euler}\verb|]{woosterthesis}| as the document class call with options and is intended for drafts. For the final print/pdf version you should uncomment \verb|\documentclass[|\texttt{10pt,code,picins,}\newline\texttt{kaukecopyright,openright,woolshort,dropcaps,verbatim,euler,index,colophon,blacklinks,}\newline\texttt{twoside}\verb|}{woosterthesis}| and comment out the previous call.
 
 The \texttt{hyperref} package will make your thesis a linked document. \texttt{amsthm} is for altering the Theorem environments. \texttt{amsmath} implements almost all of the mathematical symbols. \texttt{amssymb} adds the mathematical symbols not present in \texttt{amsmath}. \texttt{graphicx} and \texttt{eso-pic} are used to place graphics files in the thesis. \texttt{geometry} is used to set up the margins for the thesis. \texttt{setspace} is used to alter spacing by allowing a \texttt{singlespace}, \texttt{doublespace}, and \texttt{onehalfspace} environments. \texttt{natbib} formats references in parentheses with author and year.  Documentation is included for some of the packages in the \verb|doc| folder.
 
@@ -35,4 +79,3 @@ These packages should all be installed with a full installation of TeXLive on OS
 There is also a new \TeX{} engine called \xt which allows one to use the native fonts on your system as text fonts in the document. More information can be found at the \href{http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=xetex}{\xt homepage}. If using \xt you will also need \ip{fontspec} and \ip{xltxtra} which should be installed with \xt.
 
 Once the packages are loaded, \lt begins to process the commands contained between the \texttt{document} tags. As it processes the commands, a number of auxiliary files are created. These files contain information needed for things like the Bibliography, Table of Contents, List of Figures, etc. We then process the file a second time to allow \lt to use its auxiliary files to fill in information. Some information may require three passes before it is displayed. Once \lt is done you are presented with a PDF of the output.
-

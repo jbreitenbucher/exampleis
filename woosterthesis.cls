@@ -113,11 +113,11 @@
 \ifx\test@woostercopyright\t@st\@woostercopytrue\else\@woostercopyfalse\fi
 \DeclareOption{woostercopyright}{\@woostercopytrue}
 % the wblack option to insert a black W in the background of the cover instead of Kauke - JB
-%\newif\if@wblack
-%\expandafter\def\csname test@\jobname\endcsname{test}%
-%\def\t@st{test}%
-%\ifx\test@wblack\t@st\@wblacktrue\else\@wblackfalse\fi
-%\DeclareOption{wblack}{\@wblacktrue}
+\newif\if@wblack
+\expandafter\def\csname test@\jobname\endcsname{test}%
+\def\t@st{test}%
+\ifx\test@wblack\t@st\@wblacktrue\else\@wblackfalse\fi
+\DeclareOption{wblack}{\@wblacktrue}
 %the palatino option typesets the thesis in Palatino, the College font.- JB
 \newif\if@palatino
 \expandafter\def\csname test@\jobname\endcsname{test}%
@@ -232,8 +232,7 @@
 		\def\kaukelogo{\includegraphics[scale=.4]{kauke_wordmark}}
 		\def\woosterlogo{\includegraphics[scale=.4]{wooster_stacked_black}}
 		\RequirePackage{eso-pic}
-		%\newboolean{wblack}
-		%\if@wblack
+		\if@wblack
 		\newcommand\BackgroundPicture{%
 			\put(-3,-5){%
 				\parbox[b][\paperheight]{\paperwidth}{%       
@@ -242,45 +241,44 @@
 					\includegraphics[width=\paperwidth,height=\paperheight,%
 						keepaspectratio]{W_black}%
 					\vfill
-		%\else
-			%\newcommand\BackgroundPicture{%
-   				%\put(-3,-5){%
-     				%\parbox[b][\paperheight]{\paperwidth}{%       
-       				%\vfill
-       				%\centering
-       				%\includegraphics[width=\paperwidth,height=\paperheight,%
-                        %keepaspectratio]{kauke_arch_gray}%
-       				%\vfill
-       	%\setboolean{wblack}{true}
-       	%\fi
+					}}}
+		\else
+			\newcommand\BackgroundPicture{%
+   				\put(-3,-5){%
+     				\parbox[b][\paperheight]{\paperwidth}{%       
+       				\vfill
+       				\centering
+       				\includegraphics[width=\paperwidth,height=\paperheight,%
+                        keepaspectratio]{kauke_arch_gray}%
+       				\vfill
      			}}}
+		\fi
 \else % alter class behavior based on version of TeX - JB
 			\RequirePackage[pdftex]{graphicx}
 			\def\kaukelogo{\includegraphics[scale=.4]{kauke_wordmark}}
 			\def\woosterlogo{\includegraphics[scale=.4]{wooster_stacked_black}}
 			\RequirePackage{eso-pic}
-			%\newboolean{wblack}
-			%\if@wblack
+			\if@wblack
 				\newcommand\BackgroundPicture{%
 					\put(-3,-5){%
 						\parbox[b][\paperheight]{\paperwidth}{%       
 							\vfill
 							\centering
 							\includegraphics[width=\paperwidth,height=\paperheight,%
-								keepaspectratio]{W_black}%
+						keepaspectratio]{W_black}%
 							\vfill
-			%\else
-				%\newcommand\BackgroundPicture{%
-					%\put(-3,-5){%
-						%\parbox[b][\paperheight]{\paperwidth}{%       
-							%\vfill
-							%\centering
-							%\includegraphics[width=\paperwidth,height=\paperheight,%
-								%keepaspectratio]{kauke_arch_gray}%
-							%\vfill
-			%\setboolean{wblack}{true}
-			%\fi
-     				}}} 
+						}}}
+			\else
+				\newcommand\BackgroundPicture{%
+					\put(-3,-5){%
+						\parbox[b][\paperheight]{\paperwidth}{%       
+							\vfill
+							\centering
+							\includegraphics[width=\paperwidth,height=\paperheight,%
+								keepaspectratio]{kauke_arch_gray}%
+							\vfill
+				}}}
+			\fi
 \fi
 
 % Kyle Kindbom requested a theorem style where the theorem header was on a separate line.
