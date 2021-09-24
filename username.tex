@@ -277,11 +277,13 @@ I would like to acknowledge Prof. Lowell Boone in the Physics Department for his
 \nocite{*} % This command forces all the bibliography references to be printed -- not just 
               % those that were explicitly cited in the text.  If you comment this out, the bibliography
               % will only include cited references.
-\ifthenelse{\boolean{woosterchicago}}{
-\bibliographystyle{woosterchicago}}{\ifthenelse{\boolean{achemso}}{
-\bibliographystyle{achemso}}{\bibliographystyle{plainnat}}}
+%\ifthenelse{\boolean{woosterchicago}}{
+%\bibliographystyle{woosterchicago}}{\ifthenelse{\boolean{achemso}}{
+%\bibliographystyle{achemso}}{\bibliographystyle{plainnat}}}
 % if you have used the woosterchicago class option then your references and citations will be in Chicago format. If you have used the achemso class option then your references and citations will be in the American Chemical Society format. If you do not specify a citation format then the default Wooster format will be used.
-\bibliography{references} % load our Bibliography file
+%\bibliography{references} % load our Bibliography file
+\addbibresource{\references.bib}
+\printbibliography
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
