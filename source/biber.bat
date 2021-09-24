@@ -1,0 +1,2 @@
+@set BIBTEX=biber
+@texify %*
