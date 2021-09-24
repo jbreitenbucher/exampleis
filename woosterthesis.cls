@@ -197,17 +197,17 @@
 \ifx\test@colophon\t@st\@colophontrue\else\@colophonfalse\fi
 \DeclareOption{colophon}{\@colophontrue}
 % option to use the Chicago citation and reference style added for Ian Sharp
-\newif\if@woosterchicago
+\newif\if@chicago
 \expandafter\def\csname test@\jobname\endcsname{test}%
 \def\t@st{test}%
-\ifx\test@woosterchicago\t@st\@woosterchicagotrue\else\@woosterchicagofalse\fi
-\DeclareOption{woosterchicago}{\@woosterchicagotrue}
+\ifx\test@chicago\t@st\@chicagotrue\else\@chicagofalse\fi
+\DeclareOption{chicago}{\@chicagotrue}
 % option to use the American Chemical Society citation and reference style added for Norman Chamusah
-\newif\if@chemso
+\newif\if@acs
 \expandafter\def\csname test@\jobname\endcsname{test}%
 \def\t@st{test}%
-\ifx\test@chemso\t@st\@chemsotrue\else\@chemsofalse\fi
-\DeclareOption{achemso}{\@chemsotrue}
+\ifx\test@acs\t@st\@acstrue\else\@acsfalse\fi
+\DeclareOption{acs}{\@acstrue}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % option to use the American Chemical Society citation and reference style added for Norman Chamusah
 \newif\if@foreignlanguage
@@ -231,6 +231,7 @@
 \RequirePackage{amsmath}% to obtain special math related commands - JB
 \RequirePackage{setspace}% to allow single and double spacing - JB
 \RequirePackage{fancyhdr}% to have fancy chapter headings - JB
+\RequirePackage{csquotes}% to have context aware quotes when using foreign languages - JB
 \ifxetex
 	\RequirePackage{fontspec}% allows one to easily set up fonts in the document
 	\RequirePackage{xunicode}
@@ -1576,35 +1577,10 @@ by \\
 \fi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%\newdimen\bibindent
-%\setlength\bibindent{1.5em}
-%\newenvironment{thebibliography}[1]
-%     {\chapter*{\bibname}%
-%    \@mkboth{\bibname}{\bibname}% removed \MakeUppercase -JB
-%      \list{\@biblabel{\@arabic\c@enumiv}}%
-%           {\settowidth\labelwidth{\@biblabel{#1}}%
-%           \leftmargin\labelwidth
-%            \advance\leftmargin\labelsep
-%            \@openbib@code
-%            \usecounter{enumiv}%
-%            \let\p@enumiv\@empty
-%            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
-%      \sloppy
-%      \clubpenalty4000
-%      \@clubpenalty \clubpenalty
-%      \widowpenalty4000%
-%      \sfcode`\.\@m}
-%     {\def\@noitemerr
-%       {\@latex@warning{Empty `thebibliography' environment}}%
-%      \endlist}
-%\newcommand\newblock{\hskip .11em\@plus.33em\@minus.07em}
-%\let\@openbib@code\@empty
-
-% Use natbib.sty for the bibliography and make some modifications by cutting code from natbib and altering it- JB
+% Use biblatex package for the bibliography - JB
 \RequirePackage{ifthen}% to test boolean conditions - JB
-\RequirePackage{csquotes}
-\newboolean{achemso} % for American Chemical Society style
-\newboolean{woosterchicago} % for Chicago style
+\newboolean{acs} % for American Chemical Society style
+\newboolean{chicago} % for Chicago style
 \newboolean{foreignlanguage}
 \if@foreignlanguage
 	\ifxetex
@@ -1615,58 +1591,17 @@ by \\
 	\setboolean{foreignlanguage}{true}
 \fi
 % load biblatex with chem-acs style and set boolean to true
-\if@chemso
-%\RequirePackage[sort&compress,numbers,super]{natbib}
+\if@acs
 \RequirePackage[style=chem-acs,articletitle,hyperref=auto,backref=true,backrefstyle=two,natbib=true]{biblatex}
-\setboolean{achemso}{true}
+\setboolean{acs}{true}
 \else % load biblatex-chicago and set boolean to true
-	\if@woosterchicago
-		%\RequirePackage{natbib}
-		%\bibpunct{[}{]}{;}{a}{,}{,}
+	\if@chicago
 		\RequirePackage[authordate,strict,autolang=other,bibencoding=inputenc,hyperref=auto,backref=true,backrefstyle=two,natbib=true,sorting=nty]{biblatex-chicago}
-		\setboolean{woosterchicago}{true}
+		\setboolean{chicago}{true}
 	\else % load biblatex
-		%\RequirePackage{natbib}
-		%\newcommand\bibstyle@wooster{\bibpunct{[}{]}{,}{n}{}{}%
-		     %\gdef\NAT@biblabelnum##1{##1.}}
 		\RequirePackage[hyperref=auto,backref=true,backrefstyle=two,natbib=true,style=numeric]{biblatex}
 	\fi
 \fi
-
-%\providecommand\bibsection{}
-%\@ifundefined{chapter}%
-%  {\renewcommand\bibsection{\section*{\refname
-%    \@mkboth{{\refname}}{{\refname}}}}}
-%  {\@ifundefined{NAT@sectionbib}%
-%    {\renewcommand\bibsection{\chapter*{\bibname
-%     \@mkboth{{\bibname}}{{\bibname}}}}}
-%    {\renewcommand\bibsection{\section*{\bibname
-%     \ifx\@mkboth\@gobbletwo\else\markright{{\bibname}}\fi}}}}
-%\@ifclassloaded{amsart}%
-%  {\renewcommand\bibsection{\section*{\refname}}}{}
-%\@ifclassloaded{amsbook}%
-%  {\renewcommand\bibsection{\chapter*{\bibname}}}{}
-%  \@ifclassloaded{woosterthesis}%
-%  {\renewcommand\bibsection{\chapter*{\bibname\@mkboth{{\bibname}}{{\bibname}}}}}{}
-%\@ifundefined{bib@heading}{}{\let\bibsection\bib@heading}
-%\renewenvironment{thebibliography}[1]{\setlength\baselineskip{1\@ptsize pt\@plus5\p@ \@minus3\p@}\setlength\bibsep{\baselinestretch\baselineskip}%%
-% \bibsection\addcontentsline{toc}{chapter}{\bibname}%
-% \parindent \z@\bibpreamble\bibfont\list
-%   {\@biblabel{\arabic{NAT@ctr}}}{\@bibsetup{#1}%
-%    \setcounter{NAT@ctr}{0}}%
-%    \ifNAT@openbib
-%      \renewcommand\newblock{\par}
-%    \else
-%      \renewcommand\newblock{\hskip .11em \@plus.33em \@minus.07em}%
-%    \fi
-%    \sloppy\clubpenalty4000\widowpenalty4000
-%    \sfcode`\.=1000\relax
-%    \let\citeN\cite \let\shortcite\cite
-%    \let\citeasnoun\cite
-% }{\def\@noitemerr{%
-%  \PackageWarning{natbib}
-%     {Empty `thebibliography' environment}}%
-%  \endlist\vskip-\lastskip}
   
 \newenvironment{theindex}
                {\if@twocolumn
@@ -1731,7 +1666,6 @@ by \\
 \newcommand\contentsname{Contents}
 \newcommand\listfigurename{List of Figures}
 \newcommand\listtablename{List of Tables}
-%\renewcommand{\bibname}{References}
 \newcommand\indexname{Index}
 \newcommand\figurename{Figure}
 \newcommand\tablename{Table}
@@ -1829,7 +1763,6 @@ by \\
 		allcolors=black,%
 		linkcolor=black,%
 		citecolor=black,%
-		%pagebackref=false,%
 		plainpages=false,%
 		linktocpage=true,%
 		pdfpagelabels=true,%
@@ -1854,7 +1787,6 @@ by \\
 		allcolors=black,%
 		linkcolor=refcolor,%
 		citecolor=citecolor,%
-		%pagebackref=true,%
 		plainpages=false,%
 		linktocpage=true,%
 		pdfpagelabels=true,%
@@ -1878,7 +1810,6 @@ by \\
 		allcolors=black,%
 		linkcolor=black,%
 		citecolor=black,%
-		%pagebackref=false,%
 		plainpages=false,%
 		linktocpage=true,%			
 		pdfpagelabels=true,%
@@ -1903,7 +1834,6 @@ by \\
 		allcolors=black,%
 		linkcolor=refcolor,%
 		citecolor=citecolor,%
-		%pagebackref=true,%
 		plainpages=false,%
 		linktocpage=true,%
 		pdfpagelabels=true,%
