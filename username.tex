@@ -76,6 +76,7 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\addbibresource{references.bib}
 
 \title{Introduction to \LaTeX{} at Wooster}
 \thesistype{Example Independent Study Thesis} % you should make this Independent Study Thesis
@@ -272,7 +273,7 @@ I would like to acknowledge Prof. Lowell Boone in the Physics Department for his
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\renewcommand\bibname{References} % changes the name of the Bibliography
+%\renewcommand\bibname{References} % changes the name of the Bibliography
 
 \nocite{*} % This command forces all the bibliography references to be printed -- not just 
               % those that were explicitly cited in the text.  If you comment this out, the bibliography
@@ -282,8 +283,7 @@ I would like to acknowledge Prof. Lowell Boone in the Physics Department for his
 %\bibliographystyle{achemso}}{\bibliographystyle{plainnat}}}
 % if you have used the woosterchicago class option then your references and citations will be in Chicago format. If you have used the achemso class option then your references and citations will be in the American Chemical Society format. If you do not specify a citation format then the default Wooster format will be used.
 %\bibliography{references} % load our Bibliography file
-\addbibresource{\references.bib}
-\printbibliography
+\printbibliography[title=References,heading=bibintoc]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
