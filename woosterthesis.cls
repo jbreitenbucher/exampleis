@@ -209,6 +209,13 @@
 \ifx\test@chemso\t@st\@chemsotrue\else\@chemsofalse\fi
 \DeclareOption{achemso}{\@chemsotrue}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% option to use the American Chemical Society citation and reference style added for Norman Chamusah
+\newif\if@foreignlanguage
+\expandafter\def\csname test@\jobname\endcsname{test}%
+\def\t@st{test}%
+\ifx\test@foreignlanguage\t@st\@foreignlanguagetrue\else\@foreignlanguagefalse\fi
+\DeclareOption{foreignlanguage}{\@foreignlanguagetrue}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \ExecuteOptions{letterpaper,12pt,oneside,onecolumn,final,openany}% - JB
 \ProcessOptions
@@ -1569,84 +1576,96 @@ by \\
 \fi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newdimen\bibindent
-\setlength\bibindent{1.5em}
-\newenvironment{thebibliography}[1]
-     {\chapter*{\bibname}%
-      \@mkboth{\bibname}{\bibname}% removed \MakeUppercase -JB
-      \list{\@biblabel{\@arabic\c@enumiv}}%
-           {\settowidth\labelwidth{\@biblabel{#1}}%
-            \leftmargin\labelwidth
-            \advance\leftmargin\labelsep
-            \@openbib@code
-            \usecounter{enumiv}%
-            \let\p@enumiv\@empty
-            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
-      \sloppy
-      \clubpenalty4000
-      \@clubpenalty \clubpenalty
-      \widowpenalty4000%
-      \sfcode`\.\@m}
-     {\def\@noitemerr
-       {\@latex@warning{Empty `thebibliography' environment}}%
-      \endlist}
-\newcommand\newblock{\hskip .11em\@plus.33em\@minus.07em}
-\let\@openbib@code\@empty
+%\newdimen\bibindent
+%\setlength\bibindent{1.5em}
+%\newenvironment{thebibliography}[1]
+%     {\chapter*{\bibname}%
+%    \@mkboth{\bibname}{\bibname}% removed \MakeUppercase -JB
+%      \list{\@biblabel{\@arabic\c@enumiv}}%
+%           {\settowidth\labelwidth{\@biblabel{#1}}%
+%           \leftmargin\labelwidth
+%            \advance\leftmargin\labelsep
+%            \@openbib@code
+%            \usecounter{enumiv}%
+%            \let\p@enumiv\@empty
+%            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+%      \sloppy
+%      \clubpenalty4000
+%      \@clubpenalty \clubpenalty
+%      \widowpenalty4000%
+%      \sfcode`\.\@m}
+%     {\def\@noitemerr
+%       {\@latex@warning{Empty `thebibliography' environment}}%
+%      \endlist}
+%\newcommand\newblock{\hskip .11em\@plus.33em\@minus.07em}
+%\let\@openbib@code\@empty
 
 % Use natbib.sty for the bibliography and make some modifications by cutting code from natbib and altering it- JB
 \RequirePackage{ifthen}% to test boolean conditions - JB
+\RequirePackage{csquotes}
 \newboolean{achemso} % for American Chemical Society style
 \newboolean{woosterchicago} % for Chicago style
-% load natbib with the options used in achemso style and set boolean to true
+\newboolean{foreignlanguage}
+\if@foreignlanguage
+	\ifxetex
+		\RequirePackage{polyglossia}
+	\else
+		\RequirePackage{babel}
+	\fi
+	\setboolean{foreignlanguage}{true}
+% load biblatex with chem-acs style and set boolean to true
 \if@chemso
-\RequirePackage[sort&compress,numbers,super]{natbib}
+%\RequirePackage[sort&compress,numbers,super]{natbib}
+\RequirePackage[style=chem-acs,articletitle,hyperref=auto,backref=true,backrefstyle=two,natbib=true]{biblatex}
 \setboolean{achemso}{true}
-\else % load natbib, set bibliography punctuation for Chicago style and set boolean to true
+\else % load biblatex-chicago and set boolean to true
 	\if@woosterchicago
-		\RequirePackage{natbib}
-		\bibpunct{[}{]}{;}{a}{,}{,}
+		%\RequirePackage{natbib}
+		%\bibpunct{[}{]}{;}{a}{,}{,}
+		\RequirePackage[authordate,strict,babel=other,bibencoding=inputenc,hyperref=auto,backref=true,backrefstyle=two,natbib=true]{biblatex-chicago}
 		\setboolean{woosterchicago}{true}
-	\else % load natbib and define the wooster bibliography style
-		\RequirePackage{natbib}
-		\newcommand\bibstyle@wooster{\bibpunct{[}{]}{,}{n}{}{}%
-		     \gdef\NAT@biblabelnum##1{##1.}}
+	\else % load biblatex
+		%\RequirePackage{natbib}
+		%\newcommand\bibstyle@wooster{\bibpunct{[}{]}{,}{n}{}{}%
+		     %\gdef\NAT@biblabelnum##1{##1.}}
+		\RequirePackage[hyperref=auto,backref=true,backrefstyle=two,natbib=true,style=numeric]{biblatex}
 	\fi
 \fi
 
-\providecommand\bibsection{}
-\@ifundefined{chapter}%
-  {\renewcommand\bibsection{\section*{\refname
-    \@mkboth{{\refname}}{{\refname}}}}}
-  {\@ifundefined{NAT@sectionbib}%
-    {\renewcommand\bibsection{\chapter*{\bibname
-     \@mkboth{{\bibname}}{{\bibname}}}}}
-    {\renewcommand\bibsection{\section*{\bibname
-     \ifx\@mkboth\@gobbletwo\else\markright{{\bibname}}\fi}}}}
-\@ifclassloaded{amsart}%
-  {\renewcommand\bibsection{\section*{\refname}}}{}
-\@ifclassloaded{amsbook}%
-  {\renewcommand\bibsection{\chapter*{\bibname}}}{}
-  \@ifclassloaded{woosterthesis}%
-  {\renewcommand\bibsection{\chapter*{\bibname\@mkboth{{\bibname}}{{\bibname}}}}}{}
-\@ifundefined{bib@heading}{}{\let\bibsection\bib@heading}
-\renewenvironment{thebibliography}[1]{\setlength\baselineskip{1\@ptsize pt\@plus5\p@ \@minus3\p@}\setlength\bibsep{\baselinestretch\baselineskip}%%
- \bibsection\addcontentsline{toc}{chapter}{\bibname}%
- \parindent \z@\bibpreamble\bibfont\list
-   {\@biblabel{\arabic{NAT@ctr}}}{\@bibsetup{#1}%
-    \setcounter{NAT@ctr}{0}}%
-    \ifNAT@openbib
-      \renewcommand\newblock{\par}
-    \else
-      \renewcommand\newblock{\hskip .11em \@plus.33em \@minus.07em}%
-    \fi
-    \sloppy\clubpenalty4000\widowpenalty4000
-    \sfcode`\.=1000\relax
-    \let\citeN\cite \let\shortcite\cite
-    \let\citeasnoun\cite
- }{\def\@noitemerr{%
-  \PackageWarning{natbib}
-     {Empty `thebibliography' environment}}%
-  \endlist\vskip-\lastskip}
+%\providecommand\bibsection{}
+%\@ifundefined{chapter}%
+%  {\renewcommand\bibsection{\section*{\refname
+%    \@mkboth{{\refname}}{{\refname}}}}}
+%  {\@ifundefined{NAT@sectionbib}%
+%    {\renewcommand\bibsection{\chapter*{\bibname
+%     \@mkboth{{\bibname}}{{\bibname}}}}}
+%    {\renewcommand\bibsection{\section*{\bibname
+%     \ifx\@mkboth\@gobbletwo\else\markright{{\bibname}}\fi}}}}
+%\@ifclassloaded{amsart}%
+%  {\renewcommand\bibsection{\section*{\refname}}}{}
+%\@ifclassloaded{amsbook}%
+%  {\renewcommand\bibsection{\chapter*{\bibname}}}{}
+%  \@ifclassloaded{woosterthesis}%
+%  {\renewcommand\bibsection{\chapter*{\bibname\@mkboth{{\bibname}}{{\bibname}}}}}{}
+%\@ifundefined{bib@heading}{}{\let\bibsection\bib@heading}
+%\renewenvironment{thebibliography}[1]{\setlength\baselineskip{1\@ptsize pt\@plus5\p@ \@minus3\p@}\setlength\bibsep{\baselinestretch\baselineskip}%%
+% \bibsection\addcontentsline{toc}{chapter}{\bibname}%
+% \parindent \z@\bibpreamble\bibfont\list
+%   {\@biblabel{\arabic{NAT@ctr}}}{\@bibsetup{#1}%
+%    \setcounter{NAT@ctr}{0}}%
+%    \ifNAT@openbib
+%      \renewcommand\newblock{\par}
+%    \else
+%      \renewcommand\newblock{\hskip .11em \@plus.33em \@minus.07em}%
+%    \fi
+%    \sloppy\clubpenalty4000\widowpenalty4000
+%    \sfcode`\.=1000\relax
+%    \let\citeN\cite \let\shortcite\cite
+%    \let\citeasnoun\cite
+% }{\def\@noitemerr{%
+%  \PackageWarning{natbib}
+%     {Empty `thebibliography' environment}}%
+%  \endlist\vskip-\lastskip}
   
 \newenvironment{theindex}
                {\if@twocolumn
