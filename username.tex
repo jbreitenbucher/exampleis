@@ -11,13 +11,18 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%Checked on 9/4/21 and compiles with no fatal errors. Users must have the latest version of the TeXLive software and have installed all available packages from CTAN to ensure this thesis class compiles with no fatal errors
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Checked on 9/24/21 and compiles with no fatal errors. Users must have the latest version of the TeXLive software and
+% have installed all available packages from CTAN to ensure this thesis class compiles with no fatal errors
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % use this declaration for a draft  version of your IS
 \documentclass[10pt,palatino,code,picins,kaukecopyright,openright,woolshort,dropcaps,verbatim,index,euler]{woosterthesis}
-%\documentclass[10pt,code,picins,kaukecopyright,openright,woolshort,dropcaps,verbatim,euler,index,colophon,blacklinks,twoside]{woosterthesis}
-% note that you can specify the woosterchicago option to use Chicago citation style and achemso to use the American Chemical Society citation format
+%\documentclass[10pt,code,picins,kaukecopyright,openright,woolshort,dropcaps,verbatim,euler,index,colophon,twoside]{woosterthesis}
+% note that you can specify the chicago option to use Chicago citation style and acs to use the American Chemical Society citation format
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -72,11 +77,17 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-%  This is where one enters the information about the thesis.
+%  This is where one enters their bibilography file name.
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \addbibresource{references.bib}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  This is where one enters the information about the thesis.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \title{Introduction to \LaTeX{} at Wooster}
 \thesistype{Example Independent Study Thesis} % you should make this Independent Study Thesis
@@ -256,34 +267,14 @@ I would like to acknowledge Prof. Lowell Boone in the Physics Department for his
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-%  This section would be used if you are not using BibTeX. Look at Kopka and Daly for how to
-%  format a bibliography manually as well as how to use BibTeX.
+%  We used BibLaTeX and Biber to generate a Bibliography.
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%\begin{thebibliography}{99}
-%\bibitem{}
-%\bibitem{}
-%\end{thebibliography}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%  We used BibTeX to generate a Bibliography. I would recommend this method. However, it is
-%  not required.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%\renewcommand\bibname{References} % changes the name of the Bibliography
 
 \nocite{*} % This command forces all the bibliography references to be printed -- not just 
               % those that were explicitly cited in the text.  If you comment this out, the bibliography
               % will only include cited references.
-%\ifthenelse{\boolean{woosterchicago}}{
-%\bibliographystyle{woosterchicago}}{\ifthenelse{\boolean{achemso}}{
-%\bibliographystyle{achemso}}{\bibliographystyle{plainnat}}}
-% if you have used the woosterchicago class option then your references and citations will be in Chicago format. If you have used the achemso class option then your references and citations will be in the American Chemical Society format. If you do not specify a citation format then the default Wooster format will be used.
-%\bibliography{references} % load our Bibliography file
-\printbibliography[title=References,heading=bibintoc]
+\printbibliography[title=References,heading=bibintoc]% load our Bibliography file
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
