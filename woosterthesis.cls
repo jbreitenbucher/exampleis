@@ -1613,6 +1613,7 @@ by \\
 		\RequirePackage{babel}
 	\fi
 	\setboolean{foreignlanguage}{true}
+\fi
 % load biblatex with chem-acs style and set boolean to true
 \if@chemso
 %\RequirePackage[sort&compress,numbers,super]{natbib}
@@ -1622,7 +1623,7 @@ by \\
 	\if@woosterchicago
 		%\RequirePackage{natbib}
 		%\bibpunct{[}{]}{;}{a}{,}{,}
-		\RequirePackage[authordate,strict,babel=other,bibencoding=inputenc,hyperref=auto,backref=true,backrefstyle=two,natbib=true]{biblatex-chicago}
+		\RequirePackage[authordate,strict,autolang=other,bibencoding=inputenc,hyperref=auto,backref=true,backrefstyle=two,natbib=true,sorting=nty]{biblatex-chicago}
 		\setboolean{woosterchicago}{true}
 	\else % load biblatex
 		%\RequirePackage{natbib}
@@ -1730,7 +1731,7 @@ by \\
 \newcommand\contentsname{Contents}
 \newcommand\listfigurename{List of Figures}
 \newcommand\listtablename{List of Tables}
-\renewcommand{\bibname}{References}
+%\renewcommand{\bibname}{References}
 \newcommand\indexname{Index}
 \newcommand\figurename{Figure}
 \newcommand\tablename{Table}
@@ -1828,7 +1829,7 @@ by \\
 		allcolors=black,%
 		linkcolor=black,%
 		citecolor=black,%
-		pagebackref=false,%
+		%pagebackref=false,%
 		plainpages=false,%
 		linktocpage=true,%
 		pdfpagelabels=true,%
@@ -1853,7 +1854,7 @@ by \\
 		allcolors=black,%
 		linkcolor=refcolor,%
 		citecolor=citecolor,%
-		pagebackref=true,%
+		%pagebackref=true,%
 		plainpages=false,%
 		linktocpage=true,%
 		pdfpagelabels=true,%
@@ -1877,7 +1878,7 @@ by \\
 		allcolors=black,%
 		linkcolor=black,%
 		citecolor=black,%
-		pagebackref=false,%
+		%pagebackref=false,%
 		plainpages=false,%
 		linktocpage=true,%			
 		pdfpagelabels=true,%
@@ -1902,7 +1903,7 @@ by \\
 		allcolors=black,%
 		linkcolor=refcolor,%
 		citecolor=citecolor,%
-		pagebackref=true,%
+		%pagebackref=true,%
 		plainpages=false,%
 		linktocpage=true,%
 		pdfpagelabels=true,%
