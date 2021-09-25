@@ -31,3 +31,5 @@
 *.gz
 *.bcf
 username.run.xml
+username.fdb_latexmk
+username.fls
