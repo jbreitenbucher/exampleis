@@ -37,9 +37,7 @@
 %%   Grave accent  \`     Left brace    \{     Vertical bar  \|
 %%   Right brace   \}     Tilde         \~}
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
-\ProvidesClass{woosterthesis}
-              [2006/11/03 v4.2.1
- Wooster IS LaTeX document class by Dr. Jon Breitenbucher]% - JB
+\ProvidesClass{woosterthesis}[2021/09/25 v4.2.1 Wooster IS LaTeX document class by Dr. Jon Breitenbucher]% - JB
 \newcommand\@ptsize{}
 \newif\if@restonecol
 \newif\if@titlepage
@@ -47,27 +45,27 @@
 \newif\if@openright
 \newif\if@mainmatter \@mainmattertrue
 \DeclareOption{a4paper}
-   {\setlength\paperheight {297mm}%
-    \setlength\paperwidth  {210mm}}
+	{\setlength\paperheight {297mm}%
+	\setlength\paperwidth  {210mm}}
 \DeclareOption{a5paper}
-   {\setlength\paperheight {210mm}%
-    \setlength\paperwidth  {148mm}}
+	{\setlength\paperheight {210mm}%
+	\setlength\paperwidth  {148mm}}
 \DeclareOption{b5paper}
-   {\setlength\paperheight {250mm}%
-    \setlength\paperwidth  {176mm}}
+	{\setlength\paperheight {250mm}%
+	\setlength\paperwidth  {176mm}}
 \DeclareOption{letterpaper}
-   {\setlength\paperheight {11in}%
-    \setlength\paperwidth  {8.5in}}
+	{\setlength\paperheight {11in}%
+	\setlength\paperwidth  {8.5in}}
 \DeclareOption{legalpaper}
-   {\setlength\paperheight {14in}%
-    \setlength\paperwidth  {8.5in}}
+	{\setlength\paperheight {14in}%
+	\setlength\paperwidth  {8.5in}}
 \DeclareOption{executivepaper}
-   {\setlength\paperheight {10.5in}%
-    \setlength\paperwidth  {7.25in}}
+	{\setlength\paperheight {10.5in}%
+	\setlength\paperwidth  {7.25in}}
 \DeclareOption{landscape}
-   {\setlength\@tempdima   {\paperheight}%
-    \setlength\paperheight {\paperwidth}%
-    \setlength\paperwidth  {\@tempdima}}
+	{\setlength\@tempdima   {\paperheight}%
+	\setlength\paperheight {\paperwidth}%
+	\setlength\paperwidth  {\@tempdima}}
 \DeclareOption{10pt}{\renewcommand\@ptsize{0}}
 \DeclareOption{11pt}{\renewcommand\@ptsize{1}}
 \DeclareOption{12pt}{\renewcommand\@ptsize{2}}
@@ -84,135 +82,155 @@
 \DeclareOption{leqno}{\input{leqno.clo}}
 \DeclareOption{fleqn}{\input{fleqn.clo}}
 \DeclareOption{openbib}{%
-  \AtEndOfPackage{%
-   \renewcommand\@openbib@code{%
-      \advance\leftmargin\bibindent
-      \itemindent -\bibindent
-      \listparindent \itemindent
-      \parsep \z@
-      }%
-   \renewcommand\newblock{\par}}%
+	\AtEndOfPackage{%
+		\renewcommand\@openbib@code{%
+			\advance\leftmargin\bibindent
+			\itemindent -\bibindent
+			\listparindent \itemindent
+			\parsep \z@
+		}%
+		\renewcommand\newblock{\par}
+	}%
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % the abstractonly option to allow one to print just the abstract - JB
 \newif\if@bstractonly
-\expandafter\def\csname test@\jobname\endcsname{test}%
-\def\t@st{test}%
-\ifx\test@abstract\t@st\@bstractonlytrue\else\@bstractonlyfalse\fi
+	\expandafter\def\csname test@\jobname\endcsname{test}%
+	\def\t@st{test}%
+	\ifx\test@abstract\t@st\@bstractonlytrue\else\@bstractonlyfalse\fi
 \DeclareOption{abstractonly}{\@bstractonlytrue}
+
 % the kaukecopyright option to insert an Kauke word mark on the copyright page - JB
 \newif\if@kaukecopy
-\expandafter\def\csname test@\jobname\endcsname{test}%
-\def\t@st{test}%
-\ifx\test@kaukecopyright\t@st\@kaukecopytrue\else\@kaukecopyfalse\fi
+	\expandafter\def\csname test@\jobname\endcsname{test}%
+	\def\t@st{test}%
+	\ifx\test@kaukecopyright\t@st\@kaukecopytrue\else\@kaukecopyfalse\fi
 \DeclareOption{kaukecopyright}{\@kaukecopytrue}
+
 % the woostercopyright option to insert an Wooster word mark on the copyright page - JB
 \newif\if@woostercopy
-\expandafter\def\csname test@\jobname\endcsname{test}%
-\def\t@st{test}%
-\ifx\test@woostercopyright\t@st\@woostercopytrue\else\@woostercopyfalse\fi
+	\expandafter\def\csname test@\jobname\endcsname{test}%
+	\def\t@st{test}%
+	\ifx\test@woostercopyright\t@st\@woostercopytrue\else\@woostercopyfalse\fi
 \DeclareOption{woostercopyright}{\@woostercopytrue}
+
 % the wblack option to insert a black W in the background of the cover instead of Kauke - JB
 \newif\if@wblack
-\expandafter\def\csname test@\jobname\endcsname{test}%
-\def\t@st{test}%
-\ifx\test@wblack\t@st\@wblacktrue\else\@wblackfalse\fi
+	\expandafter\def\csname test@\jobname\endcsname{test}%
+	\def\t@st{test}%
+	\ifx\test@wblack\t@st\@wblacktrue\else\@wblackfalse\fi
 \DeclareOption{wblack}{\@wblacktrue}
+
 %the palatino option typesets the thesis in Palatino, the College font.- JB
 \newif\if@palatino
-\expandafter\def\csname test@\jobname\endcsname{test}%
-\def\t@st{test}%
-\ifx\test@palatino\t@st\@palatinotrue\else\@palatinofalse\fi
+	\expandafter\def\csname test@\jobname\endcsname{test}%
+	\def\t@st{test}%
+	\ifx\test@palatino\t@st\@palatinotrue\else\@palatinofalse\fi
 \DeclareOption{palatino}{\@palatinotrue}
+
 %the picins option loads the wrapfig package.- JB
 \newif\if@picins
-\expandafter\def\csname test@\jobname\endcsname{test}%
-\def\t@st{test}%
-\ifx\test@picins\t@st\@picinstrue\else\@picinsfalse\fi
+	\expandafter\def\csname test@\jobname\endcsname{test}%
+	\def\t@st{test}%
+	\ifx\test@picins\t@st\@picinstrue\else\@picinsfalse\fi
 \DeclareOption{picins}{\@picinstrue}
+
 % option to produce a hyperlinked thesis for on-line viewing - JB
 \newif\if@blacklinks
-\expandafter\def\csname test@\jobname\endcsname{test}%
-\def\t@st{test}%
-\ifx\test@blacklinks\t@st\@blacklinkstrue\else\@blacklinksfalse\fi
+	\expandafter\def\csname test@\jobname\endcsname{test}%
+	\def\t@st{test}%
+	\ifx\test@blacklinks\t@st\@blacklinkstrue\else\@blacklinksfalse\fi
 \DeclareOption{blacklinks}{\@blacklinkstrue}
+
 % option to use listings package for code listings - JB
 \newif\if@code
-\expandafter\def\csname test@\jobname\endcsname{test}%
-\def\t@st{test}%
-\ifx\test@code\t@st\@codetrue\else\@codefalse\fi
+	\expandafter\def\csname test@\jobname\endcsname{test}%
+	\def\t@st{test}%
+	\ifx\test@code\t@st\@codetrue\else\@codefalse\fi
 \DeclareOption{code}{\@codetrue}
+
 % option to use maple2e package for including Maple worksheets - JB
 \newif\if@maple
-\expandafter\def\csname test@\jobname\endcsname{test}%
-\def\t@st{test}%
-\ifx\test@maple\t@st\@mapletrue\else\@maplefalse\fi
+	\expandafter\def\csname test@\jobname\endcsname{test}%
+	\def\t@st{test}%
+	\ifx\test@maple\t@st\@mapletrue\else\@maplefalse\fi
 \DeclareOption{maple}{\@mapletrue}
+
 % option to have an index - JB
 \newif\if@index
-\expandafter\def\csname test@\jobname\endcsname{test}%
-\def\t@st{test}%
-\ifx\test@index\t@st\@indextrue\else\@indexfalse\fi
+	\expandafter\def\csname test@\jobname\endcsname{test}%
+	\def\t@st{test}%
+	\ifx\test@index\t@st\@indextrue\else\@indexfalse\fi
 \DeclareOption{index}{\@indextrue}
+
 % option to use verbatim package - JB
 \newif\if@verbatim
-\expandafter\def\csname test@\jobname\endcsname{test}%
-\def\t@st{test}%
-\ifx\test@verbatim\t@st\@verbatimtrue\else\@verbatimfalse\fi
+	\expandafter\def\csname test@\jobname\endcsname{test}%
+	\def\t@st{test}%
+	\ifx\test@verbatim\t@st\@verbatimtrue\else\@verbatimfalse\fi
 \DeclareOption{verbatim}{\@verbatimtrue}
+
 % option to use lettrine package for dropped caps - JB
 \newif\if@dropcaps
-\expandafter\def\csname test@\jobname\endcsname{test}%
-\def\t@st{test}%
-\ifx\test@dropcaps\t@st\@dropcapstrue\else\@dropcapsfalse\fi
+	\expandafter\def\csname test@\jobname\endcsname{test}%
+	\def\t@st{test}%
+	\ifx\test@dropcaps\t@st\@dropcapstrue\else\@dropcapsfalse\fi
 \DeclareOption{dropcaps}{\@dropcapstrue}
+
 % option to use woofncychap package for styled chapter headings - JB
 \newif\if@euler
-\expandafter\def\csname test@\jobname\endcsname{test}%
-\def\t@st{test}%
-\ifx\test@euler\t@st\@eulertrue\else\@eulerfalse\fi
+	\expandafter\def\csname test@\jobname\endcsname{test}%
+	\def\t@st{test}%
+	\ifx\test@euler\t@st\@eulertrue\else\@eulerfalse\fi
 \DeclareOption{euler}{\@eulertrue}
+
 % option to use woofncychap package for styled chapter headings - JB
 \newif\if@gauss
-\expandafter\def\csname test@\jobname\endcsname{test}%
-\def\t@st{test}%
-\ifx\test@gauss\t@st\@gausstrue\else\@gaussfalse\fi
+	\expandafter\def\csname test@\jobname\endcsname{test}%
+	\def\t@st{test}%
+	\ifx\test@gauss\t@st\@gausstrue\else\@gaussfalse\fi
 \DeclareOption{gauss}{\@gausstrue}
+
 % option to use alltt package - JB
 \newif\if@alltt
-\expandafter\def\csname test@\jobname\endcsname{test}%
-\def\t@st{test}%
-\ifx\test@alltt\t@st\@alltttrue\else\@allttfalse\fi
+	\expandafter\def\csname test@\jobname\endcsname{test}%
+	\def\t@st{test}%
+	\ifx\test@alltt\t@st\@alltttrue\else\@allttfalse\fi
 \DeclareOption{alltt}{\@alltttrue}
+
 % option to use lshort package with local modifications- JB
 \newif\if@lshortwooster
-\expandafter\def\csname test@\jobname\endcsname{test}%
-\def\t@st{test}%
-\ifx\test@lshortwooster\t@st\@lshortwoostertrue\else\@lshortwoosterfalse\fi
+	\expandafter\def\csname test@\jobname\endcsname{test}%
+	\def\t@st{test}%
+	\ifx\test@lshortwooster\t@st\@lshortwoostertrue\else\@lshortwoosterfalse\fi
 \DeclareOption{lshortwooster}{\@lshortwoostertrue}
+
 % option to include a colophon- JB
 \newif\if@colophon
-\expandafter\def\csname test@\jobname\endcsname{test}%
-\def\t@st{test}%
-\ifx\test@colophon\t@st\@colophontrue\else\@colophonfalse\fi
+	\expandafter\def\csname test@\jobname\endcsname{test}%
+	\def\t@st{test}%
+	\ifx\test@colophon\t@st\@colophontrue\else\@colophonfalse\fi
 \DeclareOption{colophon}{\@colophontrue}
-% option to use the Chicago citation and reference style added for Ian Sharp
+
+% option to use the Chicago citation and reference style added for Ian Sharp in 2010 and updated in 2021 for biblatex
 \newif\if@chicago
-\expandafter\def\csname test@\jobname\endcsname{test}%
-\def\t@st{test}%
-\ifx\test@chicago\t@st\@chicagotrue\else\@chicagofalse\fi
+	\expandafter\def\csname test@\jobname\endcsname{test}%
+	\def\t@st{test}%
+	\ifx\test@chicago\t@st\@chicagotrue\else\@chicagofalse\fi
 \DeclareOption{chicago}{\@chicagotrue}
-% option to use the American Chemical Society citation and reference style added for Norman Chamusah
+
+% option to use the American Chemical Society citation and reference style added for Norman Chamusah in 2010 and updated in 2021 for biblatex
 \newif\if@acs
-\expandafter\def\csname test@\jobname\endcsname{test}%
-\def\t@st{test}%
-\ifx\test@acs\t@st\@acstrue\else\@acsfalse\fi
+	\expandafter\def\csname test@\jobname\endcsname{test}%
+	\def\t@st{test}%
+	\ifx\test@acs\t@st\@acstrue\else\@acsfalse\fi
 \DeclareOption{acs}{\@acstrue}
-% option to a foreign language is being used
+
+% option to indicate a foreign language is being used
 \newif\if@foreignlanguage
-\expandafter\def\csname test@\jobname\endcsname{test}%
-\def\t@st{test}%
-\ifx\test@foreignlanguage\t@st\@foreignlanguagetrue\else\@foreignlanguagefalse\fi
+	\expandafter\def\csname test@\jobname\endcsname{test}%
+	\def\t@st{test}%
+	\ifx\test@foreignlanguage\t@st\@foreignlanguagetrue\else\@foreignlanguagefalse\fi
 \DeclareOption{foreignlanguage}{\@foreignlanguagetrue}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -235,7 +253,6 @@
 	\RequirePackage{fontspec}% allows one to easily set up fonts in the document
 	\RequirePackage{xunicode}
 	\RequirePackage{xltxtra}% adds extra commands specific to XeTeX
-	%\RequirePackage[xetex]{graphicx}
 	\def\kaukelogo{\includegraphics[scale=.4]{kauke_wordmark}}
 	\def\woosterlogo{\includegraphics[scale=.4]{wooster_stacked_black}}
 	\RequirePackage{eso-pic}
@@ -298,15 +315,15 @@
 % Kyle Kindbom requested a theorem style where the theorem header was on a separate line.
 % The break theorem style will put a line break after the theorem header. - JB
 \newtheoremstyle{break}% name
-  {\topsep}%	Space above
-  {\topsep}%	Space below
-  {\itshape}%	Body font
-  {}%			Indent amount (empty = no indent, \parindent = para indent)
-  {\bfseries}%	Thm head font
-  {.}%			Punctuation after thm head
-  {\newline}%	Space after thm head: " " = normal interword space;
-        %		\newline = linebreak
-  {}%			Thm head spec (can be left empty, meaning `normal')
+	{\topsep}%	Space above
+	{\topsep}%	Space below
+	{\itshape}%	Body font
+	{}%			Indent amount (empty = no indent, \parindent = para indent)
+	{\bfseries}%	Thm head font
+	{.}%			Punctuation after thm head
+	{\newline}%	Space after thm head: " " = normal interword space;
+	%		\newline = linebreak
+	{}%			Thm head spec (can be left empty, meaning `normal')
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
 \input{woo1\@ptsize.clo}
@@ -346,48 +363,63 @@
 \setlength\intextsep{11 pt plus 11 pt minus 3 pt}
 
 \if@twoside
-  \def\ps@headings{%
-      \let\@oddfoot\@empty\let\@evenfoot\@empty
-      \def\@evenhead{\thepage\hfil\slshape\leftmark}%
-      \def\@oddhead{{\slshape\rightmark}\hfil\thepage}%
-      \let\@mkboth\markboth
-    \def\chaptermark##1{%
-      \markboth {{% removed MakeUpperCase - JB
-        \ifnum \c@secnumdepth >\m@ne
-          \if@mainmatter
-            \thechapter. \ % removed \@chapapp - JB
-          \fi
-        \fi
-        ##1}}{}}%
-    \def\sectionmark##1{%
-      \markright {{% removed MakeUpperCase - JB
-        \ifnum \c@secnumdepth >\z@
-          \thesection. \ %
-        \fi
-        ##1}}}}
+	\def\ps@headings{%
+		\let\@oddfoot\@empty\let\@evenfoot\@empty
+		\def\@evenhead{\thepage\hfil\slshape\leftmark}%
+		\def\@oddhead{{\slshape\rightmark}\hfil\thepage}%
+		\let\@mkboth\markboth
+		\def\chaptermark##1{%
+			\markboth {
+				{% removed MakeUpperCase - JB
+					\ifnum \c@secnumdepth >\m@ne
+						\if@mainmatter
+							\thechapter. \ % removed \@chapapp - JB
+						\fi
+					\fi
+					##1
+				}
+			}
+			{}
+		}%
+        		\def\sectionmark##1{%
+			\markright {
+				{% removed MakeUpperCase - JB
+					\ifnum \c@secnumdepth >\z@
+						\thesection. \ %
+					\fi
+					##1
+        				}
+        			}
+        		}
+        }
 \else
-  \def\ps@headings{%
-    \let\@oddfoot\@empty
-    \def\@oddhead{{\slshape\rightmark}\hfil\thepage}%
-    \let\@mkboth\markboth
-    \def\chaptermark##1{%
-      \markright {{% removed MakeUpperCase - JB
-        \ifnum \c@secnumdepth >\m@ne
-          \if@mainmatter
-            \thechapter. \ % removed \@chapapp - JB
-          \fi
-        \fi
-        ##1}}}}
+	\def\ps@headings{%
+		\let\@oddfoot\@empty
+		\def\@oddhead{{\slshape\rightmark}\hfil\thepage}%
+		\let\@mkboth\markboth
+		\def\chaptermark##1{%
+			\markright {
+				{% removed MakeUpperCase - JB
+					\ifnum \c@secnumdepth >\m@ne
+						\if@mainmatter
+							\thechapter. \ % removed \@chapapp - JB
+						\fi
+					\fi
+					##1
+				}
+			}
+		}
+	}
 \fi
 \def\ps@myheadings{%
-    \let\@oddfoot\@empty\let\@evenfoot\@empty
-    \def\@evenhead{\thepage\hfil\slshape\leftmark}%
-    \def\@oddhead{{\slshape\rightmark}\hfil\thepage}%
-    \let\@mkboth\@gobbletwo
-    \let\chaptermark\@gobble
-    \let\sectionmark\@gobble
-    }
-   \let\@authordegrees\relax
+	\let\@oddfoot\@empty\let\@evenfoot\@empty
+	\def\@evenhead{\thepage\hfil\slshape\leftmark}%
+	\def\@oddhead{{\slshape\rightmark}\hfil\thepage}%
+	\let\@mkboth\@gobbletwo
+	\let\chaptermark\@gobble
+	\let\sectionmark\@gobble
+}
+\let\@authordegrees\relax
 \let\@school\relax
 \let\@program\relax
 \def\d@greetoobtain{Bachelor of Arts}
@@ -401,717 +433,688 @@
 \let\advisorname\advisor % for compatibility
 \def\second@dvisor{}
 \newcommand{\secondadvisor}[1]{%
-      \def\\{\noexpand\\}%
-      \global\edef\second@dvisor{\second@dvisor \\ #1}}
-
+	\def\\{\noexpand\\}%
+	\global\edef\second@dvisor{\second@dvisor \\ #1}
+}
 \newcommand{\gradyear}[1]{\def\ye@r{#1}}  % graduation year
-
 % copyright - JH
-
 \newcommand{\copyrightdate}[1]{\gdef\@copydate{#1}}
-\let\@copydate\@date
-  
+\let\@copydate\@date  
 \newif\if@copyright
-\@copyrightfalse
+	\@copyrightfalse
 \newcommand{\copyrighted}[1][\@author]{\@copyrighttrue
-   \def\@copyright{#1}}
+	\def\@copyright{#1}
+}
 \newcommand{\disscopyright}{%
-   \cleardoublepage
-   \thispagestyle{empty}   
-   ~
-   \if@copyright
-   \vspace*{\fill}
-   \begin{center}
-   \begin{singlespace}%
-     \copyright\ \ye@r\ by \@copyright
-     %\@copydate
-\end{singlespace}
-   \end{center}
-   \vfill   
-   \fi  
-} 
-
-% kaukecopyright - JB
-
-\if@kaukecopy
-    \renewcommand{\copyrighted}[1][\@author]{%
-   	\@copyrighttrue%
-     	 \def\@copyright{#1}%
-	 }
-    \renewcommand{\disscopyright}{%
-     	 \cleardoublepage%
-      	 \thispagestyle{empty}%
-      	 ~%
-      	\if@copyright%
-          	\vspace*{\fill}%
-				\begin{center}%
-                \kaukelogo%
-   				\begin{singlespace}%
-     					\copyright\ \ye@r\ by \@copyright
-     					%\@copydate%
-			     \end{singlespace}%
-            		\end{center}%                      
-          \vfill
-   		\fi
-    	}
-\fi
-
-% woostercopyright - JB
-
-\if@woostercopy
-\renewcommand{\copyrighted}[1][\@author]{%
-	\@copyrighttrue%
-	\def\@copyright{#1}%
-}
-\renewcommand{\disscopyright}{%
-	\cleardoublepage%
-	\thispagestyle{empty}%
-	~%
-	\if@copyright%
-	\vspace*{\fill}%
-	\begin{center}%
-		\woosterlogo%
-		\begin{singlespace}%
-			\copyright\ \ye@r\ by \@copyright
-			%\@copydate%
-		\end{singlespace}%
-	\end{center}%                      
-	\vfill
+	\cleardoublepage
+	\thispagestyle{empty}
+	~
+	\if@copyright
+		\vspace*{\fill}
+		\begin{center}
+			\begin{singlespace}%
+				\copyright\ \ye@r\ by \@copyright
+				%\@copydate
+			\end{singlespace}
+		\end{center}
+		\vfill
 	\fi
-}
+} 
+% kaukecopyright - JB
+\if@kaukecopy
+	\renewcommand{\copyrighted}[1][\@author]{%
+		\@copyrighttrue%
+		\def\@copyright{#1}%
+	}
+	\renewcommand{\disscopyright}{%
+		\cleardoublepage%
+		\thispagestyle{empty}%
+		~%
+		\if@copyright%
+			\vspace*{\fill}%
+			\begin{center}%
+				\kaukelogo%
+				\begin{singlespace}%
+					\copyright\ \ye@r\ by \@copyright
+     					%\@copydate%
+				\end{singlespace}%
+			\end{center}%
+			\vfill
+		\fi
+	}
 \fi
-
+% woostercopyright - JB
+\if@woostercopy
+	\renewcommand{\copyrighted}[1][\@author]{%
+		\@copyrighttrue%
+		\def\@copyright{#1}%
+	}
+	\renewcommand{\disscopyright}{%
+		\cleardoublepage%
+		\thispagestyle{empty}%
+		~%
+		\if@copyright%
+			\vspace*{\fill}%
+			\begin{center}%
+				\woosterlogo%
+				\begin{singlespace}%
+					\copyright\ \ye@r\ by \@copyright
+     					%\@copydate%
+				\end{singlespace}%
+			\end{center}%
+			\vfill
+		\fi
+	}
+\fi
 % a series of title page definitions one for each supported class point size - JB
-
- \ifnum\@ptsize=0  % 10 pt
-  \if@titlepage
-  \newcommand\maketitle{\begin{titlepage}%
-
-% The Kauke arch is centered on the page background - JB
-
-\AddToShipoutPicture*{\BackgroundPicture}
-\let\footnoterule\relax
-{\def\\{\noexpand\\}
-\global\gdef\@titl@{{\@title}}}%
-{
-\begin{textblock}{6}(2.20,-.42)
-\begin{singlespace}
-\begin{center}
-{\scshape\Large\@titl@}
-\end{center}
-\end{singlespace}%
-\end{textblock}}
-\begin{textblock}{6}(2.20,2.75)
-\begin{center}
-{\scshape
-  \th@sistype}
-\end{center}
-\end{textblock}  
-\begin{textblock}{7}(1.65,5.15)
-\begin{singlespace}
-\begin{center}
-Presented in Partial Fulfillment of the Requirements for \\
-the Degree \d@greetoobtain in the \\
- \@program\ at \@school
-\end{center}
-\end{singlespace}
-\end{textblock}
-\begin{textblock}{6}(2.20,7.8)
-\begin{singlespace}
-\begin{center}
-by \\
-\@author \@authordegrees\\
-\end{center}
-\end{singlespace}
-\end{textblock}
-\begin{textblock}{6}(2.20,8.8)
-{\def\baselinestretch{1}\normalsize
-\begin{center}
-\@school\\
-\ye@r
-\end{center}}%
-\end{textblock}
-\begin{textblock}{6}(0,11)
-\noindent
-\hspace{1px}
-\begin{minipage}[b]{\hsize}
-\begin{flushleft}
-{\bfseries Advised by:} \\
-\@dvisor
-\second@dvisor
-\end{flushleft}
-\end{minipage}%
-\par
-  \@thanks
-\end{textblock}
-  \end{titlepage}%
-  \setcounter{footnote}{0}%
-  \global\let\thanks\relax
-  \global\let\maketitle\relax
-  \global\let\@thanks\@empty
-  \global\let\@date\@empty
-  \global\let\@title\@empty
-  \global\let\title\relax
-  \global\let\date\relax
-  \global\let\and\relax
-}
+\ifnum\@ptsize=0  % 10 pt
+	\if@titlepage
+		\newcommand\maketitle{
+			\begin{titlepage}%
+				% The Kauke arch is centered on the page background - JB
+				\AddToShipoutPicture*{\BackgroundPicture}
+				\let\footnoterule\relax
+				{\def\\{\noexpand\\}\global\gdef\@titl@{{\@title}}}%
+				{
+					\begin{textblock}{6}(2.20,-.42)
+						\begin{singlespace}
+							\begin{center}
+								{\scshape\Large\@titl@}
+							\end{center}
+						\end{singlespace}%
+					\end{textblock}
+				}
+				\begin{textblock}{6}(2.20,2.75)
+					\begin{center}
+						{\scshape\th@sistype}
+					\end{center}
+				\end{textblock}  
+				\begin{textblock}{7}(1.65,5.15)
+					\begin{singlespace}
+						\begin{center}
+							Presented in Partial Fulfillment of the Requirements for \\
+							the Degree \d@greetoobtain in the \\
+ 							\@program\ at \@school
+						\end{center}
+					\end{singlespace}
+				\end{textblock}
+				\begin{textblock}{6}(2.20,7.8)
+					\begin{singlespace}
+						\begin{center}
+							by \\
+							\@author \@authordegrees\\
+						\end{center}
+					\end{singlespace}
+				\end{textblock}
+				\begin{textblock}{6}(2.20,8.8)
+					{\def\baselinestretch{1}\normalsize
+						\begin{center}
+							\@school\\
+							\ye@r
+						\end{center}
+					}%
+				\end{textblock}
+				\begin{textblock}{6}(0,11)
+					\noindent
+					\hspace{1px}
+					\begin{minipage}[b]{\hsize}
+						\begin{flushleft}
+							{\bfseries Advised by:} \\
+							\@dvisor
+							\second@dvisor
+						\end{flushleft}
+					\end{minipage}%
+					\par
+					\@thanks
+				\end{textblock}
+			\end{titlepage}%
+			\setcounter{footnote}{0}%
+			\global\let\thanks\relax
+			\global\let\maketitle\relax
+			\global\let\@thanks\@empty
+			\global\let\@date\@empty
+			\global\let\@title\@empty
+			\global\let\title\relax
+			\global\let\date\relax
+			\global\let\and\relax
+		}
+	\else
+		\newcommand\maketitle{
+			\par
+			\begingroup
+				\renewcommand\thefootnote{\@fnsymbol\c@footnote}%
+				\def\@makefnmark{\rlap{\@textsuperscript{\normalfont\@thefnmark}}}
+				\long\def\@makefntext##1{\parindent 1em\noindent
+				\hb@xt@1.8em{%
+				\hss\@textsuperscript{\normalfont\@thefnmark}}##1}%
+				\if@twocolumn
+					\ifnum \col@number=\@ne
+						\@maketitle
+					\else
+						\twocolumn[\@maketitle]%
+					\fi
+				\else
+					\newpage
+					\global\@topnum\z@   % Prevents figures from going at top of page.
+					\@maketitle
+				\fi
+				\thispagestyle{plain}\@thanks
+			\endgroup
+			\setcounter{footnote}{0}%
+			\global\let\thanks\relax
+			\global\let\maketitle\relax
+			\global\let\@thanks\@empty
+			\global\let\@date\@empty
+			\global\let\@title\@empty
+			\global\let\title\relax
+			\global\let\date\relax
+			\global\let\and\relax
+		}
+	\else
+		\def\@maketitle{%
+			\newpage
+			\null
+			% The Kauke arch is centered on the page background - JB
+			\AddToShipoutPicture*{\BackgroundPicture}
+			\let\footnoterule\relax
+			{\def\\{\noexpand\\}\global\gdef\@titl@{{\@title}}}%
+			{
+				\begin{textblock}{6}(2.20,-.42)
+					\begin{singlespace}
+						\begin{center}
+							{\scshape\Large\@titl@}
+						\end{center}
+					\end{singlespace}
+				\end{textblock}
+			}%
+			\begin{textblock}{6}(2.20,2.75)
+				\begin{center}
+					{\scshape\th@sistype}
+				\end{center}
+			\end{textblock}  
+			\begin{textblock}{7}(1.65,5.15)
+				\begin{singlespace}
+					\begin{center}
+						Presented in Partial Fulfillment of the Requirements for \\
+						the Degree \d@greetoobtain in the \\
+						\@program\ at \@school
+					\end{center}
+				\end{singlespace}
+			\end{textblock}
+			\begin{textblock}{6}(2.20,7.8)
+				\begin{singlespace}
+					\begin{center}
+						by \\
+						\@author \@authordegrees\\
+					\end{center}
+				\end{singlespace}
+			\end{textblock}
+			\begin{textblock}{6}(2.20,8.8)
+				{\def\baselinestretch{1}\normalsize
+					\begin{center}
+						\@school\\
+						\ye@r
+					\end{center}
+				}%
+			\end{textblock}
+			\begin{textblock}{6}(0,11)
+				\noindent
+				\begin{minipage}[b]{\hsize}
+					\begin{flushleft}
+						{\bfseries Advised by:} \\
+						\@dvisor
+						\second@dvisor
+					\end{flushleft}
+				\end{minipage}%
+				\par
+				\@thanks
+			\end{textblock}
+		}
+	\fi
 \else
-\newcommand\maketitle{\par
-  \begingroup
-    \renewcommand\thefootnote{\@fnsymbol\c@footnote}%
-    \def\@makefnmark{\rlap{\@textsuperscript{\normalfont\@thefnmark}}}%
-    \long\def\@makefntext##1{\parindent 1em\noindent
-            \hb@xt@1.8em{%
-                \hss\@textsuperscript{\normalfont\@thefnmark}}##1}%
-    \if@twocolumn
-      \ifnum \col@number=\@ne
-        \@maketitle
-      \else
-        \twocolumn[\@maketitle]%
-      \fi
-    \else
-      \newpage
-      \global\@topnum\z@   % Prevents figures from going at top of page.
-      \@maketitle
-    \fi
-    \thispagestyle{plain}\@thanks
-  \endgroup
-  \setcounter{footnote}{0}%
-  \global\let\thanks\relax
-  \global\let\maketitle\relax
-  \global\let\@thanks\@empty
-  \global\let\@date\@empty
-  \global\let\@title\@empty
-  \global\let\title\relax
-  \global\let\date\relax
-  \global\let\and\relax
-}
-\else
-\def\@maketitle{%
-  \newpage
-  \null
-
-% The Kauke arch is centered on the page background - JB
-
-\AddToShipoutPicture*{\BackgroundPicture}
-\let\footnoterule\relax
-{\def\\{\noexpand\\}
-\global\gdef\@titl@{{\@title}}}%
-{
-\begin{textblock}{6}(2.20,-.42)
-\begin{singlespace}
-\begin{center}
-{\scshape\Large\@titl@}
-\end{center}
-\end{singlespace}}%
-\end{textblock}
-\begin{textblock}{6}(2.20,2.75)
-\begin{center}
-{\scshape
-  \th@sistype}
-\end{center}
-\end{textblock}  
-\begin{textblock}{7}(1.65,5.15)
-\begin{singlespace}
-\begin{center}
-Presented in Partial Fulfillment of the Requirements for \\
-the Degree \d@greetoobtain in the \\
- \@program\ at \@school
-\end{center}
-\end{singlespace}
-\end{textblock}
-\begin{textblock}{6}(2.20,7.8)
-\begin{singlespace}
-\begin{center}
-by \\
-\@author \@authordegrees\\
-\end{center}
-\end{singlespace}
-\end{textblock}
-\begin{textblock}{6}(2.20,8.8)
-{\def\baselinestretch{1}\normalsize
-\begin{center}
-\@school\\
-\ye@r
-\end{center}}%
-\end{textblock}
-\begin{textblock}{6}(0,11)
-\noindent
-\begin{minipage}[b]{\hsize}
-\begin{flushleft}
-{\bfseries Advised by:} \\
-\@dvisor
-\second@dvisor
-\end{flushleft}
-\end{minipage}%
-\par
-  \@thanks
-\end{textblock}
-}
+	\ifnum\@ptsize=1 % 11 pt
+		\if@titlepage
+			\newcommand\maketitle{
+				\begin{titlepage}%
+					% The Kauke arch is centered on the page background - JB
+					\AddToShipoutPicture*{\BackgroundPicture}
+					\let\footnoterule\relax
+					{\def\\{\noexpand\\}\global\gdef\@titl@{{\@title}}}%
+					{
+						\begin{textblock}{6}(2.20,-.55)
+							\begin{singlespace}
+								\begin{center}
+									{\scshape\Large\@titl@}
+								\end{center}
+							\end{singlespace}%
+						\end{textblock}
+					}
+					\begin{textblock}{6}(2.20,2.65)
+						\begin{center}
+							{\scshape\th@sistype}
+						\end{center}
+					\end{textblock}  
+					\begin{textblock}{7}(1.65,4.97)
+						\begin{singlespace}
+							\begin{center}
+								Presented in Partial Fulfillment of the Requirements for \\
+								the Degree \d@greetoobtain in the \\
+								\@program\ at \@school
+							\end{center}
+						\end{singlespace}
+					\end{textblock}
+					\begin{textblock}{6}(2.20,7.67)
+						\begin{singlespace}
+							\begin{center}
+								by \\
+								\@author \@authordegrees\\
+							\end{center}
+						\end{singlespace}
+					\end{textblock}
+					\begin{textblock}{6}(2.20,8.70)
+						{\def\baselinestretch{1}\normalsize
+							\begin{center}
+								\@school\\
+								\ye@r
+							\end{center}
+						}%
+					\end{textblock}
+					\begin{textblock}{6}(0,11)
+						\noindent
+						\hspace{1px}
+						\begin{minipage}[b]{\hsize}
+							\begin{flushleft}
+								{\bfseries Advised by:} \\
+								\@dvisor
+								\second@dvisor
+							\end{flushleft}
+						\end{minipage}%
+						\par
+						\@thanks
+					\end{textblock}
+				\end{titlepage}%
+				\setcounter{footnote}{0}%
+				\global\let\thanks\relax
+				\global\let\maketitle\relax
+				\global\let\@thanks\@empty
+				\global\let\@date\@empty
+				\global\let\@title\@empty
+				\global\let\title\relax
+				\global\let\date\relax
+				\global\let\and\relax
+			}
+		\else
+			\newcommand\maketitle{
+				\par
+  				\begingroup
+					\renewcommand\thefootnote{\@fnsymbol\c@footnote}%
+					\def\@makefnmark{\rlap{\@textsuperscript{\normalfont\@thefnmark}}}%
+					\long\def\@makefntext##1{
+						\parindent 1em\noindent
+						\hb@xt@1.8em{%
+							\hss\@textsuperscript{\normalfont\@thefnmark}
+						}##1
+					}%
+					\if@twocolumn
+						\ifnum \col@number=\@ne
+							\@maketitle
+						\else
+							\twocolumn[\@maketitle]%
+						\fi
+					\else
+						\newpage
+						\global\@topnum\z@   % Prevents figures from going at top of page.
+						\@maketitle
+					\fi
+					\thispagestyle{plain}
+					\@thanks
+				\endgroup
+				\setcounter{footnote}{0}%
+				\global\let\thanks\relax
+				\global\let\maketitle\relax
+				\global\let\@thanks\@empty
+				\global\let\@date\@empty
+				\global\let\@title\@empty
+				\global\let\title\relax
+				\global\let\date\relax
+				\global\let\and\relax
+			}
+		\else
+			\def\@maketitle{%
+				\newpage
+				\null
+				% The Kauke arch is centered on the page background - JB
+				\AddToShipoutPicture*{\BackgroundPicture}
+				\let\footnoterule\relax
+				{\def\\{\noexpand\\}\global\gdef\@titl@{{\@title}}}%
+				{
+					\begin{textblock}{6}(2.20,-.55)
+						\begin{singlespace}
+							\begin{center}
+								{\scshape\Large\@titl@}
+							\end{center}
+						\end{singlespace}
+					\end{textblock}
+				}%
+				\begin{textblock}{6}(2.20,2.65)
+					\begin{center}
+						{\scshape\th@sistype}
+					\end{center}
+				\end{textblock}  
+				\begin{textblock}{7}(1.65,4.97)
+					\begin{singlespace}
+						\begin{center}
+							Presented in Partial Fulfillment of the Requirements for \\
+							the Degree \d@greetoobtain in the \\
+							\@program\ at \@school
+						\end{center}
+					\end{singlespace}
+				\end{textblock}
+				\begin{textblock}{6}(2.20,7.67)
+					\begin{singlespace}
+						\begin{center}
+							by \\
+							\@author \@authordegrees\\
+						\end{center}
+					\end{singlespace}
+				\end{textblock}
+				\begin{textblock}{6}(2.20,8.70)
+					{\def\baselinestretch{1}\normalsize
+						\begin{center}
+							\@school\\
+							\ye@r
+						\end{center}
+					}%
+				\end{textblock}
+				\begin{textblock}{6}(0,11)
+					\noindent
+					\begin{minipage}[b]{\hsize}
+						\begin{flushleft}
+							{\bfseries Advised by:} \\
+							\@dvisor
+							\second@dvisor
+						\end{flushleft}
+					\end{minipage}%
+					\par
+					\@thanks
+				\end{textblock}
+			}
+		\fi
+	\else
+		\ifnum\@ptsize>1 % 12 pt or greater
+ 			\if@titlepage
+				\newcommand\maketitle{
+					\begin{titlepage}%
+						% The Kauke arch is centered on the page background - JB
+						\AddToShipoutPicture*{\BackgroundPicture}
+						\let\footnoterule\relax
+						{\def\\{\noexpand\\}\global\gdef\@titl@{{\@title}}}%
+						{
+							\begin{textblock}{6}(2.20,-.65)
+								\begin{singlespace}
+									\begin{center}
+										{\scshape\Large\@titl@}
+									\end{center}
+								\end{singlespace}%
+							\end{textblock}
+						}
+						\begin{textblock}{6}(2.20,2.6)
+							\begin{center}
+								{\scshape\th@sistype}
+							\end{center}
+						\end{textblock}  
+						\begin{textblock}{8}(1.25,4.9)
+							\begin{singlespace}
+								\begin{center}
+									Presented in Partial Fulfillment of the Requirements for \\
+									the Degree \d@greetoobtain in the \\
+									\@program\ at \@school
+								\end{center}
+							\end{singlespace}
+						\end{textblock}
+						\begin{textblock}{6}(2.20,7.59)
+							\begin{singlespace}
+								\begin{center}
+									by \\
+									\@author \@authordegrees\\
+								\end{center}
+							\end{singlespace}
+						\end{textblock}
+						\begin{textblock}{6}(2.20,8.7)
+							{\def\baselinestretch{1}\normalsize
+								\begin{center}
+									\@school\\
+									\ye@r
+								\end{center}
+							}%
+						\end{textblock}
+						\begin{textblock}{6}(0,11)
+							\noindent
+							\hspace{1px}
+							\begin{minipage}[b]{\hsize}
+								\begin{flushleft}
+									{\bfseries Advised by:} \\
+									\@dvisor
+									\second@dvisor
+								\end{flushleft}
+							\end{minipage}%
+							\par
+							\@thanks
+						\end{textblock}
+					\end{titlepage}%
+					\setcounter{footnote}{0}%
+					\global\let\thanks\relax
+					\global\let\maketitle\relax
+					\global\let\@thanks\@empty
+					\global\let\@date\@empty
+					\global\let\@title\@empty
+					\global\let\title\relax
+					\global\let\date\relax
+					\global\let\and\relax
+				}
+			\else
+				\newcommand\maketitle{
+					\par
+					\begingroup
+						\renewcommand\thefootnote{\@fnsymbol\c@footnote}%
+						\def\@makefnmark{\rlap{\@textsuperscript{\normalfont\@thefnmark}}}%
+						\long\def\@makefntext##1{
+							\parindent 1em
+							\noindent
+							\hb@xt@1.8em{%
+								\hss\@textsuperscript{\normalfont\@thefnmark}
+							}##1
+						}%
+						\if@twocolumn
+							\ifnum \col@number=\@ne
+								\@maketitle
+							\else
+								\twocolumn[\@maketitle]%
+							\fi
+						\else
+							\newpage
+							\global\@topnum\z@   % Prevents figures from going at top of page.
+							\@maketitle
+						\fi
+						\thispagestyle{plain}
+						\@thanks
+					\endgroup
+					\setcounter{footnote}{0}%
+					\global\let\thanks\relax
+					\global\let\maketitle\relax
+					\global\let\@thanks\@empty
+					\global\let\@date\@empty
+					\global\let\@title\@empty
+					\global\let\title\relax
+					\global\let\date\relax
+					\global\let\and\relax
+				}
+			\else
+				\def\@maketitle{%
+					\newpage
+					\null
+					% The Kauke arch is centered on the page background - JB
+					\AddToShipoutPicture*{\BackgroundPicture}
+					\let\footnoterule\relax
+					{\def\\{\noexpand\\}\global\gdef\@titl@{{\@title}}}%
+					{
+						\begin{textblock}{6}(2.20,-.65)
+							\begin{singlespace}
+								\begin{center}
+									{\scshape\Large\@titl@}
+								\end{center}
+							\end{singlespace}%
+						\end{textblock}
+					}
+					\begin{textblock}{6}(2.20,2.6)
+						\begin{center}
+							{\scshape\th@sistype}
+						\end{center}
+					\end{textblock}  
+					\begin{textblock}{8}(1.25,4.9)
+						\begin{singlespace}
+							\begin{center}
+								Presented in Partial Fulfillment of the Requirements for \\
+								the Degree \d@greetoobtain in the \\
+								\@program\ at \@school
+							\end{center}
+						\end{singlespace}
+					\end{textblock}
+					\begin{textblock}{6}(2.20,7.59)
+						\begin{singlespace}
+							\begin{center}
+								by \\
+								\@author \@authordegrees\\
+							\end{center}
+						\end{singlespace}
+					\end{textblock}
+					\begin{textblock}{6}(2.20,8.7)
+						{\def\baselinestretch{1}\normalsize
+							\begin{center}
+								\@school\\
+								\ye@r
+							\end{center}
+						}%
+					\end{textblock}
+					\begin{textblock}{6}(0,11)
+						\noindent
+						\begin{minipage}[b]{\hsize}
+							\begin{flushleft}
+								{\bfseries Advised by:} \\
+								\@dvisor
+								\second@dvisor
+							\end{flushleft}
+						\end{minipage}%
+						\par
+						\@thanks
+					\end{textblock}
+				}
+			\fi
+		\fi
+	\fi
 \fi
-\else\ifnum\@ptsize=1 % 11 pt
- \if@titlepage
-  \newcommand\maketitle{\begin{titlepage}%
-
-% The Kauke arch is centered on the page background - JB
-
-\AddToShipoutPicture*{\BackgroundPicture}
-\let\footnoterule\relax
-{\def\\{\noexpand\\}
-\global\gdef\@titl@{{\@title}}}%
-{
-\begin{textblock}{6}(2.20,-.55)
-\begin{singlespace}
-\begin{center}
-{\scshape\Large\@titl@}
-\end{center}
-\end{singlespace}%
-\end{textblock}}
-\begin{textblock}{6}(2.20,2.65)
-\begin{center}
-{\scshape
-  \th@sistype}
-\end{center}
-\end{textblock}  
-\begin{textblock}{7}(1.65,4.97)
-\begin{singlespace}
-\begin{center}
-Presented in Partial Fulfillment of the Requirements for \\
-the Degree \d@greetoobtain in the \\
- \@program\ at \@school
-\end{center}
-\end{singlespace}
-\end{textblock}
-\begin{textblock}{6}(2.20,7.67)
-\begin{singlespace}
-\begin{center}
-by \\
-\@author \@authordegrees\\
-\end{center}
-\end{singlespace}
-\end{textblock}
-\begin{textblock}{6}(2.20,8.70)
-{\def\baselinestretch{1}\normalsize
-\begin{center}
-\@school\\
-\ye@r
-\end{center}}%
-\end{textblock}
-\begin{textblock}{6}(0,11)
-\noindent
-\hspace{1px}
-\begin{minipage}[b]{\hsize}
-\begin{flushleft}
-{\bfseries Advised by:} \\
-\@dvisor
-\second@dvisor
-\end{flushleft}
-\end{minipage}%
-\par
-  \@thanks
-\end{textblock}
-  \end{titlepage}%
-  \setcounter{footnote}{0}%
-  \global\let\thanks\relax
-  \global\let\maketitle\relax
-  \global\let\@thanks\@empty
-  \global\let\@date\@empty
-  \global\let\@title\@empty
-  \global\let\title\relax
-  \global\let\date\relax
-  \global\let\and\relax
-}
-\else
-\newcommand\maketitle{\par
-  \begingroup
-    \renewcommand\thefootnote{\@fnsymbol\c@footnote}%
-    \def\@makefnmark{\rlap{\@textsuperscript{\normalfont\@thefnmark}}}%
-    \long\def\@makefntext##1{\parindent 1em\noindent
-            \hb@xt@1.8em{%
-                \hss\@textsuperscript{\normalfont\@thefnmark}}##1}%
-    \if@twocolumn
-      \ifnum \col@number=\@ne
-        \@maketitle
-      \else
-        \twocolumn[\@maketitle]%
-      \fi
-    \else
-      \newpage
-      \global\@topnum\z@   % Prevents figures from going at top of page.
-      \@maketitle
-    \fi
-    \thispagestyle{plain}\@thanks
-  \endgroup
-  \setcounter{footnote}{0}%
-  \global\let\thanks\relax
-  \global\let\maketitle\relax
-  \global\let\@thanks\@empty
-  \global\let\@date\@empty
-  \global\let\@title\@empty
-  \global\let\title\relax
-  \global\let\date\relax
-  \global\let\and\relax
-}
-\else
-\def\@maketitle{%
-  \newpage
-  \null
-
-% The Kauke arch is centered on the page background - JB
-
-\AddToShipoutPicture*{\BackgroundPicture}
-\let\footnoterule\relax
-{\def\\{\noexpand\\}
-\global\gdef\@titl@{{\@title}}}%
-{
-\begin{textblock}{6}(2.20,-.55)
-\begin{singlespace}
-\begin{center}
-{\scshape\Large\@titl@}
-\end{center}
-\end{singlespace}}%
-\end{textblock}
-\begin{textblock}{6}(2.20,2.65)
-\begin{center}
-{\scshape
-  \th@sistype}
-\end{center}
-\end{textblock}  
-\begin{textblock}{7}(1.65,4.97)
-\begin{singlespace}
-\begin{center}
-Presented in Partial Fulfillment of the Requirements for \\
-the Degree \d@greetoobtain in the \\
- \@program\ at \@school
-\end{center}
-\end{singlespace}
-\end{textblock}
-\begin{textblock}{6}(2.20,7.67)
-\begin{singlespace}
-\begin{center}
-by \\
-\@author \@authordegrees\\
-\end{center}
-\end{singlespace}
-\end{textblock}
-\begin{textblock}{6}(2.20,8.70)
-{\def\baselinestretch{1}\normalsize
-\begin{center}
-\@school\\
-\ye@r
-\end{center}}%
-\end{textblock}
-\begin{textblock}{6}(0,11)
-\noindent
-\begin{minipage}[b]{\hsize}
-\begin{flushleft}
-{\bfseries Advised by:} \\
-\@dvisor
-\second@dvisor
-\end{flushleft}
-\end{minipage}%
-\par
-  \@thanks
-\end{textblock}
-}
-\fi
-\else\ifnum\@ptsize>1 % 12 pt or greater
- \if@titlepage
-  \newcommand\maketitle{\begin{titlepage}%
-
-% The Kauke arch is centered on the page background - JB
-
-\AddToShipoutPicture*{\BackgroundPicture}
-\let\footnoterule\relax
-{\def\\{\noexpand\\}
-\global\gdef\@titl@{{\@title}}}%
-{
-\begin{textblock}{6}(2.20,-.65)
-\begin{singlespace}
-\begin{center}
-{\scshape\Large\@titl@}
-\end{center}
-\end{singlespace}%
-\end{textblock}}
-\begin{textblock}{6}(2.20,2.6)
-\begin{center}
-{\scshape
-  \th@sistype}
-\end{center}
-\end{textblock}  
-\begin{textblock}{8}(1.25,4.9)
-\begin{singlespace}
-\begin{center}
-Presented in Partial Fulfillment of the Requirements for \\
-the Degree \d@greetoobtain in the \\
- \@program\ at \@school
-\end{center}
-\end{singlespace}
-\end{textblock}
-\begin{textblock}{6}(2.20,7.59)
-\begin{singlespace}
-\begin{center}
-by \\
-\@author \@authordegrees\\
-\end{center}
-\end{singlespace}
-\end{textblock}
-\begin{textblock}{6}(2.20,8.7)
-{\def\baselinestretch{1}\normalsize
-\begin{center}
-\@school\\
-\ye@r
-\end{center}}%
-\end{textblock}
-\begin{textblock}{6}(0,11)
-\noindent
-\hspace{1px}
-\begin{minipage}[b]{\hsize}
-\begin{flushleft}
-{\bfseries Advised by:} \\
-\@dvisor
-\second@dvisor
-\end{flushleft}
-\end{minipage}%
-\par
-  \@thanks
-\end{textblock}
-  \end{titlepage}%
-  \setcounter{footnote}{0}%
-  \global\let\thanks\relax
-  \global\let\maketitle\relax
-  \global\let\@thanks\@empty
-  \global\let\@date\@empty
-  \global\let\@title\@empty
-  \global\let\title\relax
-  \global\let\date\relax
-  \global\let\and\relax
-}
-\else
-\newcommand\maketitle{\par
-  \begingroup
-    \renewcommand\thefootnote{\@fnsymbol\c@footnote}%
-    \def\@makefnmark{\rlap{\@textsuperscript{\normalfont\@thefnmark}}}%
-    \long\def\@makefntext##1{\parindent 1em\noindent
-            \hb@xt@1.8em{%
-                \hss\@textsuperscript{\normalfont\@thefnmark}}##1}%
-    \if@twocolumn
-      \ifnum \col@number=\@ne
-        \@maketitle
-      \else
-        \twocolumn[\@maketitle]%
-      \fi
-    \else
-      \newpage
-      \global\@topnum\z@   % Prevents figures from going at top of page.
-      \@maketitle
-    \fi
-    \thispagestyle{plain}\@thanks
-  \endgroup
-  \setcounter{footnote}{0}%
-  \global\let\thanks\relax
-  \global\let\maketitle\relax
-  \global\let\@thanks\@empty
-  \global\let\@date\@empty
-  \global\let\@title\@empty
-  \global\let\title\relax
-  \global\let\date\relax
-  \global\let\and\relax
-}
-\else
-\def\@maketitle{%
-  \newpage
-  \null
-
-% The Kauke arch is centered on the page background - JB
-
-\AddToShipoutPicture*{\BackgroundPicture}
-\let\footnoterule\relax
-{\def\\{\noexpand\\}
-\global\gdef\@titl@{{\@title}}}%
-{
-\begin{textblock}{6}(2.20,-.65)
-\begin{singlespace}
-\begin{center}
-{\scshape\Large\@titl@}
-\end{center}
-\end{singlespace}}%
-\end{textblock}
-\begin{textblock}{6}(2.20,2.6)
-\begin{center}
-{\scshape
-  \th@sistype}
-\end{center}
-\end{textblock}  
-\begin{textblock}{8}(1.25,4.9)
-\begin{singlespace}
-\begin{center}
-Presented in Partial Fulfillment of the Requirements for \\
-the Degree \d@greetoobtain in the \\
- \@program\ at \@school
-\end{center}
-\end{singlespace}
-\end{textblock}
-\begin{textblock}{6}(2.20,7.59)
-\begin{singlespace}
-\begin{center}
-by \\
-\@author \@authordegrees\\
-\end{center}
-\end{singlespace}
-\end{textblock}
-\begin{textblock}{6}(2.20,8.7)
-{\def\baselinestretch{1}\normalsize
-\begin{center}
-\@school\\
-\ye@r
-\end{center}}%
-\end{textblock}
-\begin{textblock}{6}(0,11)
-\noindent
-\begin{minipage}[b]{\hsize}
-\begin{flushleft}
-{\bfseries Advised by:} \\
-\@dvisor
-\second@dvisor
-\end{flushleft}
-\end{minipage}%
-\par
-  \@thanks
-\end{textblock}
-}
-\fi
-\fi
-\fi
-\fi
-
 % bug causing wrong page numbering in table of contents fixed [1997/12/04]   
 % (reported by Karen Gibbs) - JH
-
 \newcommand{\dedication}[1]{%
-  \cleardoublepage
-  \chapter*{}
-  \addcontentsline{toc}{chapter}{\dedname}%
-  \thispagestyle{plain}%
-  \vspace*{\fill}
-  \begin{center}
-    #1
-  \end{center}
-  \vfill
-  \newpage
-  }
-
+	\cleardoublepage
+	\chapter*{}
+	\addcontentsline{toc}{chapter}{\dedname}%
+	\thispagestyle{plain}%
+	\vspace*{\fill}
+	\begin{center}
+		#1
+	\end{center}
+	\vfill
+	\newpage
+}
 % Abstract - JH
-
 \newenvironment{abstract}{%
-  \if@bstractonly
-  \cleardoublepage  
-  \setcounter{page}{1}%
-  \pagenumbering{arabic}%
-  \pagestyle{plain}  
-  \chapter*{\@title}%
-  \begin{singlespace}
-  \begin{center}
-    by\\
-    \@author\ \d@greetoobtain\\
-    The College of Wooster, \ye@r\\
-    \@dvisor
-  \end{center}
-  \end{singlespace}
-  \vspace{\baselineskip}
-  \else  
-  \chapter*{\abstractname}%
-  \addcontentsline{toc}{chapter}{\abstractname}%
-  \fi  
+	\if@bstractonly
+		\cleardoublepage  
+		\setcounter{page}{1}%
+		\pagenumbering{arabic}%
+		\pagestyle{plain}  
+		\chapter*{\@title}%
+		\begin{singlespace}
+			\begin{center}
+				by\\
+				\@author\ \d@greetoobtain\\
+				The College of Wooster, \ye@r\\
+				\@dvisor
+			\end{center}
+		\end{singlespace}
+		\vspace{\baselineskip}
+	\else
+		\chapter*{\abstractname}%
+		\addcontentsline{toc}{chapter}{\abstractname}%
+		\fi  
   }{%
-  \global\let\@end@bstract\relax
-  \if@bstractonly
-  \global\let\@end@bstract\enddocument
-  \def\@currenvir{document}% nasty trick!
-  \fi\@end@bstract}
-
+  	\global\let\@end@bstract\relax
+	\if@bstractonly
+		\global\let\@end@bstract\enddocument
+		\def\@currenvir{document}% nasty trick!
+	\fi
+\@end@bstract}
 % Acknowlwdgements - JH
-
 \newenvironment{acknowl}{%
-\chapter*{\ackname}%
-\addcontentsline{toc}{chapter}{\ackname}%
-}
-      {}
-
-% Colophon - JB
-      
+	\chapter*{\ackname}%
+	\addcontentsline{toc}{chapter}{\ackname}%
+}{}
+% Colophon - JB  
 \newenvironment{colophon}{%
-\chapter*{\colophonname}%
-\addcontentsline{toc}{chapter}{\colophonname}%
-\begin{singlespace}
-\begin{quote}
-\small
-}
-        {\end{quote}\end{singlespace}}
-
+	\chapter*{\colophonname}%
+	\addcontentsline{toc}{chapter}{\colophonname}%
+	\begin{singlespace}
+		\begin{quote}
+			\small
+}{\end{quote}\end{singlespace}}
 % Vita - JH
-
 \newenvironment{vita}{%
-\chapter*{\vitaname}%
-\addcontentsline{toc}{chapter}{\vitaname}%
-\begingroup\def\baselinestretch{1}%
-\normalsize}%
-        {\endgroup}
-
+	\chapter*{\vitaname}%
+	\addcontentsline{toc}{chapter}{\vitaname}%
+	\begingroup\def\baselinestretch{1}%
+	\normalsize}{\endgroup}
 \newenvironment{datelist}{%
-\begin{list}{}{%
-\setlength\topsep\baselineskip
-\setlength\partopsep{0pt}%
-\setlength\itemsep\baselineskip
-\setlength\rightmargin{0pt}%
-\setlength\labelwidth{.5 \hsize}%
-            \addtolength\labelwidth{-\labelsep}%
-            \setlength\leftmargin{\hsize}%
-\addtolength\leftmargin{-\labelwidth}%
+	\begin{list}{}{%
+	\setlength\topsep\baselineskip
+	\setlength\partopsep{0pt}%
+	\setlength\itemsep\baselineskip
+	\setlength\rightmargin{0pt}%
+	\setlength\labelwidth{.5 \hsize}%
+	\addtolength\labelwidth{-\labelsep}%
+	\setlength\leftmargin{\hsize}%
+	\addtolength\leftmargin{-\labelwidth}%
 \renewcommand\makelabel[1]{\noindent ##1 \dotfill~}}%
 }{\end{list}}
-
 % \dateitem provided for compatibility with the preceding versions. Its use
 % is deprecated. Use \begin{datelist} \item[1997] blah blah blah .... instead. - JH
-
 \newcommand{\dateitem}[2]{\noindent #1 \dotfill \parbox[t]{.5 \hsize}{#2}%
-       \vskip\baselineskip}  
-  
+       \vskip\baselineskip} 
 \newenvironment{publist}{%
         \vskip .2 \vsize
         \penalty -1000%
         \vskip -.2 \vsize
         \vspace{10 pt}%
-\begin{center}
-\pubname%
-}%
-{\end{center}\vskip\baselineskip}
-
+	\begin{center}
+		\pubname%
+}{\end{center}\vskip\baselineskip}
 \newcommand{\pubitem}[1]{\noindent #1 \vskip\baselineskip}
-
 \newenvironment{fieldsstudy}{%
         \vskip .3 \vsize
         \penalty -1000%
         \vskip -.3 \vsize
         \vspace{10 pt}%
-\begin{center}
-\fosname%
-}%
-{\end{center}\vskip\baselineskip}
-
+	\begin{center}
+		\fosname%
+}{\end{center}\vskip\baselineskip}
 \newcommand{\majorfield}[1]{\noindent \majorfieldname: #1 \vskip\baselineskip}
 \newcommand{\minorfield}[1]{\noindent \minorfieldname: #1 \vskip\baselineskip}
-\newcommand{\specialization}[1]{\noindent \specializationname: #1
-  \vskip\baselineskip}
+\newcommand{\specialization}[1]{\noindent \specializationname: #1\vskip\baselineskip}
 \newcommand{\onestudy}[2]{\noindent\studinname #1: #2}
-
-
 \newenvironment{studieslist}{%
         \gdef\studn@me{\studinname:\let\studn@me\relax}%
         \noindent\begin{tabular}{@{\protect\studn@me }l l l}}{\end{tabular}}
-
 \newcommand{\studyitem}[2]{\global\let\studn@me\relax & #1 & #2 \\}
-
 \newcommand*\chaptermark[1]{}
 \setcounter{secnumdepth}{2}
 \newcounter {part}
@@ -1132,70 +1135,76 @@ by \\
 \newcommand{\@chapapppage}{\relax}
 \newif\if@numberedchapters
 \newcommand\frontmatter{%
-    \cleardoublepage
-  \@numberedchaptersfalse
-  \@mainmatterfalse
-  \pagenumbering{roman}
-  \pagestyle{plain}}
+	\cleardoublepage
+	\@numberedchaptersfalse
+	\@mainmatterfalse
+	\pagenumbering{roman}
+	\pagestyle{plain}
+}
 \newcommand\mainmatter{%
-    \cleardoublepage
-  \renewcommand{\@chapapppage}{\pagename}
-  \@numberedchapterstrue
-  \@mainmattertrue
-  \pagenumbering{arabic}
-  \pagestyle{headings}}
+	\cleardoublepage
+	\renewcommand{\@chapapppage}{\pagename}
+	\@numberedchapterstrue
+	\@mainmattertrue
+	\pagenumbering{arabic}
+	\pagestyle{headings}
+}
 \newcommand\backmatter{%
-  \if@openright
-    \cleardoublepage
-  \else
-    \clearpage
-  \fi
-  \@numberedchapterstrue
-  \@mainmattertrue
-  \appendix
-  \pagestyle{headings}}
+	\if@openright
+		\cleardoublepage
+	\else
+		\clearpage
+	\fi
+	\@numberedchapterstrue
+	\@mainmattertrue
+	\appendix
+	\pagestyle{headings}
+}
 \newcommand\part{%
-  \if@openright
-    \cleardoublepage
-  \else
-    \clearpage
-  \fi
-  \thispagestyle{plain}%
-  \if@twocolumn
-    \onecolumn
-    \@tempswatrue
-  \else
-    \@tempswafalse
-  \fi
-  \null\vfil
-  \secdef\@part\@spart}
-
+	\if@openright
+		\cleardoublepage
+	\else
+		\clearpage
+	\fi
+	\thispagestyle{plain}%
+	\if@twocolumn
+		\onecolumn
+		\@tempswatrue
+	\else
+		\@tempswafalse
+	\fi
+	\null\vfil
+	\secdef\@part\@spart
+}
 \newcommand{\titlefont}{\fontshape{sc}}
-
 \def\@part[#1]#2{%
-    \ifnum \c@secnumdepth >-2\relax
-      \refstepcounter{part}%
-      \addcontentsline{toc}{part}{\thepart\hspace{1em}#1}%
-    \else
-      \addcontentsline{toc}{part}{#1}%
-    \fi
-    \markboth{}{}%
-    {\centering
-     \interlinepenalty \@M
-     \normalfont
-     \ifnum \c@secnumdepth >-2\relax
-       \huge \partname\nobreakspace\thepart% removed \bfseries - JB
-       \par
-       \vskip 20\p@
-     \fi
-     \Huge #2\par}% removed \bfseries - JB
-    \@endpart}
+	\ifnum \c@secnumdepth >-2\relax
+		\refstepcounter{part}%
+		\addcontentsline{toc}{part}{\thepart\hspace{1em}#1}%
+	\else
+		\addcontentsline{toc}{part}{#1}%
+	\fi
+	\markboth{}{}%
+	{\centering
+		\interlinepenalty \@M
+		\normalfont
+		\ifnum \c@secnumdepth >-2\relax
+			\huge \partname\nobreakspace\thepart% removed \bfseries - JB
+			\par
+			\vskip 20\p@
+		\fi
+		\Huge #2\par
+	}% removed \bfseries - JB
+	\@endpart
+}
 \def\@spart#1{%
-    {\centering
-     \interlinepenalty \@M
-     \normalfont
-     \Huge #1\par}% removed \bfseries - JB
-    \@endpart}
+	{\centering
+		\interlinepenalty \@M
+		\normalfont
+		\Huge #1\par
+	}% removed \bfseries - JB
+	\@endpart
+}
 \def\@endpart{\vfil\newpage
               \if@twoside
                \if@openright
