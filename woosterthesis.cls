@@ -1,4 +1,4 @@
- %%
+%%
 %% This is file `woosterthesis.cls',
 %% a modification of the book class
 %% by Dr. Jon Breitenbucher. It is
@@ -184,12 +184,12 @@
 \def\t@st{test}%
 \ifx\test@alltt\t@st\@alltttrue\else\@allttfalse\fi
 \DeclareOption{alltt}{\@alltttrue}
-% option to use woolshort package a modification of lshort - JB
-\newif\if@woolshort
+% option to use lshort package with local modifications- JB
+\newif\if@lshortwooster
 \expandafter\def\csname test@\jobname\endcsname{test}%
 \def\t@st{test}%
-\ifx\test@woolshort\t@st\@woolshorttrue\else\@woolshortfalse\fi
-\DeclareOption{woolshort}{\@woolshorttrue}
+\ifx\test@lshortwooster\t@st\@lshortwoostertrue\else\@lshortwoosterfalse\fi
+\DeclareOption{lshortwooster}{\@lshortwoostertrue}
 % option to include a colophon- JB
 \newif\if@colophon
 \expandafter\def\csname test@\jobname\endcsname{test}%
@@ -208,8 +208,7 @@
 \def\t@st{test}%
 \ifx\test@acs\t@st\@acstrue\else\@acsfalse\fi
 \DeclareOption{acs}{\@acstrue}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% option to use the American Chemical Society citation and reference style added for Norman Chamusah
+% option to a foreign language is being used
 \newif\if@foreignlanguage
 \expandafter\def\csname test@\jobname\endcsname{test}%
 \def\t@st{test}%
@@ -231,62 +230,69 @@
 \RequirePackage{amsmath}% to obtain special math related commands - JB
 \RequirePackage{setspace}% to allow single and double spacing - JB
 \RequirePackage{fancyhdr}% to have fancy chapter headings - JB
-\RequirePackage{csquotes}% to have context aware quotes when using foreign languages - JB
+\RequirePackage[autostyle]{csquotes}% to have context aware quotes when using foreign languages - JB
 \ifxetex
 	\RequirePackage{fontspec}% allows one to easily set up fonts in the document
 	\RequirePackage{xunicode}
 	\RequirePackage{xltxtra}% adds extra commands specific to XeTeX
 	%\RequirePackage[xetex]{graphicx}
-		\def\kaukelogo{\includegraphics[scale=.4]{kauke_wordmark}}
-		\def\woosterlogo{\includegraphics[scale=.4]{wooster_stacked_black}}
-		\RequirePackage{eso-pic}
-		\if@wblack
+	\def\kaukelogo{\includegraphics[scale=.4]{kauke_wordmark}}
+	\def\woosterlogo{\includegraphics[scale=.4]{wooster_stacked_black}}
+	\RequirePackage{eso-pic}
+	\if@wblack
 		\newcommand\BackgroundPicture{%
 			\put(-3,-5){%
 				\parbox[b][\paperheight]{\paperwidth}{%       
 					\vfill
 					\centering
-					\includegraphics[width=\paperwidth,height=\paperheight,%
-						keepaspectratio]{W_black}%
+					\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{W_black}%
 					\vfill
-					}}}
+				}
+			}
+		}
+	\else
+		\newcommand\BackgroundPicture{%
+   			\put(-3,-5){%
+     				\parbox[b][\paperheight]{\paperwidth}{%       
+       					\vfill
+       					\centering
+       					\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{kauke_arch_gray}%
+       					\vfill
+     				}
+			}
+		}
+	\fi
+\else % alter class behavior based on version of TeX - JB
+	\RequirePackage[utf8]{inputenc}
+   	\RequirePackage[T1]{fontenc}
+   	\RequirePackage{lmodern}
+	\RequirePackage[pdftex]{graphicx}
+	\def\kaukelogo{\includegraphics[scale=.4]{kauke_wordmark}}
+	\def\woosterlogo{\includegraphics[scale=.4]{wooster_stacked_black}}
+	\RequirePackage{eso-pic}
+		\if@wblack
+			\newcommand\BackgroundPicture{%
+				\put(-3,-5){%
+					\parbox[b][\paperheight]{\paperwidth}{%       
+						\vfill
+						\centering
+						\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{W_black}%
+						\vfill
+					}
+				}
+			}
 		\else
 			\newcommand\BackgroundPicture{%
-   				\put(-3,-5){%
-     				\parbox[b][\paperheight]{\paperwidth}{%       
-       				\vfill
-       				\centering
-       				\includegraphics[width=\paperwidth,height=\paperheight,%
-                        keepaspectratio]{kauke_arch_gray}%
-       				\vfill
-     			}}}
+				\put(-3,-5){%
+					\parbox[b][\paperheight]{\paperwidth}{%       
+						\vfill
+						\centering
+						\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{kauke_arch_gray}%
+						\vfill
+					}
+				}
+			}
 		\fi
-\else % alter class behavior based on version of TeX - JB
-			\RequirePackage[pdftex]{graphicx}
-			\def\kaukelogo{\includegraphics[scale=.4]{kauke_wordmark}}
-			\def\woosterlogo{\includegraphics[scale=.4]{wooster_stacked_black}}
-			\RequirePackage{eso-pic}
-			\if@wblack
-				\newcommand\BackgroundPicture{%
-					\put(-3,-5){%
-						\parbox[b][\paperheight]{\paperwidth}{%       
-							\vfill
-							\centering
-							\includegraphics[width=\paperwidth,height=\paperheight,%
-						keepaspectratio]{W_black}%
-							\vfill
-						}}}
-			\else
-				\newcommand\BackgroundPicture{%
-					\put(-3,-5){%
-						\parbox[b][\paperheight]{\paperwidth}{%       
-							\vfill
-							\centering
-							\includegraphics[width=\paperwidth,height=\paperheight,%
-								keepaspectratio]{kauke_arch_gray}%
-							\vfill
-				}}}
-			\fi
 \fi
 
 % Kyle Kindbom requested a theorem style where the theorem header was on a separate line.
@@ -1364,10 +1370,10 @@ by \\
                         \parsep        \z@ \@plus\p@}%
                 \item\relax}
                {\endlist}
-\newenvironment{quote}
-               {\list{}{\rightmargin\leftmargin}%
-                \item\relax}
-               {\endlist}
+%\renewenvironment{quote}
+ %              {\list{}{\rightmargin\leftmargin}%
+ %               \item\relax}
+ %              {\endlist}
 \newenvironment{titlepage}
     {%
       \cleardoublepage
@@ -1554,26 +1560,21 @@ by \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \if@code
-\RequirePackage{listings}
-\renewcommand{\lstlistlistingname}{List of Listings}
-\renewcommand{\lstlistoflistings}{% - JB
-\if@twocolumn
-      \@restonecoltrue\onecolumn
-    \else
-      \@restonecolfalse
-    \fi
-\chapter*{\lstlistlistingname}%
-     \@mkboth{%
-          \lstlistlistingname}% remove MakeUpperCase - JB
-         {\lstlistlistingname}
-         \addcontentsline{toc}{chapter}{\lstlistlistingname}%
-\@tocheadline{Listing}{Page}%
-{\def\baselinestretch{1}
-\normalsize
-\@starttoc{lol}%
-}
-\if@restonecol\twocolumn\fi}
-\let\l@lstlisting\l@figure
+	\RequirePackage{listings}
+	\renewcommand{\lstlistlistingname}{List of Listings}
+	\renewcommand{\lstlistoflistings}{% - JB
+	\if@twocolumn
+      		\@restonecoltrue\onecolumn
+    	\else
+      		\@restonecolfalse
+   	 \fi
+	\chapter*{\lstlistlistingname}%
+     	\@mkboth{\lstlistlistingname}{\lstlistlistingname}% remove MakeUpperCase - JB
+         	\addcontentsline{toc}{chapter}{\lstlistlistingname}%
+	\@tocheadline{Listing}{Page}%
+	{\def\baselinestretch{1}\normalsize\@starttoc{lol}}
+	\if@restonecol\twocolumn\fi}
+	\let\l@lstlisting\l@figure
 \fi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1592,8 +1593,8 @@ by \\
 \fi
 % load biblatex with chem-acs style and set boolean to true
 \if@acs
-\RequirePackage[style=chem-acs,articletitle,hyperref=auto,backref=true,backrefstyle=two,natbib=true]{biblatex}
-\setboolean{acs}{true}
+	\RequirePackage[style=chem-acs,articletitle,hyperref=auto,backref=true,backrefstyle=two,natbib=true]{biblatex}
+	\setboolean{acs}{true}
 \else % load biblatex-chicago and set boolean to true
 	\if@chicago
 		\RequirePackage[authordate,strict,autolang=other,bibencoding=inputenc,hyperref=auto,backref=true,backrefstyle=two,natbib=true,sorting=nty]{biblatex-chicago}
@@ -1602,7 +1603,9 @@ by \\
 		\RequirePackage[hyperref=auto,backref=true,backrefstyle=two,natbib=true,style=numeric]{biblatex}
 	\fi
 \fi
-  
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% set up the Index
 \newenvironment{theindex}
                {\if@twocolumn
                   \@restonecolfalse
@@ -1727,11 +1730,10 @@ by \\
 	\if@alltt
 		\RequirePackage{alltt}
 	\fi
-	\if@woolshort
-		\RequirePackage{styles/woolshort}
+	\if@lshortwooster
+		\RequirePackage{styles/lshortwooster}
 	\fi
 	\if@palatino
-		\RequirePackage[T1]{fontenc}
 		\RequirePackage{pxfonts}
 	\fi
 	\if@maple
