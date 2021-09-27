@@ -1671,7 +1671,7 @@
 		\RequirePackage[authordate,strict,autolang=other,bibencoding=inputenc,hyperref=auto,backref=true,backrefstyle=two,natbib=true,sorting=nty]{biblatex-chicago}
 		\setboolean{chicago}{true}
 	\else % load biblatex
-		\RequirePackage[hyperref=auto,backref=true,backrefstyle=two,natbib=true,style=numeric]{biblatex}
+		\RequirePackage[hyperref=auto,backref=true,backrefstyle=two,natbib=true,citestyle=numeric,bibstyle=alphabetic]{biblatex}
 	\fi
 \fi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
