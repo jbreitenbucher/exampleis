@@ -1552,77 +1552,80 @@
 	\fi
 }%
 \newcommand*\l@part[2]{%
-  \ifnum \c@tocdepth >-2\relax
-    \addpenalty{-\@highpenalty}%
-    \addvspace{2.25em \@plus\p@}%
-    \setlength\@tempdima{3em}%
-    \begingroup
-      \parindent \z@ \rightskip \@pnumwidth
-      \parfillskip -\@pnumwidth
-      {\leavevmode
-       \large \bfseries #1\hfil \hb@xt@\@pnumwidth{\hss #2}}\par
-       \nobreak
-         \global\@nobreaktrue
-         \everypar{\global\@nobreakfalse\everypar{}}%
-    \endgroup
-  \fi}%
+	\ifnum \c@tocdepth >-2\relax
+		\addpenalty{-\@highpenalty}%
+		\addvspace{2.25em \@plus\p@}%
+		\setlength\@tempdima{3em}%
+		\begingroup
+			\parindent \z@ \rightskip \@pnumwidth
+			\parfillskip -\@pnumwidth
+			{\leavevmode\large \bfseries #1\hfil \hb@xt@\@pnumwidth{\hss #2}}
+			\par
+			\nobreak
+			\global\@nobreaktrue
+			\everypar{\global\@nobreakfalse\everypar{}}%
+		\endgroup
+	\fi
+}%
 \newcommand*\l@chapter[2]{%
-  \ifnum \c@tocdepth >\m@ne
-    \addpenalty{-\@highpenalty}%
-    \vskip 0.5em \@plus\p@
-    \setlength\@tempdima{1.5em}%
-    \begingroup
-      \parindent \z@ \rightskip \@pnumwidth
-      \parfillskip -\@pnumwidth
-      \leavevmode % removed \bfseries - JB
-      \advance\leftskip\@tempdima
-      \hskip -\leftskip
-      #1\nobreak\hfil \nobreak\hb@xt@\@pnumwidth{\hss #2}\par
-      \penalty\@highpenalty
-    \endgroup
-  \fi}%
+	\ifnum \c@tocdepth >\m@ne
+		\addpenalty{-\@highpenalty}%
+		\vskip 0.5em \@plus\p@
+		\setlength\@tempdima{1.5em}%
+		\begingroup
+			\parindent \z@ \rightskip \@pnumwidth
+			\parfillskip -\@pnumwidth
+			\leavevmode % removed \bfseries - JB
+			\advance\leftskip\@tempdima
+			\hskip -\leftskip
+			#1\nobreak\hfil \nobreak\hb@xt@\@pnumwidth{\hss #2}\par
+			\penalty\@highpenalty
+		\endgroup
+	\fi
+}%
 \newcommand*\l@section{\@dottedtocline{1}{1.5em}{2.3em}}
 \newcommand*\l@subsection{\@dottedtocline{1}{3.8em}{3.2em}}
 \newcommand*\l@subsubsection{\@dottedtocline{1}{7.0em}{4.1em}}
 \newcommand*\l@paragraph{\@dottedtocline{1}{10em}{5em}}
 \newcommand*\l@subparagraph{\@dottedtocline{1}{12em}{6em}}
 \newcommand\listoffigures{%
-    \if@twocolumn
-      \@restonecoltrue\onecolumn
-    \else
-      \@restonecolfalse
-    \fi
-     \chapter*{\listfigurename}%
-     \@mkboth{\listfigurename}% remove MakeUpperCase - JB
-              {\listfigurename}% remove MakeUpperCase - JB
-            \addcontentsline{toc}{chapter}{\listfigurename}
-            \@tocheadline{Figure}{Page}
-    {\def\baselinestretch{1}% single space - JB
-    \normalsize
-\@starttoc{lof}%
-}%
-    \if@restonecol\twocolumn\fi
-    }
+	\if@twocolumn
+		\@restonecoltrue\onecolumn
+	\else
+		\@restonecolfalse
+	\fi
+	\chapter*{\listfigurename}%
+	\@mkboth{\listfigurename}{\listfigurename}% remove MakeUpperCase - JB
+	\addcontentsline{toc}{chapter}{\listfigurename}
+	\@tocheadline{Figure}{Page}
+	 {\def\baselinestretch{1}% single space - JB
+	 \normalsize
+	 \@starttoc{lof}%
+	 }%
+	 \if@restonecol
+	 	\twocolumn
+	\fi
+}
 \newcommand*\l@figure{\@dottedtocline{0}{0.5em}{3.2em}}
 \newcommand\listoftables{%
-    \if@twocolumn
-      \@restonecoltrue\onecolumn
-    \else
-      \@restonecolfalse
-    \fi
-    \chapter*{\listtablename}%
-      \@mkboth{%
-          \listtablename}% remove MakeUpperCase - JB
-         {\listtablename}% remove MakeUpperCase - JB
-         \addcontentsline{toc}{chapter}{\listtablename}
-         \@tocheadline{Table}{Page}%
-         {\def\baselinestretch{1}% single space - JB
-\normalsize
-\@starttoc{lot}%
-}%
-    \if@restonecol\twocolumn\fi
-    }
-    \let\l@table\l@figure
+	\if@twocolumn
+		\@restonecoltrue\onecolumn
+	\else
+		\@restonecolfalse
+	\fi
+	\chapter*{\listtablename}%
+	\@mkboth{\listtablename}{\listtablename}% remove MakeUpperCase - JB
+	\addcontentsline{toc}{chapter}{\listtablename}
+	\@tocheadline{Table}{Page}%
+	{\def\baselinestretch{1}% single space - JB
+	\normalsize
+	\@starttoc{lot}%
+	}%
+	\if@restonecol
+		\twocolumn
+	\fi
+}
+\let\l@table\l@figure
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Make redefinitions to allow listings package to work with woosterthesis
 % Thanks to Adam Anthony for finding the listings package.
