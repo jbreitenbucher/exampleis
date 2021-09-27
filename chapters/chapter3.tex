@@ -1,10 +1,10 @@
 %!TEX root = ../username.tex
 \chapter{Working with bibliographies and indicies}\label{bibind}
-I would highly recommend that you use Bib\TeX{} to create your bibliography. Bib\TeX{} processes a special .bib file. The .bib file is where you enter your bibliographic information. A sample entry looks something like
+I would highly recommend that you use Bib\LaTeX{} for your bibliography, and that is what this class uses as of August 2022. Bib\LaTeX{} supports foreign languages and UTF-8 and provides a number of styles for formatting references (ACS, Chicago, APA, Turabian). For many people it also is easier to customize than Bib\TeX{} with natbib, should you need to customize the formatting of references. Bib\LaTeX{} also can make use of the Biber reference processing application which provides support for foreign languages and more sophisticated sorting options than Bib\TeX{}. You still processes a special .bib file. The .bib file is where you enter your bibliographic information. Sample entries look something like
 \begin{singlespace}\small
 \begin{verbatim}
 @article{feu02,
-author=		{Thomas~Feuerstack},
+author=		{Thomas Feuerstack},
 title=			{Introduction to pdf{\TeX{}}}, 
 journal=		{TUGboat}, 
 volume=		{23},
@@ -18,13 +18,13 @@ or
 \begin{singlespace}\small
 \begin{verbatim}
 @book{mgbcr04,
-author=			{Frank~Mittelbach and Michel~Goossens and
-Johannes~Braams and David~Carlisle and Chris~Rowley},
-title=				{The \LaTeX\ Companion},
-publisher=			{Addison Wesley Professional},
-edition=			{2nd},
-address=			{New York},
-year=				2004}
+author=		{Frank Mittelbach and Michel Goossens and
+Johannes Braams and David Carlisle and Chris Rowley},
+title=			{The \LaTeX\ Companion},
+publisher=		{Addison Wesley Professional},
+edition=		{2nd},
+address=		{New York},
+year=			2004}
 \end{verbatim}
 \end{singlespace}
 
@@ -32,12 +32,12 @@ For a Web site I would recommend the following
 \begin{singlespace}\small
 \begin{verbatim}
 @misc{brei04,
-author = 			{Jon~Breitenbucher},
-title = 				{{W}ooster related {L}a{T}e{X} files},
-url = 				{http://jbreitenbuch.wooster.edu/~jonb/latex/},
+author = 		{Jon Breitenbucher},
+title = 		{{W}ooster related {L}a{T}e{X} files},
+url = 			{https://woolatex.spaces.wooster.edu},
 howpublished=	{World Wide Web},
-year=				2004,
-note = 			{Accessed on 03/11/2004}}
+year=			2021,
+note = 		{Accessed on 09/27/2021}}
 \end{verbatim}
 \end{singlespace}
 
