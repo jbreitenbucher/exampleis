@@ -1,0 +1,48 @@
+%!TEX root = ../username.tex
+\chapter{Working with bibliographies and indicies}\label{bibind}
+I would highly recommend that you use Bib\TeX{} to create your bibliography. Bib\TeX{} processes a special .bib file. The .bib file is where you enter your bibliographic information. A sample entry looks something like
+\begin{singlespace}\small
+\begin{verbatim}
+@article{feu02,
+author=		{Thomas~Feuerstack},
+title=			{Introduction to pdf{\TeX{}}}, 
+journal=		{TUGboat}, 
+volume=		{23},
+pages=		{329--334},
+number=		{3/4},
+url=			{http://www.tug.org/TUGboat/Articles/tb23-3-4/tb75feu.pdf},
+year=			2002}
+\end{verbatim}
+\end{singlespace}
+or
+\begin{singlespace}\small
+\begin{verbatim}
+@book{mgbcr04,
+author=			{Frank~Mittelbach and Michel~Goossens and
+Johannes~Braams and David~Carlisle and Chris~Rowley},
+title=				{The \LaTeX\ Companion},
+publisher=			{Addison Wesley Professional},
+edition=			{2nd},
+address=			{New York},
+year=				2004}
+\end{verbatim}
+\end{singlespace}
+
+For a Web site I would recommend the following
+\begin{singlespace}\small
+\begin{verbatim}
+@misc{brei04,
+author = 			{Jon~Breitenbucher},
+title = 				{{W}ooster related {L}a{T}e{X} files},
+url = 				{http://jbreitenbuch.wooster.edu/~jonb/latex/},
+howpublished=	{World Wide Web},
+year=				2004,
+note = 			{Accessed on 03/11/2004}}
+\end{verbatim}
+\end{singlespace}
+
+You can make a reference by typing \verb|\citet{mgbcr04}| to produce \citet{mgbcr04}. Other forms for citation include \verb|\citep{mgbcr04}| or  \verb|\citeauthor| \verb|{mgbcr04}| to produce \citep{mgbcr04} or \citeauthor{mgbcr04} respectively. You can consult \citet{kd03} or \citet{mgbcr04} to find out how to format entries in the .bib file and what options each reference type has.\footnote{You could also use footnotes if your department called for that.}
+
+Indicies are also relatively easy to create. If I wanted to have Wooster\index{Wooster} show up in the index, I would enter \verb|Wooster\index{Wooster}| in my source file. I could create a subentry for User Services\index{Wooster!User Services} by entering \verb|User Services|\verb|\index{Wooster!User Services}|. A subsubentry for Help Desk\index{Wooster!User Services!Help Desk} would be entered as \verb|\index{Wooster!User| \verb|Services!Help Desk}|.
+
+To create the index one needs to make sure to uncomment the \verb|\makeindex| command in the \texttt{username.tex} file. One also needs to uncomment the makeidx entry in the \verb|styles/packages.tex| file and then run the Makeindex program. Consult \citet{kd03} or \citet{mgbcr04} for further information.

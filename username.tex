@@ -149,7 +149,7 @@ I would like to acknowledge Prof. Lowell Boone in the Physics Department for his
 %                                                                                       
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{vita} 
+%\begin{vita} 
 % You talk about yourself and how you got to where you are now. There is a structured form for the Vita that can be used if you want, but I don't encourage it.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -179,20 +179,20 @@ I would like to acknowledge Prof. Lowell Boone in the Physics Department for his
 %
 %%%This is for any publications you might have.%%%%%
 
-\begin{publist}  
-\pubitem{\quad}
-\pubitem{\quad}
-\end{publist} 
-
-\begin{fieldsstudy} 
-    \majorfield{Major}
-	\minorfield{Minor}
-    \specialization{Area of IS research}
-    %\begin{studieslist}
-   %\studyitem{Abstract Algebra}{Hampton}
-   %\end{studieslist}
-  \end{fieldsstudy}
-\end{vita}
+%\begin{publist}  
+%\pubitem{\quad}
+%\pubitem{\quad}
+%\end{publist} 
+%
+%\begin{fieldsstudy} 
+%    \majorfield{Major}
+%	\minorfield{Minor}
+%    \specialization{Area of IS research}
+%    %\begin{studieslist}
+%   %\studyitem{Abstract Algebra}{Hampton}
+%   %\end{studieslist}
+%  \end{fieldsstudy}
+%\end{vita}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -230,9 +230,11 @@ I would like to acknowledge Prof. Lowell Boone in the Physics Department for his
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \input{chapters/introduction}
-\input{chapters/chapter1}
-\input{chapters/chapter2}
+\input{chapters/background}
 \input{chapters/chapter3}
+\input{chapters/chapter4}
+\input{chapters/results}
+\input{chapters/conclusion}
 %\input{chapters/chapter4}
 %\input{chapters/chapter5}
 %\input{chapters/chapter6}
@@ -311,19 +313,19 @@ I would like to acknowledge Prof. Lowell Boone in the Physics Department for his
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\ifthenelse{\boolean{colophon}}{
-\begin{colophon}
-This Independent Study was designed by Dr. Jon Breitenbucher.\newline
-It was edited and set into type in Wooster, Ohio,\newline
-using the \ifthenelse{\boolean{xetex}}{\XeTeX\ typesetting system designed by Jonathan Kew}{\LaTeX\ typesetting system designed by Leslie Lamport}\newline
-and based on the original \TeX\ system of Donald Knuth.\newline
-It was printed and bound by Office Services at The College of Wooster.
-
-The text face is Adobe Garamond Pro, designed by Robert Slimbach.\newline
-This is the Opentype version distributed by Adobe Systems\newline
-and purchased as part of the Adobe Type Classics for Learning.
-
-The paper is standard laser copier paper and not of archival quality.
-\end{colophon}}{}
+%\ifthenelse{\boolean{colophon}}{
+%\begin{colophon}
+%This Independent Study was designed by Dr. Jon Breitenbucher.\newline
+%It was edited and set into type in Wooster, Ohio,\newline
+%using the \ifthenelse{\boolean{xetex}}{\XeTeX\ typesetting system designed by Jonathan %Kew}{\LaTeX\ typesetting system designed by Leslie Lamport}\newline
+%and based on the original \TeX\ system of Donald Knuth.\newline
+%It was printed and bound by Office Services at The College of Wooster.
+%
+%The text face is Adobe Garamond Pro, designed by Robert Slimbach.\newline
+%This is the Opentype version distributed by Adobe Systems\newline
+%and purchased as part of the Adobe Type Classics for Learning.
+%
+%The paper is standard laser copier paper and not of archival quality.
+%\end{colophon}}{}
 \clearpage\thispagestyle{empty}\null\clearpage
 \end{document}
