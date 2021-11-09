@@ -5,11 +5,15 @@
 signal processing
 synthesizer
 
-\section[Short name]{Project Goals}\label{projectGoals}
-\subsection[Custom synthesizer]{Custom synthesizer}\label{}
-real time audio
-post processed audio
+\input{chapters/project-goals}
+% real-time audio
+% post processed audio
+% SuperCollider
 
-\section[How this will work]{How this will work}\label{}
-Math
-SuperCollider
+\section[How this will work]{How this will work}\label{how-it-works}
+% Math
+% SuperCollider
+
+To create a virtual analog modular synthesizer, there are two goals that must be accomplished: converting a real-time MIDI signal (or a post-processed audio file) into a format which the program can read, and a synthesizer application which can read this input and output a user's desired sound. Mathematically, this requires the use of the Nyquist-Shannon sampling theorem, and an understanding of digital signals and sine waves. 
+
+On the flip side, creating a virtual modular synthesizer for this project requires a significant amount of programming in the domain-specific language SuperCollider and Python. This is to create both a user interface which will interact with the user, and back-end logic, which will do the computations required to manipulate the input audio wave.

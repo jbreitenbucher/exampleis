@@ -224,6 +224,7 @@
 \RequirePackage{amsmath}% to obtain special math related commands - JB
 \RequirePackage{setspace}% to allow single and double spacing - JB
 \RequirePackage{fancyhdr}% to have fancy chapter headings - JB
+\RequirePackage{url}
 \ifxetex
 	\RequirePackage{fontspec}% allows one to easily set up fonts in the document
 	\RequirePackage{xunicode}

@@ -212,7 +212,7 @@ I would like to acknowledge Prof. Lowell Boone in the Physics Department for his
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\input{chapters/preface} % most theses do not have a preface so this should be commented
+%\input{chapters/preface} % most theses do not have a preface so this should be commented
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \mainmatter
@@ -231,7 +231,7 @@ I would like to acknowledge Prof. Lowell Boone in the Physics Department for his
 
 \input{chapters/introduction}
 \input{chapters/background}
-\input{chapters/chapter3}
+\input{chapters/theory}
 \input{chapters/chapter4}
 \input{chapters/results}
 \input{chapters/conclusion}
@@ -250,10 +250,10 @@ I would like to acknowledge Prof. Lowell Boone in the Physics Department for his
 
 \backmatter
 
-\input{appendices/math}
-\input{appendices/java}
-\input{appendices/cpp}
-\input{appendices/afterword}
+%\input{appendices/math}
+%\input{appendices/java}
+%\input{appendices/cpp}
+%\input{appendices/afterword}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -276,12 +276,13 @@ I would like to acknowledge Prof. Lowell Boone in the Physics Department for his
 
 \renewcommand\bibname{References} % changes the name of the Bibliography
 
-\nocite{*} % This command forces all the bibliography references to be printed -- not just 
+%\nocite{*} % This command forces all the bibliography references to be printed -- not just 
               % those that were explicitly cited in the text.  If you comment this out, the bibliography
               % will only include cited references.
-\ifthenelse{\boolean{woosterchicago}}{
-\bibliographystyle{woosterchicago}}{\ifthenelse{\boolean{achemso}}{
-\bibliographystyle{achemso}}{\bibliographystyle{plainnat}}}
+\bibliographystyle{acm}
+% \ifthenelse{\boolean{woosterchicago}}{
+% \bibliographystyle{woosterchicago}}{\ifthenelse{\boolean{achemso}}{
+% \bibliographystyle{achemso}}{\bibliographystyle{plainnat}}}
 % if you have used the woosterchicago class option then your references and citations will be in Chicago format. If you have used the achemso class option then your references and citations will be in the American Chemical Society format. If you do not specify a citation format then the default Wooster format will be used.
 \bibliography{references} % load our Bibliography file
 

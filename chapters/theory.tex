@@ -1,0 +1,54 @@
+%!TEX root = ../username.tex
+\chapter[Theory]{Theory}\label{theory}
+
+\section{Waveforms}
+
+
+Analog hardware processes and produces signals, while digital algorithms handle the sequences of samples (these are often called digital signals). To digitally analyze an analog signal, it must be digitized with the use of an analog-to-digital converter (commonly abbreviated as ADC). This sampling of an audio sample is carried out in two stages: discretization and quantization [ADD CITATION HERE]. Discretization involves dividing the signal into equal intervals of time, with each interval represented as a single measurement of amplitude. Quantization means that each amplitude measurement is approximated by a value from a finite set. To sample a portion of analog audio, the Nyquist-Shannon sampling theorem is used. 
+
+The Nyquist-Shannon sampling theorem states that a signal can be reconstructed exactly from its samples, as long as the sampling frequency is greater than twice the highest frequency component in the signal. 
+
+\section{Time Domain and Frequency Domain}
+
+Digital signals are studied in one of four domains: time domain, spatial domain, frequency domain, and wavelet domain. The time and frequency domains are the domains most commonly used in audio analysis. Digital audio is normally viewed in the time domain, though the discrete Fourier transform will produce the frequency domain representation. 
+
+\subsection{Time Domain}
+
+Audio is most commonly represented as a waveform, specifically the sine wave, with time plotted against the wave's amplitude. The x-axis will represent the discrete audio signal, and is normalized to represent the hours, minutes, or seconds. Normalization is the process of transposing a data set to a specific reference value, by dividing the output value by a given constant \cite{Zjalic_2021}. In audio, the most common type of normalization will be applied to a common audio waveform, to produce a signal that is normalized between the values of 1 and -1. 1 thus becomes the reference value for positive values, and -1 for negative values. To normalize audio, the following formula is applied to an audio signal: sample value $\times$ $\frac{1}{\textrm{reference value }}$. Audio normalization is useful for audio analysis, in that it allows for comparisons to be made between signals, regardless of their magnitude and sample rate \footnote{[INSERT DEF OF SAMPLE RATES]}. The y-axis then represents the magnitude of each audio sample, in which the decibels (or another magnitude unit) are a bipolar normalized value, between a positive and negative value. 
+
+To transform the time representation from samples to seconds, the sample rate must first be known. From there, it is simple to transpose \cite{Zjalic_2021}. For example, we assume that for the 44100 samples we have that the sample rate is also 44100 Hz [INSERT DEF OF HZ IF NOT IN ALREADY]. So, $44100 / 441100 = 1$ second, in that we divide the number of samples by the sample rate, to obtain a time representation in seconds. Another example may showcase this better. Assume we have 2646000 samples, and a sample rate of 44100 Hz. Then, we have $2646000/44100 = 60$ seconds.
+
+\subsection{Frequency Domain}
+The physical concept of frequency is relatively simple: it is the number of occurrences per unit of time in a given phenomenon \cite{Gabrielli_2020}. In audio, this becomes the number of repetitions, or cycles, of a sine wave. This type of frequency is known as the \textit{temporal frequency}, and will be denoted with the letter \textit{f}. For acoustic audio signals, we will be describing frequency in Hertz (H).\footnote{The reciprocal of the temporal frequency is known as the period, denoted as capital \textit{T}. This is defined as the time required to completed one full cycle at any given frequency, otherwise known as $T = \frac{1}{\textit{f}}$.} In digital signal processing, we instead will be using angular frequency (radians per second, denoted with $\omega$), which measures the angular displacement per unit of time. Thus, we have the following relation between temporal frequency, angular frequency, and period \cite{Gabrielli_2020}.
+
+\begin{align}
+    f &= \frac{\omega}{2\pi} &w &= 2\pi &f &= \frac{2\pi}{T}
+\end{align}
+
+To convert a signal into the frequency domain, and to obtain its frequency components, the Fourier Transform can be used\footnote{The Inverse Fourier Transform can be used to go from the frequency domain to the time domain.}. Transforms like these are common in audio signal processing. These are mathematical operations which allow you to observe a signal from a different perspective\footnote{The result of a transform on an audio signal can be seen in figure 2.9 of Gabrielli.}.
+
+\section{The Fourier Transform}
+Joseph Fourier (1768-1830) stated that all sounds could be represented by one or more sine waves of various frequencies, amplitudes, durations, and phases. Any sound could then be broken down into its component parts, and analyzed with Fourier analysis \cite{Winer_2018}. 
+
+The Fourier transform converts the time information to a magnitude and phase component of each frequency. With the Fourier transform, Fourier stated that any signal \textit{x} of time length \textit{t} can be broken down into the sine and cosine waves of which it is composed \cite{Zjalic_2021}, each having \textit{t} cycles. Thus, based on the properties of the specific audio signal, the Fourier Transform can be broken into four methods:
+
+\begin{enumerate}
+    \item Fourier Transform: applies to continuous signals which are aperiodic (without periodic repetitions)
+    \item Fourier Series: applies to continuous, periodic signals
+    \item Discrete Time Fourier Transform: applies to discrete signals\footnote{A signal which is defined at discrete points between positive and negative values} which are also aperiodic
+    \item Discrete Fourier Transform: applies to discrete signals which are also periodic
+\end{enumerate}
+
+Digital data, and so digital audio, has no relation to the first two methods. Sine and cosine waves in audio are defined from negative to positive infinity. So, by imagining a sine or cosine wave as simply one repetition of a series of a periodic sinusoidal, the criteria for a Discrete Fourier Transform is met \cite{Zjalic_2021}. Thus, it is the only transform that is applicable to digital audio signal processing, as it is both discrete and periodic.
+
+\subsection{Discrete Fourier Transform}
+The Discrete Fourier Transform (or DFT) takes the audio samples in the time domain as an input, and outputs two frequency domain outputs: $\frac{N}{2} + 1$ points. These outputs represent the amplitude of the sine and cosine waves, with \textit{N} the number of samples in the input, giving us the equation below \cite{Gold_Morgan_Ellis_2011}. This equation is of a finite duration sequence x(n)
+with $0 \leq n \leq N + 1$.
+
+\begin{equation}\label{eq:dft-equation}
+    X[k] = \sum_{k=0}^{N+1}x[n]e^{-j (\frac{2\pi}{N})kn}
+\end{equation}
+
+
+
+% Jean Baptiste Joseph Fourier proposed a concept in 1822 which 
