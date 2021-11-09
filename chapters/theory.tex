@@ -2,7 +2,47 @@
 \chapter[Theory]{Theory}\label{theory}
 
 \section{Waveforms}
+Joseph Fourier\footnote{The creator of the Fourier transform, and whose importance is expanded upon later in the chapter.} proved that all sounds are composed of individual sine waves, or other wave types. There are five basic waveform types: the sine wave, square wave, saw tooth wave, triangle wave, and pulse wave \cite{Winer_2018}. Each of these waves are periodic waves, repeating in a pattern of motion known as a cycle, and the period is the time length. [INSERT DIAGRAMS OF WAVES HERE]. 
 
+\subsection{Sine Waves}
+The first of the basic period waves is the sine wave. The sine wave is a signal with only one frequency, and is based on the trigonometric sine function. Onthe unit circle, the trigonometric sine function of a phase angle $\theta$ is defined as the ratio of the length of the opposite side and the hypotenus of a right triangle. [DIAGRAM OF UNIT CIRCLE] The unit circle, with a radius of 1, results in the sine function $sin\theta$ being equal to the y-value in Cartesian coordinates, where the hypotenuse of the right triangle that is formed meets the circle. [SHOW DIAGRAM OF THIS] A trigonometric sine wave can then be used to synthesize a sine wave audio signal. So, instead of calculating the sine function for single value $x$, to create the sine wave signal the sine function is performed on a time vector $t = \{t_1, t_2, \dots, t_n\}$, with units in seconds. $sin(t) = \{sin(t_1), sin(t_2), \dots, sin(t_n)\}$. This gives us the following diagram. [INSERT UNIT CIRCLE ARROW SINE WAVE DIAGRAM] The table below summarizes these transformations.
+\begin{center}
+    \begin{tabular}{c c}
+        Function Input & Output Characteristics \\
+        $sin(t)$ & $\frac{1 \textrm{ cycle}}{2\pi \textrm{ seconds}}$\\
+        $sin(2\pi \cdot t)$ & $\frac{1 \textrm{ cycle}}{1 \textrm{ second}}$\\
+        $sin(2\pi \cdot f \cdot t)$ & $\frac{f \textrm{ cycles}}{1 \textrm{ second}}$\\
+        $sin(2\pi \cdot f \cdot t + \varphi)$ & Phase offset, $\varphi \varepsilon$ $[0, 2\pi]$\\
+        $A \cdot sin(2\pi \cdot f \cdot t + \varphi)$ & Amplitude, \textit{A}
+    \end{tabular}
+\end{center}
+The resulting sine wave signal can then be written as $x[t] = A \cdot sin(2 \cdot \pi \cdot f \cdot t + \theta$. $f$ is the frequency scalar, $t$ is the time vector of samples, and $\theta$ is the phase offset, between $[0, 2\pi]$.
+
+\subsection{Square Waves}
+The second of the periodic waves, the square wave, is a signal which oscillates between a singular positive value, and a single negative value \cite{Tarr_2019}. [INSERT DIAGRAM OF SQUARE WAVE]. An approximation of a square wave can be creating by combining multiple individual harmonics, or sine functions. This method of forming an audio signal is known as \textit{additive synthesis}, in which a new timbre is created by adding together sine waves. As a square wave is the summation of the odd-numbered harmonics, the following equation can be used \cite{Tarr_2019}.
+
+\begin{align}
+    \textrm{Let } x &= 2 \cdot \pi \cdot f \cdot t \\
+    M &= \bigg \lfloor \frac{F_s}{2 \cdot f} \bigg \rfloor \\
+    \textrm{square}(x) &= \frac{4}{\pi}(sin(x) + \frac{1}{3}sin(3 \cdot x) + \frac{1}{5}sin(5 \cdot x) + \dots) \\
+    \textrm{square}(x) &= \frac{4}{\pi}\sum_{n=1, 3, 5, \dots}^{M}(n \cdot x)
+\end{align}
+
+Thus, the value \textit{M} is the harmonic with the highest frequency. This is calculated to be the number of odd harmonics less than the Nyquist frequency of $\frac{F_S}{2}$, rounded down to the nearest whole number. [INSERT DEF OF NYQUIST FREQ]
+
+\subsection{Sawtooth Waves}
+A Sawtooth wave is a signal with an amplitude which changes linearly between a minimum value, and a maximum value. [DIAGRAM SAWTOOTH HERE] Sawtooth waves are also created through additive synthesis, combining multiple sine functions together to create it. We have a similar equation to the one for square waves. 
+
+\begin{align}
+    \textrm{Let } x &= 2 \cdot \pi \cdot f \cdot t \\
+    M &= \bigg \lfloor \frac{F_s}{2 \cdot f} \bigg \rfloor \\
+    \textrm{square}(x) &= \frac{1}{2} - \frac{1}{\pi}(sin(x) + \frac{1}{2}sin(2 \cdot x) + \frac{1}{3}sin(3 \cdot x) + \dots) \\
+    \textrm{square}(x) &= \frac{1}{2} - \frac{1}{\pi}\sum_{n=1}^{M}(\frac{1}{n}sin(n \cdot x)
+\end{align}
+
+One thing to notice, is the equations for saw tooth waves and square waves are very similar, with both waves being the summation of the odd harmonics of the fundamental frequency.
+
+\subsection{Triangle Waves}
 
 Analog hardware processes and produces signals, while digital algorithms handle the sequences of samples (these are often called digital signals). To digitally analyze an analog signal, it must be digitized with the use of an analog-to-digital converter (commonly abbreviated as ADC). This sampling of an audio sample is carried out in two stages: discretization and quantization [ADD CITATION HERE]. Discretization involves dividing the signal into equal intervals of time, with each interval represented as a single measurement of amplitude. Quantization means that each amplitude measurement is approximated by a value from a finite set. To sample a portion of analog audio, the Nyquist-Shannon sampling theorem is used. 
 
