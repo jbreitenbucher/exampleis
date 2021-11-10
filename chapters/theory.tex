@@ -42,10 +42,6 @@ A Sawtooth wave is a signal with an amplitude which changes linearly between a m
 
 One thing to notice, is the equations for saw tooth waves and square waves are very similar, with both waves being the summation of the odd harmonics of the fundamental frequency \cite{Tarr_2019}.
 
-Analog hardware processes and produces signals, while digital algorithms handle the sequences of samples (these are often called digital signals). To digitally analyze an analog signal, it must be digitized with the use of an analog-to-digital converter (commonly abbreviated as ADC). This sampling of an audio sample is carried out in two stages: discretization and quantization [ADD CITATION HERE]. Discretization involves dividing the signal into equal intervals of time, with each interval represented as a single measurement of amplitude. Quantization means that each amplitude measurement is approximated by a value from a finite set. To sample a portion of analog audio, the Nyquist-Shannon sampling theorem is used. 
-
-The Nyquist-Shannon sampling theorem states that a signal can be reconstructed exactly from its samples, as long as the sampling frequency is greater than twice the highest frequency component in the signal. 
-
 \section{Time Domain and Frequency Domain}
 
 Digital signals are studied in one of four domains: time domain, spatial domain, frequency domain, and wavelet domain. The time and frequency domains are the domains most commonly used in audio analysis. Digital audio is normally viewed in the time domain, though the discrete Fourier transform will produce the frequency domain representation. 
