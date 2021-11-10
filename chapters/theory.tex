@@ -44,11 +44,11 @@ One thing to notice, is the equations for saw tooth waves and square waves are v
 
 \section{Time Domain and Frequency Domain}
 
-Digital signals are studied in one of four domains: time domain, spatial domain, frequency domain, and wavelet domain. The time and frequency domains are the domains most commonly used in audio analysis. Digital audio is normally viewed in the time domain, though the discrete Fourier transform will produce the frequency domain representation. 
+Digital signals are studied in one of four domains: time domain, spatial domain, frequency domain, and wavelet domain. For the purposes of this research, we focus most on only two of these domains: the time domain and the frequency domain. These domains are most commonly used in audio analysis and synthesis. Digital audio is normally viewed in the time domain, and through the use of the Discrete Fourier Transform (sometimes also called the Fast Fourier Transform), we are able to produce a frequency domain representation for frequency analysis.
 
 \subsection{Time Domain}
 
-Audio is most commonly represented as a waveform, specifically the sine wave, with time plotted against the wave's amplitude. The x-axis will represent the discrete audio signal, and is normalized to represent the hours, minutes, or seconds. Normalization is the process of transposing a data set to a specific reference value, by dividing the output value by a given constant \cite{Zjalic_2021}. In audio, the most common type of normalization will be applied to a common audio waveform, to produce a signal that is normalized between the values of 1 and -1. 1 thus becomes the reference value for positive values, and -1 for negative values. To normalize audio, the following formula is applied to an audio signal: sample value $\times$ $\frac{1}{\textrm{reference value }}$. Audio normalization is useful for audio analysis, in that it allows for comparisons to be made between signals, regardless of their magnitude and sample rate \footnote{[INSERT DEF OF SAMPLE RATES]}. The y-axis then represents the magnitude of each audio sample, in which the decibels (or another magnitude unit) are a bipolar normalized value, between a positive and negative value. 
+Audio is most commonly represented as a waveform, most commonly as the sine wave, with time plotted against the wave's amplitude. The x-axis will represent the discrete audio signal, and is normalized to represent the hours, minutes, or seconds. Normalization is the process of transposing a data set to a specific reference value, by dividing the output value by a given constant \cite{Zjalic_2021}. In audio, the most common type of normalization will be applied to a common audio waveform, to produce a signal that is normalized between the values of 1 and -1. 1 thus becomes the reference value for positive values, and -1 for negative values. To normalize audio, the following formula is applied to an audio signal: sample value $\times$ $\frac{1}{\textrm{reference value }}$. Audio normalization is useful for audio analysis, in that it allows for comparisons to be made between signals, regardless of their magnitude and sample rate \footnote{[INSERT DEF OF SAMPLE RATES]}. The y-axis then represents the magnitude of each audio sample, in which the decibels (or another magnitude unit) are a bipolar normalized value, between a positive and negative value. 
 
 To transform the time representation from samples to seconds, the sample rate must first be known. From there, it is simple to transpose \cite{Zjalic_2021}. For example, we assume that for the 44100 samples we have that the sample rate is also 44100 Hz [INSERT DEF OF HZ IF NOT IN ALREADY]. So, $44100 / 441100 = 1$ second, in that we divide the number of samples by the sample rate, to obtain a time representation in seconds. Another example may showcase this better. Assume we have 2646000 samples, and a sample rate of 44100 Hz. Then, we have $2646000/44100 = 60$ seconds.
 
@@ -83,6 +83,5 @@ with $0 \leq n \leq N + 1$.
     X[k] = \sum_{k=0}^{N+1}x[n]e^{-j (\frac{2\pi}{N})kn}
 \end{equation}
 
-
-
+The Discrete Fourier Transform represents the vector $x[n]$ as a combination of harmonically-related sinusoidals. 
 % Jean Baptiste Joseph Fourier proposed a concept in 1822 which 
