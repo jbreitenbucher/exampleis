@@ -135,6 +135,13 @@
 	\ifx\test@picins\t@st\@picinstrue\else\@picinsfalse\fi
 \DeclareOption{picins}{\@picinstrue}
 
+% option to use TikZ package - JB
+\newif\if@tikz
+	\expandafter\def\csname test@\jobname\endcsname{test}%
+	\def\t@st{test}%
+	\ifx\test@tikz\t@st\@tikztrue\else\@tikzfalse\fi
+\DeclareOption{tikz}{\@tikztrue}
+
 % option to produce a hyperlinked thesis for on-line viewing - JB
 \newif\if@blacklinks
 	\expandafter\def\csname test@\jobname\endcsname{test}%
@@ -1812,6 +1819,10 @@
 \fi
 \if@picins
 	\RequirePackage{wrapfig}
+\fi
+\if@tikz
+	\RequirePackage{tikz}
+	\usetikzlibrary{positioning}
 \fi
 \if@colophon
 	\setboolean{colophon}{true}
