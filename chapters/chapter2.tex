@@ -50,6 +50,72 @@ In the next example we are using the woosterthesis option \verb|picins|\index{wo
 \end{wrapfigure}
 \sample\sample\sample\sample\sample\sample\sample\sample\sample
 
+\subsection{Drawing figures in \LaTeX{}}
+
+It is also possible to use the \ip{Ti\emph{k}Z} package to draw figures like Figures \ref{tree} or \ref{lines} in your document. Ti\emph{k}Z/PGF are a pair of languages that allow users to create vector graphics as part of their \LaTeX{} document using commands that are \TeX{} macros. It is possible to create extremely complex scalable graphics using Ti\emph{k}Z, see the \href{https://en.wikipedia.org/wiki/PGF/TikZ}{Ti\emph{k}Z wikipedia entry} for some examples.
+
+\begin{singlespace}\small
+\begin{verbatim}
+\begin{figure}[!ht]\centering
+\begin{tikzpicture}[
+roundnode/.style={circle, draw=green!60, fill=green!5, very thick, minimum size=7mm},
+squarednode/.style={rectangle, draw=red!60, fill=red!5, very thick, minimum size=5mm},
+]
+%Nodes
+\node[squarednode]      (maintopic)                              {2};
+\node[roundnode]        (uppercircle)       [above=of maintopic] {1};
+\node[squarednode]      (rightsquare)       [right=of maintopic] {3};
+\node[roundnode]        (lowercircle)       [below=of maintopic] {4};
+%Lines
+\draw[->] (uppercircle.south) -- (maintopic.north);
+\draw[->] (maintopic.east) -- (rightsquare.west);
+\draw[->] (rightsquare.south) .. controls +(down:7mm) and +(right:7mm) .. (lowercircle.east);
+\end{tikzpicture}
+\caption{Tree diagram}\label{tree}
+\end{figure}
+\end{verbatim}
+\end{singlespace}
+
+\begin{figure}[!ht]\centering
+\begin{tikzpicture}[
+roundnode/.style={circle, draw=green!60, fill=green!5, very thick, minimum size=7mm},
+squarednode/.style={rectangle, draw=red!60, fill=red!5, very thick, minimum size=5mm},
+]
+%Nodes
+\node[squarednode]      (maintopic)                              {2};
+\node[roundnode]        (uppercircle)       [above=of maintopic] {1};
+\node[squarednode]      (rightsquare)       [right=of maintopic] {3};
+\node[roundnode]        (lowercircle)       [below=of maintopic] {4};
+
+%Lines
+\draw[->] (uppercircle.south) -- (maintopic.north);
+\draw[->] (maintopic.east) -- (rightsquare.west);
+\draw[->] (rightsquare.south) .. controls +(down:7mm) and +(right:7mm) .. (lowercircle.east);
+\end{tikzpicture}
+\caption{Tree diagram}\label{tree}
+\end{figure}
+
+\begin{singlespace}\small
+\begin{verbatim}
+\begin{figure}[!ht]\centering
+\begin{tikzpicture}
+\draw[gray, thick] (-1,2) -- (2,-4);
+\draw[gray, thick] (-1,-1) -- (2,2);
+\filldraw[black] (0,0) circle (2pt) node[anchor=west]{Intersection point};
+\end{tikzpicture}
+\caption{Intersecting lines}\label{lines}
+\end{figure}
+\end{verbatim}
+\end{singlespace}
+
+\begin{figure}[!ht]\centering
+\begin{tikzpicture}
+\draw[gray, thick] (-1,2) -- (2,-4);
+\draw[gray, thick] (-1,-1) -- (2,2);
+\filldraw[black] (0,0) circle (2pt) node[anchor=west]{Intersection point};
+\end{tikzpicture}
+\caption{Intersecting lines}\label{lines}
+\end{figure}
 
 \subsection{Minipages}
 
@@ -84,7 +150,7 @@ This is a minipage which is 3 in tall and 1 in wide. Bottom Text Text Text Text.
 
 In the example above, the syntax \verb|\begin{minipage}[t][3 in][t]{1 in}| follows the convention \linebreak\verb|\begin{minipage}[minipageposition][height][textposition]{width}|\index{minipage}
 
-\subsubsection[Two pictures in one figure]{How to get more than one picture in the same figure}
+\subsection[Two pictures in one figure]{How to get more than one picture in the same figure}
 
 You can use minipages to put more than one picture in a figure. Here is an example of how to do this.
 \begin{singlespace}\small
@@ -253,4 +319,3 @@ Block & 0.0358 & 0.0103 & $\degree{45}$ & 0.0163 \\ \hline
 \end{table}
 
 Please refer to Chapter 6 of \citet{kd03} for a complete discussion of tables and tabular environments.
-
