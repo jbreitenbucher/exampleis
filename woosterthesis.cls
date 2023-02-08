@@ -1664,10 +1664,14 @@
 \if@foreignlanguage
 	\ifxetex
 		\RequirePackage{polyglossia}
+		\RequirePackage[autostyle,autopunct=true]{csquotes}% to have context aware quotes when using foreign languages - JB
 	\else
 		\RequirePackage{babel}
+		\RequirePackage[autostyle,autopunct=true]{csquotes}% to have context aware quotes when using foreign languages - JB
 	\fi
 	\setboolean{foreignlanguage}{true}
+\else
+	\RequirePackage[style=american,autopunct=true]{csquotes}% to have context aware quotes when using foreign languages - JB
 \fi
 % load biblatex with chem-acs style and set boolean to true
 \if@acs
@@ -1828,6 +1832,19 @@
 	\setboolean{colophon}{true}
 \fi
 \RequirePackage{float}% to handle figures and tables - JB
+% add a makecaption definition for compatibility with caption package
+\setlength\abovecaptionskip{\f@size\p@}
+\setlength\belowcaptionskip{0\p@}
+\long\def\@makecaption#1#2{%
+  \vskip\abovecaptionskip
+  \sbox\@tempboxa{#1: #2}%
+  \ifdim \wd\@tempboxa >\hsize
+    #1: #2\par
+  \else
+    \global \@minipagefalse
+    \hb@xt@\hsize{\hfil\box\@tempboxa\hfil}%
+  \fi
+  \vskip\belowcaptionskip}
 \RequirePackage[style=base,format=hang,labelfont={bf,footnotesize},font=footnotesize, justification=raggedright]{caption}% to format captions - JB
 \RequirePackage{subfig}% to allow multiple images in a figure. subfig used instead of subfigure which is deprecated (1-24-2020) - JB
 \captionsetup[subfloat]{listofindent=4em}% set captions on subfigures - JB
