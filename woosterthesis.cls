@@ -37,7 +37,7 @@
 %%   Grave accent  \`     Left brace    \{     Vertical bar  \|
 %%   Right brace   \}     Tilde         \~}
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
-\ProvidesClass{woosterthesis}[2021/09/25 v4.2.1 Wooster IS LaTeX document class by Dr. Jon Breitenbucher]% - JB
+\ProvidesClass{woosterthesis}[2023/02/10 v4.2.2 Wooster IS LaTeX document class by Dr. Jon Breitenbucher]% - JB
 \newcommand\@ptsize{}
 \newif\if@restonecol
 \newif\if@titlepage
@@ -255,7 +255,6 @@
 \RequirePackage{amsmath}% to obtain special math related commands - JB
 \RequirePackage{setspace}% to allow single and double spacing - JB
 \RequirePackage{fancyhdr}% to have fancy chapter headings - JB
-\RequirePackage[autostyle]{csquotes}% to have context aware quotes when using foreign languages - JB
 \ifxetex
 	\RequirePackage{fontspec}% allows one to easily set up fonts in the document
 	\RequirePackage{xunicode}
