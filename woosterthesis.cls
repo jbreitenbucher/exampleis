@@ -37,7 +37,7 @@
 %%   Grave accent  \`     Left brace    \{     Vertical bar  \|
 %%   Right brace   \}     Tilde         \~}
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
-\ProvidesClass{woosterthesis}[2023/02/10 v4.2.2 Wooster IS LaTeX document class by Dr. Jon Breitenbucher]% - JB
+\ProvidesClass{woosterthesis}[2024/03/06 v4.2.3 Wooster IS LaTeX document class by Dr. Jon Breitenbucher]% - JB
 \newcommand\@ptsize{}
 \newif\if@restonecol
 \newif\if@titlepage
@@ -232,6 +232,20 @@
 	\def\t@st{test}%
 	\ifx\test@acs\t@st\@acstrue\else\@acsfalse\fi
 \DeclareOption{acs}{\@acstrue}
+
+% option to use the APA citation and reference style added in 2024
+\newif\if@apa
+	\expandafter\def\csname test@\jobname\endcsname{test}%
+	\def\t@st{test}%
+	\ifx\test@apa\t@st\@apatrue\else\@apafalse\fi
+\DeclareOption{apa}{\@apatrue}
+
+% option to use the MLA citation and reference style added in 2024
+\newif\if@mla
+	\expandafter\def\csname test@\jobname\endcsname{test}%
+	\def\t@st{test}%
+	\ifx\test@mla\t@st\@mlatrue\else\@mlafalse\fi
+\DeclareOption{mla}{\@mlatrue}
 
 % option to indicate a foreign language is being used
 \newif\if@foreignlanguage
@@ -1654,37 +1668,6 @@
 	\let\l@lstlisting\l@figure
 \fi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% Use biblatex package for the bibliography - JB
-\RequirePackage{ifthen}% to test boolean conditions - JB
-\newboolean{acs} % for American Chemical Society style
-\newboolean{chicago} % for Chicago style
-\newboolean{foreignlanguage}
-\if@foreignlanguage
-	\ifxetex
-		\RequirePackage{polyglossia}
-		\RequirePackage[autostyle,autopunct=true]{csquotes}% to have context aware quotes when using foreign languages - JB
-	\else
-		\RequirePackage{babel}
-		\RequirePackage[autostyle,autopunct=true]{csquotes}% to have context aware quotes when using foreign languages - JB
-	\fi
-	\setboolean{foreignlanguage}{true}
-\else
-	\RequirePackage[style=american,autopunct=true]{csquotes}% to have context aware quotes when using foreign languages - JB
-\fi
-% load biblatex with chem-acs style and set boolean to true
-\if@acs
-	\RequirePackage[style=chem-acs,articletitle,hyperref=auto,backref=true,backrefstyle=two,natbib=true]{biblatex}
-	\setboolean{acs}{true}
-\else % load biblatex-chicago and set boolean to true
-	\if@chicago
-		\RequirePackage[authordate,strict,autolang=other,bibencoding=inputenc,hyperref=auto,backref=true,backrefstyle=two,natbib=true,sorting=nty]{biblatex-chicago}
-		\setboolean{chicago}{true}
-	\else % load biblatex
-		\RequirePackage[hyperref=auto,backref=true,backrefstyle=two,natbib=true,style=numeric,defernumbers=true]{biblatex}
-	\fi
-\fi
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % set up the Index
 \newenvironment{theindex}
 	{
@@ -1739,6 +1722,49 @@
 \newcommand{\woopic}[2]{
 	\includegraphics[scale=#2]{#1}
 }
+
+% Use biblatex package for the bibliography - JB
+\RequirePackage{ifthen}% to test boolean conditions - JB
+\newboolean{acs} % for American Chemical Society style
+\newboolean{chicago} % for Chicago style
+\newboolean{apa} % for APA style
+\newboolean{mla} % for MLA style
+\newboolean{foreignlanguage}
+\if@foreignlanguage
+	\ifxetex
+		\RequirePackage{polyglossia}
+		\RequirePackage[autostyle,autopunct=true]{csquotes}% to have context aware quotes when using foreign languages - JB
+	\else
+		\RequirePackage{babel}
+		\RequirePackage[autostyle,autopunct=true]{csquotes}% to have context aware quotes when using foreign languages - JB
+	\fi
+	\setboolean{foreignlanguage}{true}
+\else
+	\RequirePackage[style=american,autopunct=true]{csquotes}% to have context aware quotes when using foreign languages - JB
+\fi
+% load biblatex with chem-acs style and set boolean to true
+\if@acs
+	\RequirePackage[style=chem-acs,articletitle,hyperref=auto,backref=true,backrefstyle=two,natbib=true]{biblatex}
+	\setboolean{acs}{true}
+\else % load biblatex-chicago and set boolean to true
+	\if@chicago
+		\RequirePackage[annotation,notes,autocite=footnote,authordate,strict=true,autolang=other,bibencoding=inputenc,hyperref=auto,backref=true,backrefstyle=two,natbib=true,sorting=nty]{biblatex-chicago}
+		\setboolean{chicago}{true}
+	\else
+		\if@mla
+			\RequirePackage[style=mla,autolang=other,bibencoding=inputenc,hyperref=auto,backref=true,backrefstyle=two,natbib=true,sorting=nty]{biblatex}
+			\setboolean{mla}{true}	
+		\else
+			\if@apa
+				\RequirePackage[style=apa,autolang=other,bibencoding=inputenc,hyperref=auto,backref=true,backrefstyle=two,natbib=true,sorting=nty]{biblatex}
+				\setboolean{apa}{true}	
+			\else % load biblatex
+				\RequirePackage[hyperref=auto,backref=true,backrefstyle=two,natbib=true,style=numeric,defernumbers=true]{biblatex}
+			\fi
+		\fi
+	\fi
+\fi
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Set up the initial names for various items
 \newcommand{\thesistype}[1]{\def\th@sistype{#1}}
 \let\th@sistype\relax
