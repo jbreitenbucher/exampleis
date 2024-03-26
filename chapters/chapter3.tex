@@ -1,6 +1,6 @@
 %!TEX root = ../username.tex
 \chapter{Working with bibliographies and indicies}\label{bibind}
-I would highly recommend that you use Bib\LaTeX{} for your bibliography, and that is what this class uses as of August 2022. Bib\LaTeX{} supports foreign languages and UTF-8 and provides a number of styles for formatting references (ACS, Chicago, APA, Turabian). For many people it also is easier to customize than Bib\TeX{} with natbib, should you need to customize the formatting of references. Bib\LaTeX{} also can make use of the Biber reference processing application which provides support for foreign languages and more sophisticated sorting options than Bib\TeX{}. You still process a special .bib file. The .bib file is where you enter your bibliographic information. Sample entries look something like
+I would highly recommend that you use Bib\LaTeX{} for your bibliography, and that is what this class uses as of August 2022. Bib\LaTeX{} supports foreign languages and UTF-8 and provides several styles for formatting references (ACS, Chicago, APA, Turabian). For many people it also is easier to customize than Bib\TeX{} with natbib, should you need to customize the formatting of references. Bib\LaTeX{} also can make use of the Biber reference processing application which provides support for foreign languages and more sophisticated sorting options than Bib\TeX{}. You still process a special .bib file. The .bib file is where you enter your bibliographic information. Sample entries look something like
 \begin{singlespace}\small
 \begin{verbatim}
 @article{feu02,
@@ -45,4 +45,4 @@ You can make a reference by typing \verb|\citet{mgbcr04}| to produce \citet{mgbc
 
 Indicies are also relatively easy to create. If I wanted to have Wooster\index{Wooster} show up in the index, I would enter \verb|Wooster\index{Wooster}| in my source file. I could create a subentry for User Services\index{Wooster!User Services} by entering \verb|User Services|\verb|\index{Wooster!User Services}|. A subsubentry for Help Desk\index{Wooster!User Services!Help Desk} would be entered as \verb|\index{Wooster!User| \verb|Services!Help Desk}|.
 
-To create the index one needs to make sure to uncomment the \verb|\makeindex| command in the \texttt{username.tex} file. One also needs to uncomment the makeidx entry in the \verb|styles/packages.tex| file and then run the Makeindex program. Consult \citet{kd03} or \citet{mgbcr04} for further information.
+To create the index, one needs to make sure to uncomment the \verb|\makeindex| command in the \texttt{username.tex} file. One also needs to uncomment the makeidx entry in the \verb|styles/packages.tex| file and then run the Makeindex program. Consult \citet{kd03} or \citet{mgbcr04} for further information.
