@@ -121,6 +121,13 @@
 	\ifx\test@wblack\t@st\@wblacktrue\else\@wblackfalse\fi
 \DeclareOption{wblack}{\@wblacktrue}
 
+% the scottie option to insert a grayscale Scottie in the background of the cover instead of Kauke - JB
+\newif\if@scottie
+	\expandafter\def\csname test@\jobname\endcsname{test}%
+	\def\t@st{test}%
+	\ifx\test@scottie\t@st\@scottietrue\else\@scottiefalse\fi
+\DeclareOption{scottie}{\@scottietrue}
+
 %the palatino option typesets the thesis in Palatino, the College font.- JB
 \newif\if@palatino
 	\expandafter\def\csname test@\jobname\endcsname{test}%
@@ -282,22 +289,35 @@
 				\parbox[b][\paperheight]{\paperwidth}{%       
 					\vfill
 					\centering
-					\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{W_black}%
+					\includegraphics[width=.9\paperwidth,height=.9\paperheight,keepaspectratio]{W_black}%
 					\vfill
 				}
 			}
 		}
 	\else
-		\newcommand\BackgroundPicture{%
-   			\put(-3,-5){%
-     				\parbox[b][\paperheight]{\paperwidth}{%       
-       					\vfill
-       					\centering
-       					\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{kauke_arch_gray}%
-       					\vfill
-     				}
+		\if@scottie
+			\newcommand\BackgroundPicture{%
+   				\put(-3,-5){%
+     					\parbox[b][\paperheight]{\paperwidth}{%       
+       						\vfill
+       						\centering
+       						\includegraphics[width=.8\paperwidth,height=.8\paperheight,keepaspectratio]{scottie_head_grayscale}%
+       						\vfill
+     					}
+				}
 			}
-		}
+		\else
+			\newcommand\BackgroundPicture{%
+   				\put(-3,-5){%
+     					\parbox[b][\paperheight]{\paperwidth}{%       
+       						\vfill
+       						\centering
+       						\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{kauke_arch_gray}%
+       						\vfill
+     					}
+				}
+			}
+		\fi
 	\fi
 \else % alter class behavior based on version of TeX - JB
 	\RequirePackage[utf8]{inputenc}
@@ -307,29 +327,42 @@
 	\def\kaukelogo{\includegraphics[scale=.4]{kauke_wordmark}}
 	\def\woosterlogo{\includegraphics[scale=.4]{wooster_stacked_black}}
 	\RequirePackage{eso-pic}
-		\if@wblack
+	\if@wblack
+		\newcommand\BackgroundPicture{%
+			\put(-3,-5){%
+				\parbox[b][\paperheight]{\paperwidth}{%       
+					\vfill
+					\centering
+					\includegraphics[width=.9\paperwidth,height=.9\paperheight,keepaspectratio]{W_black}%
+					\vfill
+				}
+			}
+		}
+	\else
+		\if@scottie
 			\newcommand\BackgroundPicture{%
-				\put(-3,-5){%
-					\parbox[b][\paperheight]{\paperwidth}{%       
-						\vfill
-						\centering
-						\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{W_black}%
-						\vfill
-					}
+   				\put(-3,-5){%
+     					\parbox[b][\paperheight]{\paperwidth}{%       
+       						\vfill
+       						\centering
+       						\includegraphics[width=.8\paperwidth,height=.8\paperheight,keepaspectratio]{scottie_head_grayscale}%
+       						\vfill
+     					}
 				}
 			}
 		\else
 			\newcommand\BackgroundPicture{%
-				\put(-3,-5){%
-					\parbox[b][\paperheight]{\paperwidth}{%       
-						\vfill
-						\centering
-						\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{kauke_arch_gray}%
-						\vfill
-					}
+   				\put(-3,-5){%
+     					\parbox[b][\paperheight]{\paperwidth}{%       
+       						\vfill
+       						\centering
+       						\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{kauke_arch_gray}%
+       						\vfill
+     					}
 				}
 			}
 		\fi
+	\fi
 \fi
 
 % Kyle Kindbom requested a theorem style where the theorem header was on a separate line.
