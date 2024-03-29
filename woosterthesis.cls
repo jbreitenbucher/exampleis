@@ -390,7 +390,6 @@
 \widowpenalty 100000
 \displaywidowpenalty 5000
 \brokenpenalty 100000
-\RequirePackage[letterpaper,marginparwidth=.6in,hmargin={1.5in,1in},top=1in,bottom=1in]{geometry}
 \@lowpenalty   51
 \@medpenalty  151
 \@highpenalty 301
@@ -416,6 +415,7 @@
 \setlength\intextsep{11 pt plus 11 pt minus 3 pt}
 
 \if@twoside
+	\RequirePackage[letterpaper,marginparwidth=.6in,hmargin={1.25in,1in},top=1in,bottom=1in]{geometry}
 	\def\ps@headings{%
 		\let\@oddfoot\@empty\let\@evenfoot\@empty
 		\def\@evenhead{\thepage\hfil\slshape\leftmark}%
@@ -446,6 +446,7 @@
         		}
         }
 \else
+	\RequirePackage[letterpaper,marginparwidth=.6in,hmargin={1in,1in},top=1in,bottom=1in]{geometry}
 	\def\ps@headings{%
 		\let\@oddfoot\@empty
 		\def\@oddhead{{\slshape\rightmark}\hfil\thepage}%
