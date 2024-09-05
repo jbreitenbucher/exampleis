@@ -1,0 +1,104 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%                                                       Personal Commands
+%                                                                    
+% There will be certain commands that you use frequently in the thesis. You can give these
+% commands new names which are easier for you to remember. You can also combine several
+% commands into a new command of your own. See The LaTeX Companion or Guide to LaTeX for
+% examples on defining your own commands. These are commands that I defined to cut down on typing.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\fl}{\ell}
+\newcommand{\lt}{\LaTeX\ }
+\newcommand{\msw}{Word\texttrademark\ }
+\newcommand{\xt}{\ifthenelse{\boolean{xetex}}{\XeTeX\ }{XeTeX} }
+%\newcommand{\Cl}{\ensuremath{\textup{C}_\fl}}
+%\newcommand{\bCl}{C$_{\ell}$}
+%\newcommand{\Al}{\ensuremath{\textup{A}_\fl}}
+%\newcommand{\msum}{{(m_1+\cdots+m_\ell)}}
+%\newcommand{\Nsum}{{(N_1+\cdots+N_\ell)}}
+%\newcommand{\ysum}{{(y_1+\cdots+y_\ell)}}
+%\newcommand{\Nsub}{{N_1+\cdots+N_\ell}}
+%\newcommand{\ysub}{{y_1+\cdots+y_\ell}}
+%\newcommand{\xsub}{{x_1+\cdots+x_\ell}}
+%\newcommand{\ysqsum}{{y_1^2+\cdots +y_{\fl}^2}}
+%\newcommand{\msqsum}{{m_1^2+\cdots +m_{\fl}^2}}
+%\newcommand{\ratio}{\left(\frac{\beta}{\alpha}\right)}
+%\newcommand{\LT}{\ensuremath{\LaTeX{}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% These commands have one argument and are entered as \commandname{argument}.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newcommand{\bd}[1]{\textbf{#1}}
+\newcommand{\mbd}[1]{{\mathbf{#1}}}
+%\newcommand{\abs}[1]{\vert{#1}\vert}
+\newcommand{\bvec}[1]{{\mbd{#1}}}
+%\newcommand{\lvec}[1]{\abs{\bvec{#1}}}
+%\newcommand{\nesmallprod}[1]{\prod_{\substack{#1=1\\
+%#1\neq p}}^{\fl}}
+%\newcommand{\esec}[1]{e_{2}({#1}_1,\ldots ,{#1}_\fl)}
+%\newcommand{\smallprod}[1]{\prod_{#1=1}^{\fl}}
+%\newcommand{\incsum}[1]{{#1}_2+2{#1}_3+\cdots +(\fl -1){#1}_\fl}
+%\newcommand{\binomsum}[1]{\binom{{#1}_1}{2}+\cdots +\binom{{#1}_\fl}{2}}
+%\newcommand{\imultsum}[1]{\multsum{{#1}_k\ge 0}{k=1,\ldots ,\fl}}
+%\newcommand{\diagsum}[1]{\sum _{\substack{{#1}_k\ge 0\\
+%k=1, \ldots ,\fl\\
+%\lvec{#1}=m}}}
+%\newcommand{\Mb}[1][\fl]{\ensuremath{\textup{\bd{M}}_b^{(#1)}}}
+%\newcommand{\HLV}[1]{\ensuremath{\textup{\bd{H}}_{#1}}}
+%\newcommand{\Rq}[1][p]{\ensuremath{\textup{R}_q^{(#1)}}}
+\newcommand{\degree}[1]{\ensuremath{#1^{\circ}}}
+\newcommand{\ip}[1]{\texttt{#1}\index{packages!#1}}
+\newcommand{\ic}[1]{\texttt{$\backslash$#1}\index{commands!#1}}
+\newcommand{\ie}[1]{#1\index{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% These commands have 2 or more arguments some with default values for the first argument. You
+% can learn a lot about constructing complicated equations by studying the commands in this %section.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newcommand{\qbinom}[2]{\ensuremath{\left[{#1}\atop{#2}\right]_q}}
+%\newcommand{\sqprod}[2]{\prod_{#1,#2=1}^{\fl}}
+%\newcommand{\triprod}[2]{\prod_{1\le #1<#2\le \fl}}
+%\newcommand{\nesqprod}[2]{\prod_{\substack{#1,#2=1\\
+%#1,#2\neq p}}^{\fl}}
+%\newcommand{\netriprod}[2]{\prod_{\substack{1\le #1<#2\le \fl\\
+%#1,#2\neq p}}}
+\newcommand{\qrfac}[3][\ ]{\left({#2}\right)_{#3}^{#1}}
+%\newcommand{\multsum}[2]{\sum_{\substack{{#1}\\
+%\\
+%{#2}}}}
+%\newcommand{\fmultsum}[2][N]{\multsum{0\le {{#2}_k}\le {{#1}_k}}{k=1,\ldots ,\fl}}
+%\newcommand{\pq}[2]{\ _{#1}\varphi_{#2}}
+%\newcommand{\mess}[2][y_k]{\frac{\qrfac{\alpha x_k}{#2}\qrfac{qx_k\beta^{-1}}{#2}}{\qrfac{\beta x_k}{#1}
+%\qrfac{qx_k\alpha^{-1}}{#1}}}
+%\newcommand{\MG}[7][\fl]{\ensuremath{\left[\textup{MG}\right]_{#2}^{(#1)}{#3}q;{#4};{#5}^{#6}{#7}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% These commands define new environments
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcounter{unnumft}
+\setcounter{unnumft}{0}
+\newenvironment{unnumft}[2]{\renewcommand{\thefootnote}{}\footnote{#1}\footnote{#2}} {\addtocounter{footnote}{-2}}
+\newenvironment{wooexample}{\small
+\begin{singlespace}
+\begin{example}}{\end{example}
+\end{singlespace}}
+
+\graphicspath{{./figures/}}% for setting where to look for figures
+%\citestyle{wooster}% change the style of citations. Math and CS people should leave this alone.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Modify the formatting of the back references
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\DefineBibliographyStrings{english}{%
+	backrefpage  = {page }, % for single page number
+	backrefpages = {pages } % for multiple page numbers
+}
+
+
+
+

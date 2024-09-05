@@ -1,0 +1,58 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% This is where one would tell \LaTeX{} how to format Theorems, Definitions, etc. and also
+% indicate the environment names. You need the amsthm package (loaded in the woosterthesis %class) in order for these commands to work.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% an example of defining your own theoremstyle
+%\newtheoremstyle{break}% name
+%  {\topsep}%      Space above
+%  {\topsep}%      Space below
+%  {\itshape}%         Body font
+%  {}%         Indent amount (empty = no indent, \parindent = para indent)
+%  {\bfseries}% Thm head font
+%  {.}%        Punctuation after thm head
+%  {\newline}%     Space after thm head: " " = normal interword space;
+%        %       \newline = linebreak
+%  {}%         Thm head spec (can be left empty, meaning `normal')
+\newtheoremstyle{scthm}{\topsep}{\topsep}{\itshape}{}{\bfseries\scshape}{}{ }{}% small cap font for the heading
+\newtheoremstyle{itdefn}{\topsep}{\topsep}{\itshape}{}{\bfseries}{.}{ }{}% italic definitions
+\newtheoremstyle{scdefn}{\topsep}{\topsep}{\itshape}{}{}{}{ }{\thmname{\textbf{#1}}\thmnumber{ \textbf{#2}}\thmnote{ \scshape #3:}}% small cap headings and italic text.
+
+\theoremstyle{break}% this theoremstyle will put the text of the theorem on a new line.
+\newtheorem{thm}{Theorem}[chapter]%number theorems within chapters 
+%\newtheorem{cor}[thm]{Corollary}%by using [thm] we are numbering these environments with the theorems.
+\newtheorem{cor}{Corollary}[chapter]%number corollaries within chapters .
+%\newtheorem{lem}[thm]{Lemma}
+\newtheorem{lem}{Lemma}[chapter]
+%\newtheorem{prop}[thm]{Proposition}
+\newtheorem{prop}{Proposition}[chapter]
+
+\theoremstyle{scdefn}
+%\newtheorem{defn}[thm]{Definition}
+\newtheorem{defn}{Definition}[chapter]
+\theoremstyle{remark}
+%\newtheorem{rem}[thm]{Remark}
+\newtheorem{rem}{Remark}[chapter]
+\renewcommand{\therem}{}
+%\newtheorem{ex}[thm]{Example}
+\newtheorem{ex}{Example}[chapter]
+
+\theoremstyle{plain}
+%\newtheorem{note}[thm]{Notation}
+\newtheorem{note}{Notation}[chapter]
+\renewcommand{\thenote}{}
+%\newtheorem{nts}[thm]{Note to self}%use to remind yourself of things yet to do
+\newtheorem{nts}{Note to self}[chapter]
+\renewcommand{\thents}{}
+%\newtheorem{terminology}[thm]{Terminology}
+\newtheorem{terminology}{Terminology}[chapter]
+\renewcommand{\theterminology}{}
+
+\theoremstyle{itdefn}
+\newtheorem{bdefn}{Definition}[chapter]
+\newsavebox{\fmbox} 
+\newenvironment{boxeddefn}[2] 
+{\begin{lrbox}{\fmbox}\begin{minipage}{0.9 \linewidth }\begin{singlespace}\begin{bdefn}[{#1}]\label{#2}\vspace{0.2cm}} 
+{\end{bdefn}\end{singlespace}\end{minipage}\end{lrbox}\fbox{\usebox{\fmbox}}}
