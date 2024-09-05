@@ -1,6 +1,7 @@
-# exampleis
+# LaTeX Independent Study Template
 LaTeX files for Independent Study at The College of Wooster
 
+## Info
 This project aims to provide you with a template for typesetting your IS using LaTeX. LaTeX is very similar to HTML in the sense that it is a markup language. What does this mean? Well, it means you need only enter the commands for structuring your IS, i.e., identify chapters, sections, subsections, equations, quotes, etc. You do not need to worry about the formatting of elements like headings, lists, or the numbering of various elements. The woosterthesis class takes care of all of that formatting. Students should read the exampleis_manual.pdf document before beginning to use the template as the manual explains how to use the template and all the custom options available in the woosterthesis class. Particular attention should be paid to the Introduction which explains what the various options do.
 
 The woosterthesis class loads several packages by default and several others through class options; it is assumed you have these installed on your system. The packages that need to be installed in your TeX installation are: alltt, amsfonts, amsmath, amssymb, amsthm, babel, biblatex, biblatex-chicago, caption, csquotes, eso-pic, eucal, eufrak, fancyhdr, float, floatflt, fontenc, fontspec, geometry, graphicx, hyperref, ifpdf, ifthen, ifxetex, inputenc, lettrine, listings, lmodern, makeidx, maple2e, microtype, pdftex, polyglossia, pxfonts, setspace, subfig, textpos, TikZ, verbatim, wrapfig, xcolor, xltxtra, and xunicode. The woosterthesis class assumes you are using pdfTeX (support for postscript based TeX has been dropped as of 2006/17/11).
