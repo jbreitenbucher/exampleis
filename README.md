@@ -21,3 +21,6 @@ Installing these dependencies can be done by doing a full install of LaTeX throu
 The template has been tested with Overleaf, as well as TeXLive installs on OS X and Windows 11. Some students have reported receiving processing time warnings from Overleaf and a request to move to a paid subscription, for that reason I recommend using a locally installed TeX instance instead of a cloud-based one.
 
 Located in this repo are two separate projects: `Complete` generates the manual itself containing several examples. `Minimal` is a scaled-down version of this template that contains the same structure.
+
+`username.tex` is the primary LaTeX document. Chapters written go into separate files found in `/chapters`.
+
