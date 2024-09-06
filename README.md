@@ -1,8 +1,21 @@
-# exampleis
+# LaTeX Independent Study Template
 LaTeX files for Independent Study at The College of Wooster
 
-This project aims to provide you with a template for typesetting your IS using LaTeX. LaTeX is very similar to HTML in the sense that it is a markup language. What does this mean? Well, it means you need only enter the commands for structuring your IS, i.e., identify chapters, sections, subsections, equations, quotes, etc. You do not need to worry about the formatting of elements like headings, lists, or the numbering of various elements. The woosterthesis class takes care of all of that formatting. Students should read the exampleis_manual.pdf document before beginning to use the template as the manual explains how to use the template and all the custom options available in the woosterthesis class. Particular attention should be paid to the Introduction which explains what the various options do.
+## Info
+This project aims to provide you with a template for typesetting your IS using LaTeX. LaTeX is very similar to HTML in the sense that it is a markup language. Instead of worrying about the formatting of elements, the woosterthesis class takes care of several elements so that students only need to identify the structure of their IS. Students should read the exampleis_manual.pdf document before writing as the manual explains how to use this template and all the custom options available in the woosterthesis class, with particular attention to the Introduction.
 
-The woosterthesis class loads several packages by default and several others through class options; it is assumed you have these installed on your system. The packages that need to be installed in your TeX installation are: alltt, amsfonts, amsmath, amssymb, amsthm, babel, biblatex, biblatex-chicago, caption, csquotes, eso-pic, eucal, eufrak, fancyhdr, float, floatflt, fontenc, fontspec, geometry, graphicx, hyperref, ifpdf, ifthen, ifxetex, inputenc, lettrine, listings, lmodern, makeidx, maple2e, microtype, pdftex, polyglossia, pxfonts, setspace, subfig, textpos, TikZ, verbatim, wrapfig, xcolor, xltxtra, and xunicode. The woosterthesis class assumes you are using pdfTeX (support for postscript based TeX has been dropped as of 2006/17/11).
+## Dependencies
+The woosterthesis class loads several packages by default and several others through class options; it is assumed you have these installed on your system. These include the following:
+alltt | amsfonts | amsmath | amssymb | amsthm | babel | biblatex
+:------:|:----------:|:---------:|:---------:|:--------:|:-------:|:-------:
+biblatex-chicago | caption | csquotes | eso-pic | eucal | eufrak | fancyhdr
+float | floatfl| fontenc | fontspec | geometry | graphicx | hyperref
+ifpdf | ifthen | ifxetex | inputenc | lettrine | listings | lmodern
+makeidx | maple2e | microtype | pdftex | polyglossia | pxfonts | setspace
+subfig | textpos | TikZ | verbatim | wrapfig | xcolor | xltxtra
+xunicode
 
-The template has been tested with Overleaf and compiles without any errors and also compiles without errors on OS X and Windows 11 installs of TeXLive that have all of the packages mentioned above. Some students have reported receiving processing time warnings from Overleaf and a request to move to a paid subscription, for that reason I recommend using a locally installed TeX instance instead of a cloud-based one.
+Installing these dependencies can be done by doing a full install of LaTeX through your package manager of choice, or by utilizing a cloud service such as Overleaf. The woosterthesis class also assumes you are using pdfTeX (support for postscript based TeX has been dropped as of 2006/17/11).
+
+## Usage
+The template has been tested with Overleaf, as well as TeXLive installs on OS X and Windows 11. Some students have reported receiving processing time warnings from Overleaf and a request to move to a paid subscription, for that reason I recommend using a locally installed TeX instance instead of a cloud-based one.
