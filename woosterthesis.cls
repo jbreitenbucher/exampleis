@@ -570,7 +570,7 @@
 				\let\footnoterule\relax
 				{\def\\{\noexpand\\}\global\gdef\@titl@{{\@title}}}%
 				{
-					\begin{textblock}{6}(2.20,-.42)
+					\begin{textblock}{6}(3.125,-.42)
 						\begin{singlespace}
 							\begin{center}
 								{\scshape\Large\@titl@}
@@ -578,12 +578,12 @@
 						\end{singlespace}%
 					\end{textblock}
 				}
-				\begin{textblock}{6}(2.20,2.75)
+				\begin{textblock}{6}(3.125,2.75)
 					\begin{center}
 						{\scshape\th@sistype}
 					\end{center}
 				\end{textblock}  
-				\begin{textblock}{7}(1.65,5.15)
+				\begin{textblock}{7}(2.585,5.15)
 					\begin{singlespace}
 						\begin{center}
 							Presented in Partial Fulfillment of the Requirements for \\
@@ -592,7 +592,7 @@
 						\end{center}
 					\end{singlespace}
 				\end{textblock}
-				\begin{textblock}{6}(2.20,7.8)
+				\begin{textblock}{6}(3.125,7.8)
 					\begin{singlespace}
 						\begin{center}
 							by \\
@@ -600,7 +600,7 @@
 						\end{center}
 					\end{singlespace}
 				\end{textblock}
-				\begin{textblock}{6}(2.20,8.8)
+				\begin{textblock}{6}(3.125,8.8)
 					{\def\baselinestretch{1}\normalsize
 						\begin{center}
 							\@school\\
@@ -608,7 +608,7 @@
 						\end{center}
 					}%
 				\end{textblock}
-				\begin{textblock}{6}(0,11)
+				\begin{textblock}{6}(1,11)
 					\noindent
 					\hspace{1px}
 					\begin{minipage}[b]{\hsize}
@@ -673,7 +673,7 @@
 			\let\footnoterule\relax
 			{\def\\{\noexpand\\}\global\gdef\@titl@{{\@title}}}%
 			{
-				\begin{textblock}{6}(2.20,-.42)
+				\begin{textblock}{6}(3.125,-.42)
 					\begin{singlespace}
 						\begin{center}
 							{\scshape\Large\@titl@}
@@ -681,12 +681,12 @@
 					\end{singlespace}
 				\end{textblock}
 			}%
-			\begin{textblock}{6}(2.20,2.75)
+			\begin{textblock}{6}(3.125,2.75)
 				\begin{center}
 					{\scshape\th@sistype}
 				\end{center}
 			\end{textblock}  
-			\begin{textblock}{7}(1.65,5.15)
+			\begin{textblock}{7}(2.585,5.15)
 				\begin{singlespace}
 					\begin{center}
 						Presented in Partial Fulfillment of the Requirements for \\
@@ -695,7 +695,7 @@
 					\end{center}
 				\end{singlespace}
 			\end{textblock}
-			\begin{textblock}{6}(2.20,7.8)
+			\begin{textblock}{6}(3.125,7.8)
 				\begin{singlespace}
 					\begin{center}
 						by \\
@@ -703,7 +703,7 @@
 					\end{center}
 				\end{singlespace}
 			\end{textblock}
-			\begin{textblock}{6}(2.20,8.8)
+			\begin{textblock}{6}(3.125,8.8)
 				{\def\baselinestretch{1}\normalsize
 					\begin{center}
 						\@school\\
@@ -711,7 +711,7 @@
 					\end{center}
 				}%
 			\end{textblock}
-			\begin{textblock}{6}(0,11)
+			\begin{textblock}{6}(1,11)
 				\noindent
 				\begin{minipage}[b]{\hsize}
 					\begin{flushleft}
@@ -735,7 +735,7 @@
 					\let\footnoterule\relax
 					{\def\\{\noexpand\\}\global\gdef\@titl@{{\@title}}}%
 					{
-						\begin{textblock}{6}(2.20,-.55)
+						\begin{textblock}{6}(3.125,-.55)
 							\begin{singlespace}
 								\begin{center}
 									{\scshape\Large\@titl@}
@@ -743,12 +743,12 @@
 							\end{singlespace}%
 						\end{textblock}
 					}
-					\begin{textblock}{6}(2.20,2.65)
+					\begin{textblock}{6}(3.125,2.65)
 						\begin{center}
 							{\scshape\th@sistype}
 						\end{center}
 					\end{textblock}  
-					\begin{textblock}{7}(1.65,4.97)
+					\begin{textblock}{7}(2.585,4.97)
 						\begin{singlespace}
 							\begin{center}
 								Presented in Partial Fulfillment of the Requirements for \\
@@ -757,7 +757,7 @@
 							\end{center}
 						\end{singlespace}
 					\end{textblock}
-					\begin{textblock}{6}(2.20,7.67)
+					\begin{textblock}{6}(3.125,7.67)
 						\begin{singlespace}
 							\begin{center}
 								by \\
@@ -765,7 +765,7 @@
 							\end{center}
 						\end{singlespace}
 					\end{textblock}
-					\begin{textblock}{6}(2.20,8.70)
+					\begin{textblock}{6}(3.125,8.70)
 						{\def\baselinestretch{1}\normalsize
 							\begin{center}
 								\@school\\
@@ -773,7 +773,7 @@
 							\end{center}
 						}%
 					\end{textblock}
-					\begin{textblock}{6}(0,11)
+					\begin{textblock}{6}(1,11)
 						\noindent
 						\hspace{1px}
 						\begin{minipage}[b]{\hsize}
@@ -842,7 +842,7 @@
 				\let\footnoterule\relax
 				{\def\\{\noexpand\\}\global\gdef\@titl@{{\@title}}}%
 				{
-					\begin{textblock}{6}(2.20,-.55)
+					\begin{textblock}{6}(3.125,-.55)
 						\begin{singlespace}
 							\begin{center}
 								{\scshape\Large\@titl@}
@@ -850,12 +850,12 @@
 						\end{singlespace}
 					\end{textblock}
 				}%
-				\begin{textblock}{6}(2.20,2.65)
+				\begin{textblock}{6}(3.125,2.65)
 					\begin{center}
 						{\scshape\th@sistype}
 					\end{center}
 				\end{textblock}  
-				\begin{textblock}{7}(1.65,4.97)
+				\begin{textblock}{7}(2.585,4.97)
 					\begin{singlespace}
 						\begin{center}
 							Presented in Partial Fulfillment of the Requirements for \\
@@ -864,7 +864,7 @@
 						\end{center}
 					\end{singlespace}
 				\end{textblock}
-				\begin{textblock}{6}(2.20,7.67)
+				\begin{textblock}{6}(3.125,7.67)
 					\begin{singlespace}
 						\begin{center}
 							by \\
@@ -872,7 +872,7 @@
 						\end{center}
 					\end{singlespace}
 				\end{textblock}
-				\begin{textblock}{6}(2.20,8.70)
+				\begin{textblock}{6}(3.125,8.70)
 					{\def\baselinestretch{1}\normalsize
 						\begin{center}
 							\@school\\
@@ -880,7 +880,7 @@
 						\end{center}
 					}%
 				\end{textblock}
-				\begin{textblock}{6}(0,11)
+				\begin{textblock}{6}(1,11)
 					\noindent
 					\begin{minipage}[b]{\hsize}
 						\begin{flushleft}
@@ -904,7 +904,7 @@
 						\let\footnoterule\relax
 						{\def\\{\noexpand\\}\global\gdef\@titl@{{\@title}}}%
 						{
-							\begin{textblock}{6}(2.20,-.65)
+							\begin{textblock}{6}(3.125,-.65)
 								\begin{singlespace}
 									\begin{center}
 										{\scshape\Large\@titl@}
@@ -912,12 +912,12 @@
 								\end{singlespace}%
 							\end{textblock}
 						}
-						\begin{textblock}{6}(2.20,2.6)
+						\begin{textblock}{6}(3.125,2.6)
 							\begin{center}
 								{\scshape\th@sistype}
 							\end{center}
 						\end{textblock}  
-						\begin{textblock}{8}(1.25,4.9)
+						\begin{textblock}{8}(2.085,4.9)
 							\begin{singlespace}
 								\begin{center}
 									Presented in Partial Fulfillment of the Requirements for \\
@@ -926,7 +926,7 @@
 								\end{center}
 							\end{singlespace}
 						\end{textblock}
-						\begin{textblock}{6}(2.20,7.59)
+						\begin{textblock}{6}(3.125,7.59)
 							\begin{singlespace}
 								\begin{center}
 									by \\
@@ -934,7 +934,7 @@
 								\end{center}
 							\end{singlespace}
 						\end{textblock}
-						\begin{textblock}{6}(2.20,8.7)
+						\begin{textblock}{6}(3.125,8.7)
 							{\def\baselinestretch{1}\normalsize
 								\begin{center}
 									\@school\\
@@ -942,7 +942,7 @@
 								\end{center}
 							}%
 						\end{textblock}
-						\begin{textblock}{6}(0,11)
+						\begin{textblock}{6}(1,11)
 							\noindent
 							\hspace{1px}
 							\begin{minipage}[b]{\hsize}
@@ -1012,7 +1012,7 @@
 					\let\footnoterule\relax
 					{\def\\{\noexpand\\}\global\gdef\@titl@{{\@title}}}%
 					{
-						\begin{textblock}{6}(2.20,-.65)
+						\begin{textblock}{6}(3.125,-.65)
 							\begin{singlespace}
 								\begin{center}
 									{\scshape\Large\@titl@}
@@ -1020,12 +1020,12 @@
 							\end{singlespace}%
 						\end{textblock}
 					}
-					\begin{textblock}{6}(2.20,2.6)
+					\begin{textblock}{6}(3.125,2.6)
 						\begin{center}
 							{\scshape\th@sistype}
 						\end{center}
 					\end{textblock}  
-					\begin{textblock}{8}(1.25,4.9)
+					\begin{textblock}{8}(2.085,4.9)
 						\begin{singlespace}
 							\begin{center}
 								Presented in Partial Fulfillment of the Requirements for \\
@@ -1034,7 +1034,7 @@
 							\end{center}
 						\end{singlespace}
 					\end{textblock}
-					\begin{textblock}{6}(2.20,7.59)
+					\begin{textblock}{6}(3.125,7.59)
 						\begin{singlespace}
 							\begin{center}
 								by \\
@@ -1042,7 +1042,7 @@
 							\end{center}
 						\end{singlespace}
 					\end{textblock}
-					\begin{textblock}{6}(2.20,8.7)
+					\begin{textblock}{6}(3.125,8.7)
 						{\def\baselinestretch{1}\normalsize
 							\begin{center}
 								\@school\\
@@ -1050,7 +1050,7 @@
 							\end{center}
 						}%
 					\end{textblock}
-					\begin{textblock}{6}(0,11)
+					\begin{textblock}{6}(1,11)
 						\noindent
 						\begin{minipage}[b]{\hsize}
 							\begin{flushleft}
