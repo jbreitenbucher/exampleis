@@ -469,8 +469,19 @@
 					##1
 				}
 			}
+			{}
+		}%
+				\def\sectionmark##1{%
+			\markright {
+				{% removed MakeUpperCase - JB
+					\ifnum \c@secnumdepth >\z@
+						\thesection. \ %
+					\fi
+					##1
+        				}
+        			}
+        		}
 		}
-	}
 \fi
 \def\ps@myheadings{%
 	\let\@oddfoot\@empty\let\@evenfoot\@empty
