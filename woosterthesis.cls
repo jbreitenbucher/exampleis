@@ -254,6 +254,13 @@
 	\ifx\test@mla\t@st\@mlatrue\else\@mlafalse\fi
 \DeclareOption{mla}{\@mlatrue}
 
+% option to use the citation order citation and reference style added in 2024 - request from Tali Lansing
+\newif\if@citeorder
+	\expandafter\def\csname test@\jobname\endcsname{test}%
+	\def\t@st{test}%
+	\ifx\test@citeorder\t@st\@citeordertrue\else\@citeorderfalse\fi
+\DeclareOption{citeorder}{\@citeordertrue}
+
 % option to indicate a foreign language is being used
 \newif\if@foreignlanguage
 	\expandafter\def\csname test@\jobname\endcsname{test}%
@@ -1763,6 +1770,7 @@
 \newboolean{chicago} % for Chicago style
 \newboolean{apa} % for APA style
 \newboolean{mla} % for MLA style
+\newboolean{citeorder}% for citation ordering of references
 \newboolean{foreignlanguage}
 \if@foreignlanguage
 	\ifxetex
@@ -1778,22 +1786,27 @@
 \fi
 % load biblatex with chem-acs style and set boolean to true
 \if@acs
-	\RequirePackage[style=chem-acs,articletitle,hyperref=auto,backref=true,backrefstyle=two,natbib=true]{biblatex}
+	\RequirePackage[style=chem-acs,articletitle,hyperref=auto,backref=true,backrefstyle=two,natbib=true,backend=biber]{biblatex}
 	\setboolean{acs}{true}
 \else % load biblatex-chicago and set boolean to true
 	\if@chicago
-		\RequirePackage[annotation,notes,autocite=footnote,authordate,strict=true,autolang=other,bibencoding=inputenc,hyperref=auto,backref=true,backrefstyle=two,natbib=true,sorting=nty]{biblatex-chicago}
+		\RequirePackage[annotation,notes,autocite=footnote,authordate,strict=true,autolang=other,bibencoding=inputenc,hyperref=auto,backref=true,backrefstyle=two,natbib=true,sorting=nty,backend=biber]{biblatex-chicago}
 		\setboolean{chicago}{true}
 	\else
 		\if@mla
-			\RequirePackage[style=mla,autolang=other,bibencoding=inputenc,hyperref=auto,backref=true,backrefstyle=two,natbib=true,sorting=nty]{biblatex}
+			\RequirePackage[style=mla,autolang=other,bibencoding=inputenc,hyperref=auto,backref=true,backrefstyle=two,natbib=true,sorting=nty,backend=biber]{biblatex}
 			\setboolean{mla}{true}	
 		\else
 			\if@apa
-				\RequirePackage[style=apa,autolang=other,bibencoding=inputenc,hyperref=auto,backref=true,backrefstyle=two,natbib=true,sorting=nty]{biblatex}
-				\setboolean{apa}{true}	
-			\else % load biblatex
-				\RequirePackage[hyperref=auto,backref=true,backrefstyle=two,natbib=true,style=numeric,defernumbers=true]{biblatex}
+				\RequirePackage[style=apa,autolang=other,bibencoding=inputenc,hyperref=auto,backref=true,backrefstyle=two,natbib=true,sorting=nty,backend=biber]{biblatex}
+				\setboolean{apa}{true}
+			\else
+				\if@citeorder
+					\RequirePackage[style=numeric,autolang=other,bibencoding=inputenc,hyperref=auto,backref=true,backrefstyle=two,natbib=true,sorting=none,backend=biber]{biblatex}
+					\setboolean{citeorder}{true}	
+				\else % load biblatex
+					\RequirePackage[hyperref=auto,backref=true,backrefstyle=two,natbib=true,style=numeric,defernumbers=true,backend=biber]{biblatex}
+				\fi
 			\fi
 		\fi
 	\fi
