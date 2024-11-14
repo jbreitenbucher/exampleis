@@ -430,25 +430,23 @@
 		\let\@mkboth\markboth
 		\def\chaptermark##1{%
 			\markboth {
-				{% removed MakeUpperCase - JB
+				% removed MakeUpperCase - JB
 					\ifnum \c@secnumdepth >\m@ne
 						\if@mainmatter
 							\thechapter. \ % removed \@chapapp - JB
 						\fi
 					\fi
 					##1
-				}
 			}
 			{}
 		}%
         		\def\sectionmark##1{%
 			\markright {
-				{% removed MakeUpperCase - JB
+				% removed MakeUpperCase - JB
 					\ifnum \c@secnumdepth >\z@
 						\thesection. \ %
 					\fi
 					##1
-        				}
         			}
         		}
         }
@@ -460,28 +458,26 @@
 		\let\@mkboth\markboth
 		\def\chaptermark##1{%
 			\markright {
-				{% removed MakeUpperCase - JB
+				% removed MakeUpperCase - JB
 					\ifnum \c@secnumdepth >\m@ne
 						\if@mainmatter
 							\thechapter. \ % removed \@chapapp - JB
 						\fi
 					\fi
 					##1
-				}
 			}
 			{}
 		}%
-				\def\sectionmark##1{%
+		\def\sectionmark##1{%
 			\markright {
-				{% removed MakeUpperCase - JB
+				% removed MakeUpperCase - JB
 					\ifnum \c@secnumdepth >\z@
 						\thesection. \ %
 					\fi
 					##1
-        				}
         			}
         		}
-		}
+	}
 \fi
 \def\ps@myheadings{%
 	\let\@oddfoot\@empty\let\@evenfoot\@empty
