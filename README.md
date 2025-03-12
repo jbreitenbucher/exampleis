@@ -11,16 +11,16 @@ LaTeX files for Independent Study at The College of Wooster
     * If you do not have publications then comment out lines 197 through 200
 2. Chapters are stored in the `chapters` folder
     * Edit the contents of the `chapters/introduction.tex` and other chapters to have your IS text
-    * If you have more than three chapters just make a new file called chapter#.tex and put %!TEX root = ../main.tex \chapter{your chapter title}\label{yourchapterlabel} as the first and second line of the file
+    * If you have more than three chapters just make a new file called chapter#.tex and put %!TEX root = ../main.tex (line 1) \chapter{your chapter title}\label{yourchapterlabel} (line 2) as the first and second line of the file
         - Uncomment lines 251 through 255 in `main.tex` as needed
     * The Introduction is labeled as Chapter 1 in the IS
 3. Images are stored in the `figures` folder
-    * The allolwed file types are JPEG, PNG, TIFF, and PDF
+    * The allowed file types are JPEG, PNG, TIFF, and PDF
     * Use the command \woopic{picturename}{scalingfactor} to include your picture
         - File names cannot have spaces in them and the scaling factor must be between 0 and 1
         - See Chapter 3 in the `exampleis_manual.pdf` for examples of including figures
 4. Appendicies are stored in the `appendicies` folder
-    * Comment out lines 266 through 270 of `main.tex` if you do not have any appendicies otherwise edit the appendix title after the / to include your appendix document
+    * Comment out lines 266 through 270 of `main.tex` if you do not have any appendicies otherwise edit the appendix title after the / to be the title of your appendix document
 5. Source code to be included in the IS is stored in the `source` folder
     * Source code can be included using \lstinputlisting[caption=caption text, label=labeltext]{source/filename}
     * See Chapter 2 of `exampleis_manual.pdf` and `appendicies/cpp.tex` or `appendicies/java.tex` files for examples of including code in an IS
