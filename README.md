@@ -3,12 +3,13 @@ LaTeX files for Independent Study at The College of Wooster
 
 ## Quick Start
 1. Open `main.tex`
-    * Edit the \documentclass declaration on line 25 to use the options you need for your IS (see `exampleis_manual.pdf` for the available options)
+    * Comment the \documentclass declaration on line 25 and uncomment the declaration on line 34 and adjust the options to use what you need for your IS (see `exampleis_manual.pdf` for the available options)
     * Edit the information around the \title declaration on line 96
     * Edit the abstract on line 140
     * Edit the dedication on line 149
     * Edit the acknowledgements on line 159
     * If you do not have publications then comment out lines 197 through 200
+    * Comment out line 230 if you do not have a Preface
 2. Chapters are stored in the `chapters` folder
     * Edit the contents of the `chapters/introduction.tex` and other chapters to have your IS text
     * If you have more than three chapters just make a new file called chapter#.tex and put %!TEX root = ../main.tex (line 1) \chapter{your chapter title}\label{yourchapterlabel} (line 2) as the first and second line of the file
