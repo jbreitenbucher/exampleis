@@ -2026,7 +2026,7 @@
 \fi
 \typeout{*** Warning: The  hyperref package has been loaded. Loading any packages after this could interfere with the hyperref package***}
 %\def\ifundefined#1{\expandafter\ifx\csname#1\endcsname\relax}
-\DeclareGraphicsExtensions{.pdf, .jpg, .tif}
+\DeclareGraphicsExtensions{.pdf, .jpg, .tif, .png}
 \doublespacing
 %%
 %% End of file `woosterthesis.cls'.
