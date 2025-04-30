@@ -1404,31 +1404,26 @@
 	}
 % removed all the \bfseries from the section heading --- who wants
 % all that stuff bold?!? Added \scshape - JB 
-\newcommand\section{\@startsection {section}{1}{\z@}%
+\newcommand\section{\@startsection{section}{1}{\z@}%
 	{-3.5ex \@plus -1ex \@minus -.2ex}%
 	{2.3ex \@plus.2ex}%
-	{\scshape\Large}
-}
+	{\scshape\Large}}
 \newcommand\subsection{\@startsection{subsection}{2}{\z@}%
 	{-3.25ex\@plus -1ex \@minus -.2ex}%
 	{1.5ex \@plus .2ex}%
-	{\scshape\large}
-}
+	{\scshape\large}}
 \newcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
 	{-3.25ex\@plus -1ex \@minus -.2ex}%
 	{1.5ex \@plus .2ex}%
-	{\scshape\normalsize}
-}
+	{\scshape\normalsize}}
 \newcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
 	{3.25ex \@plus1ex \@minus.2ex}%
 	{-1em}%
-	{\normalfont\normalsize\scshape\bfseries}
-}
+	{\normalfont\normalsize\scshape\bfseries}}
 \newcommand\subparagraph{\@startsection{subparagraph}{5}{\parindent}%
 	{3.25ex \@plus1ex \@minus .2ex}%
 	{-1em}%
-	{\normalfont\normalsize\bfseries}
-}
+	{\normalfont\normalsize\bfseries}}
 \if@twocolumn
 	\setlength\leftmargini  {2em}
 \else
