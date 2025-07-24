@@ -805,7 +805,7 @@
 \else\if@citeorder
   \PassOptionsToPackage{style=numeric,autolang=other,bibencoding=inputenc,hyperref=auto,backref=true,backrefstyle=two,natbib=true,sorting=none,backend=biber}{biblatex}
 \else
-  \PassOptionsToPackage{hyperref=auto,backref=true,backrefstyle=two,natbib=true,style=numeric,defernumbers=true,backend=biber}{biblatex}
+  \PassOptionsToPackage{hyperref=auto,backref=true,backrefstyle=two,natbib=true,style=numeric,backend=biber}{biblatex}
 \fi\fi\fi\fi\fi
 
 % --- XeTeX engine class loading ---
