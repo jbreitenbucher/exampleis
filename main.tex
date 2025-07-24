@@ -22,7 +22,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % use this declaration for a draft  version of your IS
-\documentclass[10pt,palatino,code,picins,tikz,kaukecopyright,openright,lshortwooster,dropcaps,verbatim,index,euler]{woosterthesis}
+\documentclass[palatino,code,picins,tikz,woostercopyright,openright,lshortwooster,dropcaps,verbatim,index,oneside,euler]{woosterthesis}
 % Note that you can specify the acs option to use the American Chemical Society citation format, apa option to use the American
 % Psychological Association citation format, chicago option to use the Chicago citation format, mla option to use the Modern Language
 % Association citation format, wblack option for a grayscale Wooster "W" on the cover, and scottie option for a grayscale Scottie Mascot
@@ -31,12 +31,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % use this declaration for the print version of your IS
-%\documentclass[12pt,code,palatino,picins,blacklinks,kaukecopyright,openright]{woosterthesis} % probably what most students would use
+%\documentclass[12pt,code,palatino,picins,blacklinks,kaukecopyright,openright,oneside,final]{woosterthesis} % probably what most students would use
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
+
 % use this declaration for the PDF version of your IS
-%\documentclass[12pt,code,palatino,picins,kaukecopyright,openright]{woosterthesis}
+%\documentclass[12pt,code,palatino,picins,kaukecopyright,openright,oneside,final]{woosterthesis}
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -287,6 +288,7 @@ I would like to acknowledge Prof. Lowell Boone in the Physics Department for his
 %  Uncomment the lines below to include an index. To get an index you must put 
 %  \index{index text} after any words that you want to appear in the index.
 %  Subentries are entered as \index{index text!subentry text}. You must also run the
+
 %  makeindex program to generate the index files that LaTeX uses. The PCs are set to run
 %  makeindex automatically.
 %
