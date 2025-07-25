@@ -16,6 +16,18 @@
 %  {\newline}%     Space after thm head: " " = normal interword space;
 %        %       \newline = linebreak
 %  {}%         Thm head spec (can be left empty, meaning `normal')
+% Kyle Kindbom requested a theorem style where the theorem header was on a separate line.
+% The break theorem style will put a line break after the theorem header. - JB
+\newtheoremstyle{break}% name
+	{\topsep}%	Space above
+	{\topsep}%	Space below
+	{\itshape}%	Body font
+	{}%			Indent amount (empty = no indent, \parindent = para indent)
+	{\bfseries}%	Thm head font
+	{.}%			Punctuation after thm head
+	{\newline}%	Space after thm head: " " = normal interword space;
+	%		\newline = linebreak
+	{}%			Thm head spec (can be left empty, meaning `normal')
 \newtheoremstyle{scthm}{\topsep}{\topsep}{\itshape}{}{\bfseries\scshape}{}{ }{}% small cap font for the heading
 \newtheoremstyle{itdefn}{\topsep}{\topsep}{\itshape}{}{\bfseries}{.}{ }{}% italic definitions
 \newtheoremstyle{scdefn}{\topsep}{\topsep}{\itshape}{}{}{}{ }{\thmname{\textbf{#1}}\thmnumber{ \textbf{#2}}\thmnote{ \scshape #3:}}% small cap headings and italic text.

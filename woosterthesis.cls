@@ -186,6 +186,50 @@
 }
 \setlength\footnotesep{12pt}
 \AtEndOfClass{%
+% --- Setting up how to handle parts in the document ---
+\def\@part[#1]#2{
+	\ifnum \c@secnumdepth >-2\relax
+		\refstepcounter{part}
+		\addcontentsline{toc}{part}{\thepart\hspace{1em}#1}
+	\else
+		\addcontentsline{toc}{part}{#1}
+	\fi
+	\markboth{}{}
+	{\centering
+		\interlinepenalty \@M
+		\normalfont
+		\ifnum \c@secnumdepth >-2\relax
+			\huge \partname\nobreakspace\thepart % removed \bfseries - JB
+			\par
+			\vskip 20\p@
+		\fi
+		\Huge #2\par
+	} % removed \bfseries - JB
+	\@endpart
+}
+\def\@spart#1{
+	\markboth{}{}
+	{\centering
+		\interlinepenalty \@M
+		\normalfont
+		\Huge #1\par
+	} % removed \bfseries - JB
+	\@endpart
+}
+\def\@endpart{
+	\vfil
+	\newpage
+	\if@twoside
+		\if@openright
+			\null
+			\thispagestyle{empty}
+			\newpage
+		\fi
+	\fi
+	\if@tempswa
+		 \twocolumn
+	\fi
+}
 % --- Chapter heading formatting ---
 \if@woosterchapters
 \renewcommand\chapter{%
@@ -525,50 +569,6 @@
 \renewcommand\thesubparagraph {\theparagraph.\@arabic\c@subparagraph}
 \newcommand{\@chapapppage}{\relax}
 
-% --- Setting up how to handle parts in the document ---
-\def\@part[#1]#2{
-	\ifnum \c@secnumdepth >-2\relax
-		\refstepcounter{part}
-		\addcontentsline{toc}{part}{\thepart\hspace{1em}#1}
-	\else
-		\addcontentsline{toc}{part}{#1}
-	\fi
-	\markboth{}{}
-	{\centering
-		\interlinepenalty \@M
-		\normalfont
-		\ifnum \c@secnumdepth >-2\relax
-			\huge \partname\nobreakspace\thepart % removed \bfseries - JB
-			\par
-			\vskip 20\p@
-		\fi
-		\Huge #2\par
-	} % removed \bfseries - JB
-	\@endpart
-}
-\def\@spart#1{
-	{\centering
-		\interlinepenalty \@M
-		\normalfont
-		\Huge #1\par
-	} % removed \bfseries - JB
-	\@endpart
-}
-\def\@endpart{
-	\vfil
-	\newpage
-	\if@twoside
-		\if@openright
-			\null
-			\thispagestyle{empty}
-			\newpage
-		\fi
-	\fi
-	\if@tempswa
-		 \twocolumn
-	\fi
-}
-
 % --- Set up document margins and headings based on one sided or two sided formatting ---
 \if@twoside
 	\RequirePackage[letterpaper,marginparwidth=.6in,hmargin={1.25in,1in},top=1in,bottom=1in]{geometry}
@@ -661,18 +661,6 @@
 \RequirePackage{subfig} % replaces deprecated subfigure
 \captionsetup[subfloat]{listofindent=4em}% set captions on subfigures - JB
 \setcounter{lofdepth}{2}% setting depth of the list of figures - JB
-% Kyle Kindbom requested a theorem style where the theorem header was on a separate line.
-% The break theorem style will put a line break after the theorem header. - JB
-\newtheoremstyle{break}% name
-	{\topsep}%	Space above
-	{\topsep}%	Space below
-	{\itshape}%	Body font
-	{}%			Indent amount (empty = no indent, \parindent = para indent)
-	{\bfseries}%	Thm head font
-	{.}%			Punctuation after thm head
-	{\newline}%	Space after thm head: " " = normal interword space;
-	%		\newline = linebreak
-	{}%			Thm head spec (can be left empty, meaning `normal')
 
 % --- Conditional loading of packaged based on class options ---
 % --- Font setup: Palatino option ---
