@@ -4,16 +4,16 @@ LaTeX files for Independent Study at The College of Wooster
 ## Quick Start
 1. Open `main.tex`
     * Comment the \documentclass declaration on line 25 and uncomment the declaration on line 34 and adjust the options to use what you need for your IS (see `exampleis_manual.pdf` for the available options)
-    * Edit the information around the \title declaration on line 96
-    * Edit the abstract on line 140
-    * Edit the dedication on line 149
-    * Edit the acknowledgements on line 159
-    * If you do not have publications then comment out lines 197 through 200
-    * Comment out line 230 if you do not have a Preface
+    * Edit the information around the \title declaration on line 97
+    * Edit the abstract on line 145
+    * Edit the dedication on line 154
+    * Edit the acknowledgements on line 164
+    * If you do not have publications then comment out lines 202 through 205
+    * Comment out line 235 if you do not have a Preface
 2. Chapters are stored in the `chapters` folder
     * Edit the contents of the `chapters/introduction.tex` and other chapters to have your IS text
     * If you have more than three chapters just make a new file called chapter#.tex and put %!TEX root = ../main.tex (line 1) \chapter{your chapter title}\label{yourchapterlabel} (line 2) as the first and second line of the file
-        - Uncomment lines 251 through 255 in `main.tex` as needed
+        - Uncomment lines 256 through 260 in `main.tex` as needed
     * The Introduction is labeled as Chapter 1 in the IS
 3. Images are stored in the `figures` folder
     * The allowed file types are JPEG, PNG, TIFF, and PDF
@@ -21,7 +21,7 @@ LaTeX files for Independent Study at The College of Wooster
         - File names cannot have spaces in them and the scaling factor must be between 0 and 1
         - See Chapter 3 in the `exampleis_manual.pdf` for examples of including figures
 4. Appendicies are stored in the `appendicies` folder
-    * Comment out lines 266 through 270 of `main.tex` if you do not have any appendicies otherwise edit the appendix title after the / to be the title of your appendix document
+    * Comment out lines 271 through 275 of `main.tex` if you do not have any appendicies otherwise edit the appendix title after the / to be the title of your appendix document
 5. Source code to be included in the IS is stored in the `source` folder
     * Source code can be included using \lstinputlisting[caption=caption text, label=labeltext]{source/filename}
     * See Chapter 2 of `exampleis_manual.pdf` and `appendicies/cpp.tex` or `appendicies/java.tex` files for examples of including code in an IS
