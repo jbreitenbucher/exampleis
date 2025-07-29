@@ -126,10 +126,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \frontmatter
+\ifthenelse{\boolean{abstractonly}}{
+  % Do nothing — skip front matter
+}{
 \maketitle
 \ClearShipoutPicture
 \clearpage\thispagestyle{empty}\null\clearpage
 \disscopyright 
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                                       

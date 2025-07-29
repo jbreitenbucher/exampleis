@@ -10,12 +10,8 @@
 \RequirePackage{ifthen}
 
 % --- Boolean flags for custom options ---
-\newif\if@titlepage	\@titlepagetrue
 \newif\if@bstractonly	\@bstractonlyfalse
-\newif\if@openright	\@openrightfalse
-\newif\if@mainmatter	\@mainmattertrue
 \newif\if@copyright	\@copyrightfalse
-\newif\if@restonecol
 \newif\if@blacklinks
 \newif\if@palatino
 \newif\if@tikz
@@ -48,9 +44,11 @@
 % --- Legacy boolean ---
 \newboolean{index}
 \newboolean{colophon}
+\newboolean{abstractonly}
+\setboolean{abstractonly}{false}
 
 % --- Declare class options ---
-\DeclareOption{abstractonly}{\@bstractonlytrue}
+\DeclareOption{abstractonly}{\@bstractonlytrue \setboolean{abstractonly}{true}}
 \DeclareOption{acs}{\@acstrue}
 \DeclareOption{alltt}{\@alltttrue}
 \DeclareOption{apa}{\@apatrue}
@@ -108,21 +106,8 @@
 \@singlespacetrue
 }
 
-% Special handling for openbib — an example of immediate effect
-\DeclareOption{openbib}{%
-  \AtEndOfPackage{%
-    \renewcommand\@openbib@code{
-      \advance\leftmargin\bibindent
-      \itemindent -\bibindent
-      \listparindent \itemindent
-      \parsep \z@
-    }
-    \renewcommand\newblock{\par}
-  }
-}
-
 % --- Set default options ---
-\ExecuteOptions{10pt,letterpaper,twoside,draft}
+\ExecuteOptions{10pt,letterpaper,twoside,onecolumn,openany,draft}
 
 % --- Forward unknown options to book ---
 \DeclareOption*{%
@@ -133,19 +118,13 @@
 \ProcessOptions\relax
 \LoadClass{book}
 
-% --- Layout and spacing adjustments ---
-\setlength\lineskip{1\p@}
-\setlength\normallineskip{1\p@}
-\renewcommand\baselinestretch{}
-\setlength\parskip{0\p@ \@plus \p@}
+% --- Core packages required for all engines ---
+\RequirePackage{ifpdf,ifxetex,graphicx,eso-pic,fancyhdr,amsmath,amsthm,amssymb,setspace,float}
+\RequirePackage[absolute,overlay]{textpos}
 
 % Penalty values to control page breaks
 \widowpenalty=100000
 \displaywidowpenalty=5000
-\brokenpenalty=100000
-\@lowpenalty=51
-\@medpenalty=151
-\@highpenalty=301
 
 % Float spacing and layout
 \renewcommand\bottomfraction{.7}
@@ -158,33 +137,329 @@
 	\includegraphics[scale=#2]{#1}
 }
 
-% --- Custom footnote rule ---
-\renewcommand\footnoterule{
-	\kern-3\p@
-	\hrule\@width.4\columnwidth
-	\kern2.6\p@
+% --- Set up document margins and headings based on one sided or two sided formatting ---
+\if@twoside
+	\RequirePackage[letterpaper,marginparwidth=.6in,hmargin={1.25in,1in},top=1in,bottom=1in]{geometry}
+	\def\ps@headings{%
+		\let\@oddfoot\@empty\let\@evenfoot\@empty
+		\def\@evenhead{\thepage\hfil\slshape\leftmark}
+		\def\@oddhead{{\slshape\rightmark}\hfil\thepage}
+		\let\@mkboth\markboth
+		\def\chaptermark##1{
+			\markboth {
+				% removed MakeUpperCase - JB
+					\ifnum \c@secnumdepth >\m@ne
+						\if@mainmatter
+							\thechapter. \ % removed \@chapapp - JB
+						\fi
+					\fi
+					##1
+			}
+			{}
+		}%
+        		\def\sectionmark##1{%
+			\markright {
+				% removed MakeUpperCase - JB
+					\ifnum \c@secnumdepth >\z@
+						\thesection. \ %
+					\fi
+					##1
+        			}
+        		}
+        }
+\else
+	\RequirePackage[letterpaper,marginparwidth=.6in,hmargin={1in,1in},top=1in,bottom=1in]{geometry}
+	\def\ps@headings{
+		\let\@oddfoot\@empty
+		\def\@oddhead{{\slshape\rightmark}\hfil\thepage}
+		\let\@mkboth\markboth
+		\def\chaptermark##1{%
+			\markright {
+				% removed MakeUpperCase - JB
+					\ifnum \c@secnumdepth >\m@ne
+						\if@mainmatter
+							\thechapter. \ % removed \@chapapp - JB
+						\fi
+					\fi
+					##1
+			}
+			{}
+		}%
+		\def\sectionmark##1{
+			\markright {
+				% removed MakeUpperCase - JB
+					\ifnum \c@secnumdepth >\z@
+						\thesection. \ 
+					\fi
+					##1
+        			}
+        		}
+	}
+\fi
+
+% =============================================================
+% WOOSTER THESIS TITLE PAGE
+% Supports: \if@titlepage true or false
+% Point sizes: 10pt, 11pt, 12pt+
+% =============================================================
+
+% --- Offsets (one place) ---
+\newcommand{\TitleXOffset}{4}
+\newcommand{\TitleYOffset}{1.925}
+\newcommand{\TypeYOffset}{4.75}
+\newcommand{\FulfillXOffset}{4}
+\newcommand{\FulfillYOffset}{6.9}
+\newcommand{\AuthorYOffset}{9.165}
+\newcommand{\SchoolYOffset}{10.125}
+\newcommand{\AdvisorYOffset}{12.3}
+
+\ifnum\@ptsize=1
+  \renewcommand{\TitleXOffset}{4}
+  \renewcommand{\TitleYOffset}{1.85}
+  \renewcommand{\TypeYOffset}{4.7}
+  \renewcommand{\FulfillXOffset}{4}
+  \renewcommand{\FulfillYOffset}{6.8}
+  \renewcommand{\AuthorYOffset}{9.125}
+  \renewcommand{\SchoolYOffset}{10.125}
+\fi
+
+\ifnum\@ptsize>1
+  \renewcommand{\TitleXOffset}{4}
+  \renewcommand{\TitleYOffset}{1.65}
+  \renewcommand{\TypeYOffset}{4.65}
+  \renewcommand{\FulfillXOffset}{4}
+  \renewcommand{\FulfillYOffset}{6.7}
+  \renewcommand{\AuthorYOffset}{8.925}
+  \renewcommand{\SchoolYOffset}{10.125}
+\fi
+
+% --- Parametric Title Page Macro (Titlepage mode) ---
+\newcommand{\WoosterTitlePage}[9]{
+  \AddToShipoutPicture*{\BackgroundPicture}
+  \begin{titlepage}
+    % Title
+    \begin{textblock}{8}(#1,#2)
+      \begin{singlespace}
+        \begin{center}
+          {\scshape\Large \@title}
+        \end{center}
+      \end{singlespace}
+    \end{textblock}
+
+    % Thesis type
+    \begin{textblock}{7}(4.65,#3)
+      \begin{center}
+        {\scshape \th@sistype}
+      \end{center}
+    \end{textblock}
+
+    % Fulfillment
+    \begin{textblock}{8}(#4,#5)
+      \begin{singlespace}
+        \begin{center}
+          Presented in Partial Fulfillment of the Requirements for \\
+          the Degree \d@greetoobtain in the \\
+          \@program\ at \@school
+        \end{center}
+      \end{singlespace}
+    \end{textblock}
+
+    % Author
+    \begin{textblock}{7}(4.48,#6)
+      \begin{singlespace}
+        \begin{center}
+          by \\ \@author \@authordegrees
+        \end{center}
+      \end{singlespace}
+    \end{textblock}
+
+    % School & year
+    \begin{textblock}{7}(4.48,#7)
+      {\def\baselinestretch{1}\normalsize
+        \begin{center}
+          \@school \\
+          \ye@r
+        \end{center}
+      }
+    \end{textblock}
+
+    % Advisor
+    \begin{textblock}{7}(3.5,#8)
+      \noindent
+      \hspace{1pt}
+      \begin{minipage}[b]{\hsize}
+        \begin{flushleft}
+          {\bfseries Advised by:} \\
+          \@dvisor
+          \second@dvisor
+        \end{flushleft}
+      \end{minipage}
+      \par
+      \@thanks
+    \end{textblock}
+
+    #9 % optional
+  \end{titlepage}
+
+  % Cleanup
+  \setcounter{footnote}{0}
+  \global\let\thanks\relax
+  \global\let\maketitle\relax
+  \global\let\@thanks\@empty
+  \global\let\@date\@empty
+  \global\let\@title\@empty
+  \global\let\title\relax
+  \global\let\date\relax
+  \global\let\and\relax
 }
-\@addtoreset{footnote}{chapter} % reset footnotes on each page - JB
-\renewcommand\@makefntext[1]{%
-	\parindent 1em%
-	\noindent
-	\hb@xt@1.8em{\hss\@makefnmark}#1
+
+% --- Parametric Inline Macro (\@maketitle) ---
+\newcommand{\WoosterInlineTitlePage}[9]{
+  \AddToShipoutPicture*{\BackgroundPicture}
+  \null
+
+  % Title
+  \begin{textblock}{9}(#1,#2)
+    \begin{singlespace}
+      \centering {\scshape\Large \@title}
+    \end{singlespace}
+  \end{textblock}
+
+  % Thesis type
+  \begin{textblock}{7}(2.125,#3)
+    \centering {\scshape \th@sistype}
+  \end{textblock}
+
+  % Fulfillment
+  \begin{textblock}{8}(#4,#5)
+    \begin{singlespace}
+      \centering
+      Presented in Partial Fulfillment of the Requirements for \\
+      the Degree \d@greetoobtain in the \\
+      \@program\ at \@school
+    \end{singlespace}
+  \end{textblock}
+
+  % Author
+  \begin{textblock}{7}(2.125,#6)
+    \begin{singlespace}
+      \centering
+      by \\ \@author \@authordegrees
+    \end{singlespace}
+  \end{textblock}
+
+  % School & year
+  \begin{textblock}{7}(2.125,#7)
+    {\def\baselinestretch{1}\normalsize
+    \centering
+    \@school \\ \ye@r}
+  \end{textblock}
+
+  % Advisor
+  \begin{textblock}{7}(1,#8)
+    \noindent
+    \hspace{1pt}
+    \begin{minipage}[b]{\hsize}
+      \begin{flushleft}
+        {\bfseries Advised by:} \\ \@dvisor \second@dvisor
+      \end{flushleft}
+    \end{minipage}
+    \par
+    \@thanks
+  \end{textblock}
+
+  #9 % optional
 }
-\renewcommand{\footnotesize}{%
-	\def\baselinestretch{1} % to make single spacing!
-	\@setfontsize\footnotesize\@xpt\@xiipt
-	\abovedisplayskip 10\p@ \@plus2\p@ \@minus5\p@
-	\abovedisplayshortskip \z@ \@plus3\p@
-	\belowdisplayshortskip 6\p@ \@plus3\p@ \@minus3\p@
-	\def\@listi{
-		\leftmargin\leftmargini
-		\topsep 6\p@ \@plus2\p@ \@minus2\p@
-		\parsep 3\p@ \@plus2\p@ \@minus\p@
-		\itemsep \parsep
-	}%
-	\belowdisplayskip \abovedisplayskip
+
+\def\@maketitle{
+  \newpage
+  \WoosterInlineTitlePage
+    {\TitleXOffset}{\TitleYOffset}{\TypeYOffset}{\FulfillXOffset}{\FulfillYOffset}{\AuthorYOffset}{\SchoolYOffset}{\AdvisorYOffset}{}
 }
-\setlength\footnotesep{12pt}
+
+% --- Final combined \maketitle ---
+\renewcommand{\maketitle}{
+\if@bstractonly\relax\else
+  \if@titlepage
+    \WoosterTitlePage
+       {\TitleXOffset}{\TitleYOffset}{\TypeYOffset}{\FulfillXOffset}{\FulfillYOffset}{\AuthorYOffset}{\SchoolYOffset}{\AdvisorYOffset}{}
+  \else
+    \par
+    \begingroup
+      \renewcommand\thefootnote{\@fnsymbol\c@footnote}
+      \long\def\@makefntext##1{
+        \parindent 1em\noindent
+        \hb@xt@1.8em{\hss\@textsuperscript{\normalfont\@thefnmark}}##1
+      }
+
+      \if@twocolumn
+        \ifnum \col@number=\@ne
+          \@maketitle
+        \else
+          \twocolumn[\@maketitle]
+        \fi
+      \else
+        \newpage
+        \global\@topnum\z@
+        \@maketitle
+      \fi
+
+      \thispagestyle{plain}
+      \@thanks
+    \endgroup
+
+    % Cleanup
+    \setcounter{footnote}{0}
+    \global\let\thanks\relax
+    \global\let\maketitle\relax
+    \global\let\@thanks\@empty
+    \global\let\@date\@empty
+    \global\let\@title\@empty
+    \global\let\title\relax
+    \global\let\date\relax
+    \global\let\and\relax
+  \fi
+\fi
+}
+
+% --- Setting up behavior for front matter, main matter, and back matter ---
+\newif\if@numberedchapters
+\if@bstractonly
+  \renewcommand\frontmatter{%
+	\@numberedchaptersfalse    
+	\@mainmatterfalse
+    	\@openrightfalse
+  }
+\else
+\renewcommand\frontmatter{
+	\cleardoublepage
+	\@numberedchaptersfalse
+	\@mainmatterfalse
+	\pagenumbering{roman}
+	\pagestyle{plain}
+}
+\fi
+\renewcommand\mainmatter{
+	\cleardoublepage
+	\renewcommand{\@chapapppage}{\pagename}
+	\@numberedchapterstrue
+	\@mainmattertrue
+	\pagenumbering{arabic}
+	\pagestyle{headings}
+}
+\renewcommand\backmatter{
+	\if@openright
+		\cleardoublepage
+	\else
+		\clearpage
+	\fi
+	\@numberedchapterstrue
+	\@mainmattertrue
+	\appendix
+	\pagestyle{headings}
+}
+\newcommand{\titlefont}{\fontshape{sc}}
+
 \AtEndOfClass{%
 % --- Setting up how to handle parts in the document ---
 \def\@part[#1]#2{
@@ -216,29 +491,9 @@
 	} % removed \bfseries - JB
 	\@endpart
 }
-\def\@endpart{
-	\vfil
-	\newpage
-	\if@twoside
-		\if@openright
-			\null
-			\thispagestyle{empty}
-			\newpage
-		\fi
-	\fi
-	\if@tempswa
-		 \twocolumn
-	\fi
-}
+
 % --- Chapter heading formatting ---
 \if@woosterchapters
-\renewcommand\chapter{%
-      \if@openright\cleardoublepage\else\clearpage\fi
-      \thispagestyle{plain}%
-      \global\@topnum\z@
-      \@afterindentfalse
-      \secdef\@chapter\@schapter
-    }
     \def\@chapter[#1]#2{
       \ifnum \c@secnumdepth >\m@ne
         \if@mainmatter
@@ -449,6 +704,57 @@
       \doublespacing
     \fi
 }
+
+% --- Thesis metadata ---
+\newcommand{\presentdegrees}[1]{\def\@authordegrees{, #1}}
+\AtBeginDocument{
+  \makeatletter
+  \providecommand{\@authordegrees}{}  % safe to run here
+  \makeatother
+}
+\newcommand{\degreetoobtain}[1]{\def\d@greetoobtain{#1 }}
+\newcommand{\presentschool}[1]{\def\@school{#1}}
+\newcommand{\academicprogram}[1]{\def\@program{#1}}
+\newcommand{\advisor}[1]{\def\@dvisor{#1}}
+\def\second@dvisor{}
+\newcommand{\secondadvisor}[1]{
+	\def\\{\noexpand\\}
+	\global\edef\second@dvisor{\second@dvisor \\ #1}
+}
+\newcommand{\gradyear}[1]{\def\ye@r{#1}}
+
+% --- Setting default names of document parts ---
+\newcommand{\thesistype}[1]{\def\th@sistype{#1}}
+\let\th@sistype\relax
+\newcommand{\advname}{Advisor}
+\newcommand{\dedname}{Dedication}
+\renewcommand{\chaptername}{CHAPTER}
+\renewcommand\appendixname{APPENDIX}
+\renewcommand\contentsname{Contents}
+\renewcommand\listfigurename{List of Figures}
+\renewcommand\listtablename{List of Tables}
+\renewcommand\indexname{Index}
+\renewcommand\figurename{Figure}
+\renewcommand\tablename{Table}
+\renewcommand\partname{Part}
+\newcommand\abstractname{Abstract}
+\newcommand\colophonname{Colophon}
+\newcommand{\pagename}{PAGE}
+\newcommand{\ackname}{Acknowledgments}
+\newcommand{\vitaname}{Vita}
+\newcommand{\pubname}{Publications}
+\newcommand{\fosname}{Fields of Study}
+\newcommand{\majorfieldname}{Major field}
+\newcommand{\minorfieldname}{Minor field}
+\newcommand{\specializationname}{Specialization}
+\newcommand{\studinname}{Studies in}
+\def\today{
+	\ifcase
+		\month\or January\or February\or March\or April\or May\or June\or July\or August\or September\or October\or November\or December
+	\fi
+	\space\number\day, \number\year
+}
+
 % --- Appendix handling ---
 \renewcommand\appendix{
   \par\setcounter{chapter}{0}\setcounter{section}{0}
@@ -470,8 +776,8 @@
 % --- Abstract environment ---
 \newenvironment{abstract}{
 	\if@bstractonly
-		\cleardoublepage\setcounter{page}{1}\pagenumbering{arabic}\pagestyle{plain}
-		\chapter*{\@title}\begin{singlespace}\begin{center}by \@author\ \d@greetoobtain\\ The College of Wooster, \ye@r\\ \@dvisor\end{center}\end{singlespace}\vspace{\baselineskip}
+		\setcounter{page}{1}\pagenumbering{arabic}\pagestyle{plain}
+		  \vspace*{3\baselineskip} {\centering\Huge \@title \par}\vspace{2\baselineskip}\begin{singlespace}\begin{center}by \@author\ \d@greetoobtain\\ The College of Wooster, \ye@r\\ \@dvisor\end{center}\end{singlespace}\vspace{\baselineskip}
 	\else
 		\chapter*{\abstractname}
 		\addcontentsline{toc}{chapter}{\abstractname}
@@ -527,38 +833,6 @@
         \noindent\begin{tabular}{@{\protect\studn@me }l l l}}{\end{tabular}}
 \newcommand{\studyitem}[2]{\global\let\studn@me\relax & #1 & #2 \\}
 
-% --- Setting default names of document parts ---
-\newcommand{\thesistype}[1]{\def\th@sistype{#1}}
-\let\th@sistype\relax
-\newcommand{\advname}{Advisor}
-\newcommand{\dedname}{Dedication}
-\renewcommand{\chaptername}{CHAPTER}
-\renewcommand\appendixname{APPENDIX}
-\renewcommand\contentsname{Contents}
-\renewcommand\listfigurename{List of Figures}
-\renewcommand\listtablename{List of Tables}
-\renewcommand\indexname{Index}
-\renewcommand\figurename{Figure}
-\renewcommand\tablename{Table}
-\renewcommand\partname{Part}
-\newcommand\abstractname{Abstract}
-\newcommand\colophonname{Colophon}
-\newcommand{\pagename}{PAGE}
-\newcommand{\ackname}{Acknowledgments}
-\newcommand{\vitaname}{Vita}
-\newcommand{\pubname}{Publications}
-\newcommand{\fosname}{Fields of Study}
-\newcommand{\majorfieldname}{Major field}
-\newcommand{\minorfieldname}{Minor field}
-\newcommand{\specializationname}{Specialization}
-\newcommand{\studinname}{Studies in}
-\def\today{
-	\ifcase
-		\month\or January\or February\or March\or April\or May\or June\or July\or August\or September\or October\or November\or December
-	\fi
-	\space\number\day, \number\year
-}
-
 % --- Setting up numbering format for thesis parts ---
 \renewcommand*\chaptermark[1]{}
 \renewcommand \thepart {\@Roman\c@part}
@@ -568,80 +842,6 @@
 \renewcommand\theparagraph    {\thesubsubsection.\@arabic\c@paragraph}
 \renewcommand\thesubparagraph {\theparagraph.\@arabic\c@subparagraph}
 \newcommand{\@chapapppage}{\relax}
-
-% --- Set up document margins and headings based on one sided or two sided formatting ---
-\if@twoside
-	\RequirePackage[letterpaper,marginparwidth=.6in,hmargin={1.25in,1in},top=1in,bottom=1in]{geometry}
-	\def\ps@headings{%
-		\let\@oddfoot\@empty\let\@evenfoot\@empty
-		\def\@evenhead{\thepage\hfil\slshape\leftmark}
-		\def\@oddhead{{\slshape\rightmark}\hfil\thepage}
-		\let\@mkboth\markboth
-		\def\chaptermark##1{
-			\markboth {
-				% removed MakeUpperCase - JB
-					\ifnum \c@secnumdepth >\m@ne
-						\if@mainmatter
-							\thechapter. \ % removed \@chapapp - JB
-						\fi
-					\fi
-					##1
-			}
-			{}
-		}%
-        		\def\sectionmark##1{%
-			\markright {
-				% removed MakeUpperCase - JB
-					\ifnum \c@secnumdepth >\z@
-						\thesection. \ %
-					\fi
-					##1
-        			}
-        		}
-        }
-\else
-	\RequirePackage[letterpaper,marginparwidth=.6in,hmargin={1in,1in},top=1in,bottom=1in]{geometry}
-	\def\ps@headings{
-		\let\@oddfoot\@empty
-		\def\@oddhead{{\slshape\rightmark}\hfil\thepage}
-		\let\@mkboth\markboth
-		\def\chaptermark##1{%
-			\markright {
-				% removed MakeUpperCase - JB
-					\ifnum \c@secnumdepth >\m@ne
-						\if@mainmatter
-							\thechapter. \ % removed \@chapapp - JB
-						\fi
-					\fi
-					##1
-			}
-			{}
-		}%
-		\def\sectionmark##1{
-			\markright {
-				% removed MakeUpperCase - JB
-					\ifnum \c@secnumdepth >\z@
-						\thesection. \ 
-					\fi
-					##1
-        			}
-        		}
-	}
-\fi
-
-% --- Document heading styling ---
-\def\ps@myheadings{
-	\let\@oddfoot\@empty\let\@evenfoot\@empty
-	\def\@evenhead{\thepage\hfil\slshape\leftmark}
-	\def\@oddhead{{\slshape\rightmark}\hfil\thepage}
-	\let\@mkboth\@gobbletwo
-	\let\chaptermark\@gobble
-	\let\sectionmark\@gobble
-}
-
-% --- Core packages required for all engines ---
-\RequirePackage{ifpdf,ifxetex,graphicx,eso-pic,fancyhdr,amsmath,amsthm,amssymb,setspace,float}
-\RequirePackage[absolute,overlay]{textpos}
 
 % --- Caption and figure formatting ---
 % add a makecaption definition for compatibility with caption package
@@ -699,10 +899,10 @@
 			\let\item\@idxitem
 		}
 		{\if@restonecol\onecolumn\else\clearpage\fi}
-	\renewcommand\@idxitem{\par\hangindent 40\p@}
-	\renewcommand\subitem{\@idxitem \hspace*{20\p@}}
-	\renewcommand\subsubitem{\@idxitem \hspace*{30\p@}}
-	\renewcommand\indexspace{\par \vskip 10\p@ \@plus5\p@ \@minus3\p@\relax} % - JB
+%	\renewcommand\@idxitem{\par\hangindent 40\p@}
+%	\renewcommand\subitem{\@idxitem \hspace*{20\p@}}
+%	\renewcommand\subsubitem{\@idxitem \hspace*{30\p@}}
+%	\renewcommand\indexspace{\par \vskip 10\p@ \@plus5\p@ \@minus3\p@\relax} % - JB
 }{}
 
 % --- Maple code support ---
@@ -862,247 +1062,6 @@
 		\fi}
   \vfill}}}
 
-% --- Thesis metadata ---
-\newcommand{\presentdegrees}[1]{\def\@authordegrees{, #1}}
-\AtBeginDocument{
-  \makeatletter
-  \providecommand{\@authordegrees}{}  % safe to run here
-  \makeatother
-}
-\newcommand{\degreetoobtain}[1]{\def\d@greetoobtain{#1 }}
-\newcommand{\presentschool}[1]{\def\@school{#1}}
-\newcommand{\academicprogram}[1]{\def\@program{#1}}
-\newcommand{\advisor}[1]{\def\@dvisor{#1}}
-\def\second@dvisor{}
-\newcommand{\secondadvisor}[1]{
-	\def\\{\noexpand\\}
-	\global\edef\second@dvisor{\second@dvisor \\ #1}
-}
-\newcommand{\gradyear}[1]{\def\ye@r{#1}}
-
-% =============================================================
-% WOOSTER THESIS TITLE PAGE
-% Supports: \if@titlepage true or false
-% Point sizes: 10pt, 11pt, 12pt+
-% =============================================================
-
-% --- Offsets (one place) ---
-\newcommand{\TitleXOffset}{4}
-\newcommand{\TitleYOffset}{1.925}
-\newcommand{\TypeYOffset}{4.75}
-\newcommand{\FulfillXOffset}{4}
-\newcommand{\FulfillYOffset}{6.9}
-\newcommand{\AuthorYOffset}{9.165}
-\newcommand{\SchoolYOffset}{10.125}
-\newcommand{\AdvisorYOffset}{12.3}
-
-\ifnum\@ptsize=1
-  \renewcommand{\TitleXOffset}{4}
-  \renewcommand{\TitleYOffset}{1.85}
-  \renewcommand{\TypeYOffset}{4.7}
-  \renewcommand{\FulfillXOffset}{4}
-  \renewcommand{\FulfillYOffset}{6.8}
-  \renewcommand{\AuthorYOffset}{9.125}
-  \renewcommand{\SchoolYOffset}{10.125}
-\fi
-
-\ifnum\@ptsize>1
-  \renewcommand{\TitleXOffset}{4}
-  \renewcommand{\TitleYOffset}{1.65}
-  \renewcommand{\TypeYOffset}{4.65}
-  \renewcommand{\FulfillXOffset}{4}
-  \renewcommand{\FulfillYOffset}{6.7}
-  \renewcommand{\AuthorYOffset}{8.925}
-  \renewcommand{\SchoolYOffset}{10.125}
-\fi
-
-% --- Parametric Title Page Macro (Titlepage mode) ---
-\newcommand{\WoosterTitlePage}[9]{
-  \AddToShipoutPicture*{\BackgroundPicture}
-  \begin{titlepage}
-    % Title
-    \begin{textblock}{8}(#1,#2)
-      \begin{singlespace}
-        \begin{center}
-          {\scshape\Large \@title}
-        \end{center}
-      \end{singlespace}
-    \end{textblock}
-
-    % Thesis type
-    \begin{textblock}{7}(4.65,#3)
-      \begin{center}
-        {\scshape \th@sistype}
-      \end{center}
-    \end{textblock}
-
-    % Fulfillment
-    \begin{textblock}{8}(#4,#5)
-      \begin{singlespace}
-        \begin{center}
-          Presented in Partial Fulfillment of the Requirements for \\
-          the Degree \d@greetoobtain in the \\
-          \@program\ at \@school
-        \end{center}
-      \end{singlespace}
-    \end{textblock}
-
-    % Author
-    \begin{textblock}{7}(4.48,#6)
-      \begin{singlespace}
-        \begin{center}
-          by \\ \@author \@authordegrees
-        \end{center}
-      \end{singlespace}
-    \end{textblock}
-
-    % School & year
-    \begin{textblock}{7}(4.48,#7)
-      {\def\baselinestretch{1}\normalsize
-        \begin{center}
-          \@school \\
-          \ye@r
-        \end{center}
-      }
-    \end{textblock}
-
-    % Advisor
-    \begin{textblock}{7}(3.5,#8)
-      \noindent
-      \hspace{1pt}
-      \begin{minipage}[b]{\hsize}
-        \begin{flushleft}
-          {\bfseries Advised by:} \\
-          \@dvisor
-          \second@dvisor
-        \end{flushleft}
-      \end{minipage}
-      \par
-      \@thanks
-    \end{textblock}
-
-    #9 % optional
-  \end{titlepage}
-
-  % Cleanup
-  \setcounter{footnote}{0}
-  \global\let\thanks\relax
-  \global\let\maketitle\relax
-  \global\let\@thanks\@empty
-  \global\let\@date\@empty
-  \global\let\@title\@empty
-  \global\let\title\relax
-  \global\let\date\relax
-  \global\let\and\relax
-}
-
-% --- Parametric Inline Macro (\@maketitle) ---
-\newcommand{\WoosterInlineTitlePage}[9]{
-  \AddToShipoutPicture*{\BackgroundPicture}
-  \null
-
-  % Title
-  \begin{textblock}{9}(#1,#2)
-    \begin{singlespace}
-      \centering {\scshape\Large \@title}
-    \end{singlespace}
-  \end{textblock}
-
-  % Thesis type
-  \begin{textblock}{7}(2.125,#3)
-    \centering {\scshape \th@sistype}
-  \end{textblock}
-
-  % Fulfillment
-  \begin{textblock}{8}(#4,#5)
-    \begin{singlespace}
-      \centering
-      Presented in Partial Fulfillment of the Requirements for \\
-      the Degree \d@greetoobtain in the \\
-      \@program\ at \@school
-    \end{singlespace}
-  \end{textblock}
-
-  % Author
-  \begin{textblock}{7}(2.125,#6)
-    \begin{singlespace}
-      \centering
-      by \\ \@author \@authordegrees
-    \end{singlespace}
-  \end{textblock}
-
-  % School & year
-  \begin{textblock}{7}(2.125,#7)
-    {\def\baselinestretch{1}\normalsize
-    \centering
-    \@school \\ \ye@r}
-  \end{textblock}
-
-  % Advisor
-  \begin{textblock}{7}(1,#8)
-    \noindent
-    \hspace{1pt}
-    \begin{minipage}[b]{\hsize}
-      \begin{flushleft}
-        {\bfseries Advised by:} \\ \@dvisor \second@dvisor
-      \end{flushleft}
-    \end{minipage}
-    \par
-    \@thanks
-  \end{textblock}
-
-  #9 % optional
-}
-
-\def\@maketitle{
-  \newpage
-  \WoosterInlineTitlePage
-    {\TitleXOffset}{\TitleYOffset}{\TypeYOffset}{\FulfillXOffset}{\FulfillYOffset}{\AuthorYOffset}{\SchoolYOffset}{\AdvisorYOffset}{}
-}
-
-% --- Final combined \maketitle ---
-\renewcommand{\maketitle}{
-  \if@titlepage
-    \WoosterTitlePage
-       {\TitleXOffset}{\TitleYOffset}{\TypeYOffset}{\FulfillXOffset}{\FulfillYOffset}{\AuthorYOffset}{\SchoolYOffset}{\AdvisorYOffset}{}
-  \else
-    \par
-    \begingroup
-      \renewcommand\thefootnote{\@fnsymbol\c@footnote}
-      \long\def\@makefntext##1{
-        \parindent 1em\noindent
-        \hb@xt@1.8em{\hss\@textsuperscript{\normalfont\@thefnmark}}##1
-      }
-
-      \if@twocolumn
-        \ifnum \col@number=\@ne
-          \@maketitle
-        \else
-          \twocolumn[\@maketitle]
-        \fi
-      \else
-        \newpage
-        \global\@topnum\z@
-        \@maketitle
-      \fi
-
-      \thispagestyle{plain}
-      \@thanks
-    \endgroup
-
-    % Cleanup
-    \setcounter{footnote}{0}
-    \global\let\thanks\relax
-    \global\let\maketitle\relax
-    \global\let\@thanks\@empty
-    \global\let\@date\@empty
-    \global\let\@title\@empty
-    \global\let\title\relax
-    \global\let\date\relax
-    \global\let\and\relax
-  \fi
-}
-
 % --- Setup for the copyright page ---
 \newcommand{\copyrightdate}[1]{\gdef\@copydate{#1}}
 \let\@copydate\@date  
@@ -1112,6 +1071,7 @@
 	\def\@copyright{#1}
 }
 \newcommand{\disscopyright}{
+	\if@bstractonly\relax\else
 	\cleardoublepage
 	\thispagestyle{empty}
 	~
@@ -1125,6 +1085,7 @@
 		\end{center}
 		\vfill
 	\fi
+\fi
 } 
 
 % --- kaukecopyright option ---
@@ -1134,6 +1095,7 @@
 		\def\@copyright{#1}
 	}
 	\renewcommand{\disscopyright}{
+	\if@bstractonly\relax\else
 		\cleardoublepage
 		\thispagestyle{empty}
 		~%
@@ -1148,6 +1110,7 @@
 			\end{center}
 			\vfill
 		\fi
+	\fi
 	}
 \fi
 
@@ -1158,6 +1121,7 @@
 		\def\@copyright{#1}
 	}
 	\renewcommand{\disscopyright}{
+	\if@bstractonly\relax\else
 		\cleardoublepage
 		\thispagestyle{empty}
 		~%
@@ -1172,38 +1136,37 @@
 			\end{center}
 			\vfill
 		\fi
+	\fi
 	}
 \fi
 
-% --- Setting up behavior for front matter, main matter, and back matter ---
-\newif\if@numberedchapters
-\renewcommand\frontmatter{
-	\cleardoublepage
-	\@numberedchaptersfalse
-	\@mainmatterfalse
-	\pagenumbering{roman}
-	\pagestyle{plain}
+% --- Custom footnote rule ---
+\renewcommand\footnoterule{
+	\kern-3\p@
+	\hrule\@width.4\columnwidth
+	\kern2.6\p@
 }
-\renewcommand\mainmatter{
-	\cleardoublepage
-	\renewcommand{\@chapapppage}{\pagename}
-	\@numberedchapterstrue
-	\@mainmattertrue
-	\pagenumbering{arabic}
-	\pagestyle{headings}
+\@addtoreset{footnote}{chapter} % reset footnotes on each page - JB
+\renewcommand\@makefntext[1]{%
+	\parindent 1em%
+	\noindent
+	\hb@xt@1.8em{\hss\@makefnmark}#1
 }
-\renewcommand\backmatter{
-	\if@openright
-		\cleardoublepage
-	\else
-		\clearpage
-	\fi
-	\@numberedchapterstrue
-	\@mainmattertrue
-	\appendix
-	\pagestyle{headings}
+\renewcommand{\footnotesize}{%
+	\def\baselinestretch{1} % to make single spacing!
+	\@setfontsize\footnotesize\@xpt\@xiipt
+	\abovedisplayskip 10\p@ \@plus2\p@ \@minus5\p@
+	\abovedisplayshortskip \z@ \@plus3\p@
+	\belowdisplayshortskip 6\p@ \@plus3\p@ \@minus3\p@
+	\def\@listi{
+		\leftmargin\leftmargini
+		\topsep 6\p@ \@plus2\p@ \@minus2\p@
+		\parsep 3\p@ \@plus2\p@ \@minus\p@
+		\itemsep \parsep
+	}%
+	\belowdisplayskip \abovedisplayskip
 }
-\newcommand{\titlefont}{\fontshape{sc}}
+\setlength\footnotesep{12pt}
 
 \typeout{*** Warning: The  hyperref package has been loaded. Loading any packages after this could interfere with the hyperref package***}
 \DeclareGraphicsExtensions{.pdf, .jpg, .tif, .png}
