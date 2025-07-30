@@ -1062,83 +1062,48 @@
 		\fi}
   \vfill}}}
 
-% --- Setup for the copyright page ---
+% --- Copyright Control ---
 \newcommand{\copyrightdate}[1]{\gdef\@copydate{#1}}
-\let\@copydate\@date  
+\let\@copydate\@date
+
 \newif\if@copyright
-	\@copyrightfalse
-\newcommand{\copyrighted}[1][\@author]{\@copyrighttrue
-	\def\@copyright{#1}
+\@copyrightfalse
+
+\newcommand{\copyrighted}[1][\@author]{%
+  \@copyrighttrue
+  \def\@copyright{#1}%
 }
-\newcommand{\disscopyright}{
-	\if@bstractonly\relax\else
-	\cleardoublepage
-	\thispagestyle{empty}
-	~
-	\if@copyright
-		\vspace*{\fill}
-		\begin{center}
-			\begin{singlespace}
-				\copyright\ \ye@r\ by \@copyright
-				%\@copydate
-			\end{singlespace}
-		\end{center}
-		\vfill
-	\fi
-\fi
-} 
 
-% --- kaukecopyright option ---
+% --- Set copyright logo (optionally overridden) ---
+\newcommand{\@copyrightlogo}{} % default: no logo
+
 \if@kaukecopy
-	\renewcommand{\copyrighted}[1][\@author]{
-		\@copyrighttrue
-		\def\@copyright{#1}
-	}
-	\renewcommand{\disscopyright}{
-	\if@bstractonly\relax\else
-		\cleardoublepage
-		\thispagestyle{empty}
-		~%
-		\if@copyright
-			\vspace*{\fill}
-			\begin{center}
-				\kaukelogo
-				\begin{singlespace}
-					\copyright\ \ye@r\ by \@copyright
-     					%\@copydate
-				\end{singlespace}
-			\end{center}
-			\vfill
-		\fi
-	\fi
-	}
+  \renewcommand{\@copyrightlogo}{\kaukelogo}
 \fi
 
-% --- woostercopyright option ---
 \if@woostercopy
-	\renewcommand{\copyrighted}[1][\@author]{
-		\@copyrighttrue
-		\def\@copyright{#1}
-	}
-	\renewcommand{\disscopyright}{
-	\if@bstractonly\relax\else
-		\cleardoublepage
-		\thispagestyle{empty}
-		~%
-		\if@copyright
-			\vspace*{\fill}
-			\begin{center}
-				\woosterlogo
-				\begin{singlespace}
-					\copyright\ \ye@r\ by \@copyright
-     					%\@copydate
-				\end{singlespace}
-			\end{center}
-			\vfill
-		\fi
-	\fi
-	}
+  \renewcommand{\@copyrightlogo}{\woosterlogo}
 \fi
+
+% --- Unified copyright page ---
+\newcommand{\disscopyright}{%
+  \if@bstractonly\relax\else
+    \cleardoublepage
+    \thispagestyle{empty}
+    \null
+    \vspace*{\fill}
+    \if@copyright
+      \begin{center}
+        \@copyrightlogo
+        \begin{singlespace}
+          \copyright\ \ye@r\ by \@copyright\\
+          All rights reserved.
+        \end{singlespace}
+      \end{center}
+    \fi
+    \vfill
+  \fi
+}
 
 % --- Custom footnote rule ---
 \renewcommand\footnoterule{
