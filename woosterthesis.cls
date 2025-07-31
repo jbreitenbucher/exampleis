@@ -81,8 +81,6 @@
 \DeclareOption{nowoostersections}{\@woostersectionsfalse}
 \DeclareOption{woostertitlepage}{\@woostertitlepagetrue}
 \DeclareOption{nowoostertitlepage}{\@woostertitlepagefalse}
-\DeclareOption{woostercaptions}{\@woostercaptionstrue}
-\DeclareOption{nowoostercaptions}{\@woostercaptionsfalse}
 \DeclareOption{woostertoc}{\@woostertoctrue}
 \DeclareOption{nowoostertoc}{\@woostertocfalse}
 \DeclareOption{singlespace}{\@singlespacetrue}
@@ -92,7 +90,6 @@
   \@woosterchaptersfalse
   \@woostersectionsfalse
   \@woostertitlepagetrue
-  \@woostercaptionsfalse
   \@woostertoctrue
 \@singlespacetrue
 }
@@ -101,7 +98,6 @@
   \@woosterchaptersfalse
   \@woostersectionsfalse
   \@woostertitlepagefalse
-  \@woostercaptionsfalse
   \@woostertocfalse
 \@singlespacetrue
 }
@@ -125,6 +121,7 @@
 % Penalty values to control page breaks
 \widowpenalty=100000
 \displaywidowpenalty=5000
+\hyphenpenalty=5000 \tolerance=1000
 
 % Float spacing and layout
 \renewcommand\bottomfraction{.7}
@@ -441,7 +438,7 @@
 \fi
 \renewcommand\mainmatter{
 	\cleardoublepage
-	\renewcommand{\@chapapppage}{\pagename}
+	%\renewcommand{\@chapapppage}{\pagename}
 	\@numberedchapterstrue
 	\@mainmattertrue
 	\pagenumbering{arabic}
@@ -499,19 +496,24 @@
         \if@mainmatter
           \refstepcounter{chapter}
           \if@numberedchapters % added - JB
+	% Output chapter type to log (uppercase roman numerals)
             {\let\Roman\roman
              \edef\@tmpmsg{\noexpand\typeout{\noexpand\@chapapp\space\thechapter.}}
              \uppercase\expandafter{\@tmpmsg}}
-            \ifnum\value{chapter}=1
-              \edef\@tmptoc{\noexpand\addtocontents{toc}{\noexpand\@tocheadline{\@chapapp}{\@chapapppage}}}
-              \@tmptoc
-            \fi
+		% Add "CHAPTER ... PAGE" heading once before first chapter
+		\ifnum\value{chapter}=1
+			\addtocontents{toc}{\protect\vspace{1.5\baselineskip}}
+  			\addtocontents{toc}{\protect\noindent \@chapapp \hfill PAGE\par}
+		\fi
+	% Add numbered chapter to ToC
             \addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}#1} % removed \typeout{\@chapapp\space\thechapter.} - JB
           \else
+	% Add unnumbered chapter to ToC
             \addcontentsline{toc}{chapter}{#1}
           \fi
         \fi
       \else
+	 % Not in mainmatter — always unnumbered chapter
         \addcontentsline{toc}{chapter}{#1}
       \fi
       \chaptermark{#1}
@@ -531,7 +533,7 @@
       {\parindent\z@\raggedright\normalfont
        \ifnum \c@secnumdepth >\m@ne
          \if@mainmatter
-           {\small\textsl \@chapapp\space {\fontsize{20}{22}\selectfont$\mathit{\thechapter}$}} % removed \bfseries - JB
+           \texorpdfstring{\textsl \@chapapp\space {\fontsize{20}{22}\selectfont$\mathit{\thechapter}$}}{\@chapapp\space \thechapter} % removed \bfseries - JB
            \par\nobreak
            \vskip 10\p@ % 20 -> 10 - JB
          \fi
@@ -622,27 +624,6 @@
       \newpage
     \fi
     \if@twoside\else\setcounter{page}\@ne\fi
-  }
-\fi
-
-% --- Caption formatting ---
-\if@woostercaptions
-  \setlength\abovecaptionskip{24pt minus 12pt}
-  \long\def\@makecaption#1#2{
-    \small\vskip\abovecaptionskip
-    \sbox\@tempboxa{#1: #2}
-    \ifdim \wd\@tempboxa >\hsize
-      {\def\baselinestretch{1}\normalsize\sbox\@tempboxa{#1: }
-      \@setpar{\@@par
-        \@tempdima = \hsize
-        \advance\@tempdima-\wd\@tempboxa
-        \parshape \@ne 1\wd\@tempboxa \@tempdima}
-      \par\parindent 0pt\noindent
-      \hbox to \z@{\hss #1: }#2\par}
-    \else
-      \global \@minipagefalse\hbox to\hsize{\hfil\box\@tempboxa\hfil}%
-    \fi
-    \vskip\belowcaptionskip
   }
 \fi
 
@@ -841,23 +822,20 @@
 \renewcommand\thesubsubsection{\thesubsection .\@arabic\c@subsubsection}
 \renewcommand\theparagraph    {\thesubsubsection.\@arabic\c@paragraph}
 \renewcommand\thesubparagraph {\theparagraph.\@arabic\c@subparagraph}
-\newcommand{\@chapapppage}{\relax}
+%\newcommand{\@chapapppage}{\relax}
 
 % --- Caption and figure formatting ---
-% add a makecaption definition for compatibility with caption package
-\setlength\abovecaptionskip{\f@size\p@}
-\setlength\belowcaptionskip{0\p@}
-\long\def\@makecaption#1#2{
-  \vskip\abovecaptionskip
-  \sbox\@tempboxa{#1: #2}
-  \ifdim \wd\@tempboxa >\hsize
-    #1: #2\par
-  \else
-    \global \@minipagefalse
-    \hb@xt@\hsize{\hfil\box\@tempboxa\hfil}
-  \fi
-  \vskip\belowcaptionskip}
-\RequirePackage[style=base,format=hang,labelfont={bf,footnotesize},font=footnotesize, justification=raggedright]{caption}% to format captions - JB
+\RequirePackage[style=base,format=hang]{caption}% to format captions - JB
+\PassOptionsToPackage{class=woosterthesis}{caption}
+\DeclareCaptionStyle{woosterthesis}{
+  font=small,
+  labelfont={bf,small},
+  labelsep=colon,
+  justification=centerlast,
+  singlelinecheck=false,
+  skip=\abovecaptionskip
+}
+\captionsetup{style=woosterthesis}
 \RequirePackage{subfig} % replaces deprecated subfigure
 \captionsetup[subfloat]{listofindent=4em}% set captions on subfigures - JB
 \setcounter{lofdepth}{2}% setting depth of the list of figures - JB
@@ -865,7 +843,7 @@
 % --- Conditional loading of packaged based on class options ---
 % --- Font setup: Palatino option ---
 \if@palatino
-	\RequirePackage{mathpazo}
+	\RequirePackage[sc]{mathpazo}
 	\RequirePackage{pxfonts}
 \fi
 
