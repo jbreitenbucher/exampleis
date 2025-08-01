@@ -90,7 +90,7 @@
   \@woostersectionsfalse
   \@woostertitlepagetrue
   \@woostertoctrue
-\@singlespacetrue
+  \@singlespacetrue
 }
 
 \DeclareOption{nostyle}{
@@ -98,7 +98,7 @@
   \@woostersectionsfalse
   \@woostertitlepagefalse
   \@woostertocfalse
-\@singlespacetrue
+  \@singlespacetrue
 }
 
 % --- Set default options ---
