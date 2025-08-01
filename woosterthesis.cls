@@ -10,8 +10,8 @@
 \RequirePackage{ifthen}
 
 % --- Boolean flags for custom options ---
-\newif\if@bstractonly	\@bstractonlyfalse
-\newif\if@copyright	\@copyrightfalse
+\newif\if@bstractonly  \@bstractonlyfalse
+\newif\if@copyright  \@copyrightfalse
 \newif\if@blacklinks
 \newif\if@palatino
 \newif\if@tikz
@@ -34,11 +34,11 @@
 \newif\if@gauss
 \newif\if@alltt
 \newif\if@picins
-\newif\if@woosterchapters	\@woosterchapterstrue
-\newif\if@woostersections	\@woostersectionstrue
-\newif\if@woostertitlepage	\@woostertitlepagetrue
-\newif\if@woostercaptions	\@woostercaptionstrue
-\newif\if@woostertoc	\@woostertoctrue
+\newif\if@woosterchapters  \@woosterchapterstrue
+\newif\if@woostersections  \@woostersectionstrue
+\newif\if@woostertitlepage  \@woostertitlepagetrue
+\newif\if@woostercaptions  \@woostercaptionstrue
+\newif\if@woostertoc  \@woostertoctrue
 \newif\if@singlespace
 
 % --- Legacy boolean ---
@@ -81,6 +81,8 @@
 \DeclareOption{nowoostersections}{\@woostersectionsfalse}
 \DeclareOption{woostertitlepage}{\@woostertitlepagetrue}
 \DeclareOption{nowoostertitlepage}{\@woostertitlepagefalse}
+\DeclareOption{woostercaptions}{\@woostercaptionstrue}
+\DeclareOption{nowoostercaptions}{\@woostercaptionsfalse}
 \DeclareOption{woostertoc}{\@woostertoctrue}
 \DeclareOption{nowoostertoc}{\@woostertocfalse}
 \DeclareOption{singlespace}{\@singlespacetrue}
@@ -90,6 +92,7 @@
   \@woosterchaptersfalse
   \@woostersectionsfalse
   \@woostertitlepagetrue
+  \@woostercaptionsfalse
   \@woostertoctrue
 \@singlespacetrue
 }
@@ -98,6 +101,7 @@
   \@woosterchaptersfalse
   \@woostersectionsfalse
   \@woostertitlepagefalse
+  \@woostercaptionsfalse
   \@woostertocfalse
 \@singlespacetrue
 }
@@ -129,69 +133,101 @@
 \setlength\floatsep{9 pt plus 9 pt minus 3 pt}
 \setlength\intextsep{11 pt plus 11 pt minus 3 pt}
 
+% --- Setting default names of document parts ---
+\newcommand{\thesistype}[1]{\def\th@sistype{#1}}
+\let\th@sistype\relax
+\newcommand{\advname}{Advisor}
+\newcommand{\dedname}{Dedication}
+\renewcommand{\chaptername}{CHAPTER}
+\renewcommand\appendixname{APPENDIX}
+\renewcommand\contentsname{Contents}
+\renewcommand\listfigurename{List of Figures}
+\renewcommand\listtablename{List of Tables}
+\renewcommand\indexname{Index}
+\renewcommand\figurename{Figure}
+\renewcommand\tablename{Table}
+\renewcommand\partname{Part}
+\newcommand\abstractname{Abstract}
+\newcommand\colophonname{Colophon}
+\newcommand{\pagename}{PAGE}
+\newcommand{\ackname}{Acknowledgments}
+\newcommand{\vitaname}{Vita}
+\newcommand{\pubname}{Publications}
+\newcommand{\fosname}{Fields of Study}
+\newcommand{\majorfieldname}{Major field}
+\newcommand{\minorfieldname}{Minor field}
+\newcommand{\specializationname}{Specialization}
+\newcommand{\studinname}{Studies in}
+\def\today{
+  \ifcase
+    \month\or January\or February\or March\or April\or May\or June\or July\or August\or September\or October\or November\or December
+  \fi
+  \space\number\day, \number\year
+}
+
 % Figure command easier to remember than includegraphics. It has two arguments #1= file and %#2=scaling factor
 \newcommand{\woopic}[2]{
-	\includegraphics[scale=#2]{#1}
+  \includegraphics[scale=#2]{#1}
 }
 
 % --- Set up document margins and headings based on one sided or two sided formatting ---
 \if@twoside
-	\RequirePackage[letterpaper,marginparwidth=.6in,hmargin={1.25in,1in},top=1in,bottom=1in]{geometry}
-	\def\ps@headings{%
-		\let\@oddfoot\@empty\let\@evenfoot\@empty
-		\def\@evenhead{\thepage\hfil\slshape\leftmark}
-		\def\@oddhead{{\slshape\rightmark}\hfil\thepage}
-		\let\@mkboth\markboth
-		\def\chaptermark##1{
-			\markboth {
-				% removed MakeUpperCase - JB
-					\ifnum \c@secnumdepth >\m@ne
-						\if@mainmatter
-							\thechapter. \ % removed \@chapapp - JB
-						\fi
-					\fi
-					##1
-			}
-			{}
-		}%
-        		\def\sectionmark##1{%
-			\markright {
-				% removed MakeUpperCase - JB
-					\ifnum \c@secnumdepth >\z@
-						\thesection. \ %
-					\fi
-					##1
-        			}
-        		}
+  \RequirePackage[letterpaper,marginparwidth=.6in,hmargin={1.25in,1in},top=1in,bottom=1in]{geometry}
+  \def\ps@headings{%
+    \let\@oddfoot\@empty\let\@evenfoot\@empty
+    \def\@evenhead{\thepage\hfil\slshape\leftmark}
+    \def\@oddhead{{\slshape\rightmark}\hfil\thepage}
+    \let\@mkboth\markboth
+    \def\chaptermark##1{
+      \markboth {
+        % removed MakeUpperCase - JB
+          \ifnum \c@secnumdepth >\m@ne
+            \if@mainmatter
+              \thechapter. \ % removed \@chapapp - JB
+            \fi
+          \fi
+          ##1
+      }
+      {}
+    }%
+            \def\sectionmark##1{%
+      \markright {
+        % removed MakeUpperCase - JB
+          \ifnum \c@secnumdepth >\z@
+            \thesection. \ %
+          \fi
+          ##1
+              }
+            }
         }
 \else
-	\RequirePackage[letterpaper,marginparwidth=.6in,hmargin={1in,1in},top=1in,bottom=1in]{geometry}
-	\def\ps@headings{
-		\let\@oddfoot\@empty
-		\def\@oddhead{{\slshape\rightmark}\hfil\thepage}
-		\let\@mkboth\markboth
-		\def\chaptermark##1{%
-			\markright {
-				% removed MakeUpperCase - JB
-					\ifnum \c@secnumdepth >\m@ne
-						\if@mainmatter
-							\thechapter. \ % removed \@chapapp - JB
-						\fi
-					\fi
-					##1
-			}
-			{}
-		}%
-		\def\sectionmark##1{
-			\markright {
-				% removed MakeUpperCase - JB
-					\ifnum \c@secnumdepth >\z@
-						\thesection. \ 
-					\fi
-					##1
-        			}
-        		}
-	}
+  \RequirePackage[letterpaper,marginparwidth=.6in,hmargin={1in,1in},top=1in,bottom=1in]{geometry}
+  \def\ps@headings{
+    \let\@oddfoot\@empty
+    \def\@oddhead{{\slshape\rightmark}\hfil\thepage}
+    \let\@mkboth\markboth
+    \def\chaptermark##1{%
+      \markright {
+        % removed MakeUpperCase - JB
+          \ifnum \c@secnumdepth >\m@ne
+            \if@mainmatter
+              \thechapter. \ % removed \@chapapp - JB
+            \fi
+          \fi
+          ##1
+      }
+      {}
+    }%
+    \def\sectionmark##1{
+      \markright {
+        % removed MakeUpperCase - JB
+          \ifnum \c@secnumdepth >\z@
+            \thesection. \ 
+          \fi
+          ##1
+              }
+            }
+  }
 \fi
 
 % =============================================================
@@ -423,70 +459,69 @@
 \newif\if@numberedchapters
 \if@bstractonly
   \renewcommand\frontmatter{%
-	\@numberedchaptersfalse    
-	\@mainmatterfalse
-    	\@openrightfalse
+  \@numberedchaptersfalse    
+  \@mainmatterfalse
+  \@openrightfalse
   }
 \else
 \renewcommand\frontmatter{
-	\cleardoublepage
-	\@numberedchaptersfalse
-	\@mainmatterfalse
-	\pagenumbering{roman}
-	\pagestyle{plain}
+  \cleardoublepage
+  \@numberedchaptersfalse
+  \@mainmatterfalse
+  \pagenumbering{roman}
+  \pagestyle{plain}
 }
 \fi
 \renewcommand\mainmatter{
-	\cleardoublepage
-	%\renewcommand{\@chapapppage}{\pagename}
-	\@numberedchapterstrue
-	\@mainmattertrue
-	\pagenumbering{arabic}
-	\pagestyle{headings}
+  \cleardoublepage
+  \@numberedchapterstrue
+  \@mainmattertrue
+  \pagenumbering{arabic}
+  \pagestyle{headings}
 }
 \renewcommand\backmatter{
-	\if@openright
-		\cleardoublepage
-	\else
-		\clearpage
-	\fi
-	\@numberedchapterstrue
-	\@mainmattertrue
-	\appendix
-	\pagestyle{headings}
+  \if@openright
+    \cleardoublepage
+  \else
+    \clearpage
+  \fi
+  \@numberedchapterstrue
+  \@mainmattertrue
+  \appendix
+  \pagestyle{headings}
 }
 \newcommand{\titlefont}{\fontshape{sc}}
 
 \AtEndOfClass{%
 % --- Setting up how to handle parts in the document ---
 \def\@part[#1]#2{
-	\ifnum \c@secnumdepth >-2\relax
-		\refstepcounter{part}
-		\addcontentsline{toc}{part}{\thepart\hspace{1em}#1}
-	\else
-		\addcontentsline{toc}{part}{#1}
-	\fi
-	\markboth{}{}
-	{\centering
-		\interlinepenalty \@M
-		\normalfont
-		\ifnum \c@secnumdepth >-2\relax
-			\huge \partname\nobreakspace\thepart % removed \bfseries - JB
-			\par
-			\vskip 20\p@
-		\fi
-		\Huge #2\par
-	} % removed \bfseries - JB
-	\@endpart
+  \ifnum \c@secnumdepth >-2\relax
+    \refstepcounter{part}
+    \addcontentsline{toc}{part}{\thepart\hspace{1em}#1}
+  \else
+    \addcontentsline{toc}{part}{#1}
+  \fi
+  \markboth{}{}
+  {\centering
+    \interlinepenalty \@M
+    \normalfont
+    \ifnum \c@secnumdepth >-2\relax
+      \huge \partname\nobreakspace\thepart % removed \bfseries - JB
+      \par
+      \vskip 20\p@
+    \fi
+    \Huge #2\par
+  } % removed \bfseries - JB
+  \@endpart
 }
 \def\@spart#1{
-	\markboth{}{}
-	{\centering
-		\interlinepenalty \@M
-		\normalfont
-		\Huge #1\par
-	} % removed \bfseries - JB
-	\@endpart
+  \markboth{}{}
+  {\centering
+    \interlinepenalty \@M
+    \normalfont
+    \Huge #1\par
+  } % removed \bfseries - JB
+  \@endpart
 }
 
 % --- Chapter heading formatting ---
@@ -496,24 +531,24 @@
         \if@mainmatter
           \refstepcounter{chapter}
           \if@numberedchapters % added - JB
-	% Output chapter type to log (uppercase roman numerals)
+          % Output chapter type to log (uppercase roman numerals)
             {\let\Roman\roman
-             \edef\@tmpmsg{\noexpand\typeout{\noexpand\@chapapp\space\thechapter.}}
-             \uppercase\expandafter{\@tmpmsg}}
-		% Add "CHAPTER ... PAGE" heading once before first chapter
-		\ifnum\value{chapter}=1
-			\addtocontents{toc}{\protect\vspace{1.5\baselineskip}}
-  			\addtocontents{toc}{\protect\noindent \@chapapp \hfill PAGE\par}
-		\fi
-	% Add numbered chapter to ToC
+            \edef\@tmpmsg{\noexpand\typeout{\noexpand\@chapapp\space\thechapter.}}
+            \uppercase\expandafter{\@tmpmsg}}
+            % Add "CHAPTER ... PAGE" heading once before first chapter
+            \ifnum\value{chapter}=1
+              \addtocontents{toc}{\protect\vspace{1.5\baselineskip}}
+              \addtocontents{toc}{\protect\noindent \@chapapp \hfill \pagename\par}
+            \fi
+            % Add numbered chapter to ToC
             \addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}#1} % removed \typeout{\@chapapp\space\thechapter.} - JB
           \else
-	% Add unnumbered chapter to ToC
+            % Add unnumbered chapter to ToC
             \addcontentsline{toc}{chapter}{#1}
           \fi
         \fi
       \else
-	 % Not in mainmatter — always unnumbered chapter
+        % Not in mainmatter — always unnumbered chapter
         \addcontentsline{toc}{chapter}{#1}
       \fi
       \chaptermark{#1}
@@ -526,68 +561,68 @@
         \@makechapterhead{#2}
       \fi
     }
-\if@euler\else
+  \if@euler\else
     \if@gauss\else
-    \def\@makechapterhead#1{
-      \vspace*{50\p@}
-      {\parindent\z@\raggedright\normalfont
-       \ifnum \c@secnumdepth >\m@ne
-         \if@mainmatter
-           \texorpdfstring{\textsl \@chapapp\space {\fontsize{20}{22}\selectfont$\mathit{\thechapter}$}}{\@chapapp\space \thechapter} % removed \bfseries - JB
-           \par\nobreak
-           \vskip 10\p@ % 20 -> 10 - JB
-         \fi
-       \fi
-       \interlinepenalty\@M
-       \fontshape{sc}\fontsize{20}{22}\selectfont #1\par\nobreak % \Huge -> \scshape\LARGE removed \bfseries - JB
-       \vskip 30\p@\noindent}
-    }
-\fi
-\fi
-    \def\@schapter#1{
-      \if@twocolumn
-        \@topnewpage[\@makeschapterhead{#1}]
-      \else
-        \@makeschapterhead{#1}
-        \@afterheading
-      \fi
-    }
-    \def\@makeschapterhead#1{
-      \if@twocolumn \vspace*{83\p@}\else\vspace*{50\p@}\fi
-      {\parindent\z@\raggedright\normalfont
-       \interlinepenalty\@M
-       \fontshape{sc}\fontsize{20}{22}\selectfont #1\par\nobreak % \Huge -> LARGE removed \bfseries - JB
-       \vskip 30\p@}
-    }
+      \def\@makechapterhead#1{
+        \vspace*{50\p@}
+        {\parindent\z@\raggedright\normalfont
+          \ifnum \c@secnumdepth >\m@ne
+            \if@mainmatter
+              {\small\textsl \@chapapp\space {\fontsize{20}{22}\selectfont$\mathit{\thechapter}$}} % removed \bfseries - JB
+              \par\nobreak
+              \vskip 10\p@ % 20 -> 10 - JB
+            \fi
+          \fi
+        \interlinepenalty\@M
+        \fontshape{sc}\fontsize{20}{22}\selectfont #1\par\nobreak % \Huge -> \scshape\LARGE removed \bfseries - JB
+        \vskip 30\p@\noindent}
+      }
     \fi
+  \fi
+  \def\@schapter#1{
+    \if@twocolumn
+      \@topnewpage[\@makeschapterhead{#1}]
+    \else
+      \@makeschapterhead{#1}
+      \@afterheading
+    \fi
+  }
+  \def\@makeschapterhead#1{
+    \if@twocolumn \vspace*{83\p@}\else\vspace*{50\p@}\fi
+    {\parindent\z@\raggedright\normalfont
+    \interlinepenalty\@M
+    \fontshape{sc}\fontsize{20}{22}\selectfont #1\par\nobreak % \Huge -> LARGE removed \bfseries - JB
+    \vskip 30\p@}
+  }
+\fi
 
 % --- Section formatting ---
 % do not indent first paragraph of section by default - JB
 \if@woostersections
-\def\@startsection#1#2#3#4#5#6{
-	\if@noskipsec
-		\leavevmode
-	\fi
-	\par \@tempskipa #4\relax
-	\@afterindentfalse
-	\ifdim \@tempskipa <\z@
-		\@tempskipa -\@tempskipa
-		\relax
-	\fi
-	\if@nobreak
-		\everypar{}
-	\else
-		\addpenalty{\@secpenalty}
-		\addvspace{\@tempskipa}
-	\fi
-	\@ifstar
-		{
-			\@ssect{#3}{#4}{#5}{#6}
-		}
-		{
-			\@dblarg{\@sect{#1}{#2}{#3}{#4}{#5}{#6}}
-		}
-	}
+  \def\@startsection#1#2#3#4#5#6{
+    \if@noskipsec
+      \leavevmode
+    \fi
+  \par \@tempskipa #4\relax
+  \@afterindentfalse
+  \ifdim \@tempskipa <\z@
+    \@tempskipa -\@tempskipa
+    \relax
+  \fi
+  \if@nobreak
+    \everypar{}
+  \else
+    \addpenalty{\@secpenalty}
+    \addvspace{\@tempskipa}
+  \fi
+  \@ifstar
+    {
+      \@ssect{#3}{#4}{#5}{#6}
+    }
+    {
+      \@dblarg{\@sect{#1}{#2}{#3}{#4}{#5}{#6}}
+    }
+  }
   \renewcommand\section{\@startsection{section}{1}{\z@}
     {-3.5ex \@plus -1ex \@minus -.2ex}
     {2.3ex \@plus.2ex}
@@ -679,11 +714,11 @@
   \renewcommand*\l@paragraph{\@dottedtocline{1}{10em}{5em}}
   \renewcommand*\l@subparagraph{\@dottedtocline{1}{12em}{6em}}
 \fi
-  \if@singlespace
-     \singlespacing
-  \else
-      \doublespacing
-    \fi
+\if@singlespace
+  \singlespacing
+\else
+  \doublespacing
+\fi
 }
 
 % --- Thesis metadata ---
@@ -699,42 +734,10 @@
 \newcommand{\advisor}[1]{\def\@dvisor{#1}}
 \def\second@dvisor{}
 \newcommand{\secondadvisor}[1]{
-	\def\\{\noexpand\\}
-	\global\edef\second@dvisor{\second@dvisor \\ #1}
+  \def\\{\noexpand\\}
+  \global\edef\second@dvisor{\second@dvisor \\ #1}
 }
 \newcommand{\gradyear}[1]{\def\ye@r{#1}}
-
-% --- Setting default names of document parts ---
-\newcommand{\thesistype}[1]{\def\th@sistype{#1}}
-\let\th@sistype\relax
-\newcommand{\advname}{Advisor}
-\newcommand{\dedname}{Dedication}
-\renewcommand{\chaptername}{CHAPTER}
-\renewcommand\appendixname{APPENDIX}
-\renewcommand\contentsname{Contents}
-\renewcommand\listfigurename{List of Figures}
-\renewcommand\listtablename{List of Tables}
-\renewcommand\indexname{Index}
-\renewcommand\figurename{Figure}
-\renewcommand\tablename{Table}
-\renewcommand\partname{Part}
-\newcommand\abstractname{Abstract}
-\newcommand\colophonname{Colophon}
-\newcommand{\pagename}{PAGE}
-\newcommand{\ackname}{Acknowledgments}
-\newcommand{\vitaname}{Vita}
-\newcommand{\pubname}{Publications}
-\newcommand{\fosname}{Fields of Study}
-\newcommand{\majorfieldname}{Major field}
-\newcommand{\minorfieldname}{Minor field}
-\newcommand{\specializationname}{Specialization}
-\newcommand{\studinname}{Studies in}
-\def\today{
-	\ifcase
-		\month\or January\or February\or March\or April\or May\or June\or July\or August\or September\or October\or November\or December
-	\fi
-	\space\number\day, \number\year
-}
 
 % --- Appendix handling ---
 \renewcommand\appendix{
@@ -756,19 +759,19 @@
 
 % --- Abstract environment ---
 \newenvironment{abstract}{
-	\if@bstractonly
-		\setcounter{page}{1}\pagenumbering{arabic}\pagestyle{plain}
-		  \vspace*{3\baselineskip} {\centering\Huge \@title \par}\vspace{2\baselineskip}\begin{singlespace}\begin{center}by \@author\ \d@greetoobtain\\ The College of Wooster, \ye@r\\ \@dvisor\end{center}\end{singlespace}\vspace{\baselineskip}
-	\else
-		\chapter*{\abstractname}
-		\addcontentsline{toc}{chapter}{\abstractname}
- 	\fi
+  \if@bstractonly
+    \setcounter{page}{1}\pagenumbering{arabic}\pagestyle{plain}
+    \vspace*{3\baselineskip} {\centering\Huge \@title \par}\vspace{2\baselineskip}\begin{singlespace}\begin{center}by \@author\ \d@greetoobtain\\ The College of Wooster, \ye@r\\ \@dvisor\end{center}\end{singlespace}\vspace{\baselineskip}
+  \else
+    \chapter*{\abstractname}
+    \addcontentsline{toc}{chapter}{\abstractname}
+  \fi
 }{%
- 	\global\let\@end@bstract\relax
-	\if@bstractonly
-		\global\let\@end@bstract\enddocument
-		\def\@currenvir{document}% nasty trick!
-	\fi
+  \global\let\@end@bstract\relax
+  \if@bstractonly
+    \global\let\@end@bstract\enddocument
+    \def\@currenvir{document}% nasty trick!
+  \fi
 \@end@bstract
 }
 
@@ -779,50 +782,49 @@
 
 % --- Datelist, Publist, Fields of Study for Vita ---
 \newenvironment{datelist}{\begin{list}{}{%
-	\setlength\topsep\baselineskip
-	\setlength\partopsep{0pt}%
-	\setlength\itemsep\baselineskip
-	\setlength\rightmargin{0pt}%
-	\setlength\labelwidth{.5 \hsize}%
-	\addtolength\labelwidth{-\labelsep}%
-	\setlength\leftmargin{\hsize}%
-	\addtolength\leftmargin{-\labelwidth}%
+  \setlength\topsep\baselineskip
+  \setlength\partopsep{0pt}%
+  \setlength\itemsep\baselineskip
+  \setlength\rightmargin{0pt}%
+  \setlength\labelwidth{.5 \hsize}%
+  \addtolength\labelwidth{-\labelsep}%
+  \setlength\leftmargin{\hsize}%
+  \addtolength\leftmargin{-\labelwidth}%
 \renewcommand\makelabel[1]{\noindent ##1 \dotfill~}}}{\end{list}}
 % \dateitem provided for compatibility with the preceding versions. Its use
 % is deprecated. Use \begin{datelist} \item[1997] blah blah blah .... instead. - JH
 \newcommand{\dateitem}[2]{\noindent #1 \dotfill \parbox[t]{.5 \hsize}{#2}%
-       \vskip\baselineskip} 
+  \vskip\baselineskip} 
 \newenvironment{publist}{\vskip .2 \vsize
-        \penalty -1000
-        \vskip -.2 \vsize
-        \vspace{10 pt}
-	\begin{center}
-		\pubname}{\end{center}\vskip\baselineskip}
+  \penalty -1000
+  \vskip -.2 \vsize
+  \vspace{10 pt}
+  \begin{center}
+  \pubname}{\end{center}\vskip\baselineskip}
 \newcommand{\pubitem}[1]{\noindent #1 \vskip\baselineskip}
 \newenvironment{fieldsstudy}{\vskip .3 \vsize
-        \penalty -1000
-        \vskip -.3 \vsize
-        \vspace{10 pt}
-	\begin{center}
-		\fosname}{\end{center}\vskip\baselineskip}
+  \penalty -1000
+  \vskip -.3 \vsize
+  \vspace{10 pt}
+  \begin{center}
+    \fosname}{\end{center}\vskip\baselineskip}
 \newcommand{\majorfield}[1]{\noindent \majorfieldname: #1 \vskip\baselineskip}
 \newcommand{\minorfield}[1]{\noindent \minorfieldname: #1 \vskip\baselineskip}
 \newcommand{\specialization}[1]{\noindent \specializationname: #1\vskip\baselineskip}
 \newcommand{\onestudy}[2]{\noindent\studinname #1: #2}
 \newenvironment{studieslist}{
-        \gdef\studn@me{\studinname:\let\studn@me\relax}
-        \noindent\begin{tabular}{@{\protect\studn@me }l l l}}{\end{tabular}}
+  \gdef\studn@me{\studinname:\let\studn@me\relax}
+  \noindent\begin{tabular}{@{\protect\studn@me }l l l}}{\end{tabular}}
 \newcommand{\studyitem}[2]{\global\let\studn@me\relax & #1 & #2 \\}
 
 % --- Setting up numbering format for thesis parts ---
 \renewcommand*\chaptermark[1]{}
 \renewcommand \thepart {\@Roman\c@part}
 \renewcommand\section{\@startsection{section}{1}{\z@}{-3.5ex}{2.3ex}{\scshape\Large}}
-\renewcommand\thesubsection   {\thesection.\@arabic\c@subsection}
+\renewcommand\thesubsection{\thesection.\@arabic\c@subsection}
 \renewcommand\thesubsubsection{\thesubsection .\@arabic\c@subsubsection}
-\renewcommand\theparagraph    {\thesubsubsection.\@arabic\c@paragraph}
-\renewcommand\thesubparagraph {\theparagraph.\@arabic\c@subparagraph}
-%\newcommand{\@chapapppage}{\relax}
+\renewcommand\theparagraph{\thesubsubsection.\@arabic\c@paragraph}
+\renewcommand\thesubparagraph{\theparagraph.\@arabic\c@subparagraph}
 
 % --- Caption and figure formatting ---
 \RequirePackage[style=base,format=hang]{caption}% to format captions - JB
@@ -843,69 +845,64 @@
 % --- Conditional loading of packaged based on class options ---
 % --- Font setup: Palatino option ---
 \if@palatino
-	\RequirePackage[sc]{mathpazo}
-	\RequirePackage{pxfonts}
+  \RequirePackage[sc]{mathpazo}
 \fi
 
 % --- TiKz support ---
 \if@tikz
-	\RequirePackage{tikz}
-	\usetikzlibrary{positioning}
+  \RequirePackage{tikz}
+  \usetikzlibrary{positioning}
 \fi
 
 % --- Index support ---
 \ifthenelse{\boolean{index}}{
-	\RequirePackage{makeidx}
+  \RequirePackage{makeidx}
 % ----------------------------------------
 % set up the Index
 % ----------------------------------------
-	\renewenvironment{theindex}
-		{
-			\if@twocolumn
-				\@restonecolfalse
-			\else
-				\@restonecoltrue
-			\fi
-			\columnseprule \z@
-			\columnsep 35\p@
-			\twocolumn[\@makeschapterhead{\indexname}]%
-			\@mkboth{\indexname}{\indexname} % removed \MakeUppercase -JB
-			\thispagestyle{plain}
-			\setlength\baselineskip{1\@ptsize pt} % single space - JB
-			\parindent\z@
-			\parskip\z@ \@plus .3\p@\relax
-			\let\item\@idxitem
-		}
-		{\if@restonecol\onecolumn\else\clearpage\fi}
-%	\renewcommand\@idxitem{\par\hangindent 40\p@}
-%	\renewcommand\subitem{\@idxitem \hspace*{20\p@}}
-%	\renewcommand\subsubitem{\@idxitem \hspace*{30\p@}}
-%	\renewcommand\indexspace{\par \vskip 10\p@ \@plus5\p@ \@minus3\p@\relax} % - JB
+  \renewenvironment{theindex}
+    {
+      \if@twocolumn
+        \@restonecolfalse
+      \else
+        \@restonecoltrue
+      \fi
+      \columnseprule \z@
+      \columnsep 35\p@
+      \twocolumn[\@makeschapterhead{\indexname}]%
+      \@mkboth{\indexname}{\indexname} % removed \MakeUppercase -JB
+      \thispagestyle{plain}
+      \setlength\baselineskip{1\@ptsize pt} % single space - JB
+      \parindent\z@
+      \parskip\z@ \@plus .3\p@\relax
+      \let\item\@idxitem
+    }
+    {\if@restonecol\onecolumn\else\clearpage\fi}
 }{}
 
 % --- Maple code support ---
 \if@maple
-	\RequirePackage[noplots]{maple2e}
+  \RequirePackage[noplots]{maple2e}
 \fi
 
 % --- Support for verbatim text ---
 \if@verbatim
-	\RequirePackage{verbatim}
+  \RequirePackage{verbatim}
 \fi
 
 % --- Support for initial dropped capitals ---
 \if@dropcaps
-	\RequirePackage{lettrine}
+  \RequirePackage{lettrine}
 \fi
 
 % --- Chapter style with Gauss format ---
 \if@gauss
-	\RequirePackage[Gauss]{styles/woofncychap}
+  \RequirePackage[Gauss]{styles/woofncychap}
 \fi
 
 % --- Chapter style with Euler format ---
 \if@euler
-	\RequirePackage[Euler]{styles/woofncychap}
+  \RequirePackage[Euler]{styles/woofncychap}
 \fi
 
 % --- Code listings support ---
@@ -946,76 +943,86 @@
 
 % --- Support for typewriter text ---
 \if@alltt
-	\RequirePackage{alltt}
+  \RequirePackage{alltt}
 \fi
 
 % --- Support for wrapped figures ---
 \if@picins
-	\RequirePackage{wrapfig}
+  \RequirePackage{wrapfig}
 \fi
 
 % --- Option only used to produce the manual containing all the the lshort guide ---
 \if@lshortwooster
-	\RequirePackage{styles/lshortwooster}
+  \RequirePackage{styles/lshortwooster}
 \fi
 
 % --- Support for ACS, APA, MLA, Chicago, Citation order, and numeric references ---
 \if@acs
   \PassOptionsToPackage{style=chem-acs,articletitle,hyperref=auto,backref=true,backrefstyle=two,natbib=true,backend=biber}{biblatex}
-\else\if@chicago
-  \PassOptionsToPackage{annotation,notes,autocite=footnote,authordate,strict=true,autolang=other,bibencoding=inputenc,hyperref=auto,backref=true,backrefstyle=two,natbib=true,sorting=nty,backend=biber}{biblatex-chicago}
-\else\if@apa
-  \PassOptionsToPackage{style=apa,autolang=other,bibencoding=inputenc,hyperref=auto,backref=true,backrefstyle=two,natbib=true,sorting=nty,backend=biber}{biblatex}
-\else\if@mla
-  \PassOptionsToPackage{style=mla,autolang=other,bibencoding=inputenc,hyperref=auto,backref=true,backrefstyle=two,natbib=true,sorting=nty,backend=biber}{biblatex}
-\else\if@citeorder
-  \PassOptionsToPackage{style=numeric,autolang=other,bibencoding=inputenc,hyperref=auto,backref=true,backrefstyle=two,natbib=true,sorting=none,backend=biber}{biblatex}
 \else
-  \PassOptionsToPackage{hyperref=auto,backref=true,backrefstyle=two,natbib=true,style=numeric,backend=biber}{biblatex}
-\fi\fi\fi\fi\fi
+  \if@chicago
+    \PassOptionsToPackage{annotation,notes,autocite=footnote,authordate,strict=true,autolang=other,bibencoding=inputenc,hyperref=auto,backref=true,backrefstyle=two,natbib=true,sorting=nty,backend=biber}{biblatex-chicago}
+  \else
+    \if@apa
+      \PassOptionsToPackage{style=apa,autolang=other,bibencoding=inputenc,hyperref=auto,backref=true,backrefstyle=two,natbib=true,sorting=nty,backend=biber}{biblatex}
+    \else
+      \if@mla
+        \PassOptionsToPackage{style=mla,autolang=other,bibencoding=inputenc,hyperref=auto,backref=true,backrefstyle=two,natbib=true,sorting=nty,backend=biber}{biblatex}
+      \else
+        \if@citeorder
+          \PassOptionsToPackage{style=numeric,autolang=other,bibencoding=inputenc,hyperref=auto,backref=true,backrefstyle=two,natbib=true,sorting=none,backend=biber}{biblatex}
+        \else
+          \PassOptionsToPackage{hyperref=auto,backref=true,backrefstyle=two,natbib=true,style=numeric,backend=biber}{biblatex}
+        \fi
+      \fi
+    \fi
+  \fi
+\fi
 
 % --- XeTeX engine class loading ---
 \ifxetex
-	\RequirePackage{fontspec,xunicode,xltxtra,unicode-math}
+  \RequirePackage{fontspec,xunicode,xltxtra,unicode-math}
 
-	% Language support (optional)
-	\if@foreignlanguage
-		\RequirePackage{polyglossia}
-		\RequirePackage[autostyle,autopunct=true]{csquotes}% to have context aware quotes when using foreign languages - JB
-	\else
-		\RequirePackage[style=american,autopunct=true]{csquotes}% to have context aware quotes when using foreign languages - JB
-	\fi
-	\if@blacklinks
-		\RequirePackage[xetex,pdfusetitle=true,pdfpagemode=UseOutlines,bookmarks,bookmarksopen=true,pdfstartview=FitV,colorlinks,allcolors=black,linkcolor=black,citecolor=black,plainpages=false,linktocpage=true,pdfpagelabels=true,hyperindex=false,pdfpagetransition=Glitter,breaklinks=true,urlcolor=black,pdfstartpage=1]{hyperref}
-	\else
-		\RequirePackage{xcolor}
-		\definecolor{refcolor}{cmyk}{1,0.98,0,0}    % Color for the reference links
-		\definecolor{urlcolor}{cmyk}{0.8,0.32,0.98,0.2}    % Color for the url links
-		\definecolor{citecolor}{cmyk}{0.5,1,0,0}    % Color for the citation links
-		\RequirePackage[xetex,pdfusetitle=true,pdfpagemode=UseOutlines,bookmarks,bookmarksopen=true,pdfstartview=FitV,colorlinks,allcolors=black,linkcolor=refcolor,citecolor=citecolor,plainpages=false,linktocpage=true,pdfpagelabels=true,hyperindex=true,pdfpagetransition=Glitter,breaklinks=true,urlcolor=urlcolor,pdfstartpage=1]{hyperref}
-	\fi
+  % Language support (optional)
+  \if@foreignlanguage
+    \RequirePackage{polyglossia}
+    \RequirePackage[autostyle,autopunct=true]{csquotes}% to have context aware quotes when using foreign languages - JB
+  \else
+    \RequirePackage[style=american,autopunct=true]{csquotes}% to have context aware quotes when using foreign languages - JB
+  \fi
+  \if@blacklinks
+    \RequirePackage[xetex,pdfusetitle=true,pdfpagemode=UseOutlines,bookmarks,bookmarksopen=true,pdfstartview=FitV,colorlinks,allcolors=black,linkcolor=black,citecolor=black,plainpages=false,linktocpage=true,pdfpagelabels=true,hyperindex=false,pdfpagetransition=Glitter,breaklinks=true,urlcolor=black,pdfstartpage=1]{hyperref}
+  \else
+    \RequirePackage{xcolor}
+    \definecolor{refcolor}{cmyk}{1,0.98,0,0}    % Color for the reference links
+    \definecolor{urlcolor}{cmyk}{0.8,0.32,0.98,0.2}    % Color for the url links
+    \definecolor{citecolor}{cmyk}{0.5,1,0,0}    % Color for the citation links
+    \RequirePackage[xetex,pdfusetitle=true,pdfpagemode=UseOutlines,bookmarks,bookmarksopen=true,pdfstartview=FitV,colorlinks,allcolors=black,linkcolor=refcolor,citecolor=citecolor,plainpages=false,linktocpage=true,pdfpagelabels=true,hyperindex=true,pdfpagetransition=Glitter,breaklinks=true,urlcolor=urlcolor,pdfstartpage=1]{hyperref}
+  \fi
 \else
-	\RequirePackage[utf8]{inputenc}
-   	\RequirePackage[T1]{fontenc}
-   	\RequirePackage{lmodern}
+  \RequirePackage[utf8]{inputenc}
+  \RequirePackage[T1]{fontenc}
+  \if@palatino\else
+    \RequirePackage{lmodern}
+  \fi
 
-	% Language support (optional)
-	\if@foreignlanguage
-		\RequirePackage{babel}
-		\RequirePackage[autostyle,autopunct=true]{csquotes}% to have context aware quotes when using foreign languages - JB
-	\else
-		\RequirePackage[style=american,autopunct=true]{csquotes}% to have context aware quotes when using foreign languages - JB
-	\fi
-	\RequirePackage[verbose,expansion=alltext,stretch=20]{microtype}
-	\if@blacklinks			
-		\RequirePackage[pdftex,pdfusetitle=true,pdfpagemode=UseOutlines,bookmarks,bookmarksopen=true,pdfstartview=FitV,colorlinks,allcolors=black,linkcolor=black,citecolor=black,plainpages=false,linktocpage=true,pdfpagelabels=true,hyperindex=true,pdfpagetransition=Glitter,breaklinks=true,urlcolor=black,pdfstartpage=1]{hyperref}
-	\else
-		\RequirePackage{xcolor}
-		\definecolor{refcolor}{cmyk}{1, 0.98, 0, 0}    % Color for the reference links
-		\definecolor{urlcolor}{cmyk}{0.8 ,0.32, 0.98, 0.2}    % Color for the url links
-		\definecolor{citecolor}{cmyk}{0.5, 1, 0, 0}    % Color for the citation links
-		\RequirePackage[pdftex,pdfusetitle=true,pdfpagemode=UseOutlines,bookmarks,bookmarksopen=true,pdfstartview=FitV,colorlinks,allcolors=black,linkcolor=refcolor,citecolor=citecolor,plainpages=false,linktocpage=true,pdfpagelabels=true,hyperindex=true,pdfpagetransition=Glitter,breaklinks=true,urlcolor=urlcolor,pdfstartpage=1]{hyperref}	
-	\fi
+  % Language support (optional)
+  \if@foreignlanguage
+    \RequirePackage{babel}
+    \RequirePackage[autostyle,autopunct=true]{csquotes}% to have context aware quotes when using foreign languages - JB
+  \else
+    \RequirePackage[style=american,autopunct=true]{csquotes}% to have context aware quotes when using foreign languages - JB
+  \fi
+  \RequirePackage[verbose,expansion=alltext,stretch=20]{microtype}
+  \if@blacklinks      
+    \RequirePackage[pdftex,pdfusetitle=true,pdfpagemode=UseOutlines,bookmarks,bookmarksopen=true,pdfstartview=FitV,colorlinks,allcolors=black,linkcolor=black,citecolor=black,plainpages=false,linktocpage=true,pdfpagelabels=true,hyperindex=true,pdfpagetransition=Glitter,breaklinks=true,urlcolor=black,pdfstartpage=1]{hyperref}
+  \else
+    \RequirePackage{xcolor}
+    \definecolor{refcolor}{cmyk}{1, 0.98, 0, 0}    % Color for the reference links
+    \definecolor{urlcolor}{cmyk}{0.8 ,0.32, 0.98, 0.2}    % Color for the url links
+    \definecolor{citecolor}{cmyk}{0.5, 1, 0, 0}    % Color for the citation links
+    \RequirePackage[pdftex,pdfusetitle=true,pdfpagemode=UseOutlines,bookmarks,bookmarksopen=true,pdfstartview=FitV,colorlinks,allcolors=black,linkcolor=refcolor,citecolor=citecolor,plainpages=false,linktocpage=true,pdfpagelabels=true,hyperindex=true,pdfpagetransition=Glitter,breaklinks=true,urlcolor=urlcolor,pdfstartpage=1]{hyperref}  
+  \fi
 \fi
 
 % --- Load BibLaTeX ---
@@ -1029,15 +1036,15 @@
 \newcommand{\kaukelogo}{\includegraphics[scale=.4]{kauke_wordmark}}
 \newcommand{\woosterlogo}{\includegraphics[scale=.4]{wooster_stacked_black}}
 \newcommand{\BackgroundPicture}{
-	\put(-3,-5){\parbox[b][\paperheight]{\paperwidth}{\vfill
-	\centering
-	\includegraphics[width=.9\paperwidth,height=.9\paperheight,keepaspectratio]{
-		\if@wblack W_black
-		\else
-			\if@scottie scottie_head_grayscale
-			\else kauke_arch_gray
-			\fi
-		\fi}
+  \put(-3,-5){\parbox[b][\paperheight]{\paperwidth}{\vfill
+  \centering
+  \includegraphics[width=.9\paperwidth,height=.9\paperheight,keepaspectratio]{
+    \if@wblack W_black
+    \else
+      \if@scottie scottie_head_grayscale
+      \else kauke_arch_gray
+      \fi
+    \fi}
   \vfill}}}
 
 % --- Copyright Control ---
@@ -1085,29 +1092,29 @@
 
 % --- Custom footnote rule ---
 \renewcommand\footnoterule{
-	\kern-3\p@
-	\hrule\@width.4\columnwidth
-	\kern2.6\p@
+  \kern-3\p@
+  \hrule\@width.4\columnwidth
+  \kern2.6\p@
 }
 \@addtoreset{footnote}{chapter} % reset footnotes on each page - JB
 \renewcommand\@makefntext[1]{%
-	\parindent 1em%
-	\noindent
-	\hb@xt@1.8em{\hss\@makefnmark}#1
+  \parindent 1em%
+  \noindent
+  \hb@xt@1.8em{\hss\@makefnmark}#1
 }
 \renewcommand{\footnotesize}{%
-	\def\baselinestretch{1} % to make single spacing!
-	\@setfontsize\footnotesize\@xpt\@xiipt
-	\abovedisplayskip 10\p@ \@plus2\p@ \@minus5\p@
-	\abovedisplayshortskip \z@ \@plus3\p@
-	\belowdisplayshortskip 6\p@ \@plus3\p@ \@minus3\p@
-	\def\@listi{
-		\leftmargin\leftmargini
-		\topsep 6\p@ \@plus2\p@ \@minus2\p@
-		\parsep 3\p@ \@plus2\p@ \@minus\p@
-		\itemsep \parsep
-	}%
-	\belowdisplayskip \abovedisplayskip
+  \def\baselinestretch{1} % to make single spacing!
+  \@setfontsize\footnotesize\@xpt\@xiipt
+  \abovedisplayskip 10\p@ \@plus2\p@ \@minus5\p@
+  \abovedisplayshortskip \z@ \@plus3\p@
+  \belowdisplayshortskip 6\p@ \@plus3\p@ \@minus3\p@
+  \def\@listi{
+    \leftmargin\leftmargini
+    \topsep 6\p@ \@plus2\p@ \@minus2\p@
+    \parsep 3\p@ \@plus2\p@ \@minus\p@
+    \itemsep \parsep
+  }%
+  \belowdisplayskip \abovedisplayskip
 }
 \setlength\footnotesep{12pt}
 
