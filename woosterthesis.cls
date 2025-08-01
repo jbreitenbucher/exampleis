@@ -37,7 +37,6 @@
 \newif\if@woosterchapters  \@woosterchapterstrue
 \newif\if@woostersections  \@woostersectionstrue
 \newif\if@woostertitlepage  \@woostertitlepagetrue
-\newif\if@woostercaptions  \@woostercaptionstrue
 \newif\if@woostertoc  \@woostertoctrue
 \newif\if@singlespace
 
@@ -81,8 +80,6 @@
 \DeclareOption{nowoostersections}{\@woostersectionsfalse}
 \DeclareOption{woostertitlepage}{\@woostertitlepagetrue}
 \DeclareOption{nowoostertitlepage}{\@woostertitlepagefalse}
-\DeclareOption{woostercaptions}{\@woostercaptionstrue}
-\DeclareOption{nowoostercaptions}{\@woostercaptionsfalse}
 \DeclareOption{woostertoc}{\@woostertoctrue}
 \DeclareOption{nowoostertoc}{\@woostertocfalse}
 \DeclareOption{singlespace}{\@singlespacetrue}
@@ -92,7 +89,6 @@
   \@woosterchaptersfalse
   \@woostersectionsfalse
   \@woostertitlepagetrue
-  \@woostercaptionsfalse
   \@woostertoctrue
 \@singlespacetrue
 }
@@ -101,7 +97,6 @@
   \@woosterchaptersfalse
   \@woostersectionsfalse
   \@woostertitlepagefalse
-  \@woostercaptionsfalse
   \@woostertocfalse
 \@singlespacetrue
 }
@@ -829,6 +824,7 @@
 % --- Caption and figure formatting ---
 \RequirePackage[style=base,format=hang]{caption}% to format captions - JB
 \PassOptionsToPackage{class=woosterthesis}{caption}
+\RequirePackage{subfig} % replaces deprecated subfigure
 \DeclareCaptionStyle{woosterthesis}{
   font=small,
   labelfont={bf,small},
@@ -838,7 +834,6 @@
   skip=\abovecaptionskip
 }
 \captionsetup{style=woosterthesis}
-\RequirePackage{subfig} % replaces deprecated subfigure
 \captionsetup[subfloat]{listofindent=4em}% set captions on subfigures - JB
 \setcounter{lofdepth}{2}% setting depth of the list of figures - JB
 
