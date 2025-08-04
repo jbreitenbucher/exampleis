@@ -49,6 +49,3 @@ The `woosterthesis` class also assumes you are using pdfTeX or XeTeX (support fo
 The template has been tested with Overleaf, as well as TeXLive installs on OS X and Windows 11. Some students have reported receiving processing time warnings from Overleaf and a request to move to a paid subscription, for that reason I recommend using a locally installed TeX instance instead of a cloud-based one.
 
 The class does support the use of system fonts such as Times New Roman through the XeLaTeX engine. The definitions of fonts for XeLaTeX can be found in the `styles/packages.tex`. The defaults are for a Times New Roman consistent set but suggestions of other cross platform font options are listed in comments.
-
-auth https://login.microsoftonline.com/organizations/oauth2/authorize
-token https://login.microsoftonline.com/organizations/oauth2/token
