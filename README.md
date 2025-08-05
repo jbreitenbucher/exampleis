@@ -35,6 +35,7 @@ This project aims to provide you with a template for typesetting your IS using L
 
 ## Dependencies
 The `woosterthesis` class loads several packages by default and several others through class options; it is assumed you have these installed on your system. These include the following:
+      |          |         |         |        |       |
 ------|----------|---------|---------|--------|-------|--------
 alltt | amsfonts | amsmath | amssymb | amsthm | babel | biblatex
 biblatex-chicago | caption | csquotes | eso-pic | eucal | eufrak | fancyhdr
