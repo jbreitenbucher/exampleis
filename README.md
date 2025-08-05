@@ -35,15 +35,15 @@ This project aims to provide you with a template for typesetting your IS using L
 
 ## Dependencies
 The `woosterthesis` class loads several packages by default and several others through class options; it is assumed you have these installed on your system. These include the following:
-                 |          |          |           |          |             |
----------------- | -------- | -------- | --------- | -------- | ------------|----------
+&nbsp;           | &nbsp;   | &nbsp;   | &nbsp;    | &nbsp;   | &nbsp;      | &nbsp;  
+---------------- | -------- | -------- | --------- | -------- | ----------- | --------
 alltt            | amsfonts | amsmath  | amssymb   | amsthm   | babel       | biblatex
 biblatex-chicago | caption  | csquotes | eso-pic   | eucal    | eufrak      | fancyhdr
 float            | floatfl  | fontenc  | fontspec  | geometry | graphicx    | hyperref
-ifpdf            | ifthen   | ifxetex  | inputenc  | lettrine | listings    | lmodern
+ifpdf            | ifthen   | ifxetex  | inputenc  | lettrine | listings    | lmodern 
 makeidx          | maple2e  | mathpazo | microtype | pdftex   | polyglossia | setspace
-subfig           | textpos  | TikZ     | verbatim  | wrapfig  | xcolor      | xltxtra
-xunicode  
+subfig           | textpos  | TikZ     | verbatim  | wrapfig  | xcolor      | xltxtra 
+xunicode    
 
 The `woosterthesis` class also assumes you are using pdfTeX or XeTeX (support for postscript based TeX has been dropped as of 2006/17/11).
 
