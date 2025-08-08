@@ -45,7 +45,7 @@ makeidx          | maple2e  | mathpazo | microtype | pdftex   | polyglossia | se
 subfig           | textpos  | TikZ     | verbatim  | wrapfig  | xcolor      | xltxtra 
 xunicode    
 
-The `woosterthesis` class also assumes you are using pdfTeX or XeTeX (support for postscript based TeX has been dropped as of 2006/17/11).
+The `woosterthesis` class also assumes you are using pdfTeX or XeTeX (support for postscript based TeX has been dropped as of 2006/11/17).
 
 ## Usage
 The template has been tested with Overleaf, as well as TeXLive installs on OS X and Windows 11. Some students have reported receiving processing time warnings from Overleaf and a request to move to a paid subscription, for that reason I recommend using a locally installed TeX instance instead of a cloud-based one.
