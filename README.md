@@ -42,8 +42,7 @@ biblatex-chicago | caption  | csquotes | eso-pic   | eucal    | eufrak      | fa
 float            | floatfl  | fontenc  | fontspec  | geometry | graphicx    | hyperref
 ifpdf            | ifthen   | ifxetex  | inputenc  | lettrine | listings    | lmodern 
 makeidx          | maple2e  | mathpazo | microtype | pdftex   | polyglossia | setspace
-subfig           | textpos  | TikZ     | verbatim  | wrapfig  | xcolor      | xltxtra 
-xunicode    
+subcaption       | textpos  | TikZ     | verbatim  | wrapfig  | xcolor      | xltxtra    
 
 The `woosterthesis` class also assumes you are using pdfTeX or XeTeX (support for postscript based TeX has been dropped as of 2006/11/17).
 
