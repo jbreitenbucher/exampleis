@@ -38,20 +38,20 @@ So how does a \lt session work? \lt loads the document class with any specified 
 \ip{pdftex},
 \ip{polyglossia},
 \ip{setspace},
-\ip{subfig},
+\ip{subcaption},
 \ip{textpos},
 \ip{Ti\emph{k}Z},
+\ip{unicode-math},
 \ip{verbatim},
 \ip{wrapfig},
 \ip{xcolor},
-\ip{xltxtra},
-and \ip{xunicode}.
-The \texttt{woosterthesis} class assumes you are using pdf\TeX (support for postscript based TeX has been dropped as of 2006/17/11).
+and \ip{xltxtra}.
+The \texttt{woosterthesis} class assumes you are using pdf\TeX (support for postscript based TeX has been dropped as of 2006/11/17).
 
 The \texttt{hyperref} package will make your thesis a linked document. \texttt{amsthm} is for altering the Theorem environments. \texttt{amsmath} implements almost all the mathematical symbols. \texttt{amssymb} adds the mathematical symbols not present in \texttt{amsmath}. \texttt{graphicx} and \texttt{eso-pic} are used to place graphics files in the thesis. \texttt{geometry} is used to set up the margins for the thesis. \texttt{setspace} is used to alter spacing by allowing a \texttt{singlespace}, \texttt{doublespace}, and \texttt{onehalfspace} environments. \texttt{biblatex} formats citations and references.  Documentation is included for some of the packages in the \verb|doc| folder.
 
 These packages should all be installed with a full installation of TeXLive on OS X or Windows. On OS X one can use the the MacTeX installer as i-Installer is no longer supported as of 2007/1/1. On Windows one can use MikTeX to install all available packages which will install all the above. By default the MikTeX install does a minimal installation. You will need to run the updater to make your MikTeX installation aware of all the new packages.
 
-There is also a new \TeX{} engine called \xt which allows one to use the native fonts on your system as text fonts in the document. More information can be found at the \href{http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=xetex}{\xt homepage}. If using \xt you will also need \ip{fontspec}, \ip{xunicode}, and \ip{xltxtra} which should be installed with \xt. The default font definitions for using \xt are in \verb|styles/packages.tex| with suggestions for alternatives to the defaults that have been set.
+There is also a new \TeX{} engine called \xt which allows one to use the native fonts on your system as text fonts in the document. More information can be found at the \href{http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=xetex}{\xt homepage}. If using \xt you will also need \ip{fontspec}, \ip{unicode-math}, and \ip{xltxtra} which should be installed with \xt. The default font definitions for using \xt are in \verb|styles/packages.tex| with suggestions for alternatives to the defaults that have been set.
 
 Once the packages are loaded, \lt begins to process the commands contained between the \texttt{document} tags. As it processes the commands, several auxiliary files are created. These files contain information needed for things like the Bibliography, Table of Contents, List of Figures, etc. We then process the file a second time to allow \lt to use its auxiliary files to fill in information. Some information may require three passes before it is displayed. Once \lt is done you are presented with a PDF of the output.

@@ -824,7 +824,7 @@
 % --- Caption and figure formatting ---
 \RequirePackage[style=base,format=hang]{caption}% to format captions - JB
 \PassOptionsToPackage{class=woosterthesis}{caption}
-\RequirePackage{subfig} % replaces deprecated subfigure
+\RequirePackage{subcaption} % replaces subfig
 \DeclareCaptionStyle{woosterthesis}{
   font=small,
   labelfont={bf,small},
@@ -833,9 +833,8 @@
   singlelinecheck=false,
   skip=\abovecaptionskip
 }
-\captionsetup{style=woosterthesis}
-\captionsetup[subfloat]{listofindent=4em}% set captions on subfigures - JB
-\setcounter{lofdepth}{2}% setting depth of the list of figures - JB
+\captionsetup{style=woosterthesis,subrefformat=parens}
+\captionsetup[subfigure]{list=true,listformat=subparens}
 
 % --- Conditional loading of packaged based on class options ---
 % --- Font setup: Palatino option ---
@@ -976,7 +975,7 @@
 
 % --- XeTeX engine class loading ---
 \ifxetex
-  \RequirePackage{fontspec,xunicode,xltxtra,unicode-math}
+  \RequirePackage{fontspec,unicode-math,xltxtra}
 
   % Language support (optional)
   \if@foreignlanguage

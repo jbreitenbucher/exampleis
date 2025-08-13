@@ -1,14 +1,29 @@
 %!TEX root = ../main.tex
 \chapter{Cover and Copyright Examples}\label{options}
 Here are images showing what the options \verb|scottie|\index{woosterthesis options!scottie}, \verb|wblack|\index{woosterthesis options!wblack}, and \verb|woostercopyright|\index{woosterthesis options!woostercopyright} produce when used for typesetting an IS.
-\begin{figure}[!ht]\centering
-\subfloat[Grayscale Scottie Mascot][scottie option] %changed subfigure to subfloat as result of changing to subfig package due to deprecation of subfigure 1-24-2020 - JB
-{\woopic{scottie}{.3}\label{scottie}}
-\qquad
-\subfloat[Grayscale Wooster 'W'][wblack option] %changed subfigure to subfloat as result of changing to subfig package due to deprecation of subfigure 1-24-2020 - JB
-{\woopic{wblack}{.3}\label{wblack}}
-\caption{Options for the IS Cover Page}\label{cover}
+\begin{figure}[!ht]
+  \centering
+    \begin{subfigure}[b]{0.4\textwidth} %changed subfloat to \begin{subfigure} as result of changing to subcaption package 2025-8-12 - JB
+      \centering
+      \woopic{scottie}{.3}
+      \caption[Grayscale Scottie Mascot]{scottie option}\label{scottie}
+    \end{subfigure}
+  \qquad
+    \begin{subfigure}[b]{0.4\textwidth} %changed subfloat to \begin{subfigure} as result of changing to subcaption package 2025-8-12 - JB
+      \centering
+      \woopic{wblack}{.3}
+      \caption[Grayscale Wooster 'W]{wblack option}\label{wblack}
+    \end{subfigure}
+  \caption{Options for IS Cover Page}\label{cover}
 \end{figure}
+%\begin{figure}[!ht]\centering
+%\subfloat[Grayscale Scottie Mascot][scottie option] %changed subfigure to subfloat as result of changing to subfig package due to deprecation of subfigure 1-24-2020 - JB
+%{\woopic{scottie}{.3}\label{scottie}}
+%\qquad
+%\subfloat[Grayscale Wooster 'W'][wblack option] %changed subfigure to subfloat as result of changing to subfig package due to deprecation of subfigure 1-24-2020 - JB
+%{\woopic{wblack}{.3}\label{wblack}}
+%\caption{Options for the IS Cover Page}\label{cover}
+%\end{figure}
 \begin{figure}[!ht]
 \begin{center}
 \woopic{woostercopyright}{1}

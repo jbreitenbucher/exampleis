@@ -182,27 +182,42 @@ You can use minipages to put more than one picture in a figure. Here is an examp
 \end{minipage}
 \end{figure}
 
-You can also use the \ip{subfig} package to do this. %changed subfigure to subfig as result of changing to subfig package due to deprecation of subfigure 1-24-2020 - JB
+You can also use the \ip{subcaption} package to do this. %changed from subfig package to modern subcaption package 2025-8-12 - JB
 
 \begin{singlespace}\small
-\begin{verbatim}
-\begin{figure}[!ht]\centering
-\subfloat[What goes in the List][Large conchoid]
-{\woopic{picture1}{.4}\label{fig3:left}}
-\qquad
-\subfloat[What goes in the List][Small conchoid]
-{\woopic{picture2}{.4}\label{fig3:right}}
-\caption{Two pictures in one figure}\label{fig3}
-\end{figure}
-\end{verbatim}
+  \begin{verbatim}
+    \begin{figure}[!ht]
+      \centering
+      \begin{subfigure}[b]{0.4\textwidth}
+        \centering
+        \woopic{picture1}{.4}
+        \caption[Large conchoid goes in the List]{Large conchoid}\label{fig3:left}
+      \end{subfigure}
+    \qquad
+      \begin{subfigure}[b]{0.4\textwidth}
+        \centering
+        \woopic{picture2}{.4}
+        \caption[Small conchoid goes in the List]{Small conchoid}\label{fig3:right}
+      \end{subfigure}
+    \caption{Two pictures in one figure}\label{fig3}
+    \end{figure}
+  \end{verbatim}
 \end{singlespace}
-\begin{figure}[!ht]\centering
-\subfloat[What goes in the List][Large conchoid] %changed subfigure to subfloat as result of changing to subfig package due to deprecation of subfigure 1-24-2020 - JB
-{\woopic{picture1}{.4}\label{fig3:left}}
-\qquad
-\subfloat[What goes in the List][Small conchoid] %changed subfigure to subfloat as result of changing to subfig package due to deprecation of subfigure 1-24-2020 - JB
-{\woopic{picture2}{.4}\label{fig3:right}}
-\caption{Two pictures in one figure}\label{fig3}
+
+\begin{figure}[!ht]
+  \centering
+    \begin{subfigure}[b]{0.4\textwidth} %changed subfloat to \begin{subfigure} as result of changing to subcaption package 2025-8-12 - JB
+      \centering
+      \woopic{picture1}{.4}
+      \caption[Large conchoid goes in the List]{Large conchoid}\label{fig3:left}
+    \end{subfigure}
+  \qquad
+    \begin{subfigure}[b]{0.4\textwidth} %changed subfloat to \begin{subfigure} as result of changing to subcaption package 2025-8-12 - JB
+      \centering
+      \woopic{picture2}{.4}
+      \caption[Small conchoid goes in the List]{Small conchoid}\label{fig3:right}
+    \end{subfigure}
+  \caption{Two pictures in one figure}\label{fig3}
 \end{figure}
 
 We should now be able to refer to either Figure~\ref{fig3}~\subref{fig3:left} or Figure~\ref{fig3}~\subref{fig3:right} using the labels we gave to the left and right images.
