@@ -317,9 +317,8 @@
       \hspace{1pt}
       \begin{minipage}[b]{\hsize}
         \begin{flushleft}
-          {\bfseries Advised by:} \\
           \@dvisor
-          \second@dvisor
+          \@reader
         \end{flushleft}
       \end{minipage}
       \par
@@ -389,7 +388,8 @@
     \hspace{1pt}
     \begin{minipage}[b]{\hsize}
       \begin{flushleft}
-        {\bfseries Advised by:} \\ \@dvisor \second@dvisor
+        \@dvisor
+        \@reader
       \end{flushleft}
     \end{minipage}
     \par
@@ -722,16 +722,25 @@
   \makeatletter
   \providecommand{\@authordegrees}{}  % safe to run here
   \makeatother
+
+% --- Enforce both advisor and reader must be set ---
+\ifx\@dvisor\@empty
+  \ClassError{woosterthesis}{Missing required advisor}{%
+    You must include \advisor{<label>}{<name>} in your preamble.}
+\fi
+\ifx\@reader\@empty
+  \ClassError{woosterthesis}{Missing required reader}{%
+    You must include \reader{<label>}{<name>} in your preamble.}
+\fi
 }
 \newcommand{\degreetoobtain}[1]{\def\d@greetoobtain{#1 }}
 \newcommand{\presentschool}[1]{\def\@school{#1}}
 \newcommand{\academicprogram}[1]{\def\@program{#1}}
-\newcommand{\advisor}[1]{\def\@dvisor{#1}}
-\def\second@dvisor{}
-\newcommand{\secondadvisor}[1]{
-  \def\\{\noexpand\\}
-  \global\edef\second@dvisor{\second@dvisor \\ #1}
-}
+\def\@dvisor{}
+\def\@reader{}
+
+\newcommand{\advisor}[2]{\def\@dvisor{\textbf{#1:} #2}}
+\newcommand{\reader}[2]{\def\@reader{\\ \textbf{#1:} #2}}
 \newcommand{\gradyear}[1]{\def\ye@r{#1}}
 
 % --- Appendix handling ---
