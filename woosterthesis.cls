@@ -739,8 +739,24 @@
 \def\@dvisor{}
 \def\@reader{}
 
-\newcommand{\advisor}[2]{\def\@dvisor{\textbf{#1:} #2}}
-\newcommand{\reader}[2]{\def\@reader{\\ \textbf{#1:} #2}}
+\newcommand{\advisor}[2]{%
+  \def\@dvisor{%
+    \begingroup\singlespacing
+    \textbf{#1:}\\
+    #2
+    \par\endgroup
+  }%
+}
+
+\newcommand{\reader}[2]{%
+  \def\@reader{%
+    \par%
+    \begingroup\singlespacing
+    \textbf{#1:}\\
+    #2
+    \par\endgroup
+  }%
+}
 \newcommand{\gradyear}[1]{\def\ye@r{#1}}
 
 % --- Appendix handling ---
