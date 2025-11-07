@@ -718,26 +718,15 @@
 
 % --- Thesis metadata ---
 \newcommand{\presentdegrees}[1]{\def\@authordegrees{, #1}}
-\AtBeginDocument{
-  \makeatletter
-  \providecommand{\@authordegrees}{}  % safe to run here
-  \makeatother
+\makeatletter
+\providecommand{\@authordegrees}{}
+% Define empties *before* we test them later
+\def\@dvisor{}
+\def\@reader{}
 
-% --- Enforce both advisor and reader must be set ---
-\ifx\@dvisor\@empty
-  \ClassError{woosterthesis}{Missing required advisor}{%
-    You must include \advisor{<label>}{<name>} in your preamble.}
-\fi
-\ifx\@reader\@empty
-  \ClassError{woosterthesis}{Missing required reader}{%
-    You must include \reader{<label>}{<name>} in your preamble.}
-\fi
-}
 \newcommand{\degreetoobtain}[1]{\def\d@greetoobtain{#1 }}
 \newcommand{\presentschool}[1]{\def\@school{#1}}
 \newcommand{\academicprogram}[1]{\def\@program{#1}}
-\def\@dvisor{}
-\def\@reader{}
 
 \newcommand{\advisor}[2]{%
   \def\@dvisor{%
@@ -747,7 +736,6 @@
     \par\endgroup
   }%
 }
-
 \newcommand{\reader}[2]{%
   \def\@reader{%
     \par%
@@ -758,6 +746,14 @@
   }%
 }
 \newcommand{\gradyear}[1]{\def\ye@r{#1}}
+
+% Enforce advisor set at begin-document (after user preamble runs)
+\AtBeginDocument{%
+  \ifx\@dvisor\@empty
+    \ClassError{woosterthesis}{Missing required advisor}{%
+      You must include \string\advisor{<label>}{<name>} in your preamble.}%
+  \fi
+}
 
 % --- Appendix handling ---
 \renewcommand\appendix{
@@ -1069,9 +1065,6 @@
 % --- Copyright Control ---
 \newcommand{\copyrightdate}[1]{\gdef\@copydate{#1}}
 \let\@copydate\@date
-
-\newif\if@copyright
-\@copyrightfalse
 
 \newcommand{\copyrighted}[1][\@author]{%
   \@copyrighttrue
