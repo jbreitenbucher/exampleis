@@ -25,6 +25,7 @@
 \newif\if@acs
 \newif\if@citeorder
 \newif\if@mla
+\newif\if@nature
 \newif\if@foreignlanguage
 \newif\if@lshortwooster
 \newif\if@maple
@@ -66,6 +67,7 @@
 \DeclareOption{lshortwooster}{\@lshortwoostertrue}
 \DeclareOption{maple}{\@mapletrue}
 \DeclareOption{mla}{\@mlatrue}
+\DeclareOption{nature}{\@naturetrue}
 \DeclareOption{palatino}{\@palatinotrue}
 \DeclareOption{picins}{\@picinstrue}
 \DeclareOption{scottie}{\@scottietrue}
@@ -971,7 +973,7 @@
   \RequirePackage{styles/lshortwooster}
 \fi
 
-% --- Support for ACS, APA, MLA, Chicago, Citation order, and numeric references ---
+% --- Support for ACS, APA, MLA, Chicago, Nature, Citation-order numeric ---
 \if@acs
   \PassOptionsToPackage{style=chem-acs,articletitle,hyperref=auto,backref=true,backrefstyle=two,natbib=true,backend=biber}{biblatex}
 \else
@@ -984,10 +986,43 @@
       \if@mla
         \PassOptionsToPackage{style=mla,autolang=other,bibencoding=inputenc,hyperref=auto,backref=true,backrefstyle=two,natbib=true,sorting=nty,backend=biber}{biblatex}
       \else
-        \if@citeorder
-          \PassOptionsToPackage{style=numeric,autolang=other,bibencoding=inputenc,hyperref=auto,backref=true,backrefstyle=two,natbib=true,sorting=none,backend=biber}{biblatex}
+        \if@nature% added for Physics at the request of Niklas Manz
+          \PassOptionsToPackage{style=nature,autolang=other,bibencoding=inputenc,hyperref=auto,backref=true,backrefstyle=two,natbib=true,doi=false,url=true,backend=biber}{biblatex}
+          %Modification request by Niklas Manz
+          \AtBeginDocument{%
+            % Journal + bold volume + issue in parentheses (no dot between them)
+            \renewbibmacro*{journal+issuetitle}{%
+              \usebibmacro{journal}%
+              \setunit*{\addspace}%
+              \iffieldundef{series}{}{%
+                \newunit
+                \printfield{series}%
+                \setunit{\addspace}%
+              }%
+              % Bold volume
+              \printfield{volume}%
+              % Issue/number right after volume in parentheses
+              \iffieldundef{number}
+                {}%
+                {\printtext[parens]{\printfield{number}}}%
+              \newunit
+            }%
+
+            % Optional: ensure the final "(2003)" only shows the year, not issue+year again.
+            \renewbibmacro*{issue+date}{%
+              \iffieldundef{year}
+                {}%
+                {\printtext[parens]{\usebibmacro{date}}}%
+              \newunit
+            }%
+          }%
         \else
-          \PassOptionsToPackage{hyperref=auto,backref=true,backrefstyle=two,natbib=true,style=numeric,backend=biber}{biblatex}
+          \if@citeorder
+            \PassOptionsToPackage{style=numeric,autolang=other,bibencoding=inputenc,hyperref=auto,backref=true,backrefstyle=two,natbib=true,sorting=none,backend=biber}{biblatex}
+          \else
+            % Default: numeric with natbib, nty sorting
+            \PassOptionsToPackage{style=numeric,autolang=other,bibencoding=inputenc,hyperref=auto,backref=true,backrefstyle=two,natbib=true,sorting=nty,backend=biber}{biblatex}
+          \fi
         \fi
       \fi
     \fi
