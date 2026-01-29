@@ -987,7 +987,7 @@
         \PassOptionsToPackage{style=mla,autolang=other,bibencoding=inputenc,hyperref=auto,backref=true,backrefstyle=two,natbib=true,sorting=nty,backend=biber}{biblatex}
       \else
         \if@nature% added for Physics at the request of Niklas Manz
-          \PassOptionsToPackage{style=nature,autolang=other,bibencoding=inputenc,hyperref=auto,backref=true,backrefstyle=two,natbib=true,doi=false,url=true,backend=biber}{biblatex}
+          \PassOptionsToPackage{style=nature,autolang=other,bibencoding=inputenc,hyperref=auto,backref=true,backrefstyle=two,natbib=true,doi=false,url=true,intitle=true,backend=biber}{biblatex}
           %Modification request by Niklas Manz
           \AtBeginDocument{%
             % Journal + bold volume + issue in parentheses (no dot between them)
